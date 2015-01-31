@@ -1,0 +1,111 @@
+# German words related to time
+# @(#) $Id: de.time.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-05-28, Georg Fischer: UTF-8, äöüÄÖÜß
+# - month names
+# - weekday names
+# - holy day names
+#
+# Wochentage
+Montag        		=SbSgMsTimeWeek.1	  
+Dienstag      		=SbSgMsTimeWeek.2	  
+Mittwoch      		=SbSgMsTimeWeek.3	  
+Donnerstag    		=SbSgMsTimeWeek.4	  
+Freitag       		=SbSgMsTimeWeek.5	  
+Samstag       		=SbSgMsTimeWeek.6	  
+Sonntag       		=SbSgMsTimeWeek.7	  
+# Monate      		
+Januar        		=SbSgMsTimeMnth.1	  
+Februar       		=SbSgMsTimeMnth.2	  
+März          		=SbSgMsTimeMnth.3	  
+April         		=SbSgMsTimeMnth.4	  
+Mai           		=SbSgMsTimeMnth.5	  
+Juni          		=SbSgMsTimeMnth.6	  
+Juli          		=SbSgMsTimeMnth.7	  
+August        		=SbSgMsTimeMnth.8	  
+September     		=SbSgMsTimeMnth.9	  
+Oktober       		=SbSgMsTimeMnth.10	
+November      		=SbSgMsTimeMnth.11	
+Dezember      		=SbSgMsTimeMnth.12	
+# Jahreszeiten		
+Frühling      		=SbSgMsTimeSeas.1	  
+Sommer        		=SbSgMsTimeSeas.2	  
+Herbst        		=SbSgMsTimeSeas.3	  
+Winter        		=SbSgMsTimeSeas.4	
+# Feiertage und Sonntage im Jahr
+Advent            	=SbSgMsTimeHoly
+Weihnachtstag     	=SbSgMsTimeHoly
+Weihnachten       	=SbSgNtTimeHoly
+Ostern            	=SbSgNtTimeHoly
+Pfingsten         	=SbSgNtTimeHoly
+Allerheiligen     	=SbSgNtTimeHoly
+Aschermittwoch    	=SbSgMsTimeHoly
+Bußtag            	=SbSgMsTimeHoly
+Bettag            	=SbSgMsTimeHoly
+Epiphanias        	=SbSgTimeHoly
+Erntedankfest     	=SbSgNtTimeHoly
+Estomihi          	=SbSgTimeHoly
+Ewigkeitssonntag  	=SbSgMsTimeHoly
+Exaudi            	=SbSgTimeHoly
+Fastnacht         	=SbSgFmTimeHoly
+Fasching          	=SbSgMsTimeHoly
+Fronleichnam      	=SbSgTimeHoly
+Gründonnerstag    	=SbSgMsTimeHoly
+Invokavit         	=SbSgTimeHoly
+Johannis          	=SbSgTimeHoly
+Jubilate          	=SbSgTimeHoly
+Judika            	=SbSgTimeHoly
+Kantate           	=SbSgTimeHoly
+Karfreitag        	=SbSgMsTimeHoly
+Karsamstag        	=SbSgMsTimeHoly
+Laetare           	=SbSgTimeHoly
+Maifeiertag       	=SbSgMsTimeHoly
+Martini           	=SbSgTimeHoly
+Michaelis         	=SbSgTimeHoly
+Nikolaus          	=SbSgMsTimeHoly
+Okuli             	=SbSgTimeHoly
+Ostermontag       	=SbSgMsTimeHoly
+Ostersonntag      	=SbSgMsTimeHoly
+Palmsonntag       	=SbSgMsTimeHoly
+Pfingstmontag     	=SbSgMsTimeHoly
+Quasimodogeniti   	=SbSgTimeHoly
+Reformationsfest  	=SbSgNtTimeHoly
+Reminiszere       	=SbSgTimeHoly
+Rogate            	=SbSgTimeHoly
+Rosenmontag       	=SbSgMsTimeHoly
+Septuagesimae     	=SbSgTimeHoly
+Sexagesimae       	=SbSgTimeHoly
+Silvester         	=SbSgMsTimeHoly
+Trinitatis        	=SbSgTimeHoly
+Volkstrauertag    	=SbSgMsTimeHoly
+
+# mehrere Wörter?
+# Christi Himmelfahrt
+# Misericordias Domini
+# Heiliger Abend
+# Schmutziger Donnerstag
+
+# Tageszeiten
+Tag               	=SbSgMsTime
+Nacht             	=SbSgFmTime
+Morgen            	=SbSgMsTime
+Abend             	=SbSgMsTime
+Mittag            	=SbSgMsTime
+Mitternacht       	=SbSgMsTime
+Vormittag         	=SbSgMsTime
+Nachmittag        	=SbSgMsTime
+# Zeitabschnitte  	
+Sekunde			  	=SbSgFmTime
+Minute            	=SbSgFmTime
+Stunde	          	=SbSgFmTime
+Woche             	=SbSgFmTime
+Wochenende        	=SbSgFmTime
+Monat             	=SbSgMsTime
+Ultimo            	=SbSgMsTime
+Quartal           	=SbSgNtTime
+Halbjahr          	=SbSgNtTime
+Jahr              	=SbSgNtTime
+Jahrzehnt         	=SbSgNtTime
+Jahrhundert       	=SbSgNtTime
+Jahrtausend       	=SbSgNtTime
+Semester          	=SbSgNtTime
+Trimester         	=SbSgNtTime

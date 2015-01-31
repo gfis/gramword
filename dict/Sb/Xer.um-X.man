@@ -1,0 +1,99 @@
+Brater:	SbSgMs	
+Brat:	SbSgNt
+Damm	SbSgMs
+Doner:	SbSgMsForgNutr	
+Don	SbSgForgTitl
+Dunger:	SbSgMs	
+Dung	SbSgMs
+Durer:	NmSurn	
+Dur	SbSgNtMusi
+Facher:	SbSgMs	
+Fach	SbSgNt
+Fanger:	SbSgMs	
+Fang	SbSgMs
+Forster:	SbSgMsProf	
+Forst	SbSgMs
+Frachter	SbSgMs	Fracht	SbSg
+Fron	SbSgFm
+Grab	SbSgNt
+Grunder:	SbSgMsPers	
+Grund	SbSgMs
+Hanger:	SbSgMs	
+Hang	SbSgMs
+Huter:	SbSgMsPers	
+Hut	SbSgMs
+Kascher:	SbSgMs	
+Kaufer:	SbSgMsPers	
+Kauf	SbSgMs
+Kohler:	SbSgMsProf	
+Kohl	SbSgMsNutr
+Koter:	SbSgMsZool	
+Kot	SbSgMs
+Kramer:	SbSgMsProf	
+Kram	SbSgMs
+Kropf	SbSgMs
+Kruger:	NmSurn	
+Krug	SbSgMs
+Laufer:	SbSgMs	
+Lauf	SbSgMs
+Lufter:	SbSgMs	
+Luft	SbSgFm
+Malz	SbSgNtNutr
+Mark	SbSgNtNutr
+Moller:	NmSurn	
+Moll	SbSgNtMusi
+Morder:	SbSgMsPers	
+Mord	SbSgMs
+Muller:	NmSurn	
+Mull	SbSgMs
+Pachter:	SbSgMsPers	Pacht	SbSgFm
+Pfalzer:	SbSgMsGeogRegn	Pfalz	NmFmGeogRegn
+Pfand	SbSgNt
+Pflug	SbSgMs
+Prag	NmGeogCityCz
+Rander:	SbPl	Rand	SbSgMs
+Rat	SbSgMs
+Rauber:	SbSgMsPers	Raub	SbSgMs
+Romer:	SbSgMsGeogCityIt	Rom	NmGeogCityIt
+Roster:	SbSgMs
+Rost	SbSgMs
+Salz	SbSgNtNutr
+Sanger:	SbSgMsPers	
+Sang	SbSgMs
+Saum	SbSgMs
+Schacht	SbSgMs
+Schafer:	SbSgMsPers	Schaf	SbSgNtZool
+Schatzer:	SbSgMs	Schatz	SbSgMs
+Schlafer:	SbSgMsPers	Schlaf	SbSgMs
+Schlupfer:	SbSgMs
+Schlupf	SbSgMs
+Schmoker:	SbSgMs	
+Schopfer:	SbSgMs	
+Schopf	SbSgMsBody
+Schrot	SbSgMs
+Schur	SbSgFm
+Schurfer:	SbSgMs	
+Schutzer:	SbSgMs	Schutz	SbSgMs
+Schwanzer:	SbSgMsPers	
+Schwanz	SbSg
+Schwarmer:	SbSgMsPers	Schwarm	SbSgMs
+Schwatzer:	SbSgMsPers	Schwatz	SbSgMs
+Soll	SbSgNt
+Spotter:	SbSgMsPers	Spott	SbSgMs
+Spur	SbSgFm
+Stadter:	SbSgMsPers	Stadt	SbSgFm
+Strahl	SbSgMs
+Sunder:	SbSgMsPers
+Tanzer:	SbSgMsPers	Tanz	SbSgMs
+Tater:	SbSgMsPers	Tat	SbSgFm
+Tausch	SbSgMs
+Topfer:	SbSgMsProf	Topf	SbSgMs
+Traumer:	SbSgMsPers	Traum	SbSgMs
+Troster:	SbSgMsPers	Trost	SbSgMs
+Trummer:	SbPl	Trumm	SbSgMs
+Turmer:	SbSgMsPers	Turm	SbSgMs
+Wachter:	SbSgMsPers	Wacht	SbSgFm
+Wahler:	SbSgMsPers	Wahl	SbSgFm
+Wut	SbSgFm
+Zank	SbSgMs
+Zuchter:	SbSgMsProf	Zucht	SbSgFm

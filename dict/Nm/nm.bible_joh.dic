@@ -1,0 +1,32 @@
+# frequent German names and expressions in the bible  
+# UTF-8: äöüÄÖÜß
+# @(#) $Id: nm.bible_joh.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-07-25, Georg Fischer
+Jesus		=NmPrenMsBibl.NT
+Jesu		=NmPrenMsGenvBibl.NT
+Christus	=SbSgMsPersBibl.NT
+Christi		=SbSgMsGenvPersBibl.NT
+Messias		=SbSgMsPersBibl.NT
+
+Judas		=NmPrenMsBibl.NT
+Nazaret		=NmGeogCityBibl
+Nazareth	=NmGeogCityBibl
+Petrus		=NmPrenMsBibl.NT
+Pilatus		=NmPrenMsBibl.NT
+Philippus	=NmPrenMsBibl.NT
+Galiläa		=NmGeogRegnBibl
+Abraham		=NmPrenMsBibl.AT
+Pharisäer 	=SbSgMsPersBibl
+Götter		=SbPl
+Lazarus		=NmPrenMsBibl.NT
+Hohepriester=SbSgMsPersBibl
+Hohenpriester=SbPlPersBibl,Hohepriester,SbSgMsPersBibl
+Prophet		=SbSgMsProfBibl
+Gesetz		=SbSgNt
+Synagoge	=SbSgFm
+Menschensohn=SbSgMsBibl.NT
+Paschafest	=SbSgMsBibl.NT
+Jesaja		=NmPrenMsBibl.AT
+Mose		=NmPrenMsGenvBibl.AT
+Moses		=NmPrenMsBibl.AT
+Rabbi		=SbSgMsProfBibl

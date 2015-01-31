@@ -1,0 +1,34 @@
+sch-en;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'en')
+  AND b.entry like '%sch';
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+
+sche-n;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'n')
+  AND b.entry like '%sche';
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+
+chen;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'chen');
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+
+chen.um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'chen', ':');
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+
+e-chen.um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(substring(b.entry, 1, length(b.entry) - 1), 'chen', ':')
+  AND b.entry LIKE '%e';
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+
+en-chen.um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(substring(b.entry, 1, length(b.entry) - 2), 'chen', ':')
+  AND b.entry LIKE '%en';
+print OUT "$cols[0]\tSbN5XDim,$cols[1]\n";
+

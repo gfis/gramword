@@ -1,0 +1,46 @@
+# German articles 
+# and relative pronouns
+# @(#) $Id: de.ar.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-05-28: UTF-8, äöüÄÖÜß
+# 2003-10-02  dativ
+# 2001-04-13, Georg Fischer
+#
+# Artikel
+# 1 - Nominativ; wer ruft?
+der   		=ArDetmNomvSgMs
+die   		=ArDetmNomvSgFm
+das   		=ArDetmNomvSgNt
+die   		=ArDetmNomvPl
+ein   		=ArUndtNomvSgMs
+eine  		=ArUndtNomvSgFm
+ein   		=ArUndtNomvSgNt
+# 2 - Genitiv; man entledigt sich wessen?
+des   		=ArDetmGenvSgMs
+der   		=ArDetmGenvSgFm
+des   		=ArDetmGenvSgNt
+der   		=ArDetmGenvPl
+eines 		=ArUndtGenvSgMs
+einer 		=ArUndtGenvSgFm
+eines 		=ArUndtGenvSgNt
+# 3 - Dativ; man verhandelt mit wem?
+dem   		=ArDetmDatvSgMs
+der   		=ArDetmDatvSgFm
+dem   		=ArDetmDatvSgNt
+den   		=ArDetmDatvPl
+einem 		=ArUndtDatvSgMs
+einer 		=ArUndtDatvSgFm
+einem 		=ArUndtDatvSgNt
+# 4 - Akkusativ; man benachrichtigt wen?
+den   		=ArDetmAccvSgMs
+die   		=ArDetmAccvSgFm
+das   		=ArDetmAccvSgNt
+die   		=ArDetmAccvPl
+einen 		=ArUndtAccvSgMs
+eine  		=ArUndtAccvSgFm
+ein   		=ArUndtAccvSgNt
+
+# relative pronouns
+dessen  	=PnRelt
+deren   	=PnRelt
+derer   	=PnRelt
+denen 		=PnRelt

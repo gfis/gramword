@@ -1,0 +1,63 @@
+# German substantives derived from primary adjectives
+# @(#) $Id: de.sb_aj.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-23, Georg Fischer
+# caution, stored in UTF-8 encoding: äöüÄÖÜß
+# all female, often with umlaut
+
+Blässe		=SbSgFm,blass,AjPrim
+Breite		=SbSgFm,breit,AjPrim
+Dichte		=SbSgFm,dicht,AjPrim
+Dicke		=SbSgFm,dick,AjPrim
+Dürre		=SbSgFm,dürr,AjPrim
+Ebene		=SbSgFm,eben,AjPrim
+Enge		=SbSgFm,eng,AjPrim
+Fäule		=SbSgFm,faul,AjPrim
+Ferne		=SbSgFm,fern,AjPrim
+Feuchte		=SbSgFm,feucht,AjPrim
+Fläche		=SbSgFm,flach,AjPrim
+Fremde		=SbSgFm,fremd,AjPrim
+# Frömme	=SbSgFm,fromm,AjPrim
+Frühe		=SbSgFm,früh,AjPrim
+Gänze		=SbSgFm,ganz,AjPrim
+Gerade		=SbSgFm,gerade,AjPrim
+Glätte		=SbSgFm,glatt,AjPrim
+Größe		=SbSgFm,groß,AjPrim
+Güte		=SbSgFm,gut,AjPrim
+Härte		=SbSgFm,hart,AjPrim
+Hitze		=SbSgFm,heiß,AjPrim
+Helle		=SbSgFm,hell,AjPrim
+Höhe 		=SbSgFm,hoch,AjPrim
+Kälte		=SbSgFm,kalt,AjPrim
+Krause		=SbSgFm,kraus,AjPrim
+Kürze		=SbSgFm,kurz,AjPrim
+Kühle		=SbSgFm,kühl,AjPrim
+Länge		=SbSgFm,lang,AjPrim
+Leere		=SbSgFm,leer,AjPrim
+Liebe		=SbSgFm,lieb,AjPrim
+Milde		=SbSgFm,mild,AjPrim
+Nähe		=SbSgFm,nah,AjPrim
+Nässe		=SbSgFm,nass,AjPrim
+Schärfe		=SbSgFm,scharf,AjPrim
+Schläue		=SbSgFm,schlau,AjPrim
+Schnelle	=SbSgFm,schnell,AjPrim
+Schräge		=SbSgFm,schräg,AjPrim
+Schwäche	=SbSgFm,schwach,AjPrim
+Schwere		=SbSgFm,schwer,AjPrim
+Schwüle		=SbSgFm,schwühl,AjPrim
+Spitze		=SbSgFm,spitz,AjPrim
+Spröde		=SbSgFm,spröde,AjPrim
+Stärke		=SbSgFm,stark,AjPrim
+Starre		=SbSgFm,starr,AjPrim
+Steife		=SbSgFm,steif,AjPrim
+Stille		=SbSgFm,still,AjPrim
+Strenge		=SbSgFm,streng,AjPrim
+Süße		=SbSgFm,süß,AjPrim
+Tiefe		=SbSgFm,tief,AjPrim
+Treue		=SbSgFm,treu,AjPrim
+Völle		=SbSgFm,voll,AjPrim
+Wache		=SbSgFm,wach,AjPrim
+Wärme		=SbSgFm,warm,AjPrim
+Weite		=SbSgFm,weit,AjPrim
+Wunde		=SbSgFm,wund,AjPrim
+Wüste		=SbSgFm,wüst,AjPrim
+Öde			=SbSgFm,öd,AjPrim

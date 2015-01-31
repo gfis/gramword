@@ -1,0 +1,42 @@
+# endings of German adverbs
+# @(#) $Id: av.suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-29, Georg Fischer = 59
+# caution, encoded in URF-8 äöüÄÖÜß
+#
+wärts    =AvLoct
+falls    =AvModl
+mals     =AvFreq
+einander =AvPers
+mal      =AvFreq
+ends     =AvModl
+halb     =AvLoct
+seits    =AvLoct
+erlei    =AvModl
+erweise  =AvModl
+
+# stunden-, tage-, wochen-, monate-, jahre-, über-, halb-, 
+lang     =AvTime
+tags	 =AvTime
+# meinetwegen, seinetwegen, ihretwegen
+etwegen	 =AvPers
+ethalben =AvPers
+
+# innerhalb =PrLG
+# außerhalb =PrLG
+# oberhalb  =PrLG
+# unterhalb =PrLG
+# überhalb  =PrLG
+# 
+# abseits   =PrLG
+# diesseits =PrLG
+# jenseits  =PrLG
+
+#     14 weshalb weshalb
+#     14 unterhalb       unterhalb
+#     14 oberhalb        oberhalb
+#     14 innerhalb       innerhalb
+#     14 deshalb deshalb
+#     12 ausserhalb      außerhalb
+#      7 ebendeshalb     ebendeshalb
+#      7 ausserhalb      ausserhalb
+#      6 innnerhalb      innnerhalb

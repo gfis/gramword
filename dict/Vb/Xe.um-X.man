@@ -1,0 +1,66 @@
+Ahre:	SbSgFm
+Blute:	SbSgFm
+Blut	SbSgNtBody
+Borde:	SbSgFm	
+Bord	SbSgNt
+Born	SbSgMs
+Buchse:	SbSgFm	
+Buchs	SbSgMs
+Burge:	SbSgMsPers	
+Burg	SbSgFm
+Butte:	SbSgFm
+Dane:	SbSgMsGeogCtry	Danemark:	NmGeogCtry
+Fahrte:	SbSgFm	Fahrt	SbSgFm
+Gamse:	SbSgFmZool	Gams	SbSgFmZool
+Grate:	SbSgFm	Grat	SbSgMs
+Gruppe	SbSgFm
+Hame:	SbSgFm
+Kampe:	SbSgMsPers	
+Kate:	NmFmPren
+Kot	SbSgMs
+Kratze:	SbSgFm
+Krote:	SbSgFmZool
+Lande:	SbSgFm	
+Land	SbSgNt
+Luge:	SbSgFm	Lug	SbSgMs
+Mahre:	SbSgFmZool
+Manne:	SbSgMsDial	Mann	SbSgMs
+Mark	SbSgNt
+Mohre:	SbSgFmNutr	
+Mohr	SbSgMsPers
+Mopse:	SbPl	Mops	SbSgMs
+Mucke:	SbSgFmZool
+Mutze:	SbSgFm
+Ose:	SbSgFm
+Rohre:	SbSgFm	Rohr	SbSgNt
+Rost	SbSgMs
+Ruf	SbSgMs
+Rusche:	SbSgFm
+Saule:	SbSgFm	
+Saul	NmMsPren
+Schanke:	SbSgFm	Schank	SbSgMs
+Schare:	SbSgFmGeog	
+Schar	SbSgFm
+Schlafe:	SbSgFmBody	
+Schlaf	SbSgMs
+Schmalz	SbSgMsNutr
+Schopf	SbSgMsBody
+Schurze:	SbSgFm	Schurz	SbSgMs
+Schutte:	SbSgFm	
+Schutt	SbSgMs
+Schutze:	SbSgMsPers	
+Schutz	SbSgMs
+Sturze:	SbPl	Sturz	SbSg
+Stutze:	SbSgFm	
+Stutz	SbSgMsCurr
+Sunde:	SbSgFm	
+Sund	SbSgMs
+Trane:	SbSgFm	
+Tran	SbSgMsNutr
+Tranke:	SbSgFm	
+Trank	SbSgMs
+Wachte:	SbSgFm	
+Wacht	SbSgFm
+Wurze:	SbSgFm	
+Wuste:	SbSgFm
+Wust	SbSgMs

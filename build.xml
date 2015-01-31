@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+<!--
+ * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+<!--
+    ant-buildfile for commandline, web application and web service
+    @(#) $Id: build.xml 976 2013-02-02 16:44:18Z gfis $
+    2007-02-14: use ant import - test doesn't work yet
+    2006-05-27: copied from numword
+-->
+
+<project name="gramword" default="all" basedir=".">
+    <property name="app.version"        value="1.4"/>
+    <property name="app.main-class"     value="org.teherba.gramword.MainFilter"/>
+    <import file="build-import.xml" />
+
+    <target name="generate">
+        <copy todir="${src.home}/org/teherba/xtrans">
+            <fileset dir="../xtrans/src/main/java/org/teherba/xtrans">
+                <include name="BaseTransformer.java"/>
+                <include name="BaseRecord.java"/>
+                <include name="ByteRecord.java"/><!-- not used, only for javadoc completeness -->
+                <include name="CharRecord.java"/>
+                <include name="CharTransformer.java"/>
+                <include name="Field.java"/>
+                <include name="XMLTransformer.java"/>
+            <!--
+                <include name="QueueTransformer.java"/>
+                <include name="Segment.java"/>
+                <include name="SegmentQueue.java"/>
+            -->
+            </fileset>
+        </copy>
+        <copy todir="${src.home}/org/teherba/dbat">
+            <fileset dir="../dbat/src/main/java/org/teherba/dbat">
+                <include name="Configuration.java"/>
+                <include name="CommandTokenizer.java"/>
+                <include name="DBCPoolingListener"/>
+                <include name="TableColumn"/>
+                <include name="TableMetaData"/>
+            </fileset>
+        </copy>
+        <copy todir="${src.home}/org/teherba/dbat/format">
+            <fileset dir="../dbat/src/main/java/org/teherba/dbat/format">
+                <include name="BaseTable"/>
+            </fileset>
+        </copy>
+		<copy todir="${lib.home}">
+			<fileset dir="../checkdig/dist">
+				<include name="*.jar"/>
+			</fileset>
+			<fileset dir="../numword/dist">
+				<include name="*.jar"/>
+			</fileset>
+		</copy>
+    </target>                                               
+
+    <target name="test.simple">
+        <java classname="org.teherba.gramword.GrammarClient" classpathref="compile.classpath" fork="true">
+            <arg line="de spell" />
+        </java>
+    </target>                                               
+
+    <target name="test" depends="deploy,test.command,test.servlet,test.service,test.queue" />
+    <target name="test.command"><!-- run the program from the commandline -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.GrammarFilter" />
+            <param name="args"  value="web/wordtype/wachstube.txt"/>
+        </antcall>
+    </target>
+    <target name="test.servlet"><!-- call the web page -->
+        <exec executable="lynx">
+            <arg line="-dump http://localhost/gramword/" />
+        </exec>
+    </target>
+    <target name="test.service"><!-- call the webservice -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.GrammarClient"  />
+            <param name="args"  value="lightyear m"              />
+        </antcall>
+    </target>
+
+    <target name="test.queue" depends="test.bibleref,test.konto,test.number,test.wordtype">
+        <!-- mark uppercase words and numbers -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -queue  web/wordtype/quixote0.html web/queue.html"/>
+        </antcall>
+    </target>
+
+    <target name="test.bibleref">
+        <!-- link bible references to online bibles -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -bibleref -enc1 ISO-8859-1 -enc2 ISO-8859-1 web/bibleref/luther_perikope.htm web/bibleref/luther_perikope.html"/>
+        </antcall>
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -bibleref -enc1 ISO-8859-1 -enc2 ISO-8859-1 web/bibleref/wiki_perikope.htm web/bibleref/wiki_perikope.html"/>
+        </antcall>
+    </target>
+
+    <target name="test.konto">
+        <!-- show German account numbers and BLZs -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -konto -enc1 UTF-8 -enc2 UTF-8 web/konto/collect.html web/konto.html"/>
+        </antcall>
+    </target>
+
+    <target name="test.number">
+        <!-- show numbers and their spelling, or parse number words -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -number -enc1 UTF-8 -enc2 UTF-8 web/number/genesis5.html web/number.html"/>
+        </antcall>
+    </target>
+
+    <target name="test.wordtype">
+        <!-- show word types with background colors -->
+        <antcall target="run">
+            <param name="class" value="org.teherba.gramword.MainFilter" />
+            <param name="args"  
+            value="-xml -wordtype web/wordtype/quixote0.html web/wordtype.html"/>
+        </antcall>
+    </target>
+
+</project>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+<html><head>
+<!-- 
+    Sonn- und Feiertage im evangelischen Kirchenjahr
+    2007-02-07, Dr. Georg Fischer <punctum@punctum.com>; Dorothea = 97
+-->
+</head>                  
+<body>                   
+<table>                  
+<tr><td>adv1    </td><td>01</td><td>1. Sonntag im Advent</td><td>Ps 24</td>
+    <td>Siehe, dein König kommt zu dir, ein Gerechter und ein Helfer. Sacharja 9,9</td></tr>
+<tr><td>adv2    </td><td>02</td><td>2. Sonntag im Advent</td><td>Ps 80,2-7; 15-20</td>
+    <td>Seht auf und erhebt eure Häupter, weil sich eure Erlösung naht. Lukas 21, 28</td></tr>
+<tr><td>adv3    </td><td>03</td><td>3. Sonntag im Advent</td><td>Ps 85,2-8</td>
+    <td>Bereitet dem Herrn den Weg; denn siehe, der Herr kommt gewaltig. Jesaja 40, 3.10</td></tr>
+<tr><td>adv4    </td><td>04</td><td>4. Sonntag im Advent</td><td>Ps 102,17-23</td>
+    <td>Freuet euch in dem Herrn allewege, und abermals sage ich: Freuet euch! Der Herr ist nahe! Philipper 4, 4-5</td></tr>
+<tr><td>xmasvesp</td><td>05</td><td>Heiliger Abend - Christvesper</td><td>Ps 96</td>
+    <td>Das Wort ward Fleisch und wohnte unter uns, und wir sahen seine Herrlichkeit. Johannes 1,14b</td></tr>
+<tr><td>xmaseve </td><td>06</td><td>Heiliger Abend - Christnacht</td><td>Ps 2</td>
+    <td>Das Wort ward Fleisch und wohnte unter uns, und wir sahen seine Herrlichkeit. Johannes 1,14b</td></tr>
+<tr><td>xmas1225 </td><td>07</td><td>Christfest - 1. Feiertag</td><td>Ps 96</td>
+    <td>Das Wort ward Fleisch und wohnte unter uns, und wir sahen seine Herrlichkeit. Johannes 1,14b</td></tr>
+<tr><td>steph1226</td><td>08</td><td>Christfest - 2. Feiertag</td><td>Ps 96</td>
+    <td>Das Wort ward Fleisch und wohnte unter uns, und wir sahen seine Herrlichkeit. Johannes 1,14b</td></tr>
+<tr><td>xmas1   </td><td>09</td><td>1. Sonntag nach dem Christfest</td><td>Ps 71,14-18</td>
+    <td>Das Wort ward Fleisch und wohnte unter uns, und wir sahen seine Herrlichkeit. Johannes 1,14b</td></tr>
+<tr><td>silv1231 </td><td>10</td><td>Altjahrsabend: Silvester</td><td>Ps 121</td>
+    <td>Barmherzig und gnädig ist der Herr, geduldig und von großer Güte. Psalm 103,8</td></tr>
+<tr><td>year0101 </td><td>11</td><td>Neujahrstag</td><td>Ps 8</td>
+    <td>Alles, was ihr tut mit Worten oder mit Werken, das tut alles im Namen des Herrn Jesus uns dankt Gott, dem Vater, durch ihn. Kolosser 3,17</td></tr>
+<tr><td>xmas2   </td><td>12</td><td>2. Sonntag nach dem Christfest</td><td>Ps 138,2-5</td>
+    <td>Wir sahen seine Herrlichkeit, eine Herrlichkeit als des eingeborenen Sohnes vom Vater, voller Gnade und Wahrheit. Johannes 1,14</td></tr>
+<tr><td>epi0    </td><td>13</td><td>Epiphanias</td><td>Ps 72,1-3.10-13.19 oder Ps 100</td>
+    <td>Die Finsternis vergeht, und das wahre Licht scheint jetzt. 1. Johannes 2,8b</td></tr>
+<tr><td>epi1    </td><td>14</td><td>1. Sonntag nach Epiphanias</td><td>Ps 89,2-6.20-23.27-30 oder Ps 100</td>
+    <td>Welche der Geist Gottes treibt, die sind Gottes Kinder. Römer 8, 14</td></tr>
+<tr><td>epi2    </td><td>15</td><td>2. Sonntag nach Epiphanias</td><td>Ps 105,1-8 oder Ps 100</td>
+    <td>Das Gesetz ist durch Mose gegeben; die Gnade und Wahrheit ist durch Jesus Christus geworden. Johannes 1, 17</td></tr>
+<tr><td>epi3    </td><td>16</td><td>3. Sonntag nach Epiphanias</td><td>Ps 86,1-11.17 oder Ps 100</td>
+    <td>Es werden kommen von Osten und von Westen, von Norden und von Süden, die zu tisch sitzen werden im Reich Gottes. Lukas 13, 29</td></tr>
+<tr><td>epi4    </td><td>17</td><td>4. Sonntag nach Epiphanias</td><td>Ps 107,1-2.23-32 oder Ps 100</td>
+    <td>Kommt her und sehet an die Werke Gottes, der so wunderbar ist seinem Tun an den Menschenkindern. Psalm 66, 5</td></tr>
+<tr><td>epi5    </td><td>18</td><td>5. Sonntag nach Epiphanias</td><td>Ps 37,1-7a</td>
+    <td>Der Herr wird and Licht bringen, was im Finsternis verborgen ist, und wird das Trachten der Herzen offenbar machen. 1. Korinther 4,5</td></tr>
+<tr><td>epi99   </td><td>19</td><td>Letzter Sonntag nach Epiphanias</td><td>Ps 97 oder Ps 100</td>
+    <td>Über dir geht auf der Herr, und seine Herrlichkeit erscheint über dir. Jesaja 60,2</td></tr>
+<tr><td>lent_3  </td><td>20</td><td>Septuagesimä: 3. Sonntag vor der Passionszeit</td><td>Ps 31,20-25</td>
+    <td>Wir liegen vor dir mit unsrem Gebet und vertrauen nicht auf unsere Gerechtigkeit, sondern auf deine große Barmherzigkeit. Daniel 9, 18</td></tr>
+<tr><td>lent_2  </td><td>21</td><td>Sexagesimä: 2. Sonntag vor der Passionszeit</td><td>Ps 119,89-91.105.116</td>
+    <td>Heute, wenn ihr seine Stimme hören werdet, so verstockt eure Herzen nicht. Hebräer 3, 15</td></tr>
+<tr><td>lent_1  </td><td>22</td><td>Estomihi: Sonntag vor der Passionszeit</td><td>Ps 31,2-6</td>
+    <td>Seht, wir gehen hinauf nach Jerusalem, und es wird alles vollendet werden, was geschrieben ist durch die Propheten von dem Menschensohn. Lukas 18, 31</td></tr>
+<tr><td>lent1   </td><td>23</td><td>Invokavit: 1. Sonntag der Passionszeit</td><td>Ps 91,1-4.11-12</td>
+    <td>Dazu ist erschienen der Sohn Gottes, dass er die Werke des Teufels zerstöre. 1. Johannes 3, 8</td></tr>
+<tr><td>lent2   </td><td>24</td><td>Reminiszere: 2. Sonntag der Passionszeit</td><td>Ps 10,4.11-14.17-18</td>
+    <td>Gott erweist seine Liebe zu uns darin, dass Christus für uns gestorben ist, als wir noch Sünder waren. Römer 5, 8</td></tr>
+<tr><td>lent3   </td><td>25</td><td>Okuli: 3. Sonntag der Passionszeit</td><td>Ps 34; 25,16-23</td>
+    <td>Wer seine Hand an den Pflug legt und sieht zurück, der ist nicht geschickt für das Reich Gottes. Lukas 9, 62</td></tr>
+<tr><td>lent4   </td><td>26</td><td>Lätare: 4. Sonntag der Passionszeit</td><td>Ps 84,6-13</td>
+    <td>Wenn das Weizenkorn nicht in der Erde fällt und erstirbt, bleibt es allein; wenn es aber erstirbt, bringt es viel Frucht. Johannes 12, 24</td></tr>
+<tr><td>lent5   </td><td>27</td><td>Judika: 5. Sonntag der Passionszeit</td><td>Ps 43</td>
+    <td>Der Menschensohn ist nicht gekommen, dass er sich dienen lasse, sondern dass er diene und gebe sein Leben zu einer Erlösung für viele. Matthäus 20, 28</td></tr>
+<tr><td>lent6   </td><td>28</td><td>Palmsonntag: 6. Sonntag der Passionszeit</td><td>Ps 22 oder Ps 24</td>
+    <td>Der Menschensohn muss erhöht werden, damit alle, die an ihn glauben, das ewige Leben haben. Johannes 3, 14-15</td></tr>
+<tr><td>hsupper </td><td>29</td><td>Gründonnerstag: Tag der Einsetzung des Abendmahls</td><td>Ps 111</td>
+    <td>Er hat ein Gedächtnis gestiftet seiner Wunder, der gnädige und barmherzige Herr. Psalm 111,4</td></tr>
+<tr><td>hfriday </td><td>30</td><td>Karfreitag: Tag der Kreuzigung des Herrn</td><td>Ps 22</td>
+    <td>Also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab, damit alle, die an ihn glauben, nicht verloren werden, sondern das ewige Leben haben. Johannes 3, 16</td></tr>
+<tr><td>easteve </td><td>31</td><td>Osternacht</td><td>Ps ???</td>
+    <td>???</td></tr>
+<tr><td>eastsun </td><td>32</td><td>Ostersonntag: Tag der Auferstehung des Herrn</td><td>Ps 118,14-24</td>
+    <td>Christus spricht: Ich war tot, und siehe, ich bin lebendig von Ewigkeit zu Ewigkeit und habe die Schlüssel des Todes und der Hölle. Offenbarung 1, 18</td></tr>
+<tr><td>eastmon </td><td>33</td><td>Ostermontag</td><td>Ps 118,14-24</td>
+    <td>Christus spricht: Ich war tot, und siehe, ich bin lebendig von Ewigkeit zu Ewigkeit und habe die Schlüssel des Todes und der Hölle. Offenbarung 1, 18</td></tr>
+<tr><td>east1   </td><td>34</td><td>Quasimodogeniti: 1. Sonntag nach Ostern</td><td>Ps 116,1-9</td>
+    <td>Gelobt sei Gott, der Vater unseres Herrn Jesus Christus, der uns nach seiner großen Barmherzigkeit wiedergeboren hat zu einer lebendigen Hoffnung durch die Auferstehung Jesu Christi von den Toten. 1. Petrus 1,3</td></tr>
+<tr><td>east2   </td><td>35</td><td>Miserikordias Domini: 2. Sonntag nach Ostern</td><td>Ps 23</td>
+    <td>Christus spricht: Ich bin der gute Hirte. Meine Schafe hören meine Stimme, und ich kenne sie, und sie folgen mir; und ich gebe ihnen das ewige Leben. Johannes 10, 11.27-28</td></tr>
+<tr><td>east3   </td><td>36</td><td>Jubilate: 3. Sonntag nach Ostern</td><td>Ps 34</td>
+    <td>Ist jemand in Christus, so ist er eine neue Kreatur; das Alte ist vergangen, siehe, Neues ist geworden. 2. Korinther 5, 17</td></tr>
+<tr><td>east4   </td><td>37</td><td>Kantate: 4. Sonntag nach Ostern</td><td>Ps 98</td>
+    <td>Singet dem Herrn ein neues Lied, denn er tut Wunder. Psalm 98,1</td></tr>
+<tr><td>east5   </td><td>38</td><td>Rogate: 5. Sonntag nach Ostern</td><td>Ps 95,1-7b</td>
+    <td>Gelobt sei Gott, der meine Gebet nicht verwirft noch seine Güte von mir wendet. Psalm 66, 20</td></tr>
+<tr><td>ascensn </td><td>39</td><td>Christi Himmelfahrt</td><td>Ps 47,2-10</td>
+    <td>Christus spricht: Wenn ich erhöht werde von der Erde, so will ich alle zu mir ziehen. Johannes 12, 32</td></tr>
+<tr><td>east6   </td><td>40</td><td>Exaudi: 6. Sonntag nach Ostern</td><td>Ps 27,1.7-14</td>
+    <td>Christus spricht: Wenn ich erhöht werde von der Erde, so will ich alle zu mir ziehen. Johannes 12, 32</td></tr>
+<tr><td>pent    </td><td>41</td><td>Pfingstsonntag: Tag der Ausgießung des Heiligen Geistes</td><td>Ps 118,24-29</td>
+    <td>Es soll nicht durch Heer oder Kraft, sondern durch meinen Geist geschehen, spricht der Herr Zebaoth. Sacharja 4,6</td></tr>
+<tr><td>pentmon </td><td>42</td><td>Pfingstmontag</td><td>Ps 100</td>
+    <td>Es soll nicht durch Heer oder Kraft, sondern durch meinen Geist geschehen, spricht der Herr Zebaoth. Sacharja 4,6</td></tr>
+<tr><td>trin0   </td><td>43</td><td>Trinitatis: Tag der Dreieinigkeit</td><td>Ps 145</td>
+    <td>Heilig, heilig, heilig ist der Herr Zebaoth, alle Lande sind seiner Ehre voll. Jesaja 6, 3</td></tr>
+<tr><td>trin1   </td><td>44</td><td>1. Sonntag nach Trinitatis</td><td>Ps 34,2-11</td>
+    <td>Christus spricht zu seinen Jüngern: Wer euch hört, der hört mich; und wer euch verachtet, der verachtet mich. Lukas 10, 16</td></tr>
+<tr><td>trin2   </td><td>45</td><td>2. Sonntag nach Trinitatis</td><td>Ps 36,6-11</td>
+    <td>Christus spricht: kommt her zu mir, alle, die ihr mühselig und beladen seid; ich will euch erquicken. Matthäus 11, 28</td></tr>
+<tr><td>trin3   </td><td>46</td><td>3. Sonntag nach Trinitatis</td><td>Ps 103,1-5.8-13</td>
+    <td>Der Menschensohn ist gekommen, zu suchen und selig zu machen, was verloren ist. Lukas 19,10</td></tr>
+<tr><td>trin4   </td><td>47</td><td>4. Sonntag nach Trinitatis</td><td>Ps 42,2-12</td>
+    <td>Einer trage des anderen Last, so werdet ihr das Gesetz Christi erfüllen. Galater 6, 2</td></tr>
+<tr><td>trin5   </td><td>48</td><td>5. Sonntag nach Trinitatis</td><td>Ps 73,14.23-26.28</td>
+    <td>Aus Gnade seid ihr selig geworden durch den Glauben, und das nicht aus euch: Gottes Gabe ist es. Epheser 2, 8</td></tr>
+<tr><td>trin6   </td><td>49</td><td>6. Sonntag nach Trinitatis</td><td>Ps 139,1-16.23-24</td>
+    <td>So spricht der Herr, der dich geschaffen hat: Fürchte dich nicht, denn ich habe dich erlöst; ich habe dich bei deinem Namen gerufen; du bist mein! Jesaja 43, 1</td></tr>
+<tr><td>trin7   </td><td>50</td><td>7. Sonntag nach Trinitatis</td><td>Ps 107,1-9</td>
+    <td>So seid ihr nun nicht mehr Gäste und Fremdlinge, sondern Mitbürger der Heiligen und Gottes Hausgenossen. Epheser 2, 19</td></tr>
+<tr><td>trin8   </td><td>51</td><td>8. Sonntag nach Trinitatis</td><td>Ps 48,2-3a.9-11</td>
+    <td>Lebt als Kinder des Lichts; die Frucht des Lichts ist lauter Güte und Gerechtigkeit und Wahrheit. Epheser 5, 8-9</td></tr>
+<tr><td>trin9   </td><td>52</td><td>9. Sonntag nach Trinitatis</td><td>Ps 40,9-12</td>
+    <td>Wem viel gegeben ist, bei dem wird man viel suchen; und wem viel anvertraut ist, von dem wird man um so mehr fordern. Lukas 12, 48</td></tr>
+<tr><td>trin10  </td><td>53</td><td>10. Sonntag nach Trinitatis</td><td>Ps 74,1-3.8-11.20-21</td>
+    <td>Wohl dem Volk, dessen Gott der Herr ist, dem Volk, das er zum Erbe erwählt hat! Psalm 33, 12</td></tr>
+<tr><td>trin11  </td><td>54</td><td>11. Sonntag nach Trinitatis</td><td>Ps 113,1-8</td>
+    <td>Gott widersteht den Hochmütigen, aber den Demütigen gibt er Gnade. 1. Petrus 5,5</td></tr>
+<tr><td>trin12  </td><td>55</td><td>12. Sonntag nach Trinitatis</td><td>Ps 147,-3.11-14a</td>
+    <td>Das geknickte Rohr wird er nicht zerbrechen, und den glimmemden Docht wird er nicht auslöschen. Jesaja 42,3</td></tr>
+<tr><td>trin13  </td><td>56</td><td>13. Sonntag nach Trinitatis</td><td>Ps 112,5-9</td>
+    <td>Christus spricht: Was ihr getan habt einem von diesen meinen geringsten Brüdern, das habt ihr mir getan. Matthäus 25, 40</td></tr>
+<tr><td>trin14  </td><td>57</td><td>14. Sonntag nach Trinitatis</td><td>Ps 146</td>
+    <td>Lobe den Herrn, meine Seele, und vergiss nicht, was er dir Gutes getan hat. Psalm 103, 2</td></tr>
+<tr><td>trin15  </td><td>58</td><td>15. Sonntag nach Trinitatis</td><td>Ps 127,1-2</td>
+    <td>Alle eure Sorge werft auf ihn; denn er sorgt für euch. 1. Petrus 5, 7</td></tr>
+<tr><td>trin16  </td><td>59</td><td>16. Sonntag nach Trinitatis</td><td>Ps 68,1-7a.20-21</td>
+    <td>Christus Jesus hat dem Tod die Macht genommen und das Leben und ein unvergängliches Wesen ans Licht gebracht durch das Evangelium. 2. Timotheus 1, 10</td></tr>
+<tr><td>trin17  </td><td>60</td><td>17. Sonntag nach Trinitatis</td><td>Ps 25,8-15</td>
+    <td>Unser Glaube ist der Sieg, der die Welt überwunden hat. 1. Johannes 5, 4</td></tr>
+<tr><td>trin18  </td><td>61</td><td>18. Sonntag nach Trinitatis</td><td>Ps 1</td>
+    <td>Dies Gebot haben wir von ihm, dass, wer Gott liebt, dass der auch seinen Bruder liebe. 1. Johannes 4, 21</td></tr>
+<tr><td>trin19  </td><td>62</td><td>19. Sonntag nach Trinitatis</td><td>Ps 32,1-5.10-11</td>
+    <td>Heile du mich, Herr, so werde ich heil; hilf du mir, so ist mir geholfen. Jeremia 17, 14</td></tr>
+<tr><td>trin20  </td><td>63</td><td>20. Sonntag nach Trinitatis</td><td>Ps 119,101-108</td>
+    <td>Es ist dir gesagt, Mensch, was gut ist und was der Herr von dir fordert, nämlich Gottes Wort halten und Liebe üben und demütig sein vor deinem Gott. Micha 6, 8</td></tr>
+<tr><td>trin21  </td><td>64</td><td>21. Sonntag nach Trinitatis</td><td>Ps 19,10-15</td>
+    <td>Lass dich nicht vom Bösen überwinden, sondern überwinde das Böse mit Gutem. Römer 12, 21</td></tr>
+<tr><td>trin22  </td><td>65</td><td>22. Sonntag nach Trinitatis</td><td>Ps 143,1-10</td>
+    <td>Bei dir ist Vergebung, dass man dich fürchte. Psalm 130, 4</td></tr>
+<tr><td>trin23  </td><td>66</td><td>23. Sonntag nach Trinitatis</td><td>Ps 33,13-22</td>
+    <td>Dem König aller Könige und Herrn aller Herren, der allein Unsterblichkeit hat, dem sei Ehre und ewige Macht! 1. Timotheus 6, 15-16</td></tr>
+<tr><td>trin24  </td><td>67</td><td>24. Sonntag nach Trinitatis</td><td>Ps 39,5-8</td>
+    <td>Mit Freuden sagt Dank dem Vater, der euch tüchtig gemacht hat zu dem Erbteil der Heiligen im Licht. Kolosser 1, 12</td></tr>
+<tr><td>trin97  </td><td>68</td><td>Drittletzter Sonntag des Kirchenjahres</td><td>Ps 90,1-14.(15-17)</td>
+    <td>Siehe, jetzt ist die Zeit der Gnade, siehe, jetzt ist der Tag der Heils! 2. Korinther 6, 2</td></tr>
+<tr><td>trin98  </td><td>69</td><td>Volkstrauertag: Vorletzter Sonntag des Kirchenjahres</td><td>Ps 50,1.4-6.14-15.23</td>
+    <td>Wir müssen alle offenbar werden vor dem Richterstuhl Christi. 2. Korinther 5, 10</td></tr>
+<tr><td>bussbet </td><td>70</td><td>Buß- und Bettag</td><td>Ps 51,3-14</td>
+    <td>Gerechtigkeit erhöht ein Volk; aber die Sünde ist der Leute Verderben. Sprüche 14, 34</td></tr>
+<tr><td>trin99  </td><td>71</td><td>Ewigkeitssonntag: / Letzter Sonntag des Kirchenjahres</td><td>Ps 126</td>
+    <td>Lasst eure Lenden umgürtet sein und eure Lichter brennen. Lukas 12, 35</td></tr>
+<tr><td>erntedank</td><td>72</td><td>Erntedankfest</td><td>Ps 104,10-15.27-30</td>
+    <td>Aller Augen warten auch dich, und du gibst ihnen Speise zur rechten Zeit. Psalm 145, 15</td></tr>
+<tr><td>reform1031</td><td>73</td><td>Reformationstag: 31. Oktober</td><td>Ps 46,2-8</td>
+    <td>Einen anderen Grund kann niemand legen als den, der gelegt ist, welcher ist Jesus Christus. 1. Korinther 3, 11</td></tr>
+</table>                 
+</body></html>           

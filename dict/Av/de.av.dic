@@ -1,0 +1,260 @@
+# German adverbs and other undeclinable words
+# @(#) $Id: de.av.dic 564 2010-10-19 16:29:18Z gfis $
+# 2010-10-18: tagsüber
+# 2006-08-02: vorn(e), hinten
+# 2006-06-26, Dr. Georg Fischer: UTF-8, äöüÄÖÜß
+#
+da              =Un
+so              =Un
+auch            =Un
+nicht           =Un
+fast            =Un
+doch            =Un
+vielleicht      =Un
+einher          =Un
+weiter          =Un
+sehr            =Un
+mehr            =Un
+nur             =Un
+gar             =Un
+sogar           =Un
+nicht           =Un 
+etwa            =Un
+etwas           =Un
+dort            =Un
+hier            =Un
+nichts          =Av
+mitten          =Un
+behufs          =Av
+zwecks          =Av
+
+allerhand       =Av
+sonst           =Av
+
+# Frequency ... wie oft
+allenfalls      =AvFreq
+selten          =AvFreq
+kaum            =AvFreq
+wieder          =AvFreq
+# häufig        =AvFreq
+meistens        =AvFreq
+wenigstens      =AvFreq
+oft             =AvFreq
+öfter           =AvFreq
+öfters          =AvFreq
+nie             =AvFreq
+immer           =AvFreq
+stets           =AvFreq
+jeweils         =AvFreq
+jemals          =AvFreq
+niemals         =AvFreq
+vielmals        =AvFreq
+abermals        =AvFreq
+nimmer          =AvFreq
+# manchmal      =AvFreq
+# einmal        =AvFreq
+# zwei-, drei- ... all numbers, or "zwei Mal" ...
+# keinmal       =AvFreq
+# diesmal       =AvFreq
+# vollends      =AvFreq
+
+# Modal ... wie?
+allerdings      =AvModl
+außerdem        =AvModl
+beispielsweise  =AvModl
+besonders       =AvModl
+bitte           =AvModl
+circa           =AvModl
+zurecht         =AvModl
+ebenso          =AvModl
+leider          =AvModl
+nebst           =AvModl
+also            =AvModl
+durchaus        =AvModl
+keineswegs      =AvModl
+mindestens      =AvModl
+mittels         =AvModl
+nahezu          =AvModl
+straks          =AvModl
+gern            =AvModl
+gerne           =AvModl
+anders          =AvModl
+vielmehr        =AvModl
+vollends        =AvModl
+überhaupt       =AvModl
+zustande        =AvModl
+zunutze         =AvModl
+zugrunde        =AvModl
+drob            =AvShorModlAnct darob       AvModlAnct
+darob           =AvModlAnct
+drum            =AvShorModl     darum       AvModl
+darum           =AvModl
+unbeschadet     =AvModl
+
+# Causal ... warum?
+deswegen        =AvCaus
+deshalb         =AvCaus
+
+# Time related ... wann?
+abends          =AvTime
+allenthalben    =AvTime
+alsbald         =AvTime
+bald            =AvTime
+bereits         =AvTime
+bisher          =AvTime
+bislang         =AvTime
+bisweilen       =AvTime
+damals          =AvTime
+eher            =AvTime
+erneut          =AvTime
+frühmorgens     =AvTime
+gestern         =AvTime
+heute           =AvTime
+inzwischen      =AvTime
+jetzt           =AvTime
+morgen          =AvTime
+morgens         =AvTime
+nachts          =AvTime
+nun             =AvTime
+schließlich     =AvTime
+seither         =AvTime
+sofort          =AvTime
+solange         =AvTime
+sommers         =AvTime
+spätabends      =AvTime
+tags            =AvTime
+tagsüber        =AvTime
+vorgestern      =AvTime
+vorvorgestern   =AvTime
+wiederum        =AvTime
+winters         =AvTime
+zuerst          =AvTime
+zuletzt         =AvTime
+zunächst        =AvTime
+übermorgen      =AvTime
+überübermorgen  =AvTime
+montags         =AvTime
+dienstags       =AvTime
+mittwochs       =AvTime
+donnerstags     =AvTime
+freitags        =AvTime
+samstags        =AvTime
+sonntags        =AvTime
+werktags        =AvTime
+feiertags       =AvTime
+werktags        =AvTime
+wochentags      =AvTime
+mittags         =AvTime
+vormittags      =AvTime
+nachmittags     =AvTime
+
+# Location ... wo
+links           =AvLoct
+rechts          =AvLoct
+
+innen           =AvPrimLoct
+außen           =AvPrimLoct
+oben            =AvPrimLoct
+unten           =AvPrimLoct
+vorn            =AvPrimLoct
+vorne           =AvPrimLoct
+hinten          =AvPrimLoct
+
+dran            =AvShorLoct     daran       AvLoct
+daran           =AvLoct
+drauf           =AvShorLoct     darauf      AvLoct
+darauf          =AvLoct
+draußen         =AvLoct
+draus           =AvShorLoct     daraus      AvLoct
+daraus          =AvLoct
+drinnen         =AvLoct
+drin            =AvShorLoct     darin       AvLoct
+darin           =AvLoct
+droben          =AvLoct
+drüben          =AvLoct
+drunten         =AvLoct
+darunten        =AvLoct
+drüber          =AvShorLoct     darüber     AvLoct
+darüber         =AvLoct
+drunter         =AvShorLoct     darunter    AvLoct
+darunter        =AvLoct
+dahinter        =AvLoct
+dahinten        =AvLoct
+daneben         =AvLoct
+
+entlang         =AvLoct
+unterwegs       =AvLoct
+anderswo        =AvLoct
+außerhalb       =AvLoct
+innerhalb       =AvLoct
+oberhalb        =AvLoct
+unterhalb       =AvLoct
+
+# Movement related ... wohin
+drein           =AvShorMove     darein      AvMove
+darein          =AvMove
+zurück          =AvMove
+gen             =AvMove
+quer            =AvMove
+schräg          =AvMove
+empor           =AvMove
+voraus          =AvMove
+voran           =AvMove
+hinauf          =AvMove
+herab           =AvMove
+heran           =AvMove
+hinab           =AvMove
+herunter        =AvMove
+hinunter        =AvMove
+entgegen        =AvMove
+gegen           =AvMove
+
+# Person related ... mit wem, wie
+allein          =AvPers
+einzeln         =AvPers
+# gemeinsam     =AvPers
+# alle          =AvPers
+zusammen        =AvPers
+beisammen       =AvPers
+
+# # Person related ... in welcher Anordnung
+einander        =AvPers
+# aneinander    =AvPers
+# aufeinander   =AvPers
+# auseinander   =AvPers
+# beieinander   =AvPers
+# durcheinander =AvPers
+# füreinander   =AvPers
+# gegeneinander =AvPers
+# hintereinander=AvPers
+# ineinander    =AvPers
+# miteinander   =AvPers
+# nacheinander  =AvPers
+# nebeneinander =AvPers
+# übereinander  =AvPers
+# umeinander    =AvPers
+# untereinander =AvPers
+# voneinander   =AvPers
+# voreinander   =AvPers
+# zueinander    =AvPers
+
+allerseits      =AvLoct
+beiderseits     =AvLoct
+einerseits      =AvLoct
+andererseits    =AvLoct
+längsseits      =AvLoct
+diesseits       =AvLoct
+jenseits        =AvLoct
+
+angesichts      =Av
+anscheinend     =Av
+
+außerhalb       =AvLoct
+innerhalb       =AvLoct
+oberhalb        =AvLoct
+unterhalb       =AvLoct
+weshalb         =AvLoct
+deshalb         =Av
+
+außerstande     =AvModl
+imstande        =AvModl

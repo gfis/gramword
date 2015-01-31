@@ -1,0 +1,35 @@
+Bemmchen	SbSgNtDimt	Bemme	SbSgFm
+Bienchen	SbSgNtDimt	Biene	SbSgFm
+Blondchen	SbSgNtDimtPers	Blonde	SbSgFmPers
+Eckchen	SbSgNtDimt	Ecke	SbSgFm
+Endchen	SbSgNtDimt	Ende	SbSgFm
+Entchen	SbSgNtDimtZool	Ente	SbSgFmZool
+Fleckchen	SbSgNtDimt	Fleck	SbSgMs
+Herzchen	SbSgNtDimt	Herz	SbSgNtBody
+Jungchen	SbSgNtDimtPers	Junge	SbSgMsPers
+Kehlchen	SbSgNtDimt	Kehle	SbSgFmBody
+Kettchen	SbSgNtDimt	Kette	SbSgFm
+Kitzchen	SbSgNtDimt	Kitz	SbSgNt
+Kleinchen	SbSgNtDimtPers	Kleine	SbSgFmPers
+Leutchen	SbSgNtDimtPers	Leute	SbPlPers
+Lichtchen	SbSgNtDimt	Lichte	SbSgNt
+Liebchen	SbSgNtDimtPers	Liebe	SbSgFm
+Lottchen	NmFmPrenDimt	Lotte	NmFmPren
+Miezchen	SbSgNtDimtZool	Mieze	SbSgFmZool
+Mine	SbSgFm
+Nixchen	SbSgNtDimtPers	Nixe	SbSgFm
+Pate	SbSgFmPers
+Prischen	SbSgNtDimt	Prise	SbSgFm
+Quelle	SbSgFm
+Rippchen	SbSgNtDimtNutr	Rippe	SbSgFmBody
+Scheibchen	SbSgNtDimt	Scheibe	SbSgFm
+Schippchen	SbSgNtDimt	Schippe	SbSgFm
+Seelchen	SbSgNtDimt	Seele	SbSgFm
+Stimmchen	SbSgNtDimt	Stimme	SbSgFm
+Stovchen	SbSgNtDimt
+Tantchen	SbSgNtDimtPers	Tante	SbSgFmPers
+Traudchen	NmFmPrenDimt	Traude	NmFmPren
+Trautchen	NmFmPrenDimt	Traute	NmFmPren
+Treppchen	SbSgNtDimt	Treppe	SbSgFm
+Trudchen	NmFmPrenDimt	Trude	NmFmPren
+Weilchen	SbSgNtDimt	Weile	SbSgFm

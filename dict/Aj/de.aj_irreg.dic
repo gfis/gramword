@@ -1,0 +1,71 @@
+# @(#) $Id: de.aj_irreg.dic 36 2008-09-08 06:05:06Z gfis $
+# German primary adjectives with irregular comparative and/or superlative
+# - umlaut
+# - omission of "e"
+# 2006-09-02, Georg Fischer
+# caution, UTF-8: äöüÄÖÜß
+#
+älter		=AjCmpr,alt,AjPost
+ältest		=AjSupl,alt,AjPost
+ärger		=AjCmpr,arg,AjPost
+ärgst		=AjSupl,arg,AjPost
+ärmer		=AjCmpr,arm,AjPost
+ärmst		=AjSupl,arm,AjPost
+bräver		=AjCmpr,brav,AjPost
+brävst		=AjSupl,brav,AjPost
+dümmer		=AjCmpr,dumm,AjPost
+dümmst		=AjSupl,dumm,AjPost
+dunkler		=AjCmpr,dunkel,AjPost
+dunkelst	=AjSupl,dunkel,AjPost
+edler		=AjCmpr,edel,AjPost
+edelst		=AjSupl,edel,AjPost
+frömmer		=AjCmpr,fromm,AjPost
+frömmst		=AjSupl,fromm,AjPost
+gesünder	=AjCmpr,gesund,AjPost
+gesündest	=AjSupl,gesund,AjPost
+gröber		=AjCmpr,grob,AjPost
+gröbst		=AjSupl,grob,AjPost
+größer		=AjCmpr,groß,AjPost
+größt		=AjSupl,groß,AjPost
+besser		=AjCmpr,gut,AjPost
+best		=AjSupl,gut,AjPost
+härter		=AjCmpr,hart,AjPost
+härtest		=AjSupl,hart,AjPost
+heikler		=AjCmpr,heikel,AjPost
+heikelst	=AjSupl,heikel,AjPost
+höher		=AjCmpr,hoch,AjPost
+höchst		=AjSupl,hoch,AjPost
+jünger		=AjCmpr,jung,AjPost
+jüngst		=AjSupl,jung,AjPost
+kälter		=AjCmpr,kalt,AjPost
+kältest		=AjSupl,kalt,AjPost
+klüger		=AjCmpr,klug,AjPost
+klügst		=AjSupl,klug,AjPost
+kränker		=AjCmpr,krank,AjPost
+kränkest	=AjSupl,krank,AjPost
+länger		=AjCmpr,lang,AjPost
+längst		=AjSupl,lang,AjPost
+näher		=AjCmpr,nah,AjPost
+nächst		=AjSupl,nah,AjPost
+nässer		=AjCmpr,nass,AjPost
+nässest		=AjSupl,nass,AjPost
+röter		=AjCmpr,rot,AjPost
+rötest		=AjSupl,rot,AjPost
+schärfer	=AjCmpr,scharf,AjPost
+schärfst	=AjSupl,scharf,AjPost
+schwächer	=AjCmpr,schwach,AjPost
+schwächst	=AjSupl,schwach,AjPost
+schwärzer	=AjCmpr,schwarz,AjPost
+schwärzest	=AjSupl,schwarz,AjPost
+simpler		=AjCmpr,simpel,AjPost
+simpelst	=AjSupl,simpel,AjPost
+stärker		=AjCmpr,stark,AjPost
+stärkst		=AjSupl,stark,AjPost
+teurer		=AjCmpr,teuer,AjPost
+teurst		=AjSupl,teuer,AjPost
+mehr		=AjCmpr,viel,AjPost
+meist		=AjSupl,viel,AjPost
+wärmer		=AjCmpr,warm,AjPost
+wärmst		=AjSupl,warm,AjPost
+übler		=AjCmpr,übel,AjPost
+übelst		=AjSupl,übel,AjPost

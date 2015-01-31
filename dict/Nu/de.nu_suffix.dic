@@ -1,0 +1,144 @@
+# endings of words related to numbers
+# @(#) $Id: de.nu_suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# caution, must be stored in UTF8: äöüÄÖÜß
+# 2006-07-19, Georg Fischer
+#
+%locale =de
+
+# adverbs
+erlei			=AvNumrFreq
+mal				=AvNumrFreq
+stens			=AvNumrOrdn
+tens			=AvNumrOrdn
+
+# substantives - rational 
+stel			=SbNumrRatnNt
+tel				=SbNumrRatnNt
+er				=SbSgMsNumr
+
+# ordinal
+ste				=AjSgNumrOrdnMs
+stes			=AjSgNumrOrdnNt
+ste				=AjNumrOrdn
+ter				=AjSgNumrOrdnMs
+te				=AjSgNumrOrdnFm
+te				=AjSgNumrOrdnNt
+ten				=AjNumrOrdnPl
+tes				=AjNumrOrdnNt
+
+
+# adjective endings prefixed with numbers
+fach			=AjSuffNumr
+malig			=AjSuffNumr
+stenmal			=AjSuffNumr
+tenmal			=AjSuffNumr
+
+achsig			=AjSuffNumr,Achse,SbSgFm
+adrig       	=AjSuffNumr,Ader,SbSgFm
+armig       	=AjSuffNumr,Arm,SbSgMs
+äugig       	=AjSuffNumr,Auge,SbSgNtBody
+bahnig      	=AjSuffNumr,Bahn,SbSgFm
+bändig      	=AjSuffNumr,Band,SbSgMs
+beinig      	=AjSuffNumr,Bein,SbSgNtBody
+blättrig    	=AjSuffNumr,Blatt,SbSgNtBota
+buchstabig  	=AjSuffNumr,Buchstabe,SbSgMs
+dimensional 	=AjSuffNumr,Dimension,SbSgFm
+düsig       	=AjSuffNumr,Düse,SbSgFm
+eckig       	=AjSuffNumr,Ecke,SbSgFm
+eiig        	=AjSuffNumr,Ei,SbSgNt
+faltig      	=AjSuffNumr,Falte,SbSgFm
+fältig      	=AjSuffNumr,Fall,SbSgFm
+farbig      	=AjSuffNumr,Farbe,SbSgFm
+fingrig     	=AjSuffNumr,Finger,SbSgMsBody
+flächig     	=AjSuffNumr,Fläche,SbSgFm
+flammig     	=AjSuffNumr,Flamme,SbSgFm
+flügelig    	=AjSuffNumr,Flügel,SbSgMs
+füßig       	=AjSuffNumr,Fuß,SbSgFmBody
+gängig      	=AjSuffNumr,Gang,SbSgMs
+geteilt     	=AjSuffNumr,Teil,SbSgMs
+gleisig     	=AjSuffNumr,Gleis,SbSgNt
+gliedrig    	=AjSuffNumr,Glied,SbSgNt
+händig      	=AjSuffNumr,Hand,SbSgFmBody
+hebig       	=AjSuffNumr,Hebe,SbSgFm
+jährig      	=AjSuffNumr,Jahr,SbSgNtTime
+jährlich    	=AjSuffNumr,Jahr,SbSgNtTime
+klassig     	=AjSuffNumr,Klasse,SbSgFm
+köpfig      	=AjSuffNumr,Kopf,SbSgMsBody
+löchrig     	=AjSuffNumr,Loch,SbSgNt
+# metrig    	=AjSuffNumr,Meter,SbSgMsMeas
+minütig     	=AjSuffNumr,Minute,SbSgFmTime
+minütlich   	=AjSuffNumr,Minute,SbSgFmTime
+monatig     	=AjSuffNumr,Monat,SbSgMsTime
+monatlich   	=AjSuffNumr,Monat,SbSgMsTime
+motorig     	=AjSuffNumr,Motor,SbSgMs
+prozentig   	=AjSuffNumr,Prozent,SbSgNt
+rädrig      	=AjSuffNumr,Rad,SbSgNt
+rangig      	=AjSuffNumr,Rang,SbSgMs
+reihig      	=AjSuffNumr,Reihe,SbSgFm
+# dreirippig	=AjSuffNumr,Rippe,SbSgFm
+schichtig   	=AjSuffNumr,Schicht,SbSgFm
+schiffig    	=AjSuffNumr,Schiff,SbSgNt
+seitig      	=AjSuffNumr,Seite,SbSgFm
+# sekündig  	=AjSuffNumr,Sekunde,SbSgFmTime
+sekündlich  	=AjSuffNumr,Sekunde,SbSgFmTime
+silbig      	=AjSuffNumr,Silbe,SbSgFm
+sitzig      	=AjSuffNumr,Sitz,SbSgMs
+spaltig     	=AjSuffNumr,Spalte,SbSgFm
+spännig     	=AjSuffNumr,Gespann,SbSgNt
+spitzig     	=AjSuffNumr,Spitze,SbSgFm
+sprachig    	=AjSuffNumr,Sprache,SbSgFm
+spurig      	=AjSuffNumr,Spur,SbSgFm
+stellig     	=AjSuffNumr,Stelle,SbSgFm
+stielig     	=AjSuffNumr,Stiel,SbSgMs
+stimmig     	=AjSuffNumr,Stimme,SbSgFm
+stöckig     	=AjSuffNumr,Stock,SbSgMs
+strahlig    	=AjSuffNumr,Strahl,SbSgMs
+strophig    	=AjSuffNumr,Strophe,SbSgFm
+stufig      	=AjSuffNumr,Stufe,SbSgFm
+stündig     	=AjSuffNumr,Stunde,SbSgFmTime
+stündlich   	=AjSuffNumr,Stunde,SbSgFmTime
+taktig      	=AjSuffNumr,Takt,SbSgMs
+tägig       	=AjSuffNumr,Tag,SbSgMsTime
+teilig      	=AjSuffNumr,Teil,SbSgMs
+tönig       	=AjSuffNumr,Ton,SbSgMs
+türig       	=AjSuffNumr,Tür,SbSgFm
+türmig      	=AjSuffNumr,Turm,SbSgMs
+wöchig      	=AjSuffNumr,Woche,SbSgFmTime
+wöchentlich 	=AjSuffNumr,Woche,SbSgFmTime
+zeilig      	=AjSuffNumr,Zeile,SbSgFm
+zackig      	=AjSuffNumr,Zacke,SbSgFm
+zimmrig     	=AjSuffNumr,Zimmer,SbSgFm
+zinkig      	=AjSuffNumr,Zinke,SbSgFm
+züngig      	=AjSuffNumr,Zunge,SbSgFmBody
+
+akter			=SbSuffNumrSgMs
+bettzimmer      =SbSuffNumrSgNt
+eck             =SbSuffNumrSgNt
+familienhaus    =SbSuffNumrSgNt
+füßler          =SbSuffNumrSgMs
+gang            =SbSuffNumrSgMs
+gespann         =SbSuffNumrSgNt
+gestirn         =SbSuffNumrSgNt
+kammersystem    =SbSuffNumrSgNt
+kampf           =SbSuffNumrSgMs
+kanal           =SbSuffNumrSgMs
+kant            =SbSuffNumrSgMs
+kilometermarsch =SbSuffNumrSgMs
+kilometerzone   =SbSuffNumrSgFm
+klang           =SbSuffNumrSgMs
+korn            =SbSuffNumrSgNt
+master          =SbSuffNumrSgMs
+meterlauf       =SbSuffNumrSgMs
+personenhaushalt=SbSuffNumrSgMs
+rad             =SbSuffNumrSgNt
+raumwohnung     =SbSuffNumrSgFm
+sitzer          =SbSuffNumrSgMs
+stundentakt     =SbSuffNumrSgMs
+strahler        =SbSuffNumrSgMs
+ertakt          =SbSuffNumrSgMs
+eltakt          =SbSuffNumrSgMs
+takter          =SbSuffNumrSgMs
+teiler          =SbSuffNumrSgMs
+zack            =SbSuffNumrSgMs
+zeiler          =SbSuffNumrSgMs
+zylindermotor   =SbSuffNumrSgMs

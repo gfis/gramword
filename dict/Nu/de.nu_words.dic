@@ -1,0 +1,27 @@
+# words related to numbers
+# @(#) $Id: de.nu_words.dic 36 2008-09-08 06:05:06Z gfis $
+# caution, must be stored in UTF8: äöüÄÖÜß
+# 2006-07-19, Georg Fischer
+# normal number words are recognized by numword.DeuSpeller
+#
+%locale =de
+halb		=Nu.0-5
+
+dutzend		=Nu.12
+Dutzend		=SbSgNtNumr.12
+doppelt		=Aj.2
+
+Doppel		=SbSgNtNumr.2
+Tripel		=SbSgNtNumr.3
+Quadrupel	=SbSgNtNumr.4
+Hälfte		=SbSgFmNumr.0-5
+
+Solo		=SbSgNtNumrMusi.1
+Duo			=SbSgNtNumrMusi.2
+Duett		=SbSgNtNumrMusi.2
+Trio		=SbSgNtNumrMusi.3
+Quartett	=SbSgNtNumrMusi.4
+Quintett	=SbSgNtNumrMusi.5
+Sextett		=SbSgNtNumrMusi.6
+Septett		=SbSgNtNumrMusi.7
+Oktett		=SbSgNtNumrMusi.8

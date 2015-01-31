@@ -1,0 +1,139 @@
+<!--
+    @(#) $Id: decisions.html 36 2008-09-08 06:05:06Z gfis $
+    2006-07-24, Georg Fischer 
+    caution, must be stored in UTF-8:äöüÄÖÜß
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Decisions</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+</head>
+
+<body>
+<h2>Decision Algorithm for Morphem Determination</h2>
+<p>
+The grammatical type of a word is determined by a tree (lattice) of tests.
+Each test tries to match the word in question or some derivation
+thereof against the tables in the database.
+</p><p>
+
+The following tests are implemented:
+</p>
+<ol>
+<li><h3>Table Lookup Tests</h3>
+These tests try to find the word or parts thereof in a database table. 
+For the root and ending tests, an ordered, limited number of entries which
+is less or equal than the word in question is examined.
+</li>
+    <dl>
+    <dt>Exact Match</dt>
+        <dd>The word is looked up in table <strong><em>words</em></strong> exactly as it was written.
+        This table currently contains:
+        <ul>
+            <li>8360 conjugated forms of strong verbs</li>
+            <li>470 most common pronouns, prepositions an other short words</li>
+            <li>37 number word particles</li>
+            <li>100 adverbs</li>
+            <li>96 words related to time</li>
+            <li>1049 most common first names</li>
+            <li>1162 most common last names</li>
+            <li>227 names of big German cities</li>
+        </ul>
+        </dd>
+    <dt>Word Root</dt>
+        <dd>Search for a left substring of the word in table <strong><em>roots</em></strong> .
+        This table contains:
+        <ul>
+            <li>11000 roots of weak verbs ending on <em>-en</em>, <em>-eln</em> and <em>-ern</em>, 
+                with various prefixes</li>
+            <li>1927 (foreign) roots of weak verbs ending on <em>-ieren</em> with prefixes </li>
+            <li>27 adjectives forcolors</li>
+            <li>145 adjectives with irregular comparision forms</li>
+            <li>169 adjectives related to quantities</li>
+            <li>300 "primary" adjectives 
+                which are not derived from substantives, verbs or other adjectives</li>
+            <li>4900 "primary" substantives and names (1 syllable + optional ending 
+                <em>-e</em>, <em>-en</em>, <em>-el</em>, <em>-en</em>, <em>-er</em>) </li>
+        </ul>
+        </dd>
+    <dt>Word Ending</dt>
+        <dd>Search for a right substring of the word in table <strong><em>xiffus</em></strong> 
+        (<em>suffix</em> spelled backwards).
+        The table contains:
+        <ul>
+            <li>122 common endings of substantives</li>
+            <li>8360 conjugated forms of strong verbs</li>
+            <li>684 common endings of adjectives, 
+                declinated through all genders, cases and numbers</li>
+            <li>12 common adverb endings</li>
+        </ul>
+        In order to find a word in the entries of this table, 
+        the character order of the word and of the entries is reversed. 
+        </dd>
+    </dl>
+</li>
+<li><h3>Algorithmic Tests</h3>
+    <dl>
+    <dt>Number word</dt>
+        <dd>Test whether the word starts with a German number word 
+        (eventually followed by an adjective suffix like <em>-fach</em>, <em>-spurig</em>), 
+        algorithmically with the aid of Java package <strong><em>numword</em></strong>.
+        </dd>
+    <dt>Digits</dt>
+        <dd>Test whether the word consists of a sequence of digits ("0" ... "9") only.
+        </dd>
+    </dl>
+</li>
+<li><h3>Variant Tests</h3>
+    The word in question is modified, and then the table lookup tests are retried.
+    <dl>
+    <dt>Lower Case</dt>
+        <dd>Words starting with upper case are retried with lower case 
+        (case error, new writing rules, unrecognized sentence start, 
+        substantivated verb or adjective).
+        </dd>
+    <dt>Upper Case</dt>
+        <dd>Words starting with lower case are retried with upper case 
+        (case error, new writing rules).
+        </dd>
+    <dt>-ge-</dt>
+        <dd>Retry the word after removing an embedded syllable <em>ge</em> 
+        (e.g. <em>auf<strong>ge</strong>spalten</em>). 
+        </dd>
+    <dt>-zu-</dt>
+        <dd>Retry the word after removing an embedded syllable <em>zu</em> 
+        (e.g. <em>auf<strong>zu</strong>geben</em>). 
+        </dd>
+    </dl>
+    <p>
+    The system allows that umlauts and the s-zet character 
+    to be expanded in the text (ä &gt; ae, ß > ss etc.).
+    All words with such characters are stored in the tables a second time, 
+    in expanded form, with an "explicit replacement" morphem 
+    which points to the "correct" writing
+    (with regard to the new German writing rules since 1996).
+    </p>
+</li>
+</ol>
+    Back to the <a href="../index.jsp">gramword</a> start page
+</body>
+</html>

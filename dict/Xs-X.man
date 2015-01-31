@@ -1,0 +1,45 @@
+Aas	SbSgNt
+Bries	SbSgNtNutr	
+Brie	SbSgMsNutr
+Charts	SbPlForgEn	Chart	SbSgFmForgEn
+Dachs	SbSgMsZool	
+Dach	SbSgNt
+Dings	SbGe	Ding	SbSgNt
+Fonds	SbSgMsForgEn
+Fond	SbSgMsForgFr
+Gas	SbSgNt
+Grass	NmSurn	
+Gras	SbSgMs
+Grips	SbSgMs	
+Grip	SbSgMsForgEn
+Hand	SbSgFm
+Haus	SbSgNt
+Kids	SbPlForgEn	Kid	SbSgNt
+Knacks	SbSgMs	knacken	VbIn
+Knicks	SbSgMs	knicken	VbIn
+Knies	SbSgMs	
+Knie	SbSgNtBody
+Kurs	SbSgMs	
+Kur:	SbSgFm
+Luchs	SbSgMsZool
+Mais	SbSgMsNutr	
+Mai	SbSgMsTime
+Mops	SbSgMsZool	
+Mop	SbSgMs
+Mucks	SbSgMs
+Nils	NmMsPren	
+Nil	NmGeogFlum
+Pampe	SbSgFmDial
+Puls	SbSgMs
+Pumps	SbPlForgEn	
+Pump	SbSgMs
+Raps	SbSgMsBota
+Rap	SbSgMs
+Reims	NmGeogCityFr	
+Reim	SbSgMs
+Schmus	SbSgMs	
+Schmu	SbSgMs
+Schubs	SbSgMs	Schub	SbSgMs
+Thai	SbSgMsPers	Thailand	NmGeogCtry
+Urs	NmMsPren	Ur	SbSgNtZool
+Zeugs	SbSgNtDial	Zeug	SbSgNt

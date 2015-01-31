@@ -1,0 +1,137 @@
+# undeclined German endings/suffixes
+# @(#) $Id: de.suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# caution, must be stored in UTF8: äöüÄÖÜß
+# 2006-06-14: -nahme =SbF
+# 2006-06-08, Georg Fischer
+#
+%locale =de
+# adjectives see Aj/aj.suffix.de
+# adverbs see Av/av.suffix.dic
+# substantives
+anz      =SbSgFm
+enz      =SbSgFm
+ée       =SbSgNt
+ee       =SbSgNt
+ei       =SbSgFm
+el       =SbSgNt 
+ase      =SbSgFm
+at       =SbSgNt
+bau      =SbSgMs
+phon     =SbSgNt
+# fest	 =SbSgNt
+fon      =SbSgNt
+graf     =SbSgMs
+graph    =Ex,graf
+grafie   =SbSgFm
+graphie  =Ex,grafie
+heit     =SbSgFm
+iat      =SbSgNt
+ie       =SbSgFm
+ik       =SbSgFm
+ion      =SbSgFm
+ismus    =SbSgMs
+keit     =SbSgFm
+logie    =SbSgFm
+nahme	 =SbSgFm
+nis		 =SbSgFm
+sophie   =SbSgFm
+rie      =SbSgFm
+schaft   =SbSgFm
+tät      =SbSgFm
+tion     =SbSgFm
+ung      =SbSgFm
+ur       =SbSgFm
+# plural
+anzen    =SbSgFm
+enzen    =SbSgFm
+fone     =Sb9XF
+phone    =Ex,fone
+grafien  =Sb9XF
+graphien =Ex,grafien
+heiten   =Sb9XF
+iate     =Sb9XF
+iaten    =Sb9XF
+ien      =Sb9XF
+ionen    =Sb9XF
+ismen    =Sb9XM
+keiten   =Sb9XF
+logien   =Sb9XF
+nahmen	 =Sb9XF
+nisse	 =Sb9NF
+nissen	 =Sb9AF
+sophien  =Sb9XF
+rien     =Sb9XF
+schaften =Sb9XF
+täten    =Sb9XF
+tionen   =Sb9XF
+ungen    =Sb9XF
+uren     =Sb9XF
+# substantives  professions  
+# male
+är       =Sb13MX,title.Pf
+eur      =Sb13MX,title.Pf
+iker     =Sb13MX,title.Pf
+ist      =Sb13MX,title.Pf
+loge     =Sb13MX,title.Pf
+mann     =Sb13MX,title.Pf
+chef     =Sb13MX,title.Pf
+rat      =Sb13MX,title.Pf
+ör       =Sb13MX,title.Pf
+or       =Sb13MX
+# genitive
+ärs      =Sb13MG,title.Pf
+eurs     =Sb13MG,title.Pf
+ikers    =Sb13MG,title.Pf
+isten    =Sb13MG,title.Pf
+logen    =Sb13MG,title.Pf
+manns    =Sb13MG,title.Pf
+chefs    =Sb13MG,title.Pf
+rats     =Sb13MG,title.Pf
+örs      =Sb13MG,title.Pf
+ors      =Sb13MG
+# plural
+äre      =Sb93MX,title.Pf
+eure     =Sb93MX,title.Pf
+isten    =Sb93MX,title.Pf
+leute    =Sb93MX,title.Pf
+leuten   =Sb93MX,title.Pf
+logen    =Sb93MX,title.Pf
+männer   =Sb93MX,title.Pf
+chefs    =Sb93MX,title.Pf
+räte     =Sb93MX,title.Pf
+öre      =Sb93MX,title.Pf
+oren     =Sb93MX
+             
+# female     
+in       =Sb13FX,title.Pf
+orin     =Sb13FX,title.Pf
+ärin     =Sb13FX,title.Pf
+erin     =Sb13FX,title.Pf
+eurin    =Sb13FX,title.Pf
+euse     =Sb13FX,title.Pf
+ice      =Sb13FX,title.Pf
+ikerin   =Sb13FX,title.Pf
+istin    =Sb13FX,title.Pf
+login    =Sb13FX,title.Pf
+frau     =Sb13FX,title.Pf
+chefin   =Sb13FX,title.Pf
+rätin    =Sb13FX,title.Pf
+örin     =Sb13FX,title.Pf
+innen    =Sb93FX,title.Pf
+eusen    =Sb93FX,title.Pf
+icen     =Sb93FX,title.Pf
+frauen   =Sb93FX,title.Pf
+
+eien     =SbN9F
+
+# rational and ordinal numbers
+stel     =NuRat
+tel      =NuRat
+ste      =NuOrdM
+stes     =NuOrdN
+ste      =NuOrdF
+ter      =NuOrdM
+te       =NuOrdF
+te       =NuOrdN
+ten      =NuOrd
+tes      =NuOrdN

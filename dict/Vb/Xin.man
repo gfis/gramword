@@ -1,0 +1,14 @@
+Bein	SbSgNtBody
+Gin	SbSgMsNutr		
+Hain	SbSgMs		
+Kain	NmMsPren		
+Pein	SbSgFM		
+Pin	SbSgMsForgEn		
+Rain	SbSgMs		
+Rhein	NmMsGeogFlum		
+Schrein	SbSgMs		
+Schwein	SbSgNtZool		
+Skin	SbSgMsForgEn		
+Spin	SbSgMsForgEn		
+Twain	NmSurnForg		
+Wein	SbSgMsNutr		

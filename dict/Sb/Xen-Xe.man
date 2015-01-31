@@ -1,0 +1,72 @@
+Aden	NmGeogCityForg
+Basen	SbPlFm	Base	SbSgFm
+Bauten	SbPlFm	Bau	SbSgMs
+Bingen	NmGeogCity
+Bremen	NmGeogCity
+Butzen	SbPl	Butz	SbSgMs
+Daten	SbPl	Date	SbSgFm
+Dosen	SbPl	Dose	SbSgFm
+Drachen	SbPl	Drache	SbSgMs
+Drusen	SbPl	Druse	SbSgFm
+Ellen	SbPl	Elle	SbSgFm
+Flatschen	SbSgMsDial
+Franken	NmGeogRegn	Franke	SbSgMsGeogRegn
+Franken	SbSgMsCurr
+Haufen	SbPl	Haufe	SbSgMs
+Heiden	SbPlPers	Heide	SbSgMsPers
+Heide	SbSgFm
+Hessen	NmGeogRegn	Hesse	SbSgMsGeogRegn
+Hoden	SbPl	
+Hoden	SbSgMs	
+Hutten:	SbPl	Hutte:	SbSgFm
+Kasten	SbPl	Kaste	SbSgFm
+Katen	SbPl	Kate	SbSgFm
+Knollen	SbPl	Knolle	SbSgFm
+Kragen	SbSgMs
+Laken	SbSgNt	
+Lake	SbSgFm
+Lappen	SbSgMs
+Lappen	SbPl
+Lappe	SbSgMsPers
+Letten	SbPl	Lette	SbSgMsPers
+Loden	SbSgMs
+Matzen	SbPl	Matze	SbSgFm
+Metzen	SbPl	Metze	SbSgFm
+Molken	SbPl	Molke	SbSgFm
+Namen	SbPl	Name	SbSgMs
+Nonen	SbPl	None	SbSgFm
+Noten	SbPl	Note	SbSgFm
+Pocken	SbPl	Pocke	SbSgFm
+Possen	SbPl	Posse	SbSgFm
+Preußen	NmGeogRegn	Preuße	SbSgMsGeogRegn
+Rachen	SbSgMs
+Rache	SbSgFm
+Sachsen	NmGeogRegn	Sachse	SbSgMsGeogRegnm
+Samen	SbPl	Same	SbSgMs
+Scherben	SbPl	Scherbe	SbSgFm
+Schmarren	SbSgMsDial
+Schotten	SbPl	Schotte	SbSgMsGeogRegn
+Schranken	SbPl	Schranke	SbSgF
+Schwaben	NmGeogRegn	Schwabe	SbSgMsGeogRegn
+Schwaden	SbPl	Schwade	SbSgFm
+Schweden	NmGeogCtry	Schwede	SbSgMsGeogCtry
+Sitten	SbPl	Sitte	SbSgFm
+Socken	SbPl	Socke	SbSgFm
+Sorten	SbPl	Sorte	SbSgFm
+Sporen	SbPl	Spore	SbSgFm
+Stande:	SbPl	Stand	SbSgMs
+Stollen	SbSgMs	
+Stolle	SbSgFm
+Striemen	SbSgMs
+Stumpen	SbSgMs
+Stuten	SbPlZool	Stute	SbSgFmZool
+Teen	SbSgMsPers	
+Tee	SbSgMsNutr
+Thermen	SbPl	Therme	SbSgFm
+Tiden	SbPl	Tide	SbSgFm
+Tropen	SbPl
+Tuben	SbPl	Tube	SbSgFm
+Watten	SbPl	
+Watte	SbSg
+Westen	SbSgMs	
+Weste	SbSgFm

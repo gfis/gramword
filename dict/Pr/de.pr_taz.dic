@@ -1,0 +1,136 @@
+# prepositions collected from TAZ
+# @(#) $Id: de.pr_taz.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-08-01, Georg Fischer: manually checked
+
+dagegen		PrChan.da.gegen
+weiterhin	PrChan.weiter.hin
+vorbei		PrChan.vor.bei
+hingegen	PrChan.hin.gegen
+irgendwie	PrChan.irgend.wie
+hinzu		PrChan.hin.zu
+herum		PrChan.her.um
+sowieso		PrChan.so.wie.so
+hervor		PrChan.her.vor
+irgendwo	PrChan.irgend.wo
+daneben		PrChan.da.neben
+hinweg		PrChan.hin.weg
+nebenbei	PrChan.neben.bei
+umso		PrChan.um.so
+dazwischen	PrChan.da.zwischen
+dorthin		PrChan.dort.hin
+fortan		PrChan.fort.an
+mitunter	PrChan.mit.unter
+überaus		PrChan.über.aus
+nebenan		PrChan.neben.an
+ausweg		PrChan.aus.weg
+vorab		PrChan.vor.ab
+hierher		PrChan.hier.her
+hierfür		PrChan.hier.für
+hierzu		PrChan.hier.zu
+mithin		PrChan.mit.hin
+# daum		PrChan.da.um
+mitsamt		PrChan.mit.samt
+hiermit		PrChan.hier.mit
+vorüber		PrChan.vor.über
+hierhin		PrChan.hier.hin
+umher		PrChan.um.her
+herbei		PrChan.her.bei
+vorweg		PrChan.vor.weg
+nebenher	PrChan.neben.her
+hernach		PrChan.her.nach
+hinüber		PrChan.hin.über
+# dada		PrChan.da.da
+irgendwer	PrChan.irgend.wer
+herüber		PrChan.her.über
+umhin		PrChan.um.hin
+zugegen		PrChan.zu.gegen
+hierin		PrChan.hier.in
+# umzu		PrChan.um.zu
+herauf		PrChan.her.auf
+vorhin		PrChan.vor.hin
+wovor		PrChan.wo.vor
+irgendwohin	PrChan.irgend.wo.hin
+hierüber	PrChan.hier.über
+wohingegen	PrChan.wo.hin.gegen
+hiervon		PrChan.hier.von
+hieraus		PrChan.hier.aus
+# anda		PrChan.an.da
+hierauf		PrChan.hier.auf
+irgendwoher	PrChan.irgend.wo.her
+hieran		PrChan.hier.an
+# soda		PrChan.so.da
+irgendwem	PrChan.irgend.wem
+hinfort		PrChan.hin.fort
+# soso		PrChan.so.so
+# hiergegen	PrChan.hier.gegen
+irgendwen	PrChan.irgend.wen
+# baldin	PrChan.bald.in
+obzwar		PrChan.ob.zwar
+anbei		PrChan.an.bei
+# Beida		PrChan.bei.da
+# Dawen		PrChan.da.wen
+# wieda		PrChan.wie.da
+hierunter	PrChan.hier.unter
+hiernach	PrChan.hier.nach
+# Baldauf	PrChan.bald.auf
+hinan		PrChan.hin.an
+# Fortin	PrChan.fort.in
+# daan		PrChan.da.an
+# Herstatt	PrChan.her.statt
+# Herweg	PrChan.her.weg
+dorther		PrChan.dort.her
+# dochdoch	PrChan.doch.doch
+# Garda		PrChan.gar.da
+# anan		PrChan.an.an
+# Gardain	PrChan.gar.da.in
+# Garin		PrChan.gar.in
+# anzu		PrChan.an.zu
+forthin		PrChan.fort.hin
+dahingegen	PrChan.da.hin.gegen
+# daüber	PrChan.da.über
+# ananda	PrChan.an.an.da
+# Nachschon	PrChan.nach.schon
+# Ingar		PrChan.in.gar
+# Inan		PrChan.in.an
+# aban		PrChan.ab.an
+# überweg	PrChan.über.weg
+nachwievor	PrChan.nach.wie.vor
+irgendso	PrChan.irgend.so
+# Herfort	PrChan.her.fort
+# Abweg		PrChan.ab.weg
+# Fortum	PrChan.fort.um
+# wowo		PrChan.wo.wo
+# übergenug	PrChan.über.genug
+# Oban		PrChan.ob.an
+# Nachum	PrChan.nach.um
+herzu		PrChan.her.zu
+# dadada	PrChan.da.da.da
+dorthinaus	PrChan.dort.hin.aus
+# bishin	PrChan.bis.hin
+# zuzu		PrChan.zu.zu
+# hierhier	PrChan.hier.hier
+# Dawie		PrChan.da.wie
+# Dawes		PrChan.da.wes
+# dain		PrChan.da.in
+# aufzu		PrChan.auf.zu
+# abgegen	PrChan.ab.gegen
+# Wenda		PrChan.wen.da
+# weiterin	PrChan.weiter.in
+# hierum	PrChan.hier.um
+# Dadaab	PrChan.da.da.ab
+# auszu		PrChan.aus.zu
+# Zwischenweg	PrChan.zwischen.weg
+# soweiter	PrChan.so.weiter
+# Garweg	PrChan.gar.weg
+# alsdenn	PrChan.als.denn
+# mitin		PrChan.mit.in
+herfür		PrChan.her.für
+# dortaus	PrChan.dort.aus
+# dazuhin	PrChan.da.zu.hin
+# Anin		PrChan.an.in
+# abzu		PrChan.ab.zu
+# woin		PrChan.wo.in
+# vorzu		PrChan.vor.zu
+# Vonda		PrChan.von.da
+# umin		PrChan.um.in
+# soin		PrChan.so.in

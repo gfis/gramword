@@ -1,0 +1,87 @@
+# Liste der deutschen "Bundeslaender"
+# and other districts in Europe
+# 2006-08-13, Georg Fischer
+# caution, UTF-8: äöüÄÖÜ
+
+# without towns:
+# Berlin		=NmGeogRegn.De
+# Hamburg		=NmGeogRegn.De
+# Bremen		=NmGeogRegn.De
+
+Brandenburg		=NmGeogRegn.De
+Mecklenburg		=NmGeogRegn.De
+Vorpommern		=NmGeogRegn.De
+Sachsen         =NmGeogRegn.De
+Anhalt          =NmGeogRegn.De
+Thüringen       =NmGeogRegn.De
+Baden           =NmGeogRegn.De
+Württemberg     =NmGeogRegn.De
+Bayern          =NmGeogRegn.De
+Saarland        =NmGeogRegn.De
+Rheinland       =NmGeogRegn.De
+Pfalz           =NmGeogRegn.De
+Nordrhein       =NmGeogRegn.De
+Westfalen       =NmGeogRegn.De
+Niedersachsen   =NmGeogRegn.De
+Hessen          =NmGeogRegn.De
+schleswig       =NmGeogRegn.De
+Holstein        =NmGeogRegn.De
+
+# Österreich		=NmGeogRegn.At
+Burgenland          =NmGeogRegn.At
+Kärnten             =NmGeogRegn.At
+Niederösterreich    =NmGeogRegn.At
+Oberösterreich      =NmGeogRegn.At
+Salzburg            =NmGeogRegn.At
+Steiermark          =NmGeogRegn.At
+Tirol               =NmGeogRegn.At
+Vorarlberg          =NmGeogRegn.At
+Wien                =NmGeogRegn.At
+
+# Schweiz (Kantone)
+Zürich						=NmGeogRegn.Ch
+Bern	                    =NmGeogRegn.Ch
+Luzern	                    =NmGeogRegn.Ch
+Uri	                        =NmGeogRegn.Ch
+Schwyz	                    =NmGeogRegn.Ch
+Obwalden	                =NmGeogRegn.Ch
+Nidwalden	                =NmGeogRegn.Ch
+Glarus	                    =NmGeogRegn.Ch
+Zug	                        =NmGeogRegn.Ch
+Freiburg	                =NmGeogRegn.Ch
+Solothurn	                =NmGeogRegn.Ch
+Basel-Stadt	                =NmGeogRegn.Ch
+Basel-Land	                =NmGeogRegn.Ch
+Schaffhausen	            =NmGeogRegn.Ch
+# Appenzell Ausserrhoden    =NmGeogRegn.Ch
+# Appenzell Innerrhoden     =NmGeogRegn.Ch
+Appenzell                   =NmGeogRegn.Ch
+# St. Gallen	            =NmGeogRegn.Ch
+Gallen	                    =NmGeogRegn.Ch
+Graubünden	                =NmGeogRegn.Ch
+Aargau	                    =NmGeogRegn.Ch
+Thurgau	                    =NmGeogRegn.Ch
+Tessin	                    =NmGeogRegn.Ch
+Waadt	                    =NmGeogRegn.Ch
+Wallis	                    =NmGeogRegn.Ch
+Neuenburg	                =NmGeogRegn.Ch
+Genf	                    =NmGeogRegn.Ch
+Jura	                    =NmGeogRegn.Ch
+
+# Frankreich
+Bretagne	=NmGeogRegn.Fr        
+Normandie   =NmGeogRegn.Fr
+Languedoc   =NmGeogRegn.Fr
+Carmargue   =NmGeogRegn.Fr
+Lyonnais    =NmGeogRegn.Fr
+Elsass      =NmGeogRegn.Fr
+Alsace      =NmGeogRegn.Fr
+Lothringen  =NmGeogRegn.Fr
+Lorraine	=NmGeogRegn.Fr
+Vogesen     =NmGeogRegn.Fr
+Auvergne    =NmGeogRegn.Fr
+Provence    =NmGeogRegn.Fr
+Ardennen	=NmGeogRegn.Fr
+Calvados	=NmGeogRegn.Fr
+Charente	=NmGeogRegn.Fr
+Dordogne	=NmGeogRegn.Fr

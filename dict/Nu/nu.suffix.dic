@@ -1,0 +1,18 @@
+# declinaton endings of number words 
+# @(#) $Id: nu.suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# caution, must be stored in UTF8: äöüÄÖÜß
+# 2006-07-27, Georg Fischer
+#
+%locale =de
+# ordinal, fractional numbers
+# 1-19, >= 20 with "s" (eaten by numword.DeuSpeller)
+te  	=NuSuffOrdn
+tem 	=NuSuffOrdn
+ten 	=NuSuffOrdn
+ter 	=NuSuffOrdn
+tes 	=NuSuffOrdn
+tel 	=NuSuffRatn
+tens	=NuSuffAv
+# einen Hunderter, in den Zwanzigern
+er		=NuSuffSbSgMs
+ern		=NuSuffSbPl

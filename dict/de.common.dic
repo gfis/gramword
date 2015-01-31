@@ -1,0 +1,49 @@
+# common / short German words
+# @(#) $Id: de.common.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-05-28: UTF-8, äöüÄÖÜß
+# 2003-10-02  dativ
+# 2001-04-13, Georg Fischer
+#
+# replies
+ja		=Rp
+nein	=Rp
+amen	=Rp
+# exclamations
+o		=Rp
+oh		=Rp
+ah		=Rp
+potz	=RpDial
+ach		=Rp
+# greetings
+hi		=RpVulgForg.En
+ade		=Rp
+adjeu	=RpForg.Fr
+bye		=RpForg.En
+hallo	=Rp
+tschüss =RpVulg
+servus	=RpVulg
+
+# danach Genitiv
+# begierig  =Un
+# kundig    =Un
+# eingedenk =Un
+# teilhaftig=Un
+# mächtig   =Un
+# voll      =Un
+willen   =Un
+kraft    =Un
+
+# abbreviations
+SPD    =AbSbFm
+CDU    =AbSbFm
+CSU    =AbSbFm
+FDP    =AbSbFm
+EU     =AbSbFm
+USA    =AbSbFm
+DM     =AbSbFm
+Euro   =AbSbMs
+bzw    =AbCj,beziehungsweise
+usw    =AbUn,und_so_weiter
+vgl    =AbUn,vergleiche
+Dr     =AbTitl,Doktor,SbSgMsTitl
+Prof   =AbTitl,Professor,SbSgMsTitl

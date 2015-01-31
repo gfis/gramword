@@ -1,0 +1,129 @@
+# German endings/suffixes and their declinations
+# @(#) $Id: sb.suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# caution, must be stored in UTF8: äöüÄÖÜß
+# 2006-07-25: -tum =SbSgNt
+# 2006-06-14: -nahme =SbF
+# 2006-06-08, Georg Fischer
+#
+%locale =de
+# substantives endings
+
+anz      =SbSgFm
+enz      =SbSgFm
+ée       =SbSgNt
+ee       =SbSgNt
+ei       =SbSgFm
+# caution, some exceptions in de.sb_ei.dic
+el       =SbSgNt 
+ette	 =SbSgFm
+ase      =SbSgFm
+at       =SbSgNt
+bau      =SbSgMs
+phon     =SbSgNt
+# fest	 =SbSgNt
+fon      =SbSgNt
+graf     =SbSgMs
+graph    =ExNrul,graf,SbSgMs
+grafie   =SbSgFm
+graphie  =ExNrul,grafie,SbSgFm
+heit     =SbSgFm
+iat      =SbSgNt
+ie       =SbSgFm
+ik       =SbSgFm
+ion      =SbSgFm
+ismus    =SbSgMs
+keit     =SbSgFm
+kunft    =SbSgFm
+logie    =SbSgFm
+nahme	 =SbSgFm
+nis		 =SbSgFm
+sophie   =SbSgFm
+rie      =SbSgFm
+schaft   =SbSgFm
+tät      =SbSgFm
+tion     =SbSgFm
+tum      =SbSgNt
+ung      =SbSgFm
+ur       =SbSgFm
+# plural
+anzen    =SbPl
+enzen    =SbPl
+etten	 =SbPl
+fone     =SbPl
+phone    =Ex,fone
+grafien  =SbPl
+graphien =Ex,grafien
+heiten   =SbPl
+iate     =SbPl
+iaten    =SbPl
+ien      =SbPl
+ionen    =SbPl
+ismen    =SbPl
+keiten   =SbPl
+logien   =SbPl
+nahmen	 =SbPl
+nisse	 =SbPl
+nissen	 =SbPl
+sophien  =SbPl
+rien     =SbPl
+schaften =SbPl
+täten    =SbPl
+tionen   =SbPl
+ungen    =SbPl
+uren     =SbPl
+# substantives  professions  
+# male
+är       =SbSgMsProf
+eur      =SbSgMsProf
+iker     =SbSgMsProf
+ist      =SbSgMsProf
+loge     =SbSgMsProf
+mann     =SbSgMsProf
+chef     =SbSgMsProf
+rat      =SbSgMsProf
+ör       =SbSgMsProf
+or       =SbSgMsProf
+# genitive
+ärs      =SbSgMsGeProf
+eurs     =SbSgMsGeProf
+ikers    =SbSgMsGeProf
+isten    =SbSgMsGeProf
+logen    =SbSgMsGeProf
+manns    =SbSgMsGeProf
+chefs    =SbSgMsGeProf
+rats     =SbSgMsGeProf
+örs      =SbSgMsGeProf
+ors      =SbSgMsGeProf
+# plural
+äre      =SbPlProf
+eure     =SbPlProf
+isten    =SbPlProf
+leute    =SbPlProf
+leuten   =SbPlProf
+logen    =SbPlProf
+männer   =SbPlProf
+chefs    =SbPlProf
+räte     =SbPlProf
+öre      =SbPlProf
+ore      =SbPlProf
+oren     =SbPlProf
+             
+# female     
+in       =SbSgFmProf
+orin     =SbSgFmProf
+ärin     =SbSgFmProf
+erin     =SbSgFmProf
+eurin    =SbSgFmProf
+euse     =SbSgFmProf
+ice      =SbSgFmProf
+ikerin   =SbSgFmProf
+istin    =SbSgFmProf
+login    =SbSgFmProf
+frau     =SbSgFmProf
+chefin   =SbSgFmProf
+rätin    =SbSgFmProf
+örin     =SbSgFmProf
+innen    =SbPlProf
+eusen    =SbPlProf
+icen     =SbPlProf
+frauen   =SbPlProf

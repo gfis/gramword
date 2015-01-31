@@ -1,0 +1,111 @@
+Ader	SbSgFmBody	
+Ade	Ex
+Alter	SbSgNt	
+Alte	SbSgFmPers
+Ammer	NmGeogFlum	
+Amme	SbSgFmProf
+Anker	SbSgMs	
+Anke	NmFmPren
+Biker	SbSgMsPersForgEn	Bike	SbSgNtForgEn
+Bohne	SbSgFmNutr
+Bratsche	SbSgFmMusi
+Butter	SbSgFmNutr	
+Charter	SbSgNt	
+Chatter	SbSgMsPers	
+Choke	SbSgMs
+Dogge	SbSgFmZool
+Driver	SbSgMsForgEn	Drive	SbSgMsFOrgEn
+Ecke	SbSgFm
+Elfer	SbSgMsSpor	
+Elfe	SbSgFmPers
+Elle	SbSgFm
+Ente	SbSgFmZool
+Ester	SbSgMsChem	
+Eule	SbSgFmZool
+Gatter	SbSgNt	
+Gatte	SbSgMsPers
+Gitter	SbSgNt	
+Gitte	NmFmPren
+Habe	SbSgFm
+Imker	SbSgMsProf
+Kater	SbSgMsZool	
+Kate	SbSgFm
+Kelter	SbSgFM	
+Kelte	SbSgMsPers
+Klemme	SbSgFm
+Klipper	SbSgMsProf	
+Klippe	SbSgFm
+Kreter	SbSgMsGeogRegnGr	Kreta	NmGeogRegnGr
+Kutscher	SbSgMsProf	Kutsche	SbSgFm
+Kutter	SbSgMs	
+Kutte	SbSgFm
+Lager	SbSgNt	
+Lage	SbSgFm
+Laser	SbSgMsForg	
+Leichter	SbSgMs
+Letter	SbSgFm	
+Lette	SbSgMsGeogForgLt
+Liege	SbSgFm
+Lotte	NmFmPren
+Luder	SbSgNtPers
+Macker	SbSgMsPers	Macke	SbSgFm
+Mater	SbSgFm	
+Mate	SbSgMsNutr
+Moder	SbSgMs	
+Mode	SbSgFm
+Niete	SbSgFm
+Pager	SbSgMsForgEn	
+Page	SbSgMsProf
+Pfarrer	SbSgMsProf	Pfarre	SbSgFm
+Pisser	SbSgMsPers	Pisse	SbSgFm
+Printer	SbSgMsForgEn	Printe	SbSgFmNutr
+Pulle	SbSgFmDial
+Puter	SbSgMsZool	Pute	SbSgFmZool
+Putte	SbSgFm
+Puzzle	SbSgNtForgEn
+Quelle	SbSgFm
+Racker	SbSgMsPers
+Ranger	SbSgMsProfForgEn	Range	SbSgMsForgEn
+Rapper	SbSgMsPers	
+Rappe	SbSgMsZool
+Rate	SbSgFm
+Raver	SbSgMsPers	
+Reeder	SbSgMsProf	Reede	SbSgFm
+Reibe	SbSgFm
+Reiner	NmMnPren	
+Reine	SbSgFm
+Ritze	SbSgFm
+Robbe	SbSgFmZool
+Schanze	SbSgFm
+Schiefer	SbSgMs	
+Schiefe	SbSgFm
+Schleier	SbSgMs	
+Schleie	SbSgFmZool
+Schmelze	SbSgFm
+Schnelle	SbSgFm
+Schnitter	SbSgMsProf	
+Schnitte	SbSgFm
+Schotter	SbSgMs	
+Schotte	SbSgMnGeogRegnEn
+Seife	SbSgFm
+Shake	SbSgMsForgEn
+Silber	SbSgNtMetl	
+Silbe	SbSgFm
+Speicher	SbSgMs	
+Speiche	SbSgFm
+Sprosse	SbSgFm
+Spule	SbSgFm
+Staufer	SbSgMsPers
+Stimme	SbSgFm
+Taube	SbSgFmZool
+Teer	SbSgMs	
+Tee	SbSgMsNutr
+Trapper	SbSgMsPers	
+Ulmer	SbSgMsGeogCity	
+Ulme	SbSgFmBota
+Urne	SbSgFm
+Witwer	SbSgMsPers	Witwe	SbSgFmPers
+Wunder	SbSgNt	
+Wunde	SbSgFm
+Zaire	NmGeogCtry
+Ziege	SbSgFmZool

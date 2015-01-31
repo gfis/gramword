@@ -1,0 +1,327 @@
+# list of German irregular verbs,
+# ordered by vowel exchange patterns,
+# and with mappings to verbs with similiar vowel patterns
+# @(#) $Id: irverb.de.utf8 36 2008-09-08 06:05:06Z gfis $
+# 2013-02-04: without weak verbs
+# 2006-06-07: tun!3
+# 2006-05-27: in UTF-8 äöüß
+# 2003-11-05: klimmen/glimmen, bleichen/gleichen caused problems in vbexpand.pl
+# 2001-04-14: Georg Fischer <punctum@punctum.com>
+#
+# see also: http://verben.texttheater.net/Rote_Liste
+
+# Hilfsverben und besonders unregelmäßige
+sein,bist,war,gewesen!1
+tun,tust,tat,getan!3
+haben,hast,hatte,gehabt
+mögen,magst,mochte,gemocht,möchte!2
+sollen,sollst,sollte,gesollt!2
+werden,wirst,wurde,geworden
+dürfen,darfst,durfte,gedurft!2
+können,kannst,konnte,gekonnt!2
+wollen,willst,wollte,gewollt,wollte!2
+müssen,musst,musste,gemusst!2
+wissen,weißt,wusste,gewusst!2
+
+# a a o o
+schallen,schallst,scholl,geschollen
+erschallen->schallen
+
+# a ae ie a - Aida
+fangen,fängst,fing,gefangen
+empfangen->fangen
+
+halten,hältst,hielt,gehalten
+lassen,lässt,ließ,gelassen
+fallen,fällst,fiel,gefallen
+gefallen->fallen
+schlafen->halten
+blasen->schlafen
+braten->schlafen
+raten->schlafen
+
+# a ae u a 
+backen,bäckst,buk,gebacken
+fahren,fährst,fuhr,gefahren
+graben->fahren
+laden->fahren
+schlagen->fahren
+tragen->fahren
+waschen->fahren
+wachsen->waschen
+
+# a a u a - Matura
+schaffen,schaffst,schuf,geschaffen
+
+# ae ae a u
+# drängen,drängst,drang,gedrungen
+
+# ae ae i a
+hängen,hängst,hing,gehangen
+
+# ae ae o o
+wägen,wägst,wog,gewogen
+erwägen->wägen
+
+# au au ie au
+hauen,haust,hieb,gehauen
+
+# au au o o
+schnauben,schnaubst,schnob,geschnoben
+saugen,saugst,sog,gesogen
+
+# au aeu o o
+saufen,säufst,soff,gesoffen
+
+# e e a a
+stehen,stehst,stand,gestanden,stünde
+verstehen->stehen
+denken,denkst,dachte,gedacht,dächte
+kennen,kennst,kannte,gekannt
+brennen->kennen
+nennen->kennen
+rennen->kennen
+
+# e e a e
+genesen,genest,genas,genesen
+stecken,steckst,stak,gesteckt
+
+# e e i a
+gehen,gehst,ging,gegangen
+
+# e e o o
+heben,hebst,hob,gehoben
+bewegen->heben
+pflegen->heben
+scheren->heben
+melken->heben
+
+# e i a e - Gelage
+lesen,liest,las,gelesen
+treten,trittst,trat,getreten
+geben,gibst,gab,gegeben,gäbe
+geschehen->geben
+sehen->geben
+essen->geben
+fressen->essen
+messen->essen
+vergessen->essen
+
+# e i a o - Senator
+nehmen,nimmst,nahm,genommen
+sprechen,sprichst,sprach,gesprochen
+brechen->sprechen
+stechen->sprechen
+treffen->sprechen
+bersten->sprechen
+schelten->sprechen
+sterben->sprechen
+bergen->sprechen
+gelten->sprechen
+helfen->sprechen
+verderben->sprechen
+werben->sprechen
+werfen->sprechen
+stehlen->sprechen
+empfehlen->stehlen
+befehlen->stehlen
+
+# e i o o - Tremolo
+schmelzen,schmilzt,schmolz,geschmolzen
+fechten,fichtst,focht,gefochten
+quellen,quillst,quoll,gequollen
+dreschen->quellen
+flechten->quellen
+schwellen->quellen
+
+# ei ei ie ie - freiwillig
+bleiben,bleibst,blieb,geblieben
+schreiben->bleiben
+treiben->bleiben
+reiben->bleiben
+schreien->bleiben
+speien->bleiben
+steigen->bleiben
+schweigen->bleiben
+scheiden->bleiben
+meiden->bleiben
+scheinen->bleiben
+preisen->bleiben
+weisen->preisen
+leihen->bleiben
+gedeihen->leihen
+zeihen->leihen
+verzeihen->zeihen
+
+# ei ei i i
+beißen,beißt,biss,gebissen
+befleißen->beißen
+reißen->beißen
+scheißen->beißen
+schleißen->beißen
+spleißen->beißen
+schmeißen->beißen
+verschleißen->beißen
+
+greifen,greifst,griff,gegriffen
+kneifen->greifen
+pfeifen->greifen
+schleifen->greifen
+
+weichen,weichst,wich,gewichen
+gleichen->weichen
+# Achtung: bleichen->gleichen zeigt einen Fehler in vbexpand.pl
+bleichen->weichen
+gleichen->weichen
+schleichen->weichen
+streichen->weichen
+
+leiden,leidest,litt,gelitten
+schneiden->leiden
+gleiten->leiden
+reiten->gleiten
+schreiten->leiden
+streiten->leiden
+
+# ie ie a e 
+liegen,liegst,lag,gelegen
+
+# i i a e -  Zigarre
+bitten,bittest,bat,gebeten
+sitzen,sitzt,saß,gesessen
+
+# i i a o - Picasso
+rinnen,rinnst,rann,geronnen
+beginnen->rinnen
+besinnen->beginnen
+gewinnen->beginnen
+schwimmen->rinnen
+sinnen->rinnen
+spinnen->rinnen
+
+# i i a u - Signatur
+singen,singst,sang,gesungen
+finden->singen
+sinken->singen
+dringen->singen
+dingen->singen
+bedingen->singen
+gelingen->singen
+klingen->singen
+misslingen->singen
+ringen->singen
+schlingen->singen
+schwingen->singen
+springen->singen
+wringen->singen
+zwingen->singen
+stinken->singen
+trinken->singen
+binden->singen
+empfinden->binden
+winden->binden
+schwinden->binden
+
+# i i o o - Kimono
+glimmen,glimmst,glomm,geglommen
+klimmen,klimmst,klomm,geklommen
+
+# i i i u - veraltet
+winken,winkst,winkte,gewunken
+
+# i i u u
+schinden,schindest,schund,geschunden
+
+# ie ie o ie
+triefen,triefst,troff,getrieft
+
+# ie ie o o
+sieden,siedest,sott,gesotten
+ziehen,ziehst,zog,gezogen
+fliehen,fliehst,floh,geflohen
+fliegen->fliehen
+biegen->fliegen
+frieren->fliehen
+schieben->fliehen
+verlieren->fliehen
+wiegen->fliegen
+riechen->fliehen
+kriechen->fliehen
+bieten->fliegen
+gebieten->bieten
+stieben->bieten
+
+schließen,schließt,schloss,geschlossen
+fließen->schließen
+genießen->schließen
+gießen->schließen
+schießen->schließen
+sprießen->schließen
+verdrießen->schließen
+
+# o oe ie o
+stoßen,stößt,stieß,gestoßen
+
+# oe oe o o
+schwören,schwörst,schwor,geschworen
+verlöschen->schwören
+
+# ue ue eu eu
+dünken,dünkst,deuchte,gedeucht
+
+# ue ue o o
+lügen,lügst,log,gelogen
+trügen->lügen
+küren->lügen
+# erkiesen,erkiest,erkor,erkoren (Wahrig)
+
+# u u ie u
+rufen,rufst,rief,gerufen
+
+# Sonstige
+gebären,gebierst,gebar,geboren
+kommen,kommst,kam,gekommen
+laufen,läufst,lief,gelaufen
+heißen,heißt,hieß,geheißen
+gären,gärst,gärte,gegoren
+gären,gärst,gor,gegoren
+bringen,bringst,brachte,gebracht
+
+# auch schwach mit anderer Bedeutung
+ 
+senden,sendest,sandte,gesandt
+wenden->senden
+schrecken,schrickst,schrak,geschrocken,schräke
+erschrecken->schrecken
+# hängen (s.o.)
+schaffen,schaffst,schuf,geschaffen
+
+# alternative schwache Form
+backen,bäckst,backte,gebacken
+spalten,spaltest,spaltete,gespalten
+mahlen,mahlst,mahlte,gemahlen,mahlte
+salzen->mahlen
+# drängen,drängst,drängte,gedrängt
+
+# schwache Verben mit Besonderheiten
+# kichern
+# lächeln
+# kacheln
+# -ieren: ohne ge-
+# programmieren
+# s/^(ge)(be|em|ent|er|ge|miss|ver|zer)/$2/
+# entfernen
+# behüten
+# verzweifeln
+# missverstehen->verstehen
+# erlösen
+# küssen
+# kuschen
+# vermaßen
+# praes.2.sing "est" bei schwachen
+# loten
+# landen
+# falten
+# warten
+# aber: färbst
+# färben

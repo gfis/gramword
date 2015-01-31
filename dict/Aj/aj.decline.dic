@@ -1,0 +1,27 @@
+# declination endings of German adjectives
+# @(#) $Id: aj.decline.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-27, Georg Fischer
+# caution, encoded in URF-8 äöüÄÖÜß
+#
+
+# positive - fein
+~			=AjXP 
+e			=AjXP 
+em			=AjXP  
+en			=AjXP  
+er			=AjXP  
+es			=AjXP  
+# comparative - feiner
+er			=AjXC 
+ere			=AjXC 
+erem		=AjXC  
+eren		=AjXC  
+erer		=AjXC  
+eres		=AjXC  
+# superlative - feinst
+st			=AjXS
+ste			=AjXS
+stem		=AjXS
+sten		=AjXS
+ster		=AjXS
+stes		=AjXS

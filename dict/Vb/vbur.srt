@@ -1,0 +1,3235 @@
+# German verbs ending on -en (without -ieren), -eln, -ern 
+# @(#) $Id: vbur.srt 976 2013-02-02 16:44:18Z gfis $
+# caution, this file must be stored in UTF-8: äöüÄÖÜß
+# 2013-01-23: durch- and durch/
+# 2011-09-21: lauben be- ent-, more prefixes separated
+# 2008-04-01: über-legen, dar-unter-setzen
+# 2006-07-22: bleuen
+# 2006-06-08: verabschieden; strong verbs also
+# 2006-06-05: with fieren, frieren, gieren ..., but not urgieren
+# 2006-06-03, Georg Fischer: manually checked
+#
+%lang=de
+aalen	/
+aasen	/ ver-
+# abenteuern	/
+flauen	ab/
+kanzeln	ab/
+magern	ab/
+nabeln	ab/
+schotten	ab/
+specken	ab/
+# absträngen	/
+wracken	ab/
+achten	/ be- be-ob- be-gut/ er- miss/ ver-
+ackern	/ be- durch/ um/
+adeln	/
+ahnden	/
+ahnen	/ er-
+altern	/
+# altertümeln	/
+amten	be- ver-be- ent- 
+raumen	an/be-
+biedern	an/
+angeln	/
+heimeln	an/
+ankern	/ ver-
+# anlieken	/
+prangern	an/
+strengen	an/ über-an-
+stücken	an/ be- früh/ ver-hack/
+antworten	/ be- ver- über-
+törnen	an/
+apern	/
+arbeiten	/ ab/ auf/ aus/ be- durch/ ein/ empor/ er- hand/ her-an/ her-aus/ hin/ hoch/ kurz/ mit/ nach/ schwarz/ tot/ um/ ver- vor/ weg/ weiter/ weiter/ver- zu/ zusammen/ über-
+arten	aus/ ent- 
+asten	/ ent-
+atmen	/ auf/ aus/ be- durch/ ein/
+atzen	/
+bahren	auf/
+brisen	auf/
+# aufbänken	/
+# aufgagen	/
+# aufmutzen	/
+peppen	auf/
+# aufseiten	/
+ständern	auf/
+tischen	auf/
+baken	aus/
+bauchen	aus/
+# ausbogen	/
+bojen	aus/
+borsten	aus/
+fitten	aus/
+flippen	aus/
+ixen	aus/ durch/
+knocken	aus/
+koffern	aus/
+kolken	aus/
+ufern	aus/
+walzen	aus/ kalt/ nieder/
+babbeln	/
+sitten	baby/
+backen	/ ab/ an/ auf/ aus/ durch/ fest/ ver- über-
+baden	/ aus/ moor- sonnen-
+baggern	/ auf/ aus/
+bahnen	/ an/
+baldowern	/ aus/
+balgen	/ her-um/ katz/
+ballen	/ zusammen/
+ballern	/ ver- zu/
+balzen	/
+bammeln	/ auf/
+bangen	/
+bannen	/ ver-
+# bansen	/
+barmen	/ er-
+# barren	/
+basteln	/ zu-recht/
+# basten	/
+batiken	/
+bauen	/ ab/ an/ auf/ aus/ be- ein/ er- rück/ um/ um- ver- vor/ zu/ zusammen/ über-
+baumeln	/ auf/
+baumen	/ auf/
+bauschen	/ auf/
+sichtigen	be- be-ab/ be-auf/ be-rück/
+spruchen	be-an/ über-be-an/
+standen	be-an/
+beaten	/
+augapfeln	be-
+beben	/ durch- er-
+bildern	be-
+bechern	/ durch/
+circen	be-
+beckmessern	/
+eiden	be-
+eidigen	be- ver-
+flussen	be-ein/
+trächtigen	be-ein/
+erdigen	be-
+fehden	be- ver-
+fehligen	be-
+fiedern	be-
+# befleißen	be-
+fleißigen	be-
+frieden	be- ein/
+friedigen	be- ein/
+fähigen	be-
+# försten	be-
+fürworten	be-
+# begaben	/
+gatten	be-
+# begichten	/
+ginnen	be-
+glaubigen	be-
+gnadigen	be-
+gradigen	be-
+gönnern	be-
+gütigen	be-
+hagen	be-
+heimaten	be-
+helligen	be-
+herzigen	be-
+beichten	/
+beinen	aus/ ent- 
+inhalten	be-
+pflichten	bei/
+beizen	/ ab/
+beißen	/ ab/ an/ auf/ aus/ durch- durch/ fest/ ver- zer- zu/ zusammen/
+jahen	be-
+lauben	be-
+leidigen	be- 
+belfern	/
+bellen	/ an/ ver-
+lobigen	be-
+lustigen	be-
+belzen	/
+lämmern	be-
+lästigen	be-
+masten	be-
+muttern	be-
+mächtigen	be- be-voll/ er-
+mängeln	be-
+mänteln	be-
+nachrichtigen	be-
+namsen	be-
+benedeien	/
+noten	be-
+benzen	/
+quemen	/ an/
+rappen	be-
+rechtigen	be- be-vor
+bergen	/ be-her/ her/ ver-
+berlinern	/
+bersten	/ zer-
+saiten	be-
+samen	be-
+scheinigen	be- be-augen/
+nahmen	be-schlag/
+schleunigen	be- ent-
+schriften	be- ver-
+schuhen	be-
+schwichtigen	be-
+schäftigen	be-
+schönigen	be-
+seelen	be-
+seitigen	be- ver-ein/
+# beseligen	/
+solden	be-
+spiken	be-
+bessern	/ auf/ aus/ nach/ ver-
+stuhlen	be-
+stätigen	be-
+sänftigen	be-
+# besömmern	/
+teiligen	be- be-nach/
+beten	/ an/ gesund/ nach/ vor/
+treuen	be- ver-un/
+betteln	/ durch/ er-
+betten	/ auf/ ein/ um/
+tören	be-
+tütern	be-
+# beuchen	/
+beugen	/ hin-aus/ nieder/ ver- vor/ vorn-über/ zurück/
+beulen	/ aus/ ein/ ver- zer-
+ruhigen	be- be-un/
+urkunden	be-
+beuteln	/
+beuten	aus/ er-
+# bevorrechten	/
+# bevorworten	/
+zugen	be-vor/
+heiten	be-wahr/
+# bewaldrechten	/
+wegen	/ fort/be- zurück-be-
+weiben	be-
+stelligen	be-werk/
+# bewillkommnen	/
+zichtigen	be-
+zirzen	be-
+schussen	be-vor/ be-zu/
+bibbern	/
+biegen	/ ab/ auf/ aus/ bei/ durch/ ein/ hin/ um/ ver- zu-recht/
+bieten	/ an/ auf/ aus/ dar/ ent- er- feil/ ge- ver- über- an/er- 
+bilden	/ ab/ aus/ durch/ ein/ fort/ heran/ her-aus/ nach/ um/ ver- vor/ weiter/ zurück/
+bildhauern	/
+billigen	/ miss/ ver- zu/
+bimmeln	/
+bimsen	/ ein/ ver-
+binden	/ ab/ an/ auf/ ein/ ent- fest/ hoch/ los/ um/ ver- vor/ zu/ zusammen/ über/
+bitten	/ ab/ aus/ er- für/ her/ her-über/ hin-ein/ ver- zurück/er- 
+bittern	er- ver- 
+bitzeln	/
+blaffen	/ an/
+blaken	/
+blasen	/ ab/ an/ auf/ aus/ durch/ ein/ um/ um- ver- vor/ weg/ über-
+blassen	/ ab/ er- ver-
+# blatten	/ über-
+blauen	/
+blechen	/
+blecken	/
+bleiben	/ auf/ aus/ beisammen/ da/ dabei/ da-von/ dran/ fern/ fest/ fort/ frei/ hinter- nach/ ver- weg/ zu/ zurück/ zusammen/ über/
+bleichen	/ aus/ er- ver-
+bleien	ver-
+blenden	/ ab/ auf/ aus/ ein/ rück/ ver- zurück/ zwischen/ über-
+bleuen	/ ein/ ver- zer-
+blicken	/ an/ auf/ aus/ drein/ durch/ empor/ ent-gegen/ er- her-ab/ hin-auf/ hin-aus/ hin-unter- nach/ um/ um-her/ über-
+blinken	/ an/ auf/
+blinkern	/
+blinzeln	/ zu/
+blitzen	/ ab/ auf/ durch-
+blochen	/
+blocken	/ ab/ auf/
+blubbern	/
+bluffen	/
+bluten	/ aus/ durch- nach/ ver- weiß/
+bläffen	/
+blähen	/ auf/
+bläken	/
+blättern	/ ab/ auf/ durch/ ent- hin/ um/ ver-
+bläuen	/ durch/ ein/ ver-
+blödeln	/
+blöden	ver- ent- 
+blöken	/
+blühen	/ auf/ aus/ er- ver-
+bocken	auf/ ver- 
+# bodigen	/
+# bohnen	/
+bohnern	/
+bohren	/ an/ auf/ aus/ durch- durch/ ein/ nach/ tief/ ver- vor/
+bollern	/
+bolzen	/ 
+bomben	/ aus/ zer- zusammen/
+# bongen	/
+boomen	/
+booten	ein/ aus/ 
+borgen	/ aus/
+bowlen	/
+boxen	/ durch/
+brabbeln	/
+# brandeln	/
+branden	/ um-
+brandmarken	/
+brassen	/ an/
+braten	/ an/ auf/ aus/ durch/ ver- über/
+brauchen	/ auf/ ge- miss/ ver-
+brauen	/ zusammen/
+brausen	/ ab/ auf/ durch- los/ um-
+# breaken	/
+brechen	/ ab/ an/ auf/ aus/ durch- durch/ ehe/ ein/ ent-zwei/ er- ge- her-ein/ her-vor/ los/ rade/ um/ ver- zer- zusammen/
+breiten	/ aus/ ver- weiter/ver-
+bremsen	/ ab/ aus/
+brennen	/ ab/ an/ auf/ aus/ durch/ ein/ ent- her-unter/ nieder/ ver-
+brenzeln	/
+brettern	/ her-unter/ hin-unter/ her-auf/ hin-auf/ 
+bringen	/ ab/ an/ auf/ aus/ bei/ da-her/ dar/ durch/ ein/ ent-gegen/ er- fort/ gut/ heim/ her/ her-an/ her-auf/ her-aus/ her-bei/ her-ein/ her-unter/ her-vor/ her-über/ hin/ hin-auf/ hin-aus/ hin-ein/ hinter- hin-unter/ hin-weg/ hin-über/ hoch/ mit/ nieder/ rüber/ um/ ver- voll/ vor/ vor-bei/ weg/ weiter/ wieder- zu/ zurück/ zusammen/ über-
+brocken	/ ab/ ein/
+brodeln	/ auf/
+brummeln	/
+brummen	/ an/ auf/
+brunften	/
+brunsten	/
+brunzen	/
+brutzeln	/ ver-
+bräteln	/
+bräunen	/ an/
+bröckeln	/ ab/ zer-
+brühen	/ ab/ auf/ aus/ ver-
+brüllen	/ an/ auf/
+brüsten	/
+brüten	/ an/ aus/ be- er-
+buchbindern	/
+buchen	/ ab/ aus/ rück/ um/ ver-
+buchten	ein/ aus/ 
+buckeln	/ katz/
+buddeln	/ aus/ ein/ ver-
+buhen	/ aus/
+buhlen	/
+bullern	/
+bummeln	/ ab/ ver-
+bummern	/
+bumsen	/
+bunkern	/ be- ein/
+buttern	/ rein/ zu/
+bändern	be-
+bändigen	/
+bäumen	auf/
+böllern	/
+bördeln	/
+böschen	/
+böttchern	/
+bücken	/
+büffeln	/
+bügeln	/ auf/ aus/ ein/
+bündeln	/
+bürden	auf/ über/ 
+bürgen	/ ver-
+bürgern	ein/ aus/ 
+bürsten	ab/ aus/ 
+büscheln	/
+büxen	ver- aus/ 
+büßen	/ ein/ ver-
+campen	/
+checken	ab/ durch/  ein/  aus/ 
+chloren	/ ent-
+clinchen	/
+crawlen	/
+cutten	/
+cuttern	/
+dachen	ab/ be-  über- 
+dampfen	/ ab/ auf/ be- ein/ ver-
+danken	/ ab/ be- ver-
+# dannen	/
+darben	/
+darren	/
+dauern	/ an/ be- fort/ über-
+dealen	/
+deckeln	/
+decken	/ ab/ auf/ be- ein/ ent- ver- zu/ über-
+dehnen	/ aus/ zer- über-
+deichen	/ aus/ ein/
+deichseln	/
+demütigen	/
+dengeln	/
+denken	/ aus/ be- durch- er- ge- mit/ nach/ um/ ver- zurück/ über-
+deuteln	/ her-um/
+deuten	/ an/ aus/ be- hin/ miss/ um/
+deutschen	ein/ ver- 
+dibbeln	/
+dichten	/ ab/ an/ er- hin-zu/ nach/ ver-
+dicken	/ ein/ ver-
+# dielen	/
+dienen	/ an/ aus/ be- da-zu/ver- hoch/ mit/ver- ver- zu/ zu/ver-
+dienern	/ liebe-
+dieseln	/ nach/ ver-
+dingen	/ aus/be- be- ver- vor-aus/be-
+dippen	/
+docken	/ an/ aus/ ein/
+doktern	/ her-um/
+dolmetschen	/ ver-
+donnern	/ auf/ ver-
+dopen	/
+doppeln	/ ver-
+dorren	/ ab/ aus/ ver-
+doubeln	/
+drahten	ver-
+drechseln	/
+drehen	/ ab/ an/ auf/ aus/ bei/ durch/ ein/ her-um/ hoch/ nach/ um/ ver- zu/ zurück/ über-
+dremmeln	/
+dreschen	/ ein/ ver-
+dribbeln	/
+driften	/ ab/
+drillen	/ ein/ ver-
+dringen	/ durch- durch/ ein/ vor/
+# drinnen	/
+dritteln	/
+drohen	/ an/ be-
+drosseln	/ ab/ er-
+drucken	/ ab/ an/ auf/ aus/ be- be-ein/ durch/ ein/ nach/ ver- über-
+drucksen	/ her-um/
+# dränen	/
+drängeln	/ auf/ vor/
+drängen	/ ab/ an/ auf/ be- durch/ ein/ hin-aus/ nach/ um- ver- vor/ weg/ zurück/ zusammen/
+dräuen	/
+dröhnen	/ auf/ ent- er-
+dröseln	/ auf/
+drücken	/ ab/ auf/ aus/ be- durch/ ein/ er- her-um/ kaputt/ nieder/ um/ ver- weg/ zer- zu/ zusammen/
+ducken	/ ab/
+dudeln	/ an/
+duften	/ ver-
+dulden	/ er- ge-
+dunsten	/ aus/ ver-
+dursten ver-
+duschen	/ ab/
+duseln	/ be- ein/
+duzen	/
+dämmen	/ ein/ zurück/
+dämmern	/ auf/ her-auf/
+dämpfen	/ ab/ auf/
+dörren	/ aus/
+dösen	/ ein/ ver-
+dübeln	/ ein/
+dümpeln	/ her-um/
+düngen	/ über-
+dünken	/
+dünnen	ver- aus/ 
+dünsten	/ aus/ ver-
+dürfen	/ be- durch/ her/ heran/ her-aus/ her-ein/ her-unter/ hin/ hin-auf/ hin-aus/ hin-ein/ hin-über/ mit/ vor-bei/ zurück/
+dürsten	/ ver-
+düsen	/ ab/ weg/
+düstern	ver- um-
+ebben	/ ab/ ver-
+ebnen	/ ein/
+echoen	/
+# echtsilbern	/
+eggen	/
+ehelichen	/ ver-
+ehren	/ be- ent- ver-
+eichen	/
+eiern	/ her-um/
+eifern	/ be- er- nach/ wett/
+eignen	/ an/ ent- er- über-
+eilen	/ be- durch- durch/ ent- er- hin-unter/ nach/ vor-aus/ zurück/ über-
+cremen	ein/ 
+dellen	ein/
+dosen	ein/
+# einfenzen	/
+gemeinden	ein/
+heimsen	ein/
+henkeln	ein/
+igeln	ein/ schwein/
+einigen	/ ver-
+kampfern	ein/
+kellern	ein/
+kerkern	ein/
+kesseln	ein/
+kremen	ein/
+norden	ein/
+pfarren	ein/
+poldern	ein/
+sargen	ein/
+# schänken	aus/ ein/
+teigen	ein/
+tüten	ein/
+leiben	ent- ein/ver-
+einzeln	ver-
+# einzelnen	/
+äschern	ein/
+eisen	ab/ ent- los/ ver-
+eitern	/ ver-
+ekeln	/ an/ hin-aus/ raus/ ver-
+# emden	/
+empören	/
+enden	/ be- ver- voll/
+endigen	/ be-
+engen	be- ein/ ver-
+# entaschen	/
+entbehren	/
+entblößen	/
+# enteisenen	/
+entern	/ auf/
+entfernen	/
+entgräten	/
+entjungfern	/
+entkräften	/
+entlarven	/
+entmachten	/
+entmenschen	/
+entmündigen	/
+# entpersönlichen	/
+entpflichten	/
+entpulpen	/
+entrechten	/
+entrinden	/
+entrümpeln	/
+entsittlichen	/
+entstofflichen	/
+entzundern	/
+ent-zweien	/
+erben	/ be- ent- er- fort/ ver- weiter/ver-
+erblinden	/
+erbosen	/
+erden	/ 
+erdolchen	/
+erdreisten	/
+erfrechen	/
+ergänzen	/
+ergötzen	/
+erinnern	/
+kalten	aus/ er-
+erkundigen	/
+erkälten	/
+erkühnen	/
+ermatten	/
+möglichen	er- ver-un/
+erniedrigen	/
+erobern	/ wieder- zurück/
+erschallen	/
+erschrecken	/
+erstarken	/
+ersäufen	/
+ertüchtigen	/
+erübrigen	/
+essen	/ an/ auf/ durch/ hinter- mit/ weg/ über-
+fabeln	/
+fachen	/ an/ ent-
+fachsimpeln	/
+fackeln	/ ab/
+fahnden	/
+fahren	/ ab/ an/ auf/ aus/ be- da-hin/ da-zwischen/ drein/ durch- durch/ ein/ ent- ent-gegen/ ent-lang/ er- fest/ fort/ heim/ her/ her-an/ her-aus/ her-ein/ hin/ hin-ab/ hin-aus/ hin-über/ hoch/ los/ mit/ nach/ schwarz/ tot/ um/ um- um-her/ ver- verbund/ vor/ vor/aus/ vor/bei/ wall/ weg/ weiter/ wider- will/ zer- zu/ zurück/ zusammen/ über- ein-her/ neben-her/ 
+fallen	/ ab/ an/ auf/ aus/ be- da-hin/ durch- durch/ ein/ ent- flach/ fort/ ge- her/ her-ab/ her-ein/ her-unter- hin/ hin-ab/ hin-ein/ miss/ nieder/ rein/ runter/ tot/ um/ ver- ver-un/ vor/ vorn-über/ weg/ zer- zu/ zurück/ zusammen/ über-
+falten	/ aus/ ent- zusammen/
+falzen	/ ein/
+fangen	/ ab/ an/ auf/ be- ein/ emp- um- ver-
+faschen	/
+faseln	/
+fasen	/ ab/
+fasern	/ zer-
+fassen	/ ab/ an/ auf/ be- ein/ er- nach/ um- ver- zu/ zusammen/
+fasten	/
+fauchen	/ an/
+faulen	/ ab/ an/ durch/ ver-
+faulenzen	/
+fausten	/
+faxen	/ an/ durch/ tele/
+fechten	/ an/ aus/ durch/ er- ver-
+federn	/ ab/
+fegen	/ auf/ aus/ durch/ hin-weg/ weg/ zusammen/
+fehlen	/ an/emp- be- emp- ver- weiter/emp-
+feien	ab/konter- konter-
+feiern	/ ab/ durch- durch/ krank/ nach/
+feilen	/ ab/ aus/ durch/ zu-recht/
+feilschen	/
+feinden	be- an/  ver- 
+# feinen	/
+feinern	ver- 
+feixen	/
+# felgen	/
+ferkeln	/
+fertigen	/ ab/ an/ aus/ recht/ ver-
+fesseln	/ ent-
+festen	/
+festigen	/ be- ent- ver-
+fetten	/ aus/ ein/ ent- ver-
+fetzeln	/
+fetzen	/ zer-
+feuchten	an/ be- durch- ent-
+feudeln	/
+feuern	/ ab/ an/ be- raus/ ver-
+ficken	/
+fickfacken	/
+fiebern	/
+fiedeln	/
+fiepen	/
+fieren	/ ab/
+fighten	/
+filmen	/ ver-
+filtern	/ aus/
+filzen	/ durch/ ver-
+finden	/ ab/ auf/ be- drein/ durch/ ein/ emp- er- her-aus/ hin/ hin-aus/ hin-ein/ nach/emp- statt/ vor/ zu-recht/ zurück/ zusammen/ dar-ein/ 
+fingern	/ be-
+finstern	ver-
+firmen	/
+firnissen	/ über/
+fischeln	/
+fischen	/ ab/ auf/ be- weg/ über-
+# fisteln	/
+fitzen	/ ver-
+fixen	/ an/
+flachen	ab/ ver- 
+flachsen	/
+# flacken	/
+flackern	/ auf/
+flaggen	/ aus/ be-
+flammen	/ auf/ ent-
+flanken	/
+flanschen	/
+flattern	/ auf/ zer-
+flechten	/ durch/ ein/ ent- um- ver-
+flecken	/ be-
+fleddern	/ zer-
+flegeln	/ hin/ her-um/
+flehen	/ an/ er-
+# fleischern	/
+flennen	/
+fletschen	/
+fletschern	/
+flicken	/ ein/ zu/ zu-recht/ zusammen/
+fliegen	/ ab/ an/ auf/ aus/ be- da-her/ da-hin/ durch- durch/ ein/ ent- fort/ hoch/ raus/ runter/ segel/ um- um-her/ ver- vor-bei/ weg/ weiter/ zu/ zurück/ über-
+fliehen	/ ent-
+fliesen	/
+fließen	/ ab/ aus/ durch- durch/ ein/ hin-unter/ um- ver- vor-bei/ zer- zu/ zusammen/ über/
+flimmern	/
+flippern	/
+flirren	/
+flirten	/
+flittern	/
+flitzen	/ ab/ weg/
+floaten	/
+flocken	/ aus/
+floppen	/
+fluchen	/ ver-
+fluchten	/
+flunkern	/
+fluten	/ be- durch/ über-
+flutschen	/ durch/
+flächsen	/
+flämmen	/
+fläzen	/ hin/
+flöhen	/ durch/
+flöten	/ ein/
+flößen	/ ein/
+flüchten	/ hin-ein/ 
+flügeln	/ be- über-
+flüstern	/ ein/
+# fohlen	/
+folgen	/ be- er- nach/ ver- verab/ weiter/ver- zurück/ver-
+folgern	/ schluss/
+foltern	/
+foppen	/
+fordern	/ ab/ an/ auf/ ein/ er- her-aus/ nach/ wieder- zurück/ über-
+forkeln	/
+formen	/ aus/ durch- nach/ um/ ur- ver- vor/
+forschen	/ aus/ durch- durch/ er- nach/
+forsten	be- auf/  durch-
+# fotzen	/
+foulen	/
+frachten	be- über-  ver- 
+fragen	/ ab/ an/ aus/ be- da-zwischen/ durch/ er- hinter- nach/ rück/ um- zurück/ über-
+fransen	/ aus/ zer-
+franzen	ver-
+freien	/ be-
+fremdeln	/
+fremden	ent- ver- zweck/ent- über-
+fressen	/ ab/ auf/ aus/ durch/ ein/ fest/ ver- weg/ zer- über-
+fretten	/ ab/
+freuen	/ er-
+freunden	be- an/ 
+freveln	/
+frieden	/ be- ein/ um-
+friemeln	/
+frieren	/ ab/ durch- durch/ ein/ ein/ge- er- ge- tief/ge- zu/ über-
+frischen	auf/ er-
+fristen	/ be- ent-
+# fritten	/
+frommen	/
+# fronden	/
+fronen	/
+frosten	/ ein/ ent-
+frotzeln	/
+fruchten	/ be-
+fräsen	/ ab/ ein/ zu/
+frömmeln	/
+frönen	/
+frösteln	/
+fuchsen	/ ein/
+fuchteln	/
+fugen	/ aus/ be- ver-
+fummeln	/ be- ver-
+funkeln	/
+funken	/ an/ da-zwischen/
+furchen	/ durch- zer-
+furzen	/
+fuscheln	/
+fuschen	/
+fuschern	/
+fuseln	/
+fusseln	/
+futtern	/ an/ auf/ durch/
+fußen	/
+fächeln	/ um- zu/
+fächern	/ auf/ aus/ ein/
+fädeln	/ auf/ aus/ ein/
+fälbeln	/
+fällen	/ aus/
+fälschen	/ ab/ ver-
+fälteln	/
+färben	/ ab/ ein/ ent- nach/ schön/ um/ ver- über-
+föhnen	/
+föhren	/
+fönen	/
+fördern	/ be- hin-aus/be- hin-unter/be- weiter/be-
+fügen	/ an/ bei/ ein/ hin-zu/ ver- zu/ zusammen/
+fühlen	/ ab/ be- ein/ er- mit/ nach/ vor/
+führen	/ ab/ an/ auf/ aus/ durch/ ein/ ent- ent-lang/ erst/auf/ fort/ heim/ her/ heran/ her-bei/ her-um/ hin/ hin-auf/ hin-aus/ irre/ mit/ nas/ ver- voll/ vor/ vor-bei/ weg/ weiter/ zu/ zurück/ zusammen/ zwangs/vor/ über- ur-auf/ 
+füllen	/ ab/ auf/ aus/ ein/ er- nach/ um/ über- über-er- 
+fürchten	/ be-
+fürsten	/
+füttern	/ ab/ aus/ durch/ ein/ ver-
+füßeln	/
+gabeln	/ auf/
+gackeln	/
+gackern	/
+gacksen	/
+gaffen	/ be- ver-
+gammeln	/ ver-
+garen	/ durch/
+gasen	/ aus/ be- ent- ver-
+gattern	er- ver- 
+gaukeln	/ um- vor/
+gaunern	/ be- durch/ er-
+gautschen	/
+# gebaren	/
+geben	/ ab/ an/ auf/ aus/ be- bei/ dar-an/ da-zu/ dran/ drauf/ durch/ ein/ er- frei/ heim/be- her/ her-aus/ her-ein/ hin/ hin/be- hin-ein-be- kund/ mit/ nach/ preis/ statt/ um- ver- vor/ weg/ weiter/ wieder- zu/ zurück/ über-  
+gebärden	/
+gebären	/
+gebühren	/
+gedeihen	/ an/
+gefährden	/
+gegnen	be- ent- 
+gehen	/ ab/ an/ auf/ aus/ be- da-hin/ da-neben/ da-von/ dran/ drauf/ drauf-los/ durch- durch/ ein/ ent- ent-gegen/ ent-lang/ ent-zwei/ er- fehl/ fremd/ heim/ her/ heran/ her-aus/ her-um/ her-unter/ her-vor/ hin/ hin-auf/ hin-aus/ hin-ein/ hinter- hin-unter/ hin-weg/ hin-über/ hoch/ hops/ irre/ kaputt/ klar/ lang/ los/ mit/ nach/ nieder/ ran/ rund/ schwarz/ um- um-her/ ver- vor/ vor-an/ vor-auf/ vor-aus/ vor-bei/ vor-her/ weg/ weiter/ zer- zu/ zurück/ über- dar-an/  vor-über/  ein-her/ neben-her/ 
+gehren	auf-be- be-
+geien	auf/
+geifern	/ be-
+geigen	/ heim/ ver-
+geilen	/ auf/ ver-
+geistern	/ be- her-um/ um-her/
+geizen	/
+geißeln	/
+lingen	ge- miss/
+gellen	/
+gelten	/ ab/ ent- ver-
+# gelzen	/
+gelüsten	/
+genehmigen	/
+genesen	/
+nießen	ge- nutz/
+genügen	/
+gerben	/
+# geriehen	/
+geschehen	/
+gesellen	/ bei/ hin-zu/ zu/
+gespenstern	/
+stalten	ge- aus/ge- durch/ge- um/ge- ver-an- ver-un-
+gesunden	/
+gewanden	/ ein/
+wichten	/ ge-
+gewinnen	/ ab/ wieder- zurück/
+# gewältigen	/
+gewärtigen	/
+gicksen	/
+giepern	/
+gieren	/ ran/
+gießen	/ ab/ auf/ aus/ be- ein/ er- nach/ um/ ver- zu/ über-
+giften	/ ent- ver-
+gilben	/ ver-
+gipfeln	/
+gipsen	/ ein/ ver- über-
+gipsern	/
+girren	/
+# gischen	/
+# gissen	/
+gittern	ein/ um- ver-
+glasen	/ ein/ ver- über-
+glauben	/
+gleichen	/ ab/ an/ aus/ be- ver- ver-
+gleisen	auf/ ein/  ent- 
+gleiten	/ ab/ auf/ aus/ be- ent- heim/be- hin-aus/be- hin-unter/be-
+gleißen	/
+gliedern	/ an/ auf/ aus/ durch- ein/ zer-
+glimmen	/ auf/ ver-
+# glimmern	/
+glitschen	/ ab/ aus/
+glitzern	/
+# glosen	/
+glotzen	/ be-
+glubschen	/
+glucken	/
+gluckern	/
+glucksen	/
+glupschen	/
+glänzen	/ er- um-
+# gläsern	/
+glätten	/
+glücken	/ be- miss/ ver-un/
+glühen	/ auf/ aus/ durch- durch/ er- ver- vor/
+# gnaden	/
+gneißen	/
+gnügen	be- ver- 
+gokeln	/
+golfen	/
+gondeln	/
+gongen	/
+gotten	ver- ent- 
+grabbeln	/
+graben	/ ab/ auf/ aus/ be- ein/ um/ ver-
+grabschen	/
+grapschen	/ be-
+grasen	/ ab/
+graten	ab/ ent- 
+grauen	/ er- ver-
+graulen	ver-
+graupeln	/
+grausen	/
+greifen	/ ab/ an/ auf/ aus/ be- da-neben/ durch/ ein/ er- fehl/ hin-aus/ hin-ein/ um/ um- ver- vor/ zu/ zurück/ über/
+greinen	/
+grenzen	/ ab/ an/ aus/ be- ein/ ent- um-
+griemeln	/
+grienen	/
+grieseln	/
+grießeln	/
+grillen	/
+grimmen	/ er-
+grinsen	/
+grollen	/
+grubben	/
+grubbern	/
+grummeln	/
+grunzen	/
+# gruppen	/
+gruseln	/
+grämeln	/
+grämen	/ ver-
+grätschen	/ ab/ auf/ hin-ein/
+grölen	/
+grübeln	/ nach/ zer-
+gründeln	/
+gründen	/ aus/ be- er-
+grünen	/ be- ein/ er- über-
+grüppeln	/
+grüßen	/ be-
+gucken	/ ab/ aus/ be- hin/ nach/ um/ ver- vor/ weg/ zu/
+gurgeln	/
+# gurken	/
+gurren	/
+gurten	an/
+gähnen	/
+gängeln	/
+gären	/ aus/ nach/
+gärteln	/
+gärtnern	/
+gönnen	/ miss/ ver-
+göttern	ver- ent- 
+# gülden	/ ver-
+güllen	/
+günstigen	be- ver- 
+gürten	/ um-
+haaren	/ be- ent-
+haben	/ ab/ an/ auf/ aus/ beisammen/ da/ dabei/ drauf/ durch/ er- fort/ frei/ ge- gut/ hand/ her/ her-aus/ los/ mit/ statt/ teil/ um/ vor/ vor-aus/ wahr/ weg/ wieder- zu/ zurück/ zusammen/ über/
+hacken	/ ab/ auf/ aus/ be- ein/ um/ zer- zu/
+hadern	/
+haften	/ / be- ent- ver-
+hageln	/ ver-
+hakeln	/
+haken	/ ab/ auf/ aus/ fest/ hinter- nach/ ver- zu/
+halftern	/ ab/
+hallen	/ nach/ ver- wider-
+halsen	/ auf/ um/
+halten	/ ab/ an/ an/be- auf/ auf-be- aus/ be- bei-be- bereit/ da-be- dafür/ da-gegen/ da-zu/ dicht/ dran/ drauf/ durch/ ein/ ein-be- ent- er- feil/ fest/ frei/ her/ her-aus/ hin/ hint-an/ hoch/ mit/ nieder/ ran/ raus/ sauber/ stand/ still/ um-be- ver- vor/ vor-be- vor-ent- zu/ zurück/ zurück-be- zusammen/ über- über-be- dar-an/  auf-recht-er- zurück/er- 
+# haltern	/
+# hamburgern	/
+hamstern	/
+handeln	/ ab/ aus/ be- ein/ er- kuh/ miss/ nach-be- ver- vor-be- zu-wider/
+# handen	ab/ vor/  zu/ 
+# handicapen	/
+# handikapen	/
+# handlangern	/
+# hanfen	/
+hangeln	/ hoch/ her-unter/ hin-über/
+# hangen	/
+hanteln	/
+hapern	/
+# harfen	/
+harken	/ be- ein/
+# harnen	/
+harren	/ aus/ be- ver-
+harschen	ver-
+harzen	/ ver-
+haschen	/ er-
+haspeln	/ ver-
+hassen	/
+hasten	/ über- weg/
+hatschen	/
+# hatten	/
+hauchen	/ an/ aus/ be- ein/
+hauen	/ ab/ an/ auf/ aus/ be- da-neben/ drauf/ durch- durch/ ein/ her-aus/ hin/ nieder/ runter/ um/ ver- zer- zu/ zusammen/
+haupten	be- ent- 
+hausen	/ be-
+hebeln	/ ab/ aus/
+heben	/ ab/ an/ auf/ aus/ be- ein/ ent- er- her-aus/ her-vor/ hoch/ um/ ver- über-
+# hebern	ab/ aus/ 
+hecheln	/ durch-
+hechten	/ weg/
+hecken	/ aus/
+# heden	/
+hefteln	/
+heften	/ ab/ an/ bei/ ein/ fest/ zu/ zusammen/
+hegen	/ ein/ um-
+hehlen	/ ver-
+heilen	/ ab/ aus/ ein/ ver- zu/
+heiligen	/ ent-
+heiraten	/ ein/ er- ver-
+heischen	/ er-
+heitern	auf/ er- 
+heizen	/ an/ auf/ be- durch- durch/ ein/ ver- vor/ über-
+heißen	/ gut/ ver-
+helfen	/ ab/ auf/ aus/ be- durch/ ein/ hin-weg/ mit/ nach/ ver- weiter/
+hellen	/ auf/ er-
+hemmen	/ ent-
+henken	/
+# herbsteln	/
+herbsten	/
+herrschen	/ an/ be- vor/
+albern	her-um/ ver-
+hetzen	/ ab/ auf/ ver-
+heucheln	/
+heuen	/ ab/ ein/ ver- 
+heuern	/ ab/ an/ ver-
+heulen	auf/ los/ vor/ 
+hexen	/ be- ver- weg/
+# hickeln	/
+# hicksen	/
+hieven	/ ein/
+himmeln	/ an/ ver-
+hindern	/ be- ver-
+# hineingeheimnissen	/
+hinken	/ hinter-her/ nach/
+# hinnen	/
+# hintern	/
+hissen	/
+hitzen	er- über- 
+hobeln	/ ab/ be- 
+hocken	/ hin/ nieder/
+hoffen	/ er- ver- 
+holen	/ ab/ auf/ aus/ ein/ er- general-über- heim/ her/ her-auf/ her-aus/ her-ein/ her-vor/ her-über/ hoch/ kiel/ nach/ nieder/ runter/ ver- weg/ wieder- zurück/ über-
+holländern	/
+holpern	/
+holzen	/ ab/ aus/ ver-
+honen	/
+hopsen	/ 
+horchen	/ ab/ auf/ aus/ be- ge- hin/ zu/
+# horsten	/
+horten	/
+hucken	/ auf/
+hudeln	/ lob- ver-
+# hudern	/
+# hufen	/
+huldigen	/
+humpeln	/
+hungern	/ ab/ aus/ durch/ ver-
+hunzen	/ ver-
+hupen	/
+hupfen	/
+huren	/ ver-
+# huscheln	/
+huschen	/ weg/
+husten	/ ab/ aus/
+# hutschen	/
+hutzeln	/
+häkeln	/ ab/ um-
+hälften	/
+hämmern	/ be- ein/
+händigen	ein/ aus/ 
+hängen	/ ab/ an/ auf/ aus/ be- dran/ durch/ ein/ er- her-ab/ her-aus/ her-unter/ hin/ nach/ rein/ rum/ um/ um- ver- vor/ weg/ zu/ zusammen/ über/
+hänseln	/
+# hänten	/
+# hären	/
+härmen	/ ab/
+härten	/ ab/ aus/ ent- er- ver-
+hätscheln	/ ver-
+häufeln	/ 
+häufen	/ an/ auf/ über-
+häuten	/ ab/ ent-
+# högen	/
+höhen	er- über-
+höhlen	/ aus/
+höhnen	/ ver-
+hökern	/ ver-
+hören	/ ab/ an/ an/ge- auf/ da-zu/ge- ein/ er- ge- her/ her/ge- her-aus/ hin/ge- mit/ schwarz/ um/ ver- weg/ zu/ zu/ge- zusammen/ge- über-
+hörnen	/
+hüllen	/ ein/ ent- um- ver- zu/
+hülsen	/ 
+hüpfen	/ sack/ seil/
+hüsteln	/
+hüten	/ be- ein/ ver-
+# iahen	/
+# illern	/
+imkern	/ 
+impfen	/ be- ein/ schutz/
+interviewen	/
+# irden	/
+irren	/ ab/ be- durch- um-her/ ver-
+jagen	/ ab/ auf/ be- durch- ein/ er- fort/ her/ hoch/ nach/ um-her/ ver- weg/
+jammern	/ be- vor/
+# jappen	/
+japsen	/
+# jassen	/
+# jauchen	/
+jauchzen	/ auf/
+jaulen	/ auf/
+jausen	/
+jazzen	/ ver-
+jetten	/
+jobben	/
+jochen	/ ein/
+jodeln	/
+joggen	/
+johlen	/
+jubeln	/ be- hoch/ um- ver- zu/
+# juchen	/
+# juchten	/
+juchzen	/
+jucken	/
+jumpen	/
+# jungen	/
+juxen	/ ver-
+jähren	/ ver-
+jäten	/ aus/
+kabbeln	/
+kabeln	/ ver-
+kacheln	/ ein/
+kacken	/ ver-
+# kahmen	/
+kakeln	/ be-
+# kalandern	/
+# kalaschen	/
+kalauern	/
+kalben	/ ver-
+# kalbern	/
+kalfatern	/
+kalken	/ ent- ver-
+# kampeln	/
+# kandeln	/
+# kanevassen	/
+# kannegießern	/
+kanten	ver-
+# kantern	/
+kapern	/
+# kapiteln	/ ab/
+kappen	/ ver-
+# kapriolen	/
+kapseln	ab/ ein/  ver- 
+# karden	/
+kardätschen	/
+# kargen	/
+karjuckeln	/
+karren	/ weg/
+karriolen	/
+karten	nach/ ver-
+kartätschen	/
+# kascheln	/
+kaschen	/
+kaspern	/ her-um/
+kasteien	/
+# katexochen	/
+kathetern	/
+katschen	/
+# katten	/
+# kaudern	/
+kauen	/ ab/ durch/ vor/ zer-
+kauern	/ nieder/
+kaufen	/ ab/ ab/ver- an/ auf/ aus/ver- be- ein/ er- frei/ hin-zu/ los/ nach/ ver- weiter/ver- wieder- zu/
+# kaupeln	/
+# kebbeln	/
+# keckern	/
+kegeln	/ aus/ preis/
+kehlen	/ aus/
+kehren	/ ab/ auf/ aus/ be- ein/ heim/ her-aus/ her-vor/ rück/ um/ ver- vor/ weg/ wieder- zu/ zurück/ zusammen/
+keifen	/
+keilen	/ aus/ ein/ ver-
+keimen	/ auf/ aus/ ent-
+kellnern	/
+keltern	/
+kennen	/ ab/er- an/er- aus/ be- er- ver- zu/er-
+kentern	/
+# keppeln	/
+kerben	/ aus/ ein/
+kernen	/ aus/ ent-
+# ketschen	/
+ketteln	/
+ketten	/ an/ ver-
+keuchen	/
+keulen	/
+# kibbeln	/
+kichern	/
+kicken	/ weg/
+# kicksen	/
+kidnappen	/
+kiebitzen	/
+# kiefern	/
+kieken	/ be-
+# kielen	/
+kieseln	/ ver-
+kiesen	/ er-
+kiffen	/
+# killen	/
+kippeln	/
+kippen	/ ab/ aus/ ein/ hinten-über/ hin-unter/ um/ ver- vorn-über/ über/
+# kirnen	/
+kirren	/
+kitschen	ver-
+kitten	/ ver-
+kitzeln	/ durch/
+# klabastern	/
+klacken	/
+klackern	/
+klaffen	/
+# klaftern	/
+klagen	/ an/ aus/ be- ein/ ver- vor/ weh/
+klammern	/ an/ aus/ ein/ fest/ um- ver-
+klambüsern	/ aus/
+klappen	/ auf/ aus/ hoch/ um/ ver- zu/ zurück/ zusammen/
+klappern	/ ab/
+klapsen	/
+klaren	auf/ ver- 
+klatschen	/ ab/ auf/ be- ver-
+klauben	/ auf/ aus/
+klauen	/ be-
+kleben	/ ab/ an/ auf/ be- ein/ fest/ ver- zu/ zusammen/ über-
+# klecken	/
+kleckern	/ be- hinterher/ ver-
+klecksen	/ be-
+# kleiben	/
+kleiden	/ an/ aus/ be- ein/ ent- um/ um- ver- über-
+kleinern	ver- zer- 
+kleistern	/ ver-
+klemmen	/ ab/ be- ein/ ver-
+# klempern	/
+klempnern	/
+# klengen	/
+klettern	/ durch- er- hin-auf/ hoch/ über-
+klicken	/ an/ durch/ weg/
+klickern	/ ver-
+# klieben	/
+# klieren	/
+klimmen	/ er-
+klimpern	/
+klingeln	/
+klingen	/ ab/ an/ auf/ aus/ durch- er- mit/ nach/ ver- wider-
+klinken	/ auf/ ein/
+# klippen	/
+klirren	/
+klitschen	/
+klittern	/
+klonen	/
+klopfen	/ ab/ an/ aus/ be- fest/
+kloppen	/ ver-
+klotzen	/ ran/
+klumpen	/ ver-
+kläffen	/ an/
+klären	/ ab/ auf/ er- ver-
+klönen	/
+klöppeln	/
+klügeln	aus/
+klüngeln	/
+knabbern	/ ab/ an/ be-
+knacken	/ auf/ ver-
+knacksen	/ an/ ver-
+knallen	/ ab/ nieder/ ver- zer- zu/
+# knappern	/
+knapsen	/ ab/
+knarren	/
+knarzen	/
+# knastern	/
+knatschen	/
+knattern	/
+# knaupeln	/
+knausern	/
+knautschen	/ ver- zer-
+knebeln	/
+knechten	/
+kneifen	/ aus/ ver- zu/ zusammen/
+kneipen	/
+kneippen	/
+kneten	/ durch/
+knibbeln	/
+knicken	/ ab/ ein/ um/
+knickern	/
+knicksen	/
+knien	/ be- hin/ nieder/ rein/
+# knietschen	/
+# kniffen	/
+knipsen	/ an/ aus/
+knirschen	/
+knistern	/
+# knitschen	/
+knittern	/ ver- zer-
+knobeln	/ aus/
+knorzen	/
+knoten	/ auf/ ent- fest/ ver- zu/
+knubbeln	/
+knuddeln	/
+knuffen	/
+# knuppern	/
+knurren	/ ver-
+knuspern	/
+knuten	/
+knutschen	/
+knäueln	/
+knäulen	/ ver- zer-
+knöchern	ver-
+knöpfen	/ ab/ auf/ aus/ durch/ ein/ vor/ zu/
+# knören	/
+knöteln	/
+knüllen	/ ver- zer- zusammen/
+knüpfen	/ an/ auf/ ver-
+knüppeln	/ ein/ nieder/
+kobolzen	/
+kochen	/ ab/ an/ auf/ aus/ be- ein/ ver- zer- über/
+kohlen	an/ be- ver- vor/
+kokeln	/
+koken	/ ver-
+koksen	/
+kollern	/
+kommen	/ ab/ ab/be- an/ auf/ auf/be- aus/ be- bei/ da-her/ dar-um/ da-von/ da-zu/ da-zu/be- da-zwischen/ dran/ durch/ ein/ empor/ ent- ent-gegen/ ent-lang/ flott/be- fort/ frei/ gleich/ heim/ her/ heran/ her-aus/ her-aus/be- her-ein/ her-ein/be- her-um/ her-unter/ her-unter/be- her-über/ hin/be- hin-aus/ hin-ein/ hin-weg/ hin-zu/ hoch/ hoch/be- klar/ klein/be- los/ los/be- mit/ mit/be- nach/ nach/be- nieder/ raus/ rein/ runter/ rüber/ spitz/be- um/ umhin/ ver- voll/ vor/ vor-an/ vor-bei/ weg/ weg/be- weiter/ wieder- wieder/be- zu/ zu/be- zu-recht/ zurück/ zurück/be- zusammen/ zuvor/ über- über/be- über-ein/ 
+konditern	/
+# kontakten	/
+kontern	/
+koppeln	/ ab/ an/ aus/ ent- rück/ ver-
+# koppen	/
+# korallen	/
+korken	ent- ver- zu/
+kosen	/ lieb/
+kosten	/ aus/ durch- durch/ ver-
+kotzen	/ an/ aus/ be-
+krabbeln	/
+# krabben	/
+krachen	/ ein/ ver- zusammen/
+# kracken	/
+kragen	ab/ vor/  aus/ 
+krakeelen	/
+krakeln	/
+krallen	/ an/ ver-
+kramen	/ aus/ ver-
+# krampen	/
+krampfen	/ ent- ver-
+# kranen	/
+# krangeln	/
+kranken	/ er-
+# krappen	/
+kratzen	/ ab/ an/ auf/ aus/ ver- weg/ zer- zusammen/
+krauchen	/ ver-
+kraulen	/
+# krausen	/
+krauten	/ ent- ver-
+kraxeln	/
+krebsen	/
+kredenzen	/
+kreiden	an/
+kreischen	/ auf/
+kreiseln	/
+kreisen	/ ein/ um-
+kreißen	/
+krempeln	/ auf/ her-unter/ hoch/ um/
+krempen	/
+# krengeln	/
+# krengen	/
+# kreppen	/
+kreuzen	/ an/ auf/ be- durch- durch/ ein/ rück/ über-
+kreuzigen	/ be-
+kribbeln	/
+# krickeln	/
+kriechen	/ aus/ be- durch- durch/ ver- zurück/
+kriegen	/ ab/ auf/ aus/ be- dran/ drauf/ ein/ her/ her-um/ hin/ klein/ los/ mit/ ran/ raus/ rein/ rum/ spitz/ tot/ weg/ zurück/ über-
+# krimmeln	/
+# krimpen	/
+kringeln	/
+# krippen	/
+kriseln	/
+krispeln	/
+kritteln	/ be-
+kritzeln	/ ab/ be- 
+krumpeln	/ ver-
+# krumpfen	/
+krusten	ent- über- ver-
+krächzen	/
+kräftigen	/ be-
+krähen	/
+# krählen	/
+krängen	/
+kränkeln	/
+kränken	/
+kränzen	/ be- um-
+kräuseln	/
+krönen	/ be-
+kröpfen	/ ver-
+# kröseln	/
+krümeln	/ ver- zer-
+krümmen	/ ver-
+kucken	/ be-
+kugeln	/ aus/
+kullern	/
+kunden	be- er- 
+kundschaften	/ aus/
+kungeln	/
+kuppeln	/ aus/ ein/ ver-
+# kuppen	/
+kurbeln	/ an/ hoch/
+# kuren	/
+kurven	/ her-um/ um- 
+kuscheln	/ ein/
+kuschen	/
+# käfigen	/
+# kälbern	/
+# kälken	/
+# kämmeln	/
+kämmen	/ ab/ aus/ durch- durch/ zurück/
+kämpfen	/ be- durch- durch/ er- nieder/ um-
+käsen	/ ver-
+kästeln	/ ver-
+kätschen	/
+köcheln	/
+ködern	/ be-
+können	/ ab/ an/ da-zu/ durch/ fort/ her/ heran/ her-aus/ her-ein/ her-unter/ hin/ hin-auf/ hin-aus/ hin-ein/ hin-weg/ hin-über/ mit/ rein/ umhin/ vor-bei/ weiter/ zurück/
+köpfeln	/
+köpfen	/ ein/
+kören	/
+körnen	/ an/ ver- zer-
+köstigen	be- ver- 
+kübeln	/
+kühlen	/ ab/ aus/ ein/ tief/ ver- über-
+# kümmeln	/
+kümmern	/ be- ver-
+# kümpeln	/
+künden	/ an/ auf/ ver-
+kündigen	/ ab/ an/ auf/ ver-
+künsteln	/ er-
+küren	/ er- mani/ pedi/
+kürzen	/ ab/ ver-
+küssen	/
+# labbern	/
+laben	/ er-
+labern	/
+lachen	/ ab/ an/ auf/ aus/ be- kaputt/ krank/ krumm/ schief/ tot/ ver- zu/
+lacken	/
+lackmeiern	/
+laden	/ ab/ auf/ aus/ be- bei/ durch/ ein/ ent- nach/ um/ ver- vor/ über-
+lagern	/ ab/ an/ aus/ be- ein/ end/ um/ um- ver- wege- zwischen/ über-
+lahmen	/ er-
+laichen	/ ab/
+lallen	/
+# lammen	/ ver-
+landen	/ an/ bruch/ not- ver- zwischen/
+langen	/ ab/ver- an/ be- er- ge- hin/ hin-über/ge- ver- wieder-er- zu/ zurück/ver-
+# laschen	/
+lassen	/ ab/ an/ aus/ be- da/ da-von/ durch/ ein/ ent- er- fort/ frei/ her-ab/ heran/ her-auf/ her-aus/ her-bei/ her-ein/ hin-auf/ hin-aus/ hin-ein/ hinter- locker- los/ nach/ natur-be- nieder/ ran/ rein/ runter/ ver- vor/ vor-bei/ weg/ zer- zu/ zurück/ über- ver-an/ 
+lasten	/ an/ auf/ aus/ be- ent- zu/ über- über-be-
+latschen	/ aus/
+lauben	er- ur- be-ur-  ent- 
+lauern	/ auf/ be-
+laufen	/ ab/ an/ auf/ aus/ be- da-von/ durch- durch/ ein/ ent- ent-gegen/ ent-lang/ er- fest/ fort/ frei/ her/ her-um/ hin-aus/ los/ mit/ nach/ paar/ schau/ tot/ um/ um-her/ ver- vor-aus/ vor-bei/ weg/ weiter/ wett/ zer- zu/ zusammen/ zu-wider/ neben-her/ 
+laugen	/ ab/ aus/
+lauschen	/ be- er-
+lausen	/ ent- ver-
+lauten	ver-
+leasen	/
+leben	/ auf/ aus/ be- da-hin/ durch- ein/ er- fort/ hoch/ nach/ ver- vor/ weiter/ zusammen/ über- mit/er- nach/er- 
+lechzen	/
+lecken	/ ab/ auf/ aus/ be-
+# ledern	/
+ledigen	er- ent- 
+leeren	/ aus/ ent-
+legen	/ ab/ an/ auf/ aus/ be- bei/ bereit/ bloß/ brach/ dar/ dar-um/ da-zu/ drauf/ ein/ fest/ frei/ her-ein/ hin/ hoch/ klar/ lang/ los/ nach/ rein/ still/ trocken/ über- um-/ vor/ weg/ zu/ zu-recht/ zurück/ zusammen/
+lehnen	/ ab/ an/ auf/ be- ent- vor/ zurück/
+lehren	/ be-
+leichtern	/ er-
+leiden	/ durch- er- ver- be-mit/
+leiern	/ an/ aus/
+leihen	/ aus/ be- ent- her/ ver-
+leimen	/ an/ ver-
+# leinen	/ an/ ganz/ halb/ rein/ sack/ steif/
+leinen	an/
+leisten	/ ab/
+leiten	/ ab/ an/ aus/ ein/ fehl/ ge- her/ hin-aus/ge- irre/ miss/ um-/ ver- weiter/ zu/ über/
+lenken	/ ab/ ein/ fern/ gegen/ um-/
+lenzen	/
+lernen	/ an/ aus/ da-zu/ ein/ er- hin-zu/ um-/ ver- zu/
+lesen	/ ab/ an/ auf/ aus/ be- durch/ ein/ er- gegen/ hand/ver- mit/ nach/ ver- vor/ zer- zusammen/ über- aus/er- 
+leuchten	/ auf/ aus/ be- durch- durch/ ein/ er- heim/ wett/er-
+leugnen	/ ab/ ver-
+lichteln	/
+lichten	/ ab/ auf/ aus/ be- über-be-
+lichtern	irr/
+liebeln	/
+lieben	/ be- ver-
+liefern	/ ab/ an/ auf/ aus/ be- ein/ mit/ nach/ über-
+liegen	/ ab/ an/ auf/ aus/ bereit/ bloß/ brach/ da/ da-neben/ dar-nieder/ drunter/ durch/ er- fest/ gegen-über/ her-um-/ ob- still/ um-her/ vor/ zurück/
+liften	/
+lindern	/
+linken	/
+# linnen	/
+linsen	/
+lispeln	/
+listen	/ ab/ auf/ er- über-
+# lobben	/
+loben	/ an/ge- aus/ be- ent- fort/ ge- ver-
+lochen	/ durch- ein/
+locken	/ ab/ an/ ent- froh/ her-bei/ ver-
+lockern	/ auf/
+lodern	auf/ ver- 
+loggen	/ aus/ ein/
+lohen	/ ver-
+lohnen	/ be- ent- ver-
+losen	/ aus/ ver- ver-harm/ ver-wahr/
+loten	aus/
+lotsen	/ durch/ hin-durch/
+lottern	/ ver-
+luchsen	/ ab/
+lugen	/
+lullen	ein/
+# lumbecken	/
+lumpen	ver-
+# lunchen	/
+lungern	/ her-um-/
+lupfen	/
+# luppen	/
+lutschen	/ auf/ aus/
+luven	/ an/ auf/
+lynchen	/
+lächeln	/ an/ be- hohn/ zu/
+# lächern	/
+lähmen	/
+längen	/ ab/
+läppen	/
+läppern	/ ver- zusammen/
+lärmen	/
+lästern	/ ver-
+läuten	/ ab/ an/ aus/ ein/
+läutern	/ er-
+löchern	/ durch- zer-
+# löcken	/
+löffeln	/ aus/
+löhnen	/ ent-
+löschen	/ ab/ aus/ er- ver-
+lösen	/ ab/ auf/ aus/ ein/ er- los/ nach/
+löten	/ an/ hart/ ver- weich/
+lüften	/ aus/ be- durch- ent-
+lügen	/ an/ be- durch/ er- vor/
+lümmeln	/
+lüpfen	/
+machen	/ ab/ an/ auf/ aus/ be- bereit/ blau/ dar-an/ da-von/ dicht/ dran/ drauf/ durch/ dünn/ ein/ ent-zwei/ fest/ flott/ fort/ frei/ glatt/ gleich/ gut/ her/ heran/ her-aus/ her-unter/ hin/ irre/ kalt/ kaputt/ kehrt/ klar/ krank/ kund/ locker- los/ mit/ nach/ nieder/ rum-/ sauber/ scharf/ schlapp/ schön/ tot/ ver- vor/ vor-an/ weg/ weis/ weiter/ wett/ zu/ zu-recht/
+mahlen	/ aus/ ver- zer-
+mahnen	/ ab/ an/ ein/ er- ge-
+maischen	/
+makeln	/
+malen	/ ab/ an/ auf/ aus/ be- nach/ ver- über-
+malern	/
+# mallen	/
+malmen	zer-
+malochen	/
+mampfen	/
+managen	/
+mangeln	/ er-
+# mangen	/
+mannen	be- ent- er- über-
+manschen	/ ver- zer-
+mantschen	/ ver- zer-
+markten	/ ver-
+# marmeln	/
+martern	/ zer-
+# matern	/
+matschen	/
+mauern	/ auf/ aus/ ein/ hinter- um- ver- vor/ zu/
+maulen	/
+maunzen	/
+mauscheln	/
+mausen	/ be-
+mausern	/
+# mauzen	/
+maßen	an/ be- mut/ ver-
+meckern	/ an/ be-
+# meerumschlungen	/
+mehren	/ ver-
+meiden	/ ver-
+meinen	/ ver-
+meistern	/ schul/
+meißeln	/ auf/ aus/ ein/
+melden	/ ab/ an/ krank/ um/ ver- vor-an/
+melken	/
+# memmeln	/
+mendeln	/ 
+mengen	/ bei/ ein/ ver-
+menscheln	/
+menschlichen	ver- ent- 
+# mensendiecken	/
+mergeln	ab/ aus/ 
+merken	/ an/ auf/ be- ver- vor/
+messen	/ ab/ an/ auf/ aus/ be- bei/ durch- er- nach/ ver- zu/
+metzeln	/ nieder/
+meucheln	/
+meutern	/
+miauen	/
+mickern	/
+miefen	/
+mieten	/ an/ aus/ ein/ ent- ver- weiter/ver-
+milchen	/
+mildern	/
+mimen	/
+mindern	/ ver-
+# minnen	/
+mischen	/ auf/ bei/ dar-ein/ drein/ durch- durch/ ein/ ent- mit/ ver-
+missen	/ ver-
+misten	/ aus/ ent-
+mitteln	er- über-  ver- weiter/ver-  aus/ 
+mixen	/
+mobben	/
+modeln	/ um/
+modern	/ ver-
+# mofeln	/
+mogeln	/ be- durch/
+moppen	/
+mopsen	/
+morden	/ er-
+# morgen	/ über- über-über-
+morsen	/
+mosern	/
+mosten	/
+motten	ein/
+motzen	/ an/ auf/
+mucken	auf/
+# muckschen	/
+mucksen	/
+muffeln	/
+# muffen	/
+muhen	/
+mulchen	/
+# mulmen	/
+mummeln	ein/
+mummen	ein/ ver-
+munden	/ be-vor/
+munkeln	/
+muntern	auf/ er- 
+muren	ver-
+murksen	/ ab/ ver-
+murmeln	/
+murren	/
+mustern	/ ab/ an/ aus/ be- durch- durch/
+muten	an/ ver- zu/
+mutigen	er- ent- 
+mäandern	/
+mähen	/ nieder/
+mäkeln	/ be-
+mälzen	/
+mären	aus/
+mästen	/ über-
+# mäuseln	/
+mäßigen	/ er-
+möbeln	auf/ ver- 
+mögen	/ mit/ ver-
+# möllern	/
+möpseln	/
+mörsern	/
+mörteln	/
+müden	ab/ er-  über- 
+müffeln	/
+mühen	/ ab/ be- her-be- her-auf-be- her-ein-be- hin-ein-be-
+mümmeln	/
+münden	/ aus/ ein/
+münzen	/ aus/ um/
+müssen	/ durch/ fort/ heim/ her/ heran/ her-aus/ her-ein/ her-unter/ hin/ hin-auf/ hin-aus/ hindurch/ hin-ein/ hin-über/ mit/ ran/ vor-bei/ weg/ zurück/
+müßigen	be-
+ahmen	nach/
+dunkeln	ab/ ein/ ent- nach/ ver- 
+plappern	/ nach/ ver-
+nachten	über- 
+äffen	nach/
+nadeln	/
+nageln	/ an/ be- fest/ ver- zu/
+nagen	/ ab/ be- durch- durch/ zer-
+nahen	/
+narben	ver-
+narren	/ ver-
+naschen	/ ver-
+nassauern	/
+nebeln	be- ein/ um- ver-
+necken	/
+nehmen	/ ab/ an/ auf/ aus/ be- da-neben/be- durch/ ein/ ein/ver- ent- ent-gegen/ fest/ her/ her-aus/ her-ein/ hin/ hoch/ hopp/ hops/ mal/ mit/ teil/ ver- vor/ vor-bei-be- vorlieb/ vorweg/ wahr/ weg/ wunder- zu/ zurück/ zusammen/ über-
+neiden	/ be-
+neigen	/ hin/ ver- vor/ zu/
+nennen	/ be- er- um-be-
+neppen	/
+nerven	/ ent-
+nesteln	/ auf/
+netzen	/ be- ver-
+neuern	er-
+# neusilbern	/
+nibbeln	ab/
+nichten	ver- zer- 
+nicken	/ ein/ zu/
+nieseln	/
+niesen	/ be- los/
+nieten	/ um/ ver-
+# ningeln	/
+nippen	/
+nisten	/ ein/
+# nitscheln	/
+# noppen	/
+normen	/
+nuckeln	/ ein/
+# nuddeln	/
+nudeln	/ durch/
+nullen	/
+nummern	be- 
+nuscheln	/
+nuten	/ ver-
+# nutschen	/
+nutzen	/ ab/ aus/ be- mit/be-
+nächtigen	/ durch-
+nähen	/ ab/ an/ auf/ ein/ fest/ um/ ver- weiß/ zu/ zusammen/
+nähern	/ an/
+nähren	/ er-
+näseln	/
+nässeln	/
+nässen	/ be- durch- ein/
+nölen	/
+nörgeln	/
+nötigen	/ ab/ auf/ be-
+nützen	/ ab/ be- mit/be-
+# ochsen	/
+offenbaren	/
+ohrfeigen	/
+opfern	/ auf/
+orakeln	/
+ordern	/ be- her-be-
+ordnen	/ ab/ an/ bei/ ein/ neben/ ver- zu/ über/
+orgeln	/ hand/
+orten	/ ver-
+outen	/
+paaren	/ ver-
+pachten	/ ver-
+packen	/ ab/ an/ auf/ aus/ be- bei/ ein/ um/ ver- weg/ zu/ zusammen/
+paddeln	/
+paffen	/
+palavern	/
+# palen	/
+panschen	/
+# pantschen	/
+panzern	/
+pappen	/
+parken	/ aus/ ein/ zu/
+paschen	/
+paspeln	/
+passen	/ ab/ an/ auf/ ein/ hin-ein/ ver- zu/ zusammen/
+patschen	/
+patzen	/ ver-
+pauken	/ durch/ ein/ her-aus/
+pausen	/ ab/ durch/
+peilen	/ an/
+peinigen	/
+peitschen	/ auf/ aus/ durch/ ein/
+pellen	/
+pelzen	/
+pendeln	/ aus/ ein/
+pennen	/ aus/ ein/ ver-
+perlen	/ ab/
+pesen	/
+petzen	/ ver-
+pfeffern	/ ein/
+pfeifen	/ ab/ an/ aus/ ver-
+# pfelzen	/
+pferchen	/ ein/ zusammen/
+pfetzen	/
+pflanzen	/ an/ auf/ aus/ be- ein/ fort/ um/ ver- über-
+pflastern	be- zu/ 
+pflatschen	/
+pflaumen	an/ her-um/
+pflegen	/ ver- ein/
+pflocken	/
+# pflöcken	/
+pflücken	/ ab/ aus/ zer-
+pflügen	/ um/
+pfriemeln	/ auf/
+pfropfen	auf/
+pfuschen	/ hin-ein/ kur- ver-
+pfählen	/ aus/
+pfänden	/ ver-
+picheln	/
+pichen	/ ver-
+pickeln	/
+picken	/
+# pickern	/
+picknicken	/
+pieken
+piepen	/
+piepsen	/
+piesacken	/
+pieseln	/ ver-
+# pietschen	/
+# piken	/
+piksen	/
+pilgern	/
+# pilken	/
+pimpeln	/ ver-
+pimpern	/
+pinkeln	/ be-
+# pinken	/
+pinnen	ab/
+pinseln	/ be- ein/ über-
+pirschen	/ an/
+# pispern	/
+pissen	/ be- ver-
+# plachandern	/
+placken	/
+pladdern	/
+plagen	/ ab/
+planen	/ ein/ ver- vor/ vor-bei/
+planschen	/
+platschen	/
+platten	ab/ ver-
+platzen	/ auf/ her-aus/ her-ein/ hin-ein/ zer-
+plaudern	/ aus/ ver-
+plauschen	/
+# plaustern	/
+# plauzen	/
+plempern	/ ver-
+# plentern	/
+# plieren	/
+# plinkern	/
+# plinsen	/
+# pludern	/
+# plumpen	/
+plumpsen	/
+plustern	/ auf/
+plänkeln	/
+plärren	/
+plätschern	/ da-hin/
+plätteln	/
+plätten	/ ver-
+# plätzen	/
+plündern	/ aus/
+# plüschen	/
+pochen	/
+pofen	/
+pokern	/
+polen	/ um/
+polken	/
+polstern	/ auf/ aus/
+poltern	/
+popeln	/
+poppen	auf/ ver- 
+posaunen	/ aus/ hin-aus/
+# posen	/
+# posten	/
+powern	/ aus/
+prahlen	/
+prallen	/ ab/ an/ auf/ zurück/ zusammen/
+prangen	/
+# pranzen	/
+prasseln	/ ein/ nieder/
+prassen	/ ver-
+predigen	/
+# preien	/
+preisen	/ an/ aus/ ein/ hoch/ lob-
+prellen	/ ver- vor/
+preschen	/ vor/
+pressen	/ ab/ aus/ ein/ er- frei/ zu/ zusammen/
+prickeln	/
+priemen	/
+# pritschen	/
+# privaten	/
+proben	/ er-
+prophezeien	/
+prosten	/ zu/
+protzen	/
+# prudeln	/
+prunken	/
+prusten	/
+prägen	/ auf/ aus/ ein/ nach/ um/
+präpeln	/
+# pröbeln	/
+prüfen	/ durch/ nach/ über-
+prügeln	/ durch/ ver-
+# puckern	/
+# puddeln	/
+# pudden	/
+# pudeln	/
+pudern	/ be- ein/ über-
+puffen	/ ver-
+pulen	/
+pullen	/
+pullern	/
+pulsen	/ durch-
+pulvern	/ auf/ ver- zer-
+pumpen	/ an/ auf/ aus/ um/ ver-
+# pumpern	/
+punkten	/ aus/
+punzen	/
+pupen	/
+puppen	ein/ ent- ver-
+# puppern	/
+pupsen	/
+purzeln	/
+puschen	/
+pushen	/
+pusseln	/
+pusten	/ auf/ aus/ ver-
+putschen	/ auf/
+# putten	/
+putzen	/ ab/ auf/ aus/ runter/ ver- weg/
+puzzeln	/
+päppeln	/ auf/ hoch/ ver-
+# pätscheln	/
+pöbeln	/ an/
+pökeln	/ ein/
+quabbeln	/
+quacksalbern	/
+quadräteln	/
+quakeln	/
+quaken	/
+qualmen	/ ver-
+quanteln	/
+quasen	ver-
+quasseln	/ an/ be-
+quatschen	/ an/ aus/ be- ver-
+quellen	/ auf/ ent- ver- vor/ über/
+quengeln	/
+queren	/ durch- über-
+# quesen	/
+quetschen	/ aus/ durch/ zer-
+quicken	er- ver- 
+quieken	/
+quieksen	/
+quietschen	/
+# quillen	/
+quilten	/
+quirlen	/ ver-
+quizzen	/
+# quorren	/
+quäken	/
+quälen	/ ab/
+rackern	/ ab/
+radeln	/ aus/
+raffeln	/
+raffen	/ auf/ da-hin/ hin-weg/ zusammen/
+ragen	/ auf/ empor/ her-aus/ her-vor/ hoch/ über-
+rahmen	/ ab/ ein/ ent- um-
+rainen	an/
+rammeln	/ ver-
+rammen	/ ein/
+ramschen	/ ver-
+rangeln	/
+ranken	/ be- um-
+ranzen	an/
+rappeln	/ auf/ hoch/
+# rasaunen	/
+rascheln	/
+rasen	/ durch- durch/
+raspeln	/
+rasseln	/ durch/ her-ein/
+rasten	/ aus/ ein/
+rastern	/
+raten	/ ab/ an/ be- be-vor/ durch/be- ent- miss/ ver- wider- zu/
+ratschen	/
+rattern	/
+ratzen	/
+rauben	/ aus/ be-
+rauchen	/ an/ mit/ ver-
+rauen	/ an/ auf/
+raufen	/ aus/ zer- zusammen/
+raunen	/ zu/
+raunzen	/ an/
+raupen	/
+rauschen	/ be- durch- ver-
+rechen	/
+rechnen	/ ab/ an/ auf/ aus/ be- bruch/ da-zu/ durch/ ein/ er- hin-zu/ hoch/ kopf/ mit/ nach/ um/ ver- vor/ vor-aus/be- zu/ zusammen/ über-
+# rechtlichen	/
+recken	/ aus/ ver-
+recyceln	/
+reden	/ an/ aus/ bauch/ be- da/wider- da-her/ da-zwischen/ drauf-los/ drein/ ein/ her-bei/ her-um/ hin-ein/ irre/ mit/ nach/ schön/ verab/ vor-bei/ wider- zer- zu/ über- dar-ein/ 
+reffen	/
+regeln	/ maß/
+regen	/ ab/ an/ auf/ er-
+regnen	/ ab/ aus/ be- durch- durch/ ein/ nieder/ ver-
+reiben	/ ab/ auf/ ein/ trocken/ ver- zer-
+reichen	/ aus/ dar/ durch/ ein/ er- ge- heran/ her-über/ hin/ hin-auf/ hin-unter/ nach/ verab/ zu/ über-
+reichern	ab/ be-  an/ 
+reifen	/ aus/ heran/ nach/
+reihen	/ an/ auf/ ein/
+reihern	/
+reimen	/ zusammen/
+reinigen	/ be- ver-un/
+# reinsilbern	/
+reisen	/ ab/ an/ aus/ be- durch- durch/ ein/ heim/ hin/ mit/ nach/ um-her/ ver- weiter/
+reiten	/ ab/ auf/ auf-be- aus/ be- drauf-los/ durch- durch/ ein/ nach-be- rein/ um- ver- vor-be- vor-bei/ zu/ zu/be- über-
+reizen	/ an/ auf/ aus/ über-
+# reizzen	/
+reißen	/ ab/ an/ auf/ aus/ durch/ ein/ ent- fort/ her-aus/ her-um/ her-unter/ hin/ hin-ab/ hin-unter/ los/ mit/ nieder/ rein/ um- ver- weg/ zer- zusammen/ über-
+rekeln	/
+relaxen	/
+rempeln	/ an/
+renken	/ aus/ ein/ ver-
+rennen	/ an/ be- ein/ fest/ fort/ hin-ein/ nach/ um/ ver- vor/ weg/ wett/ über-
+renten	be- ver- 
+retten	/ er- hin-über/
+reuen	/ be- ge-
+reuten	/
+ribbeln	/ auf/
+richten	/ ab/ an/ auf/ aus/ be- ein/ ent- er- her/ hin/ nach/ent- ver- vor/ zu/
+richtigen	/ be-
+riechen	/ be-
+riefeln	/
+riegeln	ab/ ver-  ent-  zu/ 
+rieseln	/ be- durch- durch/ über-
+# riesen	/
+riffeln	/
+riggen	/
+rigolen	/
+rillen	/
+# rindern	/
+ringeln	/
+ringen	/ ab/ aus/ be- durch/ ent- er- nieder/ um-
+rinkeln	/
+rinnen	/ aus/ da/ ent- ge- ver- zer-
+rippeln	/
+rippen	/ aus/
+# rischeln	/
+# riten	/
+ritzen	/ ein/
+robben	/
+roboten	/
+rocken	/
+rodeln	/
+roden	/ aus/
+# rojen	/
+rollen	/ ab/ auf/ aus/ durch/ ein/ ent- hin-unter/ ver- weg/ zu/ zurück/ zusammen/ über-
+rollern	/
+# rossen	/
+rosten	/ durch/ ein/ ent- ver-
+rotten	/ aus/ ver- zusammen/
+rotzen	/
+rubbeln	/
+ruckeln	/
+rucken	/ an/
+rucksen	/
+rudern	/
+rufen	/ ab/ ab/be- an/ auf/ aus/ be- da-zwischen/ ein-be- her-bei/ her-ein/ her-vor/ nach/ ver- wach/ wider- zu/ zurück/ zurück-be- zusammen/
+ruhen	/ aus/ be- ge-
+rummeln	/
+rumoren	/
+rumpeln	/ über-
+rumsen	/
+runden	/ ab/ auf/ um- über-
+runksen	/
+runzeln	/
+rupfen	/ ab/ aus/ zer-
+ruscheln	/
+rutschen	/ ab/ aus/ durch/ her-aus/ runter/ ver-
+rußen	/ be- ent- ver-
+rächen	/
+rädeln	/ aus/
+rädern	/
+räkeln	/
+rändern	/
+rätseln	/ ent-
+rättern	/
+räubern	/ aus/
+räuchern	/ aus/ be-weih/ ver- weih/
+räufeln	/ auf/
+räumen	/ ab/ auf/ aus/ ein/ um/ weg/
+räuspern	/
+röcheln	/
+röhren	/
+röntgen	/
+rösten	/ ge-
+röten	/ er-
+# rötten	/
+rücken	/ ab/ an/ auf/ aus/ be- ein/ ent- heran/ her-aus/ nach/ raus/ ver- vor/ zu-recht/
+rüffeln	/
+rügen	/
+rühmen	/ nach/
+rühren	/ an/ auf/ be- ein/ fort/ her/ um- ver-
+rülpsen	/
+rümpfen	/
+rüsten	/ ab/ auf/ aus/ ein/ ent- nach/ um/
+rütteln	/ auf/ durch/ wach/
+sabbeln	/
+sabbern	/ be-
+sacken	/ ab/ durch/ ein/ ver- zusammen/
+saften	/ ent-
+sagen	/ ab/ an/ auf/ aus/ be- dank/ durch/ ein/ ent- gut/ her/ hin/ los/ nach/ tot/ ver- vor/ vor-aus/ vor-her/ vorweg/ wahr/ weis/ weiter/ zu/
+sahnen	ab/ ent-
+salbadern	/
+salben	/ ein/ lab/
+salzen	/ ein/ ent- nach/
+sammeln	/ an/ auf/ ein/ ver-
+sandeln	/
+sanden	/ ver-
+satteln	/ drauf/ um/
+sauen	/ ein/ ver-
+saufen	/ ab/ an/ aus/ be- er- ver-
+saugen	/ ab/ an/ auf/ aus/ ein/ fest/
+saunen	/
+sausen	/ durch/
+scannen	/
+schaben	/ ab/ aus/
+schachern	/ ver-
+schachteln	/ ein/
+schachten	/ aus/
+schaden	/
+schaffen	/ ab/ an/ be- er- fort/ heran/ her-aus/ her-bei/ her-ein/ hin-aus/ hin-ein/ hin-über/ nach/ recht/ ver- wahn/ weg/ zurück/
+schalen	ein/ ver-  aus/ 
+schalken	/ ver-
+schallen	/ be- er- wider-
+schallern	/
+# schalmen	/
+schalten	/ ab/ an/ auf/ aus/ ein/ gleich/ neben/ um/ zurück/
+# schamfilen	/
+schanghaien	/
+schanzen	/ ver- zu/
+scharen	/
+scharmützeln	/
+scharren	/ aus/ ein/ ver- zu/
+scharwenzeln	/ her-um/
+# scharwerken	/
+schassen	/
+schatten	ab/ be- um- über-
+schatzen	brand/
+schaudern	/ er- zurück/
+schauen	/ an/ auf/ aus/ be- da-zu/ durch- durch/ er- her/ her-aus/ hin/ hin-ein/ hin-über/ nach/ um/ ver- vor-aus/ vor-bei/ wahr/ zu/ zurück/ über-
+schauern	/ durch- er-
+schaufeln	/ aus/ zu/
+schaukeln	/ auf/ hin/ hoch/ ver-
+schauspielern	/
+scheffeln	/
+# scheiben	/
+scheiden	/ ab/ aus/ be- ent- ver-
+scheinen	/ be- durch- durch/ er- wider-
+scheiteln	/
+scheitern	/
+scheißen	/ an/ aus/ be- klug/ ver-
+# schelfen	/
+# schelfern	/
+schellen	zer-
+schelten	/ aus/
+schenken	/ aus/ be- ein/ nach/ ver- wieder-
+scheppern	/
+scheren	/ ab/ aus/ be- ein/ fort/ weg/
+# scherwenzeln	/
+schesen	/
+scheuchen	/ auf/ hoch/ ver- weg/
+scheuen	/ verab/ zurück/
+scheuern	/ auf/ durch- durch/ ver-
+schichten	/ auf/ be- um/
+schicken	/ ab/ an/ aus/ be- ein/ fort/ her/ her-aus/ her-ein/ hin/ hin-über/ los/ nach/ ver- vor/ vor-aus/ vorweg/ weg/ zu/ zurück/ zwangs/ver-
+schieben	/ ab/ an/ auf/ ein/ her/ hin/ hin-aus/ hoch/ nach/ ver- vor/ zu/
+schiedsrichtern	/
+# schiefern	/
+schielen	/
+schienen	/
+ein/
+schießen	/ ab/ an/ auf/ aus/ be- bei/ da-neben/ drauf-los/ durch- durch/ ein/ er- fehl/ krank/ los/ nieder/ tot/ vor/ vor-bei/ zer- zu/ zusammen/ über/
+schiffeln	/
+schiffen	/ aus/ ein/ um- ver-
+schiften	/
+schildern	/ aus/ be-
+schilfen	ver-
+schillern	/
+schilpen	/
+schimmeln	/ an/ ver-
+schimmern	/ durch- durch/ er-
+schimpfen	/ aus/ be- drauf-los/
+schindeln	/
+schinden	/ ab/ her-aus/
+schippen	/
+schippern	/
+# schirken	/
+schirmen	/ ab/ be-
+schirren	/ ab/ an/ aus/
+schlabbern	/ be-
+schlachten	/ ab/ aus/ haus- not- schwarz/
+schlacken	ent- ver-
+schlackern	/
+schlafen	/ aus/ be- bei/ durch- durch/ ein/ ent- ver- vor/ weiter/ über-
+schlaffen	ab/ er- 
+schlagen	/ ab/ an/ auf/ aus/ be- be-auf/ be-rat- bei/ breit/ da-zwischen/ drauf/ drein/ durch/ ein/ empor/ ent- er- fehl/ her-um/ hin/ hoch/ kaputt/ leck/ los/ nach/ nieder/ rat- tot/ um- ver- ver-an/ zer- zu/ zurück/ zusammen/ über- über/
+schlammen	ent- ver-
+schlampampen	/
+schlampen	/ ver-
+# schlappen	/
+schlappern	/
+schlauchen	/
+# schlaudern	/
+schlecken	/ aus/
+schleckern	/
+schleichen	/ an/ be- durch/ ein/ er- her-ein/ nach/ um- um-her/ weg/
+schleiern	ver- ent- 
+schleifen	/ ab/ an/ ein/ hohl/ mit/ ver-
+schleimen	/ aus/ ver-
+schleißen	ver- zer-
+schlemmen	/ ver-
+schlendern	/ um-her/
+schlenkern	/
+schlenzen	/
+schleppen	/ ab/ an/ da-hin/ durch/ ein/ her-bei/ hin/ mit/ ver-
+schleudern	/ trocken/ ver-
+schleusen	/ be- durch/ ein/
+schlichten	/
+schlicken	/
+schlickern	/
+# schliefen	/
+schlieren	/
+schließen	/ ab/ an/ auf/ aus/ be- ein/ ein-be- ent- er- kurz/ um- ver- weg/ zu/ über/
+schlingen	/ um- ver-
+schlingern	/
+# schlippen	/
+schlittern	/ hin-ein/
+schlitzen	/ auf/ zer-
+# schlorren	/
+schlossern	/
+schlottern	/
+schlotzen	/
+schluchzen	/ auf/
+schlucken	/ hinter- hin-unter/ runter/ ver-
+schlucksen	/
+schludern	/ ver-
+schlummern	/ ein/
+schlurfen	/
+schläfern	ein/
+schlämmen	/ ab/ auf/ aus/ ein/ ver-
+schlängeln	/ durch/
+schlüpfen	/ aus/ durch/ ent-
+schlürfen	/ aus/
+schlüsseln	/ auf/ ent- ver-
+schmachten	/ ver-
+schmaddern	/
+schmalzen	/ ab/
+schmarotzen	/
+schmatzen	/
+schmauchen	/
+schmausen	/ ver-
+schmecken	/ ab/ vor/
+schmeicheln	/ an/ ein/ um-
+schmeißen	/ auf/ ein/ hin/ hin-aus/ nach/ ran/ raus/ um/ weg/ zer- zusammen/
+schmelzen	/ ab/ ein/ er- um/ ver- zusammen/
+schmettern	/ ab/ nieder/ zer-
+schmieden	/
+schmiegen	/ an/
+schmieren	/ ab/ an/ aus/ be- ein/ ver-
+schminken	/ ab/
+schmirgeln	/ ab/
+schmollen	/
+schmoren	/ durch/
+# schmorgen	/
+schmuddeln	/
+schmuggeln	/ durch/ ein/
+schmunzeln	/
+schmurgeln	/
+schmusen	/
+schmutzen	an/ be- ver-
+schmähen	/ ver-
+schmälern	/ ver-
+schmälzen	/ ab/
+schmökern	/
+schmücken	/ aus/
+schnackeln	/
+schnacken	/
+schnallen	/ ab/ an/ fest/ um/
+schnalzen	/
+schnappen	/ auf/ ein/ ver- weg/ zu/ über-
+schnapsen	/
+schnarchen	/
+schnattern	/
+# schnatzen	/
+schnauben	/ aus/
+schnaufen	/ ver-
+schnauzen	/ an/
+schneeballen	/
+schneiden	/ ab/ an/ auf/ aus/ be- durch- durch/ ein/ ent-zwei/ mit/ ver- weg/ zer- zu/ zu-recht/ zurück/ über-
+schneidern	/
+schneien	/ be- ein/ her-ein/ zu/ über-
+# schneiteln	/
+schnellen	/
+schnetzeln	/
+schneuzen	/
+# schnicken	/
+schnieben	/
+schniefen	/
+schniegeln	/
+schnipfeln	/
+schnippeln	/ ver-
+schnippen	/
+schnipseln	/
+schnipsen	/
+schnitzeln	/
+schnitzen	/
+# schnobern	/
+schnorcheln	/
+schnorren	/
+schnuffeln	/
+# schnullen	/
+schnupfen	/ ver-
+schnuppern	/ be-
+schnurren	/
+schnäbeln	/
+schnäppern	/
+schnäpseln	/
+schnätzeln	/
+schnäuzen	/
+schnörkeln	/ ver-
+schnüffeln	/ aus/ be- durch/
+schnüren	/ ab/ auf/ ein/ ver- zu/ zusammen/
+schocken	/
+# schollern	/
+schonen	/ ver-
+# schoppen	/
+# schoren	/
+schottern	be-
+# schraffen	/
+# schragen	/
+# schralen	/
+schrammen	/ ab/ ver-
+# schrapen	/
+schrappen	/
+schrauben	/ ab/ an/ auf/ ein/ hin-auf/ los/ ver- zu/
+schrecken	/ ab/ auf/ er- hoch/ ver- zurück/ zusammen/
+schreiben	/ ab/ an/ auf/ aus/ be- da-zu/ durch/ ein/ fest/ fort/ gesund/ groß/ gut/ klein/ krank/ mit/ nach/ nieder/ recht/ schön/ um/ um- ver- vor/ zu/ zusammen/ über-
+schreien	/ an/ auf/ aus/ be- nieder/ über-
+schreinern	/
+schreiten	/ ab/ aus/ be- durch- ein/ ein-her/ fort/ über- 
+schriftstellern	/
+schrillen	/
+schroten	/ aus/ ver-
+schrotten	/ ent- ver-
+schrubben	/ ab/
+schrumpfen	/ ein/ gesund/ ver- zusammen/
+schruppen	/
+schrägen	/ ab/
+# schrämen	/
+schränken	/ be- ein/ ver-
+schröpfen	/
+# schubben	/
+schubsen	/ um/
+# schuckeln	/
+# schuddern	/
+schuften	/ ab/
+schulden	/ ent- um/ ver-
+schuldigen	be- an/  ent- 
+schulen	aus/ be- ein/ um/ ver-
+schultern	/
+schummeln	/ be- durch/
+schummern	/
+# schumpern	/
+schunkeln	/
+schuppen	/ ab/ be- ent-
+# schupsen	/ be-
+schurigeln	/
+# schurren	/
+schusseln	/ ver-
+schussern	/
+schustern	/ zu/ zu-recht/ zusammen/
+schwabbeln	/
+schwabbern	/
+# schwadern	/
+schwafeln	/
+schwanen	/
+schwanken	/
+schwappen	/ über/
+schwapsen	/
+# schwarten	/
+schwatzen	/ auf/ be- nach/
+schweben	/ ein/ ent- um- vor/
+schwefeln	/ aus/ ent-
+schweifen	/ ab/ aus/ durch- um-her/
+schweigen	/ aus/ still/ tot/ ver-
+# schweinern	/
+schweißen	/ an/ auf/ ein/ ent- kalt/ punkt/ ver- zu/ zusammen/
+schwelen	/
+schwelgen	/
+schwellen	/ ab/ an/ auf/ ver-
+schwemmen	/ ab/ an/ auf/ aus/ über-
+schwenden	ver-
+schwenken	/ aus/ ein/ um/
+schweren	be- er- 
+schwimmen	/ auf/ brust/ delfin/ delphin/ durch- durch/ ein/ frei/ hin-über/ rücken/ ver-
+schwindeln	/ an/ be- durch/ er-
+schwinden	/ da-hin/ ent- ver-
+schwingen	/ ab/ aus/ be- ein/ er- mit/ nach/
+# schwippen	/
+schwirren	ab/ um- um-her/
+schwitzen	/ aus/ durch/ ver-
+schwofen	/
+schwäbeln	/
+schwächen	/ ab/
+schwächeln	/ 
+schwängern	/
+schwänzeln	/
+schwänzen	/
+schwären	/
+schwärmen	/ aus/ um- vor/
+schwärzen	/ an/ ein/
+schwätzen	/ auf/ be-
+schwören	/ ab/ be- ein/ her-auf-be- ver-
+schächten	/
+schädigen	/ be- ent-
+schäften	an/
+schäkeln	/
+schäkern	/
+schälen	/ aus/ be- her-aus/
+schämen	/ be-
+schänden	/
+# schären	/
+schärfen	/ auf/ ein/ ent- ver-
+schätzen	/ ab/ ein/ ver- wert/ über-
+schäumen	/ auf/ aus/ ein/ über/
+schönen	/ ver-
+schöpfen	/ ab/ aus/ er-
+schüchtern	ein/ ver- 
+schüren	/
+schürfen	/ ab/ auf/
+# schürgen	/
+schürzen	/
+schütteln	/ ab/ auf/ aus/ durch/
+schütten	/ ab/ auf/ aus/ hin-ein/ um/ ver- weg/ zu/ über- über/
+schüttern	er-
+schützen	/ be- vor/
+scoren	/
+segeln	/ be- da-hin/ durch- um-
+segnen	/ ab/ aus/ ein/
+sehen	/ ab/ an/ auf/ aus/ be- durch/ ein/ ent-gegen/ er- fern/ gegen-über/ gleich/ hell/ her-ab/ hin/ hin-weg/ nach/ rot/ schwarz/ um/ ver- vor/ vor-aus/ vor-her/ weiter/ zu/ über- aus/er- 
+sehnen	/ er- her-bei/ zurück/
+# seibern	/
+seichen	/
+seifen	ab/ ein/ ver-
+seihen	/
+seilen	ab/ an/
+# seinigen	/
+sein	/ auf/ beisammen/	wohl/ zurück/
+selchen	/
+senden	/ ab/ aus/ ein/ ent- nach/ ur- ver- zu/ zurück/ über-
+sengen	/ ver-
+senken	/ ab/ ein/ hin-ab/ ver-
+sennen	/
+sensen	/
+setzen	/ ab/ an/ auf/ aus/ be- bei/ da-gegen/ dar-an/ dar-ein/ dar-unter/ da-zu/ dran/ durch/ ein/ ent- ent-gegen/ er- fehl/be- fest/ fort/ frei/ gleich/ her-ab/ her-auf/ hin/ hin-ein/ver- hint-an/ hinten/an/ hin-weg/ nach/ nieder/ rück/über- straf/ver- um/ um-be- ver- vor/ vor-aus/ weg/ wider- zer- zu/ zu-recht/ zurück/ zurück/ver- zusammen/ über- über/
+seuchen	durch- ver- ent- 
+seufzen	/ auf/
+sicheln	/
+sichern	/ ab/ ent- nach/ver- rück/ver- ver- ver-un/ zu/ über-ver- über-
+sichten	/
+sicken	/
+sickern	/ durch/ ein/ ver-
+sieben	/ aus/ durch/ ver-
+siechen	/ da-hin/ hin/
+siedeln	/ an/ aus/ be- um/ zer- zwangs-um- über-
+sieden	/ ein/
+siegeln	/ be- ent- ver-
+siegen	/ be- ob- ver-
+sielen	/
+siezen	/
+singen	/ be- ein/ lob- mit/ nach/ vor/ zer-
+sinken	/ ab/ ein/ hin/ hin-ab/ nieder/ um/ ver-
+sinnen	/ be- ent- er- hinter- nach/ um-be-
+sinnlichen	ver- ent- 
+sintern	/ /
+sirren	/
+sitzen	/ ab/ auf/ aus/ be- bei-sammen/ da/ dabei/ drin/ durch/ ein/ er- fest/ gegen-über/ her-um/ nach/ nieder/ still/ ver- vor/
+skaten	/
+skoren	/
+skullen	/
+smoken	/
+sniffen	/
+boarden	snow/
+# soggen	/
+sohlen	be- ver-
+sollen	/ hin-auf/ mit/	weg/
+sondern	ab/ aus/ 
+sonnen	/
+sorgen	/ aus/ be- ent- um- ver- vor/
+# soßen	/
+spachteln	/ ver-
+spalten	/ ab/ auf/ zer-
+spanen	/ ab/ zer-
+spannen	/ ab/ an/ auf/ aus/ be- ein/ ent- um- ver- vor/ über-
+sparen	/ ab/ an/ auf/ aus/ bau/ ein/ er-
+# sparren	/
+spaßen	/
+speicheln	/ ein/
+speichern	/ ab/ auf/
+speien	/ an/ aus/ be-
+# speilen	/
+speisen	/ ab/ ein/ ver-
+# spektakeln	/
+spenden	/
+sperren	/ ab/ auf/ aus/ ein/ ver- zu/
+spicken	/
+spiegeln	/ ab/ be- ent- vor/ wider-
+spiekern	/
+spielen	/ ab/ an/ auf/ aus/ be- durch/ ein/ er- frei/ her-aus/ her-unter- hin-über/ hoch/ mit/ nach/ um- ver- vor/ weiter/ zu/ zurück/ zusammen/ über-
+spießen	/ auf/
+spinnen	/ an/ aus/ ein/ ent- um- ver-
+spitzeln	/ be-
+spitzen	/ an/ zu/ über-
+spleißen	/ ver- zer-
+# splissen	/
+splitten	/
+splittern	/ ab/ auf/ zer-
+sponsern	/
+spornen	an/
+sporteln	/
+spotten	/ be- ver-
+# spratzen	/ zer-
+sprayen	/ auf/ ein/
+sprechen	/ ab/ an/ aus/ be- durch/ ein/ ent- frei/ hohn/ los/ mit/ nach/ ver- vor/ wider- zu/ über/
+# spreiten	/
+spreizen	/ auf/
+sprengen	/ auf/ aus/ be- ein/ ver- zer-
+sprenkeln	/ be- über-
+# sprenzen	/
+sprießen	/ auf/ ent- er-
+springen	/ ab/ an/ auf/ be- bei/ durch/ ein/ ent- her-aus/ hin-aus/ hin-zu/ hoch/ seil/ um/ vor/ weit/ zer- über- über/
+sprinten	/
+spritzen	/ an/ auf/ aus/ be- ein/ ver-
+sprossen	/
+sprudeln	/ her-aus/ ver- über/
+sprühen	/ auf/ be- ein/ ver-
+spucken	/ an/ aus/ be-
+spuken	/
+spulen	/ ab/ auf/ um/
+spunden	ver-
+spuren	/
+spurten	/
+sputen	/
+spähen	/ aus/ er-
+spänen	/ ab/
+spötteln	/ be-
+spülen	/ ab/ an/ auf/ aus/ nach/ um- über-
+spüren	/ auf/ er- nach/ ver-
+stacheln	/ an/ auf/
+staffeln	/
+staken	/
+staksen	/
+stallen	be- ein/
+stammeln	/
+stammen	/ ab/ ent- her-
+# stammern	/
+stampfen	/ auf/ ein/ zer-
+stanzen	/ aus/ ein/
+stapeln	/ auf/ hoch/ tief/
+stapfen	/
+starren	/ an/ er-
+starten	/ durch/
+statten	ab/ be-  er- ge- wieder-er- zurück/er-  aus/ 
+stauben	/ ab/ an/ be- ein/ ent- ver-
+stauchen	/ ver- zusammen/
+# stauden	/
+stauen	/ an/ auf/ ver-
+staunen	/ an/ be- er-
+stechen	/ ab/ an/ auf/ aus/ be- durch- durch/ ein/ er- her-vor/ um/ zer- zu/ über-
+stecken	/ ab/ an/ auf/ aus/ be- drin/ ein/ hin-ein/ um/ ver- zu/ zurück/
+stehen	/ ab/ an/ auf/ aus/ be- be-vor/ bei/ bei-sammen/ bereit/ da/ da-bei/ da/für/ da-hin/ dar-um/ drauf/ drin/ durch/ ein/ ein/ge- ent- ent-gegen/ er- fest/ fort/be- frei/ ge- gegen-über/ gerade/ gleich/ miss/ver- nach/ still/ stramm/ trocken/ um- ver- vor/ wider- zu/ zu/ge- zurück/ zusammen/ über- auf/er- 
+stehlen	/ da-von/ fort/ weg/
+steifen	/ aus/ ver-
+steigen	/ ab/ an/ auf/ aus/ be- berg/ durch- durch/ ein/ empor/ ent- er- hin-ab/ hin-auf/ hin-weg/ hoch/ nach/ nieder/ um/ ver- zu/ über-
+steigern	/ er- hin-ein/ ver- zwangs/ver- über-
+# steilen	/
+steinen	aus/ ent-
+steinigen	/
+stellen	/ ab/ ab/be- an/ auf/ aus/ be- bereit/ bloß/ da-gegen/ dar/ durch/ ein/ ein/be- ent- ent-gegen/ er- fest/ frei/ gegen-über/ glatt/ gleich/ her/ her-aus/ hin/ hin-aus/ hin-ein/ hint-an/ hoch/ kalt/ klar/ nach/ nach/be- sicher/ um/ um- ver- vor/ vor/be- vor-an/ weg/ zu/ zu-recht/ zurück/ zusammen/ über- wieder-her-
+# stellten	/
+stelzen	/
+stemmen	/ auf/ ent-gegen/
+stempeln	/ ab/ ent- um/ über-
+steppen	/ ab/ auf/ ver-
+sterben	/ ab/ aus/ da-hin/ er- ver- weg/
+steuern	/ an/ aus/ be- fern/ los/ um/ um- ver- zu/ über-
+stibitzen	/
+sticheln	/
+sticken	/ be- ent- er-
+stieben	/ zer-
+stiefeln	/
+stielen	/ ein/
+stiemen	/
+stieren	/
+stiften	/ an/
+stillen	/ ab/
+stimmen	/ ab/ an/ be- bei/ ein/ mit/be- nieder/ um/ ver- vor-be- vor/aus/be- vor/her-be- zu/ zusammen/ über- über-ein/
+stinken	/
+stippen	/ ein/
+stochern	/
+stocken	/ auf/ be-
+stolpern	/ ver-
+stopfen	/ aus/ hin-ein/ kunst/ ver- zu/
+stoppeln	/
+stoppen	/ ab/
+# storchen	/
+# storgen	/
+stottern	/ ab/
+# stowen	/
+stoßen	/ ab/ an/ auf/ aus/ be- durch- durch/ ein/ gesund/ kugel/ nach/ nieder/ um/ ver- vor/ weg/ zer- zu/ zurück/ zusammen/
+# strabanzen	/
+strafen	/ ab/ be-
+straffen	/
+strahlen	/ ab/ an/ aus/ be- ein/ er- sand/ um- wider- zer- zurück/ über-
+# straken	/
+# strammen	/
+strampeln	/ ab/ bloß/
+# strampfen	/
+stranden	/
+straucheln	/
+strawanzen	/
+streben	/ an/ auf/ be- empor/ er- fort/ ver- wider- zu/
+strecken	/ aus/ dar/ durch/ er- her-aus/ hin/ nieder/ voll/ vor/
+streicheln	/
+streichen	/ ab/ an/ auf/ aus/ be- durch- durch/ ein/ her-aus/ ver- vor/ weg/ zusammen/ über-
+streifen	/ ab/ durch/ um-her/ über/
+streiken	/ be-
+streiten	/ ab/ be- er- wett/ wider- zer-
+# stremmen	/
+stressen	/
+streuen	/ aus/ be- ein/ hin/ ver- zer- über-
+streunen	/
+stricheln	/
+stricken	/ be- rund/ um/ ver-
+striegeln	/
+striezen	/
+strippen	/
+strolchen	/
+stromern	/
+strotzen	/
+strudeln	/
+strullen	/
+strählen	/
+sträuben	/
+strömen	/ aus/ durch- durch/ ein/ ent- her-bei/ her-ein/ hin/ um- ver- zu/ zusammen/ über-
+# stuckern	/
+stufen	/ ab/ auf/ ein/ zurück/
+stumpfen	/ ab/
+stunden	/
+# stupfeln	/
+stupfen	/
+# stuppen	/
+stupsen	/
+stutzen	/ zu/ zu-recht/ zurück/
+stylen	/ durch/
+# stäbeln	/
+stählen	/ ver-
+stängeln	/
+stänkern	/ an/ ver-
+# stären	/
+stärken	/ be- ver-
+stäuben	/ auf/ be- ein/ ver- zer-
+# stäubern	/
+stäupen	/
+stöbern	/ auf/ durch- her-um/
+stöckeln	/
+stöhnen	/ auf/
+stöpseln	/ auf/ zu/
+stören	/ auf/ ent- funk/ent- ver- zer-
+stückeln	/ zer-
+stülpen	/ auf/ aus/ ein/ um/ über/
+stümmeln	ver-
+stümpern	/
+stürmen	/ an/ be- ein/ er-
+stürzen	/ ab/ be- ein/ her-ein/ hin/ hin-ab/ hinten-über/ hin-unter/ los/ nach/ nieder/ tot/ um/ vorn-über- zusammen/ über-
+stützen	/ ab/ auf/
+suchen	/ an/ auf/ aus/ be- durch- durch/ er- heim/ nach/ nach/unter- unter- ver- zusammen/
+suckeln	/
+sudeln	/ be-
+suhlen	/
+sulzen	/
+# summen	/ auf/
+sumpfen	/ ent- ver-
+surfen	/ wind/
+surren	/
+swingen	/
+säbeln	/ um/
+sächseln	/
+säckeln	/
+säen	/ an/ aus/ be- ein/ über-
+sägen	/ ab/ an/ aus/ durch- durch/ um/ zer-
+sättigen	/ über-
+säubern	/
+säuern	/ ein/ ent- über-
+säugen	/
+säumen	/ ein/ um- ver- verab/
+säuseln	/ an/ be-
+söhnen	ver- aus/ 
+# söhren	/
+süffeln	/
+sühnen	/ ent- ver-
+sülzen	/
+# sümpfen	/
+sündigen	/ ver-
+süßen	/ aus/ ver-
+tadeln	/
+tafeln	/
+# taften	/
+# tagelöhnern	/
+tagen	/ ver-
+takeln	/ ab/ auf/ be-
+takten	/
+talgen	/
+taljen	/
+talken	/
+tanken	/ auf/ be- durch/
+# tannen	/
+tanzen	/ ab/ an/ aus/ bauch/ durch- durch/ ein/ seil/ um- vor/
+tapern	/
+tappen	/ er- hin-ein/
+tapsen	/
+tarnen	/ ent-
+tarocken	/
+# taschenspielern	/
+tasten	/ ab/ an/ be- ein/ her-an/
+tatschen	/ be-
+tattern	/
+tauchen	/ an/ auf/ ein/ hin-ab/ hin/unter- tief/ unter-
+tauen	/ ab/ an/ auf/ be-
+taufen	/ not- um/
+taugen	/
+taumeln	/
+tauschen	/ ab/ aus/ ein/ um/ ver-
+teeren	/ ent-
+teilen	/ ab/ ab/ur- auf/ aus/ be-ur- be-vor- ein/ er- mit/ um/ver- ur- ver- ver-ur- vier- vor/ver-ur- zer- zu/ zu/er- über-vor-
+# telexen	/
+# tellern	/
+# tempern	/
+# terrigen	/
+testen	/ aus/
+teuern	be- über- ver- 
+teufen	/ ab/
+texten	/ be- zu/
+thronen	/ ent-
+ticken	/
+tigern	/ her-um/
+tilgen	/ aus/ ver-
+timen	/
+tingeln	/
+tippeln	/
+tippen	/ ab/ an/ auf/ ein/ um/ ver-
+tischlern	/
+titeln	/ be- um/
+# titschen	/
+toasten	/
+toben	/ aus/ durch-
+tollen	/ her-um/
+tonen	be- ver- über-be-
+tonnen	be- aus/ 
+topfen	ein/ um/
+toppen	/ auf/
+torkeln	/
+tosen	/ um-
+traben	/
+trachten	/ be-
+tragen	/ ab/ an/ auf/ aus/ be- be-an/ be-auf/ bei/ da/von/ ein/ er- fort/ her-an/ her-aus/ hin/ hin-aus/ hin-ein/ nach/ um-her/ ver- vor/ weg/ zu/ zusammen/ über-
+trampeln	/ be- nieder/ tot/ zer-
+trampen	/
+# trampsen	/
+# trappeln	/
+# trappen	/
+trapsen	/
+tratschen	/ weiter/
+trauen	/ an/ an/ver- be- fern/ ge- her-vor/ miss/ ver- zu/
+trauern	/ be- nach/ ver-
+trecken	/
+treffen	/ an/ an/be- auf/ be- ein/ zu/ zusammen/ über- über-ein/
+treiben	/ ab/ an/ auf/ aus/ be- bei/ durch/ ein/ her/ her-um/ hin/ hin-aus/ hinter- um/ ver- vor/ vor-an/ weg/ weiter/ zu/ zurück/ zusammen/ über-
+treideln	/
+# trendeln	/
+trennen	/ ab/ auf/ durch- durch/ zer-
+# trenzen	/
+treten	/ ab/ an/ aus/ be- bei/ breit/ da-zwischen/ durch/ ein/ ent-gegen/ fehl/ fest/ gegen-über/ her-an/ her-vor/ hin/ hin-ein/ hin/zu/ kaputt/ nieder/ tot/ ver- vor/ weg/ zer- zurück/ zusammen/ über-
+trichtern	/ ein/
+tricksen	/ aus/
+triefen	/
+trielen	/
+triezen	/
+# triften	/
+trillern	/
+trimmen	/ ver-
+trinken	/ ab/ aus/ be- er- tot/ ver- weg/ zu/
+trippeln	/
+trocknen	/ ab/ an/ aus/ ein/ ver-
+trollen	/
+trommeln	/ zusammen/
+trompeten	/ aus/
+tropfen	/ ab/ ver-
+trotteln	ver-
+trotten	/
+trotzen	/ ab/ er-
+trudeln	/ aus/ ein/
+trumpfen	ab/ auf/ über-
+# trutzen	/
+trällern	/
+tränen	/
+tränken	/ durch- ein/ er-
+träufeln	/ be- ein/
+träufen	/
+träumen	/ aus/ er- ver-
+trödeln	/ ver-
+# trölen	/
+tröpfeln	/ ein/
+trösten	/ hin-weg/ ver-
+tröten	/
+trüben	be- ein/
+# trüffeln	/
+trügen	/ be-
+trümmern	zer- ent- 
+# tschentschen	/
+tschilpen	/
+# tuchen	/
+tuckern	/
+tummeln	/
+tun	/	auf/ ab/ groß/ her-vor/ hin-ein/ ver- weg/	
+tunen	/
+tunken	/ ein/
+tunneln	/ durch-
+tupfen	/ ab/ auf/ aus/ be-
+turnen	/ an/ vor/ wett/
+turteln	/
+tuscheln	/
+tuschen	ver-
+tuten	/
+twisten	/
+täfeln	/ ver-
+tändeln	/ ver-
+tänzeln	/
+tätigen	/ be-
+tätscheln	/
+täuben	be-
+täuschen	/ an/ ent- hin-weg/ vor/
+tölpeln	be- über-
+tönen	er- über-
+töpfern	/
+# törggelen	/
+töten	/ ab/ er-
+# tückschen	/
+tüdern	ver-
+tüfteln	/ aus/
+tünchen	/ über-
+tüpfeln	/
+türken	/
+türmen	/ auf/
+ulken	/ ver-
+armen	um-
+floren	um-
+garnen	ein/ um-
+golden	um-
+manteln	um-
+randen	um-
+wölken	um-
+zingeln	um-
+unken	/
+verabschieden	/
+verallgemeinern	/
+veralten	/
+veranlagen	/
+veranschaulichen	/
+verargen	/
+verarmen	/
+verarschen	/
+verarzten	/
+veraschen	/
+verausgaben	/
+verauslagen	/
+verballhornen	/
+verbauern	/
+verbiestern	/
+verbildlichen	/
+verblüffen	/
+verbreitern	/
+verbriefen	/
+verbrämen	/
+verbrüdern	/
+verbumfiedeln	/
+verbösern	/
+verbünden	/
+verbürgerlichen	/
+verchartern	/
+verchromen	/
+verdammen	/
+verdaten	/
+verdauen	/
+verderben	/
+verdeutlichen	/
+verdinglichen	/
+verdolen	/
+verdrecken	/
+verdreifachen	/
+verdrießen	/
+verdummen	/
+verdumpfen	/
+# verdunklen	/
+verdutzen	/
+verdächtigen	/
+veredeln	/
+vereinbaren	/
+einen	/ ver-
+vereinfachen	/
+vereinheitlichen	/
+vereinnahmen	/
+vereinsamen	/
+vereiteln	/
+verelenden	/
+verengern	/
+verestern	/
+verewigen	/
+verfemen	/
+verflüchtigen	/
+verflüssigen	/
+verfrühen	/
+vergackeiern	/
+# verganden	/
+vergegenständlichen	/
+vergegenwärtigen	/
+vergeistigen	/
+vergesellschaften	/
+vergessen	/
+vergeuden	/
+vergewaltigen	/
+vergewissern	/
+vergletschern	/
+vergnatzen	/
+vergolden	/
+vergreisen	/
+vergrellen	/
+vergrätzen	/
+vergröbern	/
+vergrößern	/
+vergällen	/
+vergöttlichen	/
+vergüten	/ rück/
+verheddern	/
+verheeren	/
+verheimlichen	/
+verherrlichen	/
+verhochdeutschen	/
+# verhohlen	/
+verhohnepipeln	/
+verhornen	/
+verhundertfachen	/
+verhütten	/
+verinnerlichen	/
+verjuchheien	/
+verjüngen	/
+# verkadmen	/
+verkamisolen	/
+verkarsten	/
+verkasematuckeln	/
+verketzern	/
+verklüften	/
+# verknalen	/
+verknappen	/
+verknasten	/
+verknorpeln	/
+verknusen	/
+verkorksen	/
+verkraften	/
+verkrüppeln	/
+# verkästen	/
+verkörpern	/
+verlangsamen	/
+verlautbaren	/
+# verlebendigen	/
+# verleitgeben	/
+verletzen	/
+verleumden	/
+verlieren	/
+verludern	/
+verlängern	/
+# verlässigen	/
+vermaledeien	/
+# vermarken	/
+vermasseln	/
+vermiesen	/
+verminen	/
+vermooren	/
+vermorschen	/
+vermählen	/
+vermännlichen	/
+vernachlässigen	/
+verneinen	/
+vernickeln	/
+verniedlichen	/
+vernünfteln	/
+verpesten	/
+verpfründen	/
+verplomben	/
+verpönen	/
+# verquisten	/
+verringern	/
+verrohen	/
+verrohren	/
+versachlichen	/
+versaubeuteln	/
+versauern	/
+verschandeln	/
+verscheißern	/
+verscherbeln	/
+verschlanken	/
+verschlechtern	/
+verschlimmbessern	/
+verschlimmern	/
+verschorfen	/
+verschroben	/
+verschrumpeln	/
+# verschupfen	/
+verschönern	/
+versehren	/
+verselbstständigen	/
+versilbern	/
+versimpeln	/
+versinnbildlichen	/
+versklaven	/
+verslumen	/
+verspießern	/
+verspillern	/
+verspäten	/
+verspünden	/
+verstaatlichen	/
+verstetigen	/
+verstromen	/
+strubbeln	/ ver-
+verstummen	/
+verstädtern	/
+verständigen	/
+# vertauben	/
+vertausendfachen	/
+verteidigen	/
+verteufeln	/
+vertiefen	/
+vertieren	/
+# vertobaken	/
+vertorfen	/
+# vertrusten	/
+vertäuen	/
+# verunehren	/
+# veruneinigen	/
+verunglimpfen	/
+verunkrauten	/
+verursachen	/
+vervielfachen	/
+vervielfältigen	/
+vervierfachen	/
+vervollkommnen	/
+vervollständigen	/
+verwaisen	/
+verweichlichen	/
+verweltlichen	/
+wildern	/ uas/ ver- 
+verwirklichen	/
+# verwuscheln	/
+verzehnfachen	/
+# verzehnten	/
+verzichten	/
+verzinnen	/
+veräppeln	/
+verästeln	/
+veräußerlichen	/
+veröffentlichen	/ vor/ erst/
+verübeln	/
+vespern	/
+vierteln	/
+vögeln	/
+völkern	be- über-  ent- 
+völlern	/
+wabbeln	/
+wabern	/
+wachen	/ auf/ be- durch- durch/ er- über-
+# wachseln	/
+wachsen	/ an/ auf/ aus/ be- durch/ ein/ ent- er- fest/ her-an/ her-aus/ hin-aus/ nach/ um- ver- zu/ zusammen/ über-
+# efeu/be- gras/be- gras/über- rasen/be- 
+wackeln	/ ver-
+waffnen	/ be- ent-
+wagen	/ durch/ her-an/ her-aus/ her-ein/ her-vor/ hin/ hin-aus/ hin-ein/ vor/
+wahren	/ auf-be- be- ge- ver-
+walden	be- ent- 
+walken	/ durch/ ver-
+wallen	/ auf/ um- über-
+# wallfahrten	/
+walten	/ ob- ver-
+wamsen	ver-
+wandeln	/ ab/ an/ an/ver- lust/ nacht/ schlaf/ traum/ um/ ver-
+wandern	/ ab/ aus/ berg/ durch- ein/ er- rad/ um- zu/
+wanken	/
+# wannen	/
+wanzen	ent- ver-
+wappnen	/
+# waren	/
+warnen	/ ent- ver- vor/
+# warpen	/
+warten	/ ab/ auf/ er- hin/ zu/
+waschen	/ ab/ auf/ aus/ durch/ rein/ ver- vor/ weiß/
+wassern	/ not-
+waten	/ durch-
+watscheln	/
+watschen	/ ab/
+weben	/ durch- durch/ ein/ ver-
+wechseln	/ ab/ aus/ ein/ hin-über/ um/ ver- über/
+wecken	/ auf/ auf/er- ein/ er-
+wedeln	/ schweif/
+# wegern	/
+wehen	/ um- ver- zu/
+wehren	/ ab/ be- er- ver-
+# weibeln	/
+weichen	/ ab/ auf/ aus/ durch- durch/ ein/ ent- er- zurück/
+weiden	/ ab/ aus/ be-
+# weifen	/
+weigern	/ ver-
+weihen	/ ein/ ent-
+# weihnachten	/
+weilen	/ lang/ ver- zu/
+weinen	/ aus/ be- nach/
+weisen	/ ab/ an/ auf/ aus/ be- ein/ er- hin/ nach/ ver- vor/ zu/ zu-recht/ zurück/ zurück/ver- über-
+weiten	/ aus/
+weitern	er-
+weißeln	/
+weißen	nach/ über-
+welken	/ ver-
+# wellen	/
+# wellern	/
+welschen	kauder-
+wenden	/ ab/ an/ auf/ be- ein/ ent- hin/ um/ ver- weiter/ver- zu/ zurück/
+werben	/ ab/ an/ be- er- um-
+werden	/ irre/ kund/ los/
+werfen	/ ab/ an/ auf/ aus/ be- ein/ ent- fort/ her-aus/ her-um/ hin/ hin-aus/ hinter-her/ hin/unter- hin-über/ hoch/ nach/ nieder/ raus/ um/ ver- vor/ weg/ zer- zu/ zurück/ über-
+# wergen	/
+werkeln	/
+werken	/ feuer- fuhr/ her-um/fuhr/ heim/
+werten	/ ab/ auf/ aus/ be- ent- um/ ver- über-be- 
+wesen	/ ver-
+# wessen	/
+wetten	/ ver-
+wettern	/
+wetzen	/ ab/ aus/ durch/
+wichsen	/ ab/ ver-
+wickeln	/ ab/ auf/ aus/ be- ein/ ent- fort/ent- um/ um- ver- weiter/ent-
+widern	an/ er- 
+widmen	/ ent- um/
+# wiebeln	/
+käuen	wieder-
+# wiefeln	/
+wiegeln	/ ab/ auf/
+wiegen	/ ab/ auf/ aus/ ein/ nach/ ver- vor/ über-
+wiehern	/
+wienern	/
+wieseln	/
+# wieten	/
+# wilddieben	/
+# wildenzen	/
+willigen	be- ein/
+wimmeln	ab/
+# wimmen	/
+wimmern	/
+windeln	/
+winden	/ aus/ durch/ ent- hin-aus/ her-aus/ hoch/ um- ver- über-
+winkeln	/ an/ ein/
+winken	/ ab/ durch/ ein/ her-über/ hin-über/ nach/ zu/
+winseln	/
+wintern	/ aus/ durch- ein/ über-
+wippen	/
+# wippern	/
+wirbeln	/ auf/ hoch/
+wirken	/ aus/ be- durch- durch/ ein/ er- mit/ nach/ ver- zer- zurück/ zusammen/
+wirren	ver- ent- 
+wirten	be-
+wirtschaften	/ ab/ be- drauf/los/ er- her-aus/ her-unter- los/ ver-
+wischen	/ ab/ auf/ aus/ ent- er- ver- weg/
+# wispeln	/
+wispern	/
+wissen	/ vor/aus/ weiter/
+witschen	durch/
+wittern	/ aus/ ge- um- ver-
+witzeln	/ be-
+# wobbeln	/
+wogen	/ um-
+wohnen	/ ab/ be- bei/ ein/ ver-
+wollen	/ fort/ heim/ mit/ weg/ weiter/ zurück/
+# worden	/
+# worfeln	/
+# wricken	/
+wriggen	/
+wringen	/ aus/
+wuchern	/ be- über-
+wuchten	/ aus/
+wummern	/
+wundern	/ be- ver-
+# wurden	/
+wurmen	/ ent-
+wurschteln	durch/ ver- 
+wursteln	/ durch/ ver-
+wursten	/ ver-
+wurzeln	/ an/ be- ein/ ent- ver-
+wuseln	/
+# wussten	/
+wuzeln	/
+wägen	/ ab/ aus/ er-
+wählen	/ ab/ an/ aus/ aus/er- durch/ ein/ er- ver- vor/
+wähnen	/ er-
+währen	/ be- ge-
+# wälgern	/
+# wällen	/
+wälzen	/ ab/ um- über-
+wärmen	/ an/ auf/ durch- durch/ er- vor/
+wässern	/ be- ent- ver-
+wöhnen	arg/ be-arg/ ver- ent- ge- ab/ge- an/ge- ein/ge-
+wölben	/ auf/ hoch/ vor/ über-
+# wölfen	/
+wölken	be- auf/ 
+# wöllen	/
+wühlen	/ auf/ durch- durch/ ein/ um/ zer-
+wünschen	/ be-glück/ her-bei/ ver-
+würdigen	/ ent- her-ab/
+würfeln	/
+würgen	/ ab/ er- hin/unter-
+würzen	/ nach/
+wüsten	ver-
+wüten	/
+# zacken	/ zick/
+# zackern	/
+zagen	/ ver-
+zahlen	/ ab/ ab/be- an/ auf/ aus/ aus/be- be- drauf/ ein/ heim/ nach/ vor/aus/ vor/aus/be- weiter/ zu/ zurück/ zurück-be- über- über-be-
+zahnen	/ ver-
+# zainen	/
+zanken	/ aus/ ver-
+zapfen	/ ab/ an/ ver-
+zappeln	/ ab/
+zappen	/
+# zasern	/
+zaubern	/ be- ent- her-vor/ ver- vor/ weg/
+zaudern	/
+zausen	zer-
+zechen	/ durch- durch/
+# zecken	/
+zehren	/ auf/ aus/ ver-
+zeichnen	/ ab/ an/ auf/ aus/ be- durch/ ein/ gegen/ kenn/ nach/ plan/ um/ ver- vor/ über-
+# zeideln	/
+zeigen	/ an/ auf/ be- er- ver- vor/
+zeihen	/ ver-
+# zeiseln	/
+# zeisen	/
+zeitigen	/
+zelten	/ wild/
+zerdeppern	/
+fledern	/ zer-
+zerfleischen	/
+# zergen	/
+zermürben	/
+zerren	/ ent- ver-
+zerrütten	/
+zerteppern	/
+zetern	/
+zetteln	/ an/ ver-
+zeugen	/ be- er- über-
+# zickeln	/
+# ziegeln	/
+ziehen	/ ab/ an/ auf/ aus/ bei/ blank/ durch- durch/ ein/ fest/ fort/ gleich/ groß/ her/ her-an/ her-auf/ her-aus/ her-ein/ her-vor/ hin/ hin-ab/ hin-auf/ hin-aus/ hin-ein/ hoch/ los/ mit/ nach/ nach/voll/ um/ voll/ vor/ vor/bei/ weg/ zu/ zurück/ zusammen/ über-
+zielen	/ ab/ an/ er- hin/
+ziemen	/ ge-
+ziepen	/
+zieren	/ ver- ver-un-
+ziffern	be- ent- 
+# zigeunern	/
+zimmern	/ ver- zu-recht/
+# zimpern	/
+zinken	/ ver-
+# zinnern	/
+zinsen	ab/ auf/ ver-
+zirkeln	ab/ aus/
+zirpen	/
+zischeln	/
+zischen	/ ab/ an/ aus/
+zittern	/ durch- er-
+zockeln	/
+zocken	/ ab/
+zollen	/ ver-
+zoomen	/
+# zoten	/
+zotteln	/ nach/
+zucken	/ auf/ durch- zurück/ zusammen/
+zuckern	ein/ ver- über-
+# zullen	/
+# zulpen	/
+zupfen	/ ab/ aus/ zer-
+zurren	/ fest/
+# zutschen	/
+zuzeln	/
+zwacken	/ ab/
+zwatzeln	/ ver-
+zwecken	ab/ be-  an/ 
+zweifeln	/ an/ be- ver-
+zweigen	ab/ ver- 
+zwicken	/
+zwiebeln	/
+# zwiebrachen	/
+# zwieseln	/
+# zwilchen	/
+zwingen	/ auf/ be- er- nieder/
+# zwinken	/
+zwinkern	/ zu/
+zwirbeln	/ auf/
+zwirnen	ver-
+zwitschern	/ an/
+zwängen	/ durch/ ein/ hin/durch/
+zählen	/ ab/ an/ auf/ aus/ durch/ er- mit/ nach/ ver- vor/ vor/er- zu/ zusammen/ nach/er- weiter/er- 
+zähmen	/ be-
+zähneln	/
+# zähnen	/
+zärteln	ver-
+zäumen	ab/ auf/
+zäunen	ab/ ein/ um- ver-
+zögern	/ hin-aus/ ver-
+züchten	/ auf/
+züchtigen	/ not-
+zücken	/ ent- ver-
+zügeln	/
+zündeln	/
+zünden	/ an/ ent-
+züngeln	/ auf/ um-
+zürnen	/ er-
+ächten	/
+ächzen	/
+ähneln	/
+ändern	/ ab/ um/ ver- zurück/
+ängstigen	/ ver-
+ärgern	/ her-um/ tot/ ver-
+äsen	/
+# ästen	/ aus/ ent-
+ätzen	/ ein/ ver- weg/
+# äufnen	/
+äugeln	lieb/
+äugen	be- er-
+äußern	/ ent- ver-
+öden	/ an/ ver-
+öffnen	/ er-
+öhmden	/
+ölen	/ ein/ ent- ver-
+örtern	er-
+üben	/ aus/ ein/ ver-
+borden	über-
+brücken	über-
+kronen	über-
+lappen	über-
+# übermarchen	/
+raschen	über-
+wältigen	be- über-

@@ -1,0 +1,207 @@
+<!--
+    @(#) $Id: coding.html 36 2008-09-08 06:05:06Z gfis $
+    2006-07-24, Georg Fischer 
+    caution, must be stored in UTF-8:äöüÄÖÜß
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Colored Words</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheet.css" />
+</head>
+
+<body>
+<h2>Coding of Morphem Descriptors</h2>
+<p>
+The grammatical type of words is coded with a string of abbreviations 
+for various syntactical and semantic features:
+</p>
+<ol>
+<li>Word Class (main attribute)</li>
+<ul>
+<!-- keep these styles in sync with GrammarFilter.java, 
+     and with stylesheet.css - they appear with colored fore- and background ! 
+-->
+<li><span class="Ab">Ab</span> - abbreviation (substantive)</li>
+<li><span class="Aj">Aj</span> - adjective</li>
+<li><span class="Ar">Ar</span> - article (determined)</li>
+<li><span class="Au">Au</span> - article (undetermined)</li>
+<li><span class="Av">Av</span> - adverb</li>
+<li><span class="Cc">Cc</span> - concatenation</li>
+<li><span class="Er">Er</span> - error</span>, invalid spelling</li>
+<li>                 Ex        - reference to correct entry (e.g. for form with expanded umlauts)</li>
+<li><span class="Ir">Ir</span> - interrogative</span></li>
+<li><span class="Nm">Nm</span> - name</li>
+<li><span class="Nu">Nu</span> - number</li>
+<li><span class="Pn">Pn</span> - pronoun</li>
+<li><span class="Pr">Pr</span> - preposition</li>
+<li><span class="Rp">Rp</span> - reply or exclamation</li>
+<li><span class="Sb">Sb</span> - substantive</li>
+<li><span class="Un">Un</span> - unspecified frequent word</li>
+<li><span class="Vb">Vb</span> - verb</li>
+</ul>
+
+<li>Number</li>
+<ul>
+<li>Sg - singular</li>
+<li>Dl - dual</li>
+<li>Pl - plural</li>
+</ul>
+
+<li>Person
+<ul>
+<li>1 - me, we</li>
+<li>2 - you</li>
+<li>3 - he/she/it, they</li>
+</ul>
+
+<li>Gender</li>
+<ul>
+<li>Ms - masculine</li>
+<li>Fm - feminine</li>
+<li>Nt - neuter</li>
+</ul>
+
+<li>Specification</li>
+<ul>
+<li>Detm - determined</li>
+<li>Undt - undetermined</li>
+</ul>
+
+<li>Comparision</li>
+<ul>
+<li>Post - positive (no comparision)</li>
+<li>Cmpr - comparative</li>
+<li>Supl - superlative</li>
+</ul>
+
+<li>Modal</li>
+<ul>
+<li>L - local</li>
+<li>T - temporal</li>
+<li>M - modal</li>
+</ul>
+
+<li>Tempus/Verb form</li>
+<ul>
+<li>Pr - present</li>
+<li>Ip - imperfect</li>
+<li>Pf - perfect</li>
+<li>In - infinitive</li>
+<li>Ge - gerundium</li>
+<li>Pa - participe</li>
+<li>Fu - future</li>
+<li>C1 - conjunctive I, subjonctif</li>
+<li>Pq - plusquamperfect</li>
+<li>C2 - conjunctive II, subjonctif pass&eacute;</li>
+<li>Im - imperative</li>
+</ul>
+
+<li>Active/Passive</li>
+<ul>
+<li>Actv - active</li>
+<li>Pasv - passive</li>
+</ul>
+
+<li>Casus</li>
+<ul>
+<li>Nomv - nominative</li>
+<li>Genv - genitive</li>
+<li>Datv - dative</li>
+<li>Accv - accusative</li>
+<li>Ablv - ablative</li>
+</ul>
+
+<li>Other grammatical modifiers</li>
+<ul>
+<li>Anct - ancient, old form</li>
+<li>Chan - chain of words (separated by underscores)</li>
+<li>Colr - color</li>
+<li>Diar - with diaresis (there is another word without)</li>
+<li>Honr - honorative (personal pronouns in uppercase)</li>
+<li>Prim - primary, elementary, not combined</li>
+<li>Poss - possessive (pronoun)</li>
+<li>Refl - reflexive (pronoun)</li>
+<li>Relt - relative (pronoun)</li>
+<li>Root - root form</li>
+<li>Shor - shortened form, contraction</li>
+<li>Strg - strong (e.g. verb)</li>
+<li>Suff - suffix indicating some word type</li>
+<li>Weak - weak (e.g. verb)</li>
+</ul>
+
+<li>Word Field</li>
+<ul>
+<li>Bibl - words from the Holy Bible</li>
+<li>Bota - Botanic, plants</li>
+<li>Body - parts of (human) body</li>
+<li>Card - cardinal: 0, 1, 2 ... (for numbers)</li>
+<li>Caus - causal</li>
+<li>Clth - cloth, weaving, texture</li>
+<li>Curr - currency, money</li>
+<li>Dial - Dialect, bad language</li>
+<li>Frac - fractional: 1/2, 1/3 ... (for numbers)</li>
+<li>Freq - indicates frequency</li>
+<li>Forg - foreign (not native German) word or name, 
+    followed by an optional 2-letter ISO 636 country code
+</li>
+<li>Geog - Geography
+    <ul>
+        <li>City - city or location name</li>
+        <li>Flum - river name (with gender)</li>
+        <li>Mont - mountain name</li>
+    </ul>
+    These codes may be accompanied by <em>Forg</em>.
+</li>
+<li>Jidd - Jiddish</li>
+<li>Letr - Name of a (greek) letter</li>
+<li>Locn - location</li>
+<li>Meas - measurement unit</li>
+<li>Medc - medicine, illness</li>
+<li>Metl - metal</li>
+<li>Meto - meteorology, wheather</li>
+<li>Milt - military, weapon</li>
+<li>Minr - mineralogy, juwelry</li>
+<li>Modl - modal</li>
+<li>Move - indicating (direction of) movement</li>
+<li>Numr - related to some number</li>
+<li>Nutr - nutrition, eatable or drinkable</li>
+<li>Ordn - ordinal: 1st, 2nd ... (for numbers)</li>
+<li>Orul - old writing rules (before 1996)</li>
+<li>Pers - person</li>
+<li>Pren - first name, christian name of a person</li>
+<li>Prof - profession (implies person)</li>
+<li>Phys - Physics</li>
+<li>Ratn - rational number, fraction</li>
+<li>Spor - sport, play</li>
+<li>Surn - surname, last name of a person</li>
+<li>Time - time related</li>
+    <ul>
+        <li>Holy - name of holy day, sunday or holiday</li>
+        <li>Mnth - month name</li>
+        <li>Week - weekday</li>
+        <li>Seas - season</li>
+    </ul>
+<li>Zool - Zoology, animals</li>
+</ul>
+
+</ol>
+</body>
+</html>

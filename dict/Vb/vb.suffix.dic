@@ -1,0 +1,142 @@
+# conjugation endings of German verbs
+# @(#) $Id: vb.suffix.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-07, Georg Fischer
+#
+%lang=de
+
+# senden, reiten
+en         =VbInXX,en
+e          =VbPr11,en
+est        =VbPr12,en
+et         =VbPr13,en
+en         =VbPr91,en
+et         =VbPr92,en
+en         =VbPr93,en
+ete        =VbIp11,en
+etest      =VbIp12,en
+ete        =VbIp13,en
+eten       =VbIp91,en
+etet       =VbIp92,en
+eten       =VbIp93,en
+eter       =VbPa1M,en
+ete        =VbPa1F,en
+etem       =VbPa1D,en
+eten       =VbPa1A,en
+           =VbIm12,en
+en         =VbIm91,en
+et         =VbIm92,en
+end        =VbGeXX,en
+ende       =VbGe1F,en
+ender      =VbGe1M,en
+endem      =VbGe1D,en
+enden      =VbGe1A,en
+
+# fegen, hallen, stimmen
+# en         =VbInXX,en
+# e          =VbPr11,en
+st         =VbPr12,en
+# t          =VbPr12,sen (loesen, kuessen)
+t          =VbPr13,en
+en         =VbPr91,en
+t          =VbPr92,en
+en         =VbPr93,en
+te         =VbIp11,en
+test       =VbIp12,en
+te         =VbIp13,en
+ten        =VbIp91,en
+tet        =VbIp92,en
+ten        =VbIp93,en
+ter        =VbPa1M,en
+te         =VbPa1F,en
+tem        =VbPa1D,en
+ten        =VbPa1A,en
+#            =VbIm12,en
+# en         =VbIm91,en
+t          =VbIm92,en
+# end        =VbGeXX,en
+# ende       =VbGe1F,en
+# ender      =VbGe1M,en
+# endem      =VbGe1D,en
+# enden      =VbGe1A,en
+
+# laecheln
+eln        =VbInXX,eln
+le         =VbPr11,eln
+ele        =VbPr11,eln
+elst       =VbPr12,eln
+elt        =VbPr13,eln
+eln        =VbPr91,eln
+elt        =VbPr92,eln
+eln        =VbPr93,eln
+elte       =VbIp11,eln
+eltest     =VbIp12,eln
+elte       =VbIp13,eln
+elten      =VbIp91,eln
+eltet      =VbIp92,eln
+elten      =VbIp93,eln
+elter      =VbPa1M,eln
+elte       =VbPa1F,eln
+eltem      =VbPa1D,eln
+elten      =VbPa1A,eln
+el         =VbIm12,eln
+eln        =VbIm91,eln
+elt        =VbIm92,eln
+elnd       =VbGeXX,eln
+elnde      =VbGe1F,eln
+elnder     =VbGe1M,eln
+elndem     =VbGe1D,eln
+elnden     =VbGe1A,eln
+
+# kirchern
+ern        =VbInXX,ern
+ere        =VbPr11,ern
+erst       =VbPr12,ern
+ert        =VbPr13,ern
+ern        =VbPr91,ern
+ert        =VbPr92,ern
+ern        =VbPr93,ern
+erte       =VbIp11,ern
+ertest     =VbIp12,ern
+erte       =VbIp13,ern
+erten      =VbIp91,ern
+ertet      =VbIp92,ern
+erten      =VbIp93,ern
+erter      =VbPa1M,ern
+erte       =VbPa1F,ern
+ertem      =VbPa1D,ern
+erten      =VbPa1A,ern
+er         =VbIm12,ern
+ern        =VbIm91,ern
+ert        =VbIm92,ern
+ernd       =VbGeXX,ern
+ernde      =VbGe1F,ern
+ernder     =VbGe1M,ern
+erndem     =VbGe1D,ern
+ernden     =VbGe1A,ern
+
+# diskutieren, engagieren
+ieren      =VbInXX,ieren
+iere       =VbPr11,ieren
+ierst      =VbPr12,ieren
+iert       =VbPr13,ieren
+ieren      =VbPr91,ieren
+iert       =VbPr92,ieren
+ieren      =VbPr93,ieren
+ierte      =VbIp11,ieren
+iertest    =VbIp12,ieren
+ierte      =VbIp13,ieren
+ierten     =VbIp91,ieren
+iertet     =VbIp92,ieren
+ierten     =VbIp93,ieren
+ierter     =VbPa1M,ieren
+ierte      =VbPa1F,ieren
+iertem     =VbPa1D,ieren
+ierten     =VbPa1A,ieren
+ier        =VbIm12,ieren
+ieren      =VbIm91,ieren
+iert       =VbIm92,ieren
+ierend     =VbGeXX,ieren
+ierende    =VbGe1F,ieren
+ierender   =VbGe1M,ieren
+ierendem   =VbGe1D,ieren
+ierenden   =VbGe1A,ieren

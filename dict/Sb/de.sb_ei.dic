@@ -1,0 +1,76 @@
+# German substantives ending with "ei" 
+# and not derived from a verb, adjective or substantive
+# exceptions only, there are many derived from verbs and substantives
+# @(#) $Id: de.sb_ei.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-07-17, Georg Fischer
+# caution, stored in UTF-8 encoding: äöüÄÖÜß
+
+# elementary german substantives
+Ei			=SbSgNtNutr
+Eier		=SbPlNutr,Ei,SbSgNtNutr
+# compositions with "Ei" (= egg)  are really hard to detect
+Rührei		=SbSgNtNutr
+Osterei		=SbSgNtNutr
+Frühstücksei=SbSgNtNutr
+Spiegelei	=SbSgNtNutr
+Setzei		=SbSgNtNutr
+
+Blei		=SbSgNtMetl
+Brei		=SbSgMsNutr
+Schrei		=SbSgMs
+Schlei		=SbSgMsZool
+
+Bohei		=SbSgMs
+Buhei		=SbSgMs
+Aufschrei	=SbSgFm
+Geschrei	=SbSgFm
+
+# regions and countries
+Barbarei	=NmFmGeogRegn
+Berberei	=NmFmGeogRegn
+Lombardei	=NmFmGeogRegn
+Mandschurei	=NmFmGeogRegn
+Mongolei	=NmFmGeogCtry
+Slowakei	=NmFmGeogCtry
+Tschechoslowakei	=NmFmGeogCtry
+Türkei		=NmFmGeogCtry
+Walachei	=NmFmGeogRegn
+
+# something/s.b. resides there
+Abtei		=SbSgFm
+Auskunftei	=SbSgFm
+Bastei		=SbSgFm
+Borstei		=SbSgFm
+Datei		=SbSgFm
+Detektei	=SbSgFm,Detektiv,SbSgMs
+Fuggerei	=SbSgFm	
+Kantorei	=SbSgFm
+Kanzlei		=SbSgFm,Kanzel
+Karawanserei=SbSgFm
+Kartei		=SbSgFm
+Komturei	=SbSgFm
+Konditorei	=SbSgFm
+Partei		=SbSgFm
+Pfarrei		=SbSgFm
+Pfisterei	=SbSgFm
+Polizei		=SbSgFm
+Probstei	=SbSgFm
+Reederei	=SbSgFm
+Sakristei	=SbSgFm
+Vogtei		=SbSgFm
+
+# really exceptional or not female
+Akelei		=SbSgFmBota
+Allerlei	=SbSgNt
+Arznei		=SbSgFm
+Hahnrei		=SbSgMs
+Konterfei	=SbSgNt
+Litanei		=SbSgFmMusi
+Nackedei	=SbSgMsPers
+Narretei	=SbSgFm
+Papagei		=SbSgMsZool
+Schalmei	=SbSgFmMusi
+
+# Italian names
+Galilei		=NmSurnForgIt
+Pompei		=NmGeogCityForgIt

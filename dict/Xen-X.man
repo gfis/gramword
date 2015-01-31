@@ -1,0 +1,20 @@
+Bissen	SbPlAc	Biss	SbSgMs
+Buschen:	SbPlAc	Busch	SbSgMs
+Busen	SbSgMsBody	
+Bus	SbSgMs
+Felsen	SbPlAc	Fels	SbSgMs
+Finken	SbPlAc	Fink	SbSgMs
+Gluten	SbPlNutr	
+Glut	SbSgFm
+Hahn	SbSgMs
+Karst	SbSgMs
+Lieschen	NmFmPrenDimt
+Nocken	SbPlAc	Nocke	SbSgFm
+Norden	SbSgMs	Nord	SbSgMs
+Patch	SbSgMsForgEn
+Pilsen	NmGeogCity	Pils	SbSgNtNutr
+Schach	SbSgNt
+Schriften	SbPlAc	Schrift	SbSgFm
+Standen:	SbPlAc	Stand	SbSgMs
+Tram	SbSgFmForg
+Traumen:	SbPlAc	Traum	SbSgMs

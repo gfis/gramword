@@ -1,0 +1,336 @@
+adv1#ccal.nas.deu#1. Advent#ev,ka    
+adv1#ccal.nal.deu#1. Sonntag im Advent#ev,ka    
+adv1#ccal.forml#anc2+0#
+adv2#ccal.nas.deu#2. Advent#ev,ka    
+adv2#ccal.nal.deu#2. Sonntag im Advent#ev,ka    
+adv2#ccal.forml#anc2+7#
+adv3#ccal.nas.deu#3. Advent#ev,ka    
+adv3#ccal.nal.deu#3. Sonntag im Advent#ev,ka    
+adv3#ccal.forml#anc2+14#
+adv4#ccal.nas.deu#4. Advent#ev,ka    
+adv4#ccal.nal.deu#4. Sonntag im Advent#ev,ka    
+adv4#ccal.forml#anc2+21#
+xmas0#ccal.nas.deu#Heiliger Abend#ev,ka    
+xmas0#ccal.nal.deu#Heiliger Abend#ev,ka    
+xmas0#ccal.forml#fix=12-24#
+xmas0Z18#ccal.nas.deu#Christvesper#ev       
+xmas0Z18#ccal.nal.deu#Heiliger Abend - Christvesper#ev       
+xmas0Z18#ccal.forml#fix=12-24#
+xmas0Z22#ccal.nas.deu#Christnacht#ev       
+xmas0Z22#ccal.nal.deu#Heiliger Abend - Christnacht#ev       
+xmas0Z22#ccal.forml#fix=12-24#
+xmasP1#ccal.nas.deu#1. Weihnachstag#ev,ka    
+xmasP1#ccal.nal.deu#Christfest - 1. Feiertag#ev,ka    
+xmasP1#ccal.forml#fix=12-25#
+xmasP2#ccal.nas.deu#2. Weihnachtstag#ev,ka    
+xmasP2#ccal.nal.deu#Christfest - 2. Feiertag#ev,ka    
+xmasP2#ccal.forml#fix=12-26#
+xmasP3#ccal.nas.deu#3. Weihnachtstag#ev,ka    
+xmasP3#ccal.nal.deu#Christfest - 3. Feiertag#ev,ka    
+xmasP3#ccal.forml#fix=12-27#
+xmasS1#ccal.nas.deu#1. So.n.Weihn.#ev,ka    
+xmasS1#ccal.nal.deu#1. Sonntag nach dem Christfest#ev,ka    
+xmasS1#ccal.forml#anc2+28#
+silv#ccal.nas.deu#Sivester#ev,ka    
+silv#ccal.nal.deu#Altjahrsabend: Silvester#ev,ka    
+silv#ccal.forml#fix=12-31#
+circ#ccal.nas.deu#Jesu Darst.#ev,ka    
+circ#ccal.nal.deu#1. Januar, Tag der Beschneidung und Namensgebung Jesu#ev,ka    
+circ#ccal.forml#fix=01-01#
+circP1#ccal.nas.deu#2. Neujahrstag#ev,ka    
+circP1#ccal.nal.deu#Tag nach dem Fest der Beschneidung Christi#ev,ka    
+circP1#ccal.forml#fix=01-02#
+xmasS2#ccal.nas.deu#2. So.n.Weihn.#ev,ka    
+xmasS2#ccal.nal.deu#2. Sonntag nach dem Christfest#ev,ka    
+xmasS2#ccal.forml#anc0-7#
+epi#ccal.nas.deu#Epiph.#ev       
+epi#ccal.nal.deu#Epiphanias#ev       
+epi#ccal.forml#fix=01-06#
+3koen#ccal.nas.deu#Hl. 3 Kön.#   ka    
+3koen#ccal.nal.deu#Heilige 3 Könige#   ka    
+3koen#ccal.forml#fix=01-06#
+epi1#ccal.nas.deu#1. So.n.Epiph.#ev,ka    
+epi1#ccal.nal.deu#1. Sonntag nach Epiphanias#ev,ka    
+epi1#ccal.forml#anc0+0#
+epi2#ccal.nas.deu#2. So.n.Epiph.#ev,ka    
+epi2#ccal.nal.deu#2. Sonntag nach Epiphanias#ev,ka    
+epi2#ccal.forml#anc0+7#
+epi3#ccal.nas.deu#3. So.n.Epiph.#ev,ka    
+epi3#ccal.nal.deu#3. Sonntag nach Epiphanias#ev,ka    
+epi3#ccal.forml#anc0+14#
+epi4#ccal.nas.deu#4. So.n.Epiph.#ev,ka    
+epi4#ccal.nal.deu#4. Sonntag nach Epiphanias#ev,ka    
+epi4#ccal.forml#anc0+21#
+epi5#ccal.nas.deu#5. So.n.Epiph.#ev,ka    
+epi5#ccal.nal.deu#5. Sonntag nach Epiphanias#ev,ka    
+epi5#ccal.forml#anc0+28#
+epi9#ccal.nas.deu#Letzter So.n.Epiph.#ev,ka    
+epi9#ccal.nal.deu#Letzter Sonntag nach Epiphanias#ev,ka    
+epi9#ccal.forml#anc1-70#
+septu#ccal.nas.deu#Septuagesimä#ev,ka    
+septu#ccal.nal.deu#Septuagesimä: 3. Sonntag vor der Passionszeit#ev,ka    
+septu#ccal.forml#anc1-63#
+sexag#ccal.nas.deu#Sexagesimä#ev,ka    
+sexag#ccal.nal.deu#Sexagesimä: 2. Sonntag vor der Passionszeit#ev,ka    
+sexag#ccal.forml#anc1-56#
+estom#ccal.nas.deu#Estomihi#ev,ka    
+estom#ccal.nal.deu#Estomihi: Sonntag vor der Passionszeit#ev,ka    
+estom#ccal.forml#anc1-49#
+fast0#ccal.nas.deu#Rosenmontag#ev,ka    
+fast0#ccal.nal.deu#Rosenmontag#ev,ka    
+fast0#ccal.forml#anc1-48#
+fast1#ccal.nas.deu#Fastnacht#ev,ka    
+fast1#ccal.nal.deu#Fastnachtsdienstag#ev,ka    
+fast1#ccal.forml#anc1-47#
+fast2#ccal.nas.deu#Aschermittw.#ev,ka    
+fast2#ccal.nal.deu#Aschermittwoch#ev,ka    
+fast2#ccal.forml#anc1-46#
+invoc#ccal.nas.deu#Invokavit#ev,ka    
+invoc#ccal.nal.deu#Invokavit: 1. Sonntag der Passionszeit#ev,ka    
+invoc#ccal.forml#anc1-42#
+remin#ccal.nas.deu#Reminiszere#ev,ka    
+remin#ccal.nal.deu#Reminiszere: 2. Sonntag der Passionszeit#ev,ka    
+remin#ccal.forml#anc1-35#
+oculi#ccal.nas.deu#Okuli#ev,ka    
+oculi#ccal.nal.deu#Okuli: 3. Sonntag der Passionszeit#ev,ka    
+oculi#ccal.forml#anc1-28#
+laeta#ccal.nas.deu#Lätare#ev,ka    
+laeta#ccal.nal.deu#Lätare: 4. Sonntag der Passionszeit#ev,ka    
+laeta#ccal.forml#anc1-21#
+judic#ccal.nas.deu#Judika#ev,ka    
+judic#ccal.nal.deu#Judika: 5. Sonntag der Passionszeit#ev,ka    
+judic#ccal.forml#anc1-14#
+palma#ccal.nas.deu#Palmsonntag#ev,ka    
+palma#ccal.nal.deu#Palmsonntag: 6. Sonntag der Passionszeit#ev,ka    
+palma#ccal.forml#anc1-7#
+eastM3#ccal.nas.deu#Gründonnerstag#ev,ka    
+eastM3#ccal.nal.deu#Gründonnerstag: Tag der Einsetzung des Abendmahls#ev,ka    
+eastM3#ccal.forml#anc1-3#
+eastM2#ccal.nas.deu#Karfreitag#ev,ka    
+eastM2#ccal.nal.deu#Karfreitag: Tag der Kreuzigung des Herrn#ev,ka    
+eastM2#ccal.forml#anc1-2#
+eastM1#ccal.nas.deu#Karsonnabend#ev,ka    
+eastM1#ccal.nal.deu#Karsonnabend#ev,ka    
+eastM1#ccal.forml#anc1-1#
+east0#ccal.nas.deu#Ostersonntag#ev,ka    
+east0#ccal.nal.deu#Ostersonntag: Tag der Auferstehung des Herrn#ev,ka    
+east0#ccal.forml#anc1+0#
+eastP1#ccal.nas.deu#Ostermontag#ev,ka    
+eastP1#ccal.nal.deu#Ostermontag#ev,ka    
+eastP1#ccal.forml#anc1+1#
+eastP2#ccal.nas.deu#Osterdienstag#ev,ka    
+eastP2#ccal.nal.deu#Osterdienstag#ev,ka    
+eastP2#ccal.forml#anc1+2#
+quasi#ccal.nas.deu#Quasimodogeniti#ev       
+quasi#ccal.nal.deu#Quasimodogeniti: 1. Sonntag nach Ostern#ev       
+quasi#ccal.forml#anc1+7#
+quasi#ccal.nas.deu#Weißer Sonntag#   ka    
+quasi#ccal.nal.deu#Weißer Sonntag#   ka    
+quasi#ccal.forml#anc1+7#
+miser#ccal.nas.deu#Miserikordias Dom.#ev,ka    
+miser#ccal.nal.deu#Miserikordias Domini: 2. Sonntag nach Ostern#ev,ka    
+miser#ccal.forml#anc1+14#
+jubil#ccal.nas.deu#Jubilate#ev,ka    
+jubil#ccal.nal.deu#Jubilate: 3. Sonntag nach Ostern#ev,ka    
+jubil#ccal.forml#anc1+21#
+canta#ccal.nas.deu#Kantate#ev,ka    
+canta#ccal.nal.deu#Kantate: 4. Sonntag nach Ostern#ev,ka    
+canta#ccal.forml#anc1+28#
+rogat#ccal.nas.deu#Rogate#ev,ka    
+rogat#ccal.nal.deu#Rogate: 5. Sonntag nach Ostern#ev,ka    
+rogat#ccal.forml#anc1+35#
+chrasc#ccal.nas.deu#Christi Himmelf.#ev,ka    
+chrasc#ccal.nal.deu#Christi Himmelfahrt#ev,ka    
+chrasc#ccal.forml#anc1+39#
+exaud#ccal.nas.deu#Exaudi#ev,ka    
+exaud#ccal.nal.deu#Exaudi: 6. Sonntag nach Ostern#ev,ka    
+exaud#ccal.forml#anc1+42#
+pent0#ccal.nas.deu#Pfingsten#ev,ka    
+pent0#ccal.nal.deu#Pfingstsonntag: Tag der Ausgießung des Heiligen Geistes#ev,ka    
+pent0#ccal.forml#anc1+49#
+pentP1#ccal.nas.deu#Pfingstmontag#ev,ka    
+pentP1#ccal.nal.deu#Pfingstmontag#ev,ka    
+pentP1#ccal.forml#anc1+50#
+pentP2#ccal.nas.deu#Pfingstdienst.#ev       
+pentP2#ccal.nal.deu#2. Pfingstfeiertag#ev       
+pentP2#ccal.forml#anc1+51#
+trin0#ccal.nas.deu#Trinitatis#ev,ka    
+trin0#ccal.nal.deu#Trinitatis: Tag der Dreieinigkeit#ev,ka    
+trin0#ccal.forml#anc1+56#
+trin1#ccal.nas.deu#1. So.n.Trin.#ev,ka    
+trin1#ccal.nal.deu#1. Sonntag nach Trinitatis#ev,ka    
+trin1#ccal.forml#anc1+63#
+fronl#ccal.nas.deu#Fronleichnam#   ka    
+fronl#ccal.nal.deu#Fronleichnam#   ka    
+fronl#ccal.forml#anc1+60#
+marasc#ccal.nas.deu#Mariä Himmelf.#   ka    
+marasc#ccal.nal.deu#Mariä Himmelfahrt#   ka    
+marasc#ccal.forml#fix=08-15#
+trin2#ccal.nas.deu#2. So.n.Trin.#ev,ka    
+trin2#ccal.nal.deu#2. Sonntag nach Trinitatis#ev,ka    
+trin2#ccal.forml#anc1+70#
+trin3#ccal.nas.deu#3. So.n.Trin.#ev,ka    
+trin3#ccal.nal.deu#3. Sonntag nach Trinitatis#ev,ka    
+trin3#ccal.forml#anc1+77#
+trin4#ccal.nas.deu#4. So.n.Trin.#ev,ka    
+trin4#ccal.nal.deu#4. Sonntag nach Trinitatis#ev,ka    
+trin4#ccal.forml#anc1+84#
+trin5#ccal.nas.deu#5. So.n.Trin.#ev,ka    
+trin5#ccal.nal.deu#5. Sonntag nach Trinitatis#ev,ka    
+trin5#ccal.forml#anc1+91#
+trin6#ccal.nas.deu#6. So.n.Trin.#ev,ka    
+trin6#ccal.nal.deu#6. Sonntag nach Trinitatis#ev,ka    
+trin6#ccal.forml#anc1+98#
+trin7#ccal.nas.deu#7. So.n.Trin.#ev,ka    
+trin7#ccal.nal.deu#7. Sonntag nach Trinitatis#ev,ka    
+trin7#ccal.forml#anc1+105#
+trin8#ccal.nas.deu#8. So.n.Trin.#ev,ka    
+trin8#ccal.nal.deu#8. Sonntag nach Trinitatis#ev,ka    
+trin8#ccal.forml#anc1+112#
+trin9#ccal.nas.deu#9. So.n.Trin.#ev,ka    
+trin9#ccal.nal.deu#9. Sonntag nach Trinitatis#ev,ka    
+trin9#ccal.forml#anc1+119#
+trin10#ccal.nas.deu#10. So.n.Trin.#ev,ka    
+trin10#ccal.nal.deu#10. Sonntag nach Trinitatis#ev,ka    
+trin10#ccal.forml#anc1+126#
+trin11#ccal.nas.deu#11. So.n.Trin.#ev,ka    
+trin11#ccal.nal.deu#11. Sonntag nach Trinitatis#ev,ka    
+trin11#ccal.forml#anc1+133#
+trin12#ccal.nas.deu#12. So.n.Trin.#ev,ka    
+trin12#ccal.nal.deu#12. Sonntag nach Trinitatis#ev,ka    
+trin12#ccal.forml#anc1+140#
+trin13#ccal.nas.deu#13. So.n.Trin.#ev,ka    
+trin13#ccal.nal.deu#13. Sonntag nach Trinitatis#ev,ka    
+trin13#ccal.forml#anc1+147#
+trin14#ccal.nas.deu#14. So.n.Trin.#ev,ka    
+trin14#ccal.nal.deu#14. Sonntag nach Trinitatis#ev,ka    
+trin14#ccal.forml#anc1+154#
+trin15#ccal.nas.deu#15. So.n.Trin.#ev,ka    
+trin15#ccal.nal.deu#15. Sonntag nach Trinitatis#ev,ka    
+trin15#ccal.forml#anc1+161#
+trin16#ccal.nas.deu#16. So.n.Trin.#ev,ka    
+trin16#ccal.nal.deu#16. Sonntag nach Trinitatis#ev,ka    
+trin16#ccal.forml#anc1+168#
+trin17#ccal.nas.deu#17. So.n.Trin.#ev,ka    
+trin17#ccal.nal.deu#17. Sonntag nach Trinitatis#ev,ka    
+trin17#ccal.forml#anc1+175#
+trin18#ccal.nas.deu#18. So.n.Trin.#ev,ka    
+trin18#ccal.nal.deu#18. Sonntag nach Trinitatis#ev,ka    
+trin18#ccal.forml#anc1+182#
+trin19#ccal.nas.deu#19. So.n.Trin.#ev,ka    
+trin19#ccal.nal.deu#19. Sonntag nach Trinitatis#ev,ka    
+trin19#ccal.forml#anc1+189#
+trin20#ccal.nas.deu#20. So.n.Trin.#ev,ka    
+trin20#ccal.nal.deu#20. Sonntag nach Trinitatis#ev,ka    
+trin20#ccal.forml#anc1+196#
+trin21#ccal.nas.deu#21. So.n.Trin.#ev,ka    
+trin21#ccal.nal.deu#21. Sonntag nach Trinitatis#ev,ka    
+trin21#ccal.forml#anc1+203#
+trin22#ccal.nas.deu#22. So.n.Trin.#ev,ka    
+trin22#ccal.nal.deu#22. Sonntag nach Trinitatis#ev,ka    
+trin22#ccal.forml#anc1+210#
+trin23#ccal.nas.deu#23. So.n.Trin.#ev,ka    
+trin23#ccal.nal.deu#23. Sonntag nach Trinitatis#ev,ka    
+trin23#ccal.forml#anc1+217#
+trin24#ccal.nas.deu#24. So.n.Trin.#ev,ka    
+trin24#ccal.nal.deu#24. Sonntag nach Trinitatis#ev,ka    
+trin24#ccal.forml#anc1+224#
+trin25#ccal.nas.deu#25. So.n.Trin.#ev,ka    
+trin25#ccal.nal.deu#25. Sonntag nach Trinitatis#ev,ka    
+trin25#ccal.forml#anc1+231#
+trin26#ccal.nas.deu#26. So.n.Trin.#ev,ka    
+trin26#ccal.nal.deu#26. Sonntag nach Trinitatis#ev,ka    
+trin26#ccal.forml#anc1+238#
+trin27#ccal.nas.deu#27. So.n.Trin.#ev,ka    
+trin27#ccal.nal.deu#27. Sonntag nach Trinitatis#ev,ka    
+trin27#ccal.forml#anc1+245#
+martin#ccal.nas.deu#Martini#   ka    
+martin#ccal.nal.deu#Martinstag#   ka    
+martin#ccal.forml#fix=11-11#
+nikol#ccal.nas.deu#Nikolaus#   ka    
+nikol#ccal.nal.deu#Nikolaustag#   ka    
+nikol#ccal.forml#fix=12-06#
+trin97#ccal.nas.deu#3.letzter So.im Kj.#ev,ka    
+trin97#ccal.nal.deu#Drittletzter Sonntag des Kirchenjahres#ev,ka    
+trin97#ccal.forml#anc2-21#
+trin98#ccal.nas.deu#Volkstrauertag#ev,ka    
+trin98#ccal.nal.deu#Volkstrauertag: Vorletzter Sonntag des Kirchenjahres#ev,ka    
+trin98#ccal.forml#anc2-14#
+busbet#ccal.nas.deu#Buß- und Bettag#ev       
+busbet#ccal.nal.deu#Buß- und Bettag#ev       
+busbet#ccal.forml#anc2-11#
+trin99#ccal.nas.deu#Ewigkeitssonntag#ev       
+trin99#ccal.nal.deu#Ewigkeitssonntag: Letzter Sonntag des Kirchenjahres#ev       
+trin99#ccal.forml#anc2-7#
+trin99#ccal.nas.deu#Totensonntag#   ka    
+trin99#ccal.nal.deu#Totensonntag: Letzter Sonntag des Kirchenjahres#   ka    
+trin99#ccal.forml#anc2-7#
+erndank#ccal.nas.deu#Erntedankfest#ev,ka    
+erndank#ccal.nal.deu#Erntedankfest#ev,ka    
+erndank#ccal.forml#wrm1.10#
+reform#ccal.nas.deu#Reformationstag#ev       
+reform#ccal.nal.deu#Reformationstag: 31. Oktober#ev       
+reform#ccal.forml#fix=10-31#
+augsb#ccal.nas.deu#Augsburger K.#ev       
+augsb#ccal.nal.deu#Feiertag der Augsburger Konfession: 26. Juni#ev       
+augsb#ccal.forml#fix=06-26#
+konfir#ccal.nas.deu#Konfirmation#ev       
+konfir#ccal.nal.deu#Konfirmation#ev       
+konfir#ccal.forml#var#
+kirchw#ccal.nas.deu#Kirchweihe#ev       
+kirchw#ccal.nal.deu#Kirchweihe#ev       
+kirchw#ccal.forml#var#
+keinht#ccal.nas.deu#f.d.Einheit d.K.#ev       
+keinht#ccal.nal.deu#Bittgottesdienst um die Einheit der Kirche#ev       
+keinht#ccal.forml#var#
+evangm#ccal.nas.deu#f.d.Ausbr. d.Ev.#ev       
+evangm#ccal.nal.deu#Bittgottesdienst um die Ausbreitung des Evangeliums#ev       
+evangm#ccal.forml#var#
+friede#ccal.nas.deu#f.d.Frieden#ev       
+friede#ccal.nal.deu#Bittgottesdienst um Frieden#ev       
+friede#ccal.forml#var#
+steph#ccal.nas.deu#Stephanus#ev,ka    
+steph#ccal.nal.deu#26. Dezember, Tag des Erzmärtyrers Stephanus#ev,ka    
+steph#ccal.forml#fix=12-26#
+kinder#ccal.nas.deu#Unsch. Kinder#ev,ka    
+kinder#ccal.nal.deu#28. Dezember, Tag der unschuldigen Kinder#ev,ka    
+kinder#ccal.forml#fix=12-28#
+marpur#ccal.nas.deu#Lichtmess#ev       
+marpur#ccal.nal.deu#2. Februar, Tag der Darstellung des Herrn (Lichtmess)#ev       
+marpur#ccal.forml#fix=02-02#
+marpur#ccal.nas.deu#Lichtmess#   ka    
+marpur#ccal.nal.deu#Mariä Reinigung#   ka    
+marpur#ccal.forml#fix=02-02#
+marann#ccal.nas.deu#Mariä Ankünd.#ev,ka    
+marann#ccal.nal.deu#25. März, Tag der Ankündigung der Geburt des Herrn#ev,ka    
+marann#ccal.forml#fix=03-25#
+marasc#ccal.nas.deu#Mariä Himmelf.#   ka    
+marasc#ccal.nal.deu#15. August, Mariä Himmelfahrt#   ka    
+marasc#ccal.forml#fix=08-15#
+joabapt#ccal.nas.deu#Johannis#ev,ka    
+joabapt#ccal.nal.deu#24. Juni, Tag der Geburt Johannes des Täufers#ev,ka    
+joabapt#ccal.forml#fix=06-24#
+pepaul#ccal.nas.deu#Peter+Paul#ev,ka    
+pepaul#ccal.nal.deu#29. Juni, Tag der Apostel Petrus und Paulus#ev,ka    
+pepaul#ccal.forml#fix=06-29#
+marvis#ccal.nas.deu#Mariä Heims.#ev,ka    
+marvis#ccal.nal.deu#2. Juli, Tag der Heimsuchung Mariä#ev,ka    
+marvis#ccal.forml#fix=07-02#
+michael#ccal.nas.deu#Michaelis#ev,ka    
+michael#ccal.nal.deu#29. September, Tag des Erzengels Michael und aller Engel#ev,ka    
+michael#ccal.forml#fix=09-29#
+hallow#ccal.nas.deu#Allerheiligen#ev,ka    
+hallow#ccal.nal.deu#1. November, Gedenktag der Heiligen#ev,ka    
+hallow#ccal.forml#fix=11-01#
+hallos#ccal.nas.deu#Allerseelen#   ka    
+hallos#ccal.nal.deu#Allerseelen#   ka    
+hallos#ccal.forml#fix=11-02#
+wverein#ccal.nas.deu#T.d.Wiedervereinig.#      pol
+wverein#ccal.nal.deu#Tag der deutschen Wiedervereinigung#      pol
+wverein#ccal.forml#fix=10-03#
+may1#ccal.nas.deu#Maifeiertag#      pol
+may1#ccal.nal.deu#Tag der Arbeit#      pol
+may1#ccal.forml#fix=05-01#
+nyear#ccal.nas.deu#Neujahr#      pol
+nyear#ccal.nal.deu#Neujahrstag#      pol
+nyear#ccal.forml#fix=01-01#

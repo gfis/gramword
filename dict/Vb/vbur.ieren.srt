@@ -1,0 +1,1628 @@
+# German verbs ending on "-ieren"
+# @(#) $Id: vbur.ieren.srt 976 2013-02-02 16:44:18Z gfis $
+# caution, this file must be stored in UTF-8: äöüÄÖÜß
+# 2013-01-24: durch/, difference between ein/ and ein-
+# 2011-09-27: without ver-un-zieren, more prefixes
+# 2006-07-24: attackieren
+# 2006-07-18: expanded morphems
+# 2006-06-05: without fieren, frieren, gieren ..., but with urgieren
+# 2006-06-03, Georg Fischer: manually checked
+#
+%lang=de
+%morph=VbRtWeak,ieren
+abandonn	-
+abbrevi	-
+abdiz	-
+abduz	-
+abonn	-
+abort	-
+absent	-
+absorb	-
+abstrah	-
+# abv	-
+adapt	-
+add	- auf/
+addiz	-
+adhär	-
+adjudiz	-
+adjust	-
+administr	-
+adopt	-
+ador	-
+# adrem	-
+adress	- um/
+adsorb	-
+adstring	-
+affin	-
+affiz	-
+agglomer	-
+agglutin	-
+ag	- aus/
+agit	-
+agnosz	-
+klam	ak- de- ex- pro- re-
+akkommod	-
+akkompagn	-
+akkredit	-
+akkultur	-
+akquir	-
+aktiv	-
+aktualis	-
+akzeler	-
+akzentu	-
+akzept	-
+alarm	-
+alaunis	-
+aliment	-
+alkoholis	-
+alkyl	-
+allegoris	-
+alli	-
+alphabetis	-
+alter	-
+altern	-
+alumin	-
+amalgam	-
+amelior	-
+amend	-
+amerikanis	-
+amnest	-
+amortis	-
+amplifiz	-
+amput	-
+amt	-
+amüs	-
+analys	-
+anathematis	-
+anatom	-
+anglis	-
+anim	-
+annekt	-
+annonc	-
+annull	-
+anonymis	-
+antedat	-
+antichambr	-
+antikis	-
+antizip	-
+anästhes	-
+anästhetis	-
+apokop	-
+apostroph	-
+appell	-
+apperzip	-
+applaud	-
+appliz	-
+appret	-
+approb	-
+apt	-
+aquarell	-
+arabis	-
+archais	-
+archiv	-
+argument	-
+aris	-
+arm	-
+aromatis	-
+arpegg	-
+arrang	-
+arret	-
+arriv	-
+arrond	-
+artikul	-
+asphalt	-
+aspir	-
+assan	-
+assibil	-
+assimil	-
+assist	-
+assort	-
+assozi	-
+aszend	-
+atomis	-
+attach	-
+attack	-
+attest	-
+attribu	-
+auktion	- ver-
+auskult	-
+authentifiz	-
+authentis	-
+automatis	-
+autoris	-
+aval	-
+avanc	-
+avis	-
+aviv	-
+axiomatis	-
+bagatellis	-
+bajonett	-
+balanc	- aus/
+# balb	-
+balkanis	-
+ballot	-
+balsam	- ein/
+bandag	-
+banderol	-
+bankrott	-
+baratt	-
+barb	-
+bard	-
+baronis	-
+bas	-
+bastard	-
+beatifiz	-
+benediz	-
+beton	- ein/ zu/
+bilanz	-
+billard	-
+bitumin	-
+biwak	-
+blam	-
+blanch	-
+blason	-
+blasphem	-
+bless	-
+block	-
+blond	-
+bolschewis	-
+bombard	-
+# bomb	-
+bonifiz	-
+bonit	-
+bord	-
+# boss	-
+botanis	-
+boug	-
+boykott	-
+bramarbas	-
+brevet	-
+brikett	-
+brikol	-
+brill	-
+bronz	-
+brosch	-
+brutalis	-
+brün	-
+brüsk	-
+buchstab	- durch/
+budget	-
+bugs	-
+bürokratis	- ent-
+camoufl	-
+cellophan	-
+chang	-
+charg	-
+chlor	-
+collag	-
+compil	-
+damasz	-
+dat	- nach/ rück- um/ vor/ voraus/ zurück/
+debatt	-
+debit	-
+debüt	-
+chiffr	- de-
+cod	- de- en-
+dediz	-
+deduz	-
+defil	-
+defin	-
+deflor	-
+form	- de- in- prä- re- trans- vor/in-
+defraud	-
+degag	-
+gener	- de- re-
+gout	- de-
+grad	- de-
+gust	- de-
+hydratis	- de-
+hydr	- de-
+deifiz	-
+dekant	-
+dekap	-
+dekartell	-
+dekartellis	-
+dekat	-
+deklar	-
+deklass	-
+deklin	-
+dekod	-
+dekollet	-
+dekolonis	-
+dekolor	-
+dekompon	-
+dekomprim	-
+dekontamin	-
+# dekonzentr	-
+dekor	-
+dekort	-
+dekrepit	-
+dekret	-
+dekup	-
+dekuvr	-
+deleg	-
+delekt	-
+delir	-
+delog	-
+demask	-
+dement	-
+demokratis	-
+demol	-
+demonetis	-
+demonstr	-
+demont	- ab/
+demoralis	-
+demotiv	-
+denaturalis	-
+denatur	-
+denazifiz	-
+dentel	-
+denunz	-
+deodor	-
+depil	-
+deplac	-
+deplatz	-
+depolaris	-
+depon	-
+deprav	-
+deprim	-
+depriv	-
+deput	-
+derang	-
+deriv	-
+derog	-
+desarm	-
+desavou	-
+desensibilis	-
+desert	-
+design	-
+desillusion	-
+desodor	-
+desoxid	-
+dessin	-
+destil	-
+destru	-
+deszend	-
+detach	-
+detaill	-
+deterior	-
+determin	-
+deton	-
+devalv	-
+devast	-
+devi	-
+dezimalis	-
+dezim	-
+diagnostiz	-
+dialogis	-
+dialys	-
+diffam	-
+differenz	- aus/
+differ	-
+diffund	-
+diger	-
+digitalis	-
+dikt	- zu/
+dilett	-
+dimension	-
+diminu	-
+dimitt	-
+din	-
+diphthong	-
+diplom	-
+dirig	- um/
+disharmon	-
+diskont	- re-
+diskredit	-
+diskrimin	-
+diskurr	-
+diskut	- an/ aus/ durch/ weg/
+disloz	-
+dispach	-
+dispens	-
+disperg	-
+dispon	- um/ prä-
+disput	-
+disqualifiz	-
+dissent	-
+dissert	-
+dissid	-
+dissimil	-
+dissimul	-
+disson	-
+dissozi	-
+distanz	-
+distrah	-
+distribu	-
+disziplin	-
+diverg	-
+diversifiz	-
+divid	-
+dogmatis	-
+dokument	-
+dol	-
+doll	-
+domestiz	-
+domin	- prä-
+domizil	-
+dos	- über/
+doss	-
+dot	-
+doubl	-
+doz	-
+drag	-
+drain	-
+dramatis	-
+drangsal	-
+drap	-
+dress	-
+drän	-
+dubl	-
+duell	-
+# dupl	-
+dupliz	- re-
+dynamis	-
+dämonis	-
+dänis	-
+düp	-
+echauff	-
+ed	-
+edit	-
+effektu	-
+effil	-
+effloresz	-
+egalis	-
+egren	-
+# einball	-
+ejakul	-
+elektrifiz	-
+elektris	-
+elid	-
+elimin	-
+elox	-
+emaill	-
+eman	-
+emanzip	-
+emball	-
+emend	-
+emerit	-
+emigr	-
+emitt	-
+emotionalis	-
+emulg	-
+enerv	-
+engag	-
+englis	-
+engob	-
+enkaust	-
+enkod	-
+enthusiasm	-
+entkoffein	-
+entkolonialis	-
+entmythis	-
+entnazifiz	-
+entstalinis	-
+eosin	-
+epil	-
+equip	-
+erig	-
+erod	-
+erotis	-
+eru	-
+erupt	-
+eskalad	-
+eskal	- de-
+eskamot	-
+eskort	-
+etabl	-
+etatis	-
+etikett	-
+etiol	-
+etymologis	-
+euphoris	-
+europäis	-
+evaku	-
+evalu	-
+evangelis	-
+evapor	-
+evolv	-
+evoz	-
+examin	-
+exekut	-
+exemplifiz	-
+exerz	- durch/ ein/ straf- vor/
+exhal	-
+exhib	-
+exhum	-
+exim	-
+exkav	-
+exklud	-
+exkommuniz	-
+exkulp	-
+exmatrikul	-
+exmitt	-
+exorz	-
+exorzis	-
+expand	-
+expatri	-
+exped	-
+expektor	-
+experiment	- herum/
+explant	-
+expliz	-
+explod	-
+exploit	-
+explor	-
+expon	-
+expropri	-
+exspir	-
+exstirp	-
+extempor	-
+extend	-
+extrah	-
+extrapol	-
+extrud	-
+exulzer	-
+exzell	-
+exzerp	-
+exzid	-
+exzit	-
+fabriz	- vor/ prä-
+fabul	-
+fadis	-
+faksimil	-
+faktur	- manu-
+fall	-
+falsett	-
+falsifiz	-
+famul	-
+fanatis	-
+fantas	-
+faradis	-
+farc	-
+fasch	-
+faschis	-
+fassett	-
+fasson	-
+faszin	-
+favoris	-
+femin	-
+ferment	-
+feston	-
+fetischis	-
+figur	-
+filet	-
+fil	-
+filtr	- ein/ durch/
+finanz	- nach/ vor/ zwischen/ re-
+fing	-
+firm	- um/
+fix	-
+flamb	-
+flan	-
+flank	-
+flatt	-
+flekt	-
+flexibilis	-
+flor	-
+flot	-
+flott	-
+fluktu	-
+fluoresz	-
+fluorid	-
+fluor	-
+fokuss	-
+foli	-
+forc	-
+formalis	-
+formul	- aus/ um/ vor/
+fortifiz	-
+fraktion	-
+frank	-
+französ	-
+französis	-
+frapp	-
+fraternis	-
+frequent	-
+frett	-
+frikass	-
+fris	-
+fritt	-
+frond	-
+frott	- ab/
+fruktifiz	-
+frustr	-
+fug	-
+fundament	-
+fund	-
+fung	-
+funktionalis	-
+funktion	- um/
+furag	-
+furn	-
+fusion	-
+füsil	-
+galon	-
+galopp	- ver-
+galvanis	-
+gangränesz	-
+garant	-
+garn	-
+garnison	-
+garrott	-
+gas	-
+gast	-
+gatt	-
+gaufr	-
+gelatin	-
+gel	-
+generalis	-
+gen	-
+ger	-
+germanis	-
+gestikul	-
+gettois	-
+gir	-
+glac	-
+glas	-
+globalis	-
+glorifiz	- ent-
+gloss	-
+gradu	-
+gran	-
+granul	-
+grass	-
+gratin	-
+gratul	-
+grav	- ein/
+gravit	-
+grill	-
+grimass	-
+grund	-
+grupp	- ein/ um/
+gräzis	-
+guilloch	-
+guillotin	-
+gumm	-
+habilit	-
+habitualis	-
+halb	-
+halluzin	-
+halogen	-
+handikap	-
+hant	-
+harmon	-
+harmonis	-
+harpun	-
+hasard	-
+hasch	-
+haus	-
+hauss	-
+havar	-
+graf	chromato- ab/foto- foto- hekto- holo- litho- para- tele- biblio- steno- mit/steno- karto- xero-
+graph	chromato- ab/foto- foto- hekto- holo- litho- para- tele- biblio- steno- mit/steno- karto- xero-
+hellenis	-
+herois	-
+hierarchis	-
+hispanis	-
+historis	-
+hof	-
+hollerith	-
+homogenis	-
+homolog	-
+honor	-
+hospitalis	-
+hospit	-
+humanis	- ent-
+humifiz	-
+hybridis	-
+hypnotis	-
+hypostas	-
+idealis	-
+identifiz	-
+ideologis	- ent-
+idolis	-
+illumin	-
+illustr	-
+imagin	-
+imit	-
+immatrikul	-
+immigr	-
+immobilis	-
+immunis	-
+impast	-
+implant	- re-
+implement	-
+impliz	-
+implod	-
+impon	-
+imprim	-
+improvis	-
+imprägn	-
+integr	- des-
+interag	-
+interess	-
+interfer	-
+internalis	-
+internationalis	-
+intern	-
+interpell	-
+interpol	-
+interpret	- fehl- hinein/ um/
+interpung	-
+interven	-
+interzed	-
+ionis	-
+iris	-
+ironis	-
+irrit	-
+irrlichtel	-
+islamis	-
+isol	-
+italianis	-
+italienis	-
+jarowis	-
+jod	-
+jongl	-
+jubil	-
+judiz	- ab-
+just	-
+justifiz	-
+juvenalis	-
+kabot	-
+kadenz	-
+kadm	-
+kaduz	-
+kalandr	-
+kalibr	-
+kalkul	- aus/ durch/ ein/ ver-
+kaloris	-
+kalzin	-
+kam	-
+kamin	-
+kamp	-
+kanalis	-
+kandid	-
+kand	-
+kannel	-
+kanon	-
+kanonis	-
+kapaunis	-
+kap	-
+kapitalis	-
+kapitul	- re-
+kapriz	-
+karambol	-
+karamell	-
+karamellis	-
+karbonis	-
+karbur	-
+kard	-
+kar	- konter-
+karik	-
+karmos	-
+kaross	-
+kartell	-
+kart	-
+karton	-
+kasch	-
+kasern	-
+kassett	-
+kass	- ab/ ein/
+kastr	-
+katalogis	-
+katalys	-
+katapult	- hinaus/ weg/
+katastr	-
+katechis	-
+katheteris	-
+katholis	-
+kauteris	-
+kautschut	-
+kilometr	-
+klar	- aus/
+klass	-
+klassifiz	-
+# klav	-
+klimatis	- ak-
+klisch	-
+klist	-
+klon	-
+koagul	-
+koal	-
+koalis	-
+kod	-
+kodifiz	-
+exist	- ko-
+kohabit	-
+kohär	-
+koinzid	-
+koit	-
+kokett	-
+# kol	-
+kollab	-
+kollabor	-
+kollation	-
+kollaud	-
+kollektiv	-
+kollid	-
+kollud	-
+kolmat	-
+kolonis	-
+kolor	-
+kombin	-
+kommand	- ab/ re-
+kommass	-
+komment	-
+kommerzialis	-
+kommission	-
+kommitt	-
+kommunalis	-
+kommuniz	-
+kommut	-
+kompar	-
+kompens	- über- re-
+kompil	-
+komplement	-
+komplett	-
+kompliment	- be- hinaus/ hinein/
+kompliz	- ver-
+komplott	-
+kompon	- durch/
+kompost	-
+komprim	-
+kompromitt	-
+kondens	-
+kondition	-
+kondol	-
+konfektion	-
+konfer	-
+konfirm	-
+konfisz	-
+konflig	-
+konfront	-
+konföder	-
+kongru	-
+konjiz	-
+konjug	-
+# konjung	-
+konklud	-
+konkretis	-
+konkurr	-
+konniv	-
+konnot	-
+konsekr	-
+konsent	-
+konsign	-
+konsolid	-
+konspekt	-
+konspir	-
+konstat	-
+konstern	-
+konstitu	-
+konstring	-
+konstru	- durch/ re-
+konsult	-
+konsum	- ver-
+kontakt	-
+kontamin	-
+kont	-
+kontingent	-
+kontrah	-
+kontrasign	-
+kontrast	-
+kontroll	- nach/
+kontur	-
+konven	-
+konverg	-
+konvers	-
+konvert	-
+konzed	-
+konzelebr	-
+konzeptualis	-
+konzern	-
+konzert	-
+konzession	-
+konzip	-
+kooper	-
+koopt	-
+koordin	-
+kop	- fern- foto- tele- um/ xero-
+kopul	-
+kord	-
+korefer	-
+korrefer	-
+korrel	-
+korrepet	-
+korrespond	-
+korrig	- durch/
+korrod	-
+korrump	-
+kostüm	-
+kot	-
+kotonis	-
+kratikul	-
+kredit	-
+kre	-
+krep	-
+kriminalis	- ent-
+kristallis	- aus/ heraus/
+kritis	-
+krock	-
+krok	-
+kub	-
+kujon	-
+kulmin	-
+kultiv	- re-
+kumul	- ak-
+kupell	-
+kup	-
+kur	- aus/
+kurs	-
+kutsch	-
+kuvert	-
+kyanis	-
+kürett	-
+küvel	-
+labor	-
+lac	-
+lack	-
+lais	-
+lakt	-
+lament	-
+lamin	-
+lanc	-
+langett	-
+lanzin	-
+las	-
+latex	-
+latinis	-
+laut	-
+lav	- durch/
+lax	-
+lazer	-
+legalis	-
+leg	-
+legitim	-
+lektor	-
+lemmatis	-
+liberalis	-
+lig	-
+li	-
+limit	-
+lin	-
+liquid	-
+lizenz	-
+logarithm	-
+log	- aus/ ein/
+lokalis	-
+lombard	-
+long	-
+lorgnett	-
+luminesz	-
+lustr	-
+lux	-
+luxur	-
+läd	-
+lüstr	-
+madjaris	-
+magazin	-
+magnetis	- ent-
+majoris	-
+makadamis	-
+makul	-
+malträt	-
+mandat	-
+manifest	-
+manipul	-
+manövr	- aus/
+marginalis	-
+marin	-
+mark	- de-
+marmor	-
+marod	-
+marsch	- ab/ auf/ durch/ ein/ los/ vor-bei/
+mask	-
+massakr	-
+mass	- ein/
+masturb	-
+materialis	-
+mathematis	-
+matt	-
+maxim	-
+mazer	-
+mechanis	-
+mediatis	-
+medit	-
+mel	-
+melior	-
+memor	-
+menag	-
+menstru	-
+merzeris	-
+metallis	-
+metamorphos	-
+metastas	-
+methodis	-
+mikroskop	-
+militaris	- ent- de- re-
+miniaturis	-
+min	- ge-
+minim	-
+ministr	-
+mission	- de-
+mobilis	- de-
+modell	-
+moder	-
+modernis	-
+modifiz	-
+modul	-
+moir	-
+mok	-
+molest	-
+mon	-
+monologis	-
+monophthong	-
+monopolis	-
+mont	- ab/ an/ auf/ aus/ ein/
+moralis	-
+motiv	-
+motoris	-
+mouill	-
+mouss	-
+mov	-
+multipliz	-
+mumifiz	-
+munition	-
+musiz	-
+mut	-
+mystifiz	- ent-
+mythologis	- ent-
+mäandr	-
+möbl	-
+narkotis	-
+nasal	-
+nationalis	- ent-
+naturalis	-
+navig	-
+neg	-
+neglig	-
+neutralis	-
+nitr	-
+nitrifiz	-
+nivell	-
+nobilit	-
+nomadis	-
+nomin	-
+normalis	-
+norm	-
+nostrifiz	-
+not	-
+notifiz	-
+novell	-
+nuanc	-
+nullifiz	-
+numer	- re- prä-
+nummer	- durch/
+obduz	-
+objektiv	-
+obstru	-
+offer	-
+okklud	-
+okkup	- re-
+oktav	-
+oktroy	- auf/
+okul	-
+onan	-
+ondul	-
+opalesz	-
+operationalis	-
+oper	-
+oppon	-
+opt	-
+optim	-
+orchestr	-
+ordin	-
+organis	- des- durch/ re- um/
+orient	-
+ornament	-
+oskul	-
+ossifiz	-
+oszill	-
+# outr	-
+oxid	-
+oxyd	-
+ozonis	-
+pagin	-
+paket	-
+pakt	-
+palett	-
+palm	-
+palp	-
+palpit	-
+panasch	-
+paneel	-
+pan	-
+# pap	-
+papriz	-
+parad	-
+paraffin	-
+parallelis	-
+paralys	-
+paraph	-
+paraphras	-
+pardon	-
+parfüm	-
+par	-
+parkett	-
+parlament	-
+parl	-
+parod	-
+partizip	-
+parzell	-
+paspel	-
+pass	- durch/
+passiv	-
+pasteuris	-
+patent	-
+patin	-
+patron	-
+patronis	-
+patrouill	-
+pauschal	-
+pauschalis	-
+paus	-
+pazifiz	-
+pekz	-
+pellet	-
+penetr	-
+pension	-
+peptis	-
+perfektion	-
+perfor	-
+perhorresz	-
+perimetr	-
+periodis	-
+periphras	-
+perkol	-
+perkut	-
+perlustr	-
+permitt	-
+permut	-
+persever	-
+persifl	-
+personalis	-
+personifiz	-
+pervert	-
+perzip	-
+petition	-
+petrifiz	-
+petsch	-
+pex	-
+philosoph	-
+phosphoresz	-
+phras	-
+pigment	-
+pik	-
+pil	-
+pill	-
+pilot	-
+pirouett	-
+plac	-
+plafon	-
+plagi	-
+plakat	-
+plan	-
+platin	-
+platt	-
+platz	-
+pliss	-
+plomb	-
+pläd	-
+poch	-
+poetis	-
+point	-
+polaris	-
+polemis	- ent/
+pol	- auf/ nach/
+politis	- ent-
+polonis	-
+polychrom	-
+polymeris	-
+pomadis	-
+ponc	-
+popularis	-
+port	- ap- de- ex- im- trans- ab/trans- re-im- re-ex- kol- rap-
+portion	-
+porträt	-
+posament	-
+pos	-
+position	-
+post	-
+postul	-
+potenz	-
+pouss	-
+praktiz	-
+press	-
+primitivis	-
+privatis	- re-
+privileg	- ent-
+prob	- an/ auf/ aus/
+problematis	-
+produz	- ko- re-
+profan	-
+professionalis	-
+profil	-
+profit	-
+prognostiz	-
+programm	- ein/ um/ vor-
+prohib	-
+projekt	-
+projiz	-
+proletaris	- ver-
+prolifer	-
+prolong	-
+promen	-
+promov	-
+promulg	-
+prononc	-
+propag	-
+propon	-
+prorog	-
+prospekt	-
+prosper	-
+prostitu	-
+proteg	-
+protest	-
+protokoll	-
+protrah	-
+proviant	- ver-
+provinzialis	-
+provoz	-
+prozed	-
+prozentu	-
+prozess	- durch/
+prädestin	-
+prädikatis	-
+präfer	-
+präjudiz	-
+präklud	-
+prälud	-
+präm	-
+prämi	-
+präpar	-
+präsent	- re-
+präsid	-
+skrib	prä- pro- sub- kon- tran-
+präsum	-
+prätend	-
+präzipit	-
+präzis	-
+psalmod	-
+psychiatr	-
+psychoanalys	-
+psychologis	-
+pubert	-
+publiz	-
+puls	-
+pulveris	-
+punkt	- inter- aku-
+punz	-
+pupinis	-
+purg	-
+purifiz	-
+putresz	-
+pädagogis	-
+pür	-
+quadr	-
+qualifiz	- ab/
+quantifiz	-
+quantit	-
+quart	- aus/ ein/ um/
+querul	-
+quinkel	-
+quinquil	-
+quitt	-
+quot	-
+quotis	-
+rabatt	-
+rad	- aus/ weg/
+radikalis	-
+radiz	-
+raffin	-
+ralli	-
+rampon	-
+randal	-
+rang	aus/ ein/ um/
+ras	- ab/ aus/
+rastr	-
+ratifiz	-
+ratin	-
+rationalis	- durch/ weg/
+ration	-
+reag	- ab/ über/
+reaktiv	-
+realis	-
+reamateuris	-
+reanim	-
+rebell	-
+recherch	-
+redig	-
+redress	-
+reduz	-
+refakt	-
+refer	-
+reflekt	-
+refund	-
+regal	-
+reg	- durch/
+registr	-
+reglement	-
+regul	- ein/
+rehabilit	-
+infiz	- des- re-
+rekognosz	-
+rekonvalesz	-
+rekrut	-
+rektifiz	-
+rekurr	-
+relativ	-
+releg	-
+remitt	-
+remont	-
+renatur	-
+renomm	-
+renov	-
+rent	-
+renunz	-
+repar	-
+repart	-
+repass	-
+repatri	-
+repet	-
+repliz	-
+repon	-
+reprob	-
+repunz	-
+requir	-
+resez	-
+resid	-
+resign	-
+resist	-
+resorb	-
+respekt	-
+respir	-
+respond	-
+ressort	-
+restaur	-
+restitu	-
+restring	-
+result	-
+resüm	-
+retard	-
+retir	-
+retourn	-
+retrodat	-
+retrovert	-
+retrozed	-
+retusch	-
+reun	-
+revakzin	-
+reval	-
+revalv	-
+revanch	-
+revid	-
+# rev	-
+revolt	-
+revolution	-
+revolv	-
+revoz	-
+rezens	-
+rezept	-
+rezidiv	-
+rezip	-
+rezykl	-
+reüss	-
+rhodin	-
+rhythmis	-
+ripost	-
+risk	-
+ristorn	-
+rivalis	-
+roch	-
+rodomont	-
+roll	-
+romanis	-
+romantis	-
+rot	-
+roul	-
+rubriz	-
+ruin	-
+räson	-
+röntgenis	-
+sabot	-
+sald	-
+salut	-
+salv	-
+sanforis	-
+san	- weg-
+sanktion	-
+satin	-
+satur	-
+sauc	-
+saun	-
+schablon	-
+schablonis	-
+schamott	-
+schampon	- ein/
+schampun	-
+scharm	-
+scharr	-
+schass	-
+schatt	- ab/
+schematis	-
+schikan	-
+schnabul	-
+schock	-
+schraff	-
+schwadron	-
+sediment	-
+segment	-
+segreg	-
+sekk	-
+sekret	-
+sekund	-
+seleg	-
+selekt	-
+selektion	-
+sensibilis	-
+separ	-
+sequestr	-
+serv	- ab/ ob- re- kon- prä-
+sexualis	-
+sezern	-
+sez	-
+shampoon	- ein/
+signalis	-
+sign	-
+signifiz	-
+sil	- ein/
+silifiz	-
+simplifiz	-
+simul	-
+sinn	-
+sist	-
+situ	-
+skalp	-
+skandal	-
+skandalis	-
+skand	-
+skelett	-
+skizz	-
+skont	-
+skontr	-
+skulpt	-
+slawis	-
+solfegg	-
+solidaris	-
+# solid	-
+solmis	-
+solv	- ab-
+sond	-
+sort	- aus/ ein/
+souffl	-
+soup	-
+soutach	-
+sozialis	- re-
+spart	-
+spati	-
+spation	-
+spaz	- herein/
+sped	-
+spekul	- ver- hoch/
+spend	-
+spezialis	-
+spezifiz	-
+spintis	-
+spion	- aus/ nach/
+spiritualis	-
+spond	-
+stabilis	- prä- de- 
+staff	- aus/
+stagn	-
+standardis	-
+stat	-
+station	-
+statu	-
+stenotyp	-
+stereotyp	-
+sterilis	-
+stigmatis	-
+stilis	- hoch/
+stimul	-
+stipul	-
+stolz	-
+storn	-
+strangul	-
+strapaz	- über/
+stratifiz	-
+struktur	- durch/ re-
+stuck	-
+stud	- ein/
+sublim	-
+submitt	-
+subordin	-
+substanti	-
+substantiv	-
+substanzi	-
+substitu	-
+subsum	-
+subtrah	-
+subvention	-
+sugger	-
+summ	- auf/
+suppliz	-
+suppon	-
+supprim	-
+suspend	-
+suszip	-
+symbolis	-
+sympathis	-
+synchronis	-
+synkop	-
+synthetis	-
+systematis	-
+szintill	-
+säkularis	-
+tabellaris	-
+tabell	-
+tablett	-
+tabu	- ent-
+tabuis	- ent-
+tachin	-
+taill	- an/
+takt	-
+talkum	-
+tambur	-
+tampon	-
+tang	-
+# tann	-
+tapez	- aus/
+tar	- aus/
+tarif	-
+tarock	-
+tatau	-
+tausch	-
+tax	- ein/
+technifiz	-
+technis	-
+telefon	- ver-
+temper	-
+tend	-
+tent	-
+termin	-
+terrass	-
+terroris	-
+test	-
+text	-
+textur	-
+thematis	-
+theologis	-
+theoretis	-
+therap	- aus/
+thesaur	-
+timbr	-
+tirass	-
+tiril	-
+titr	-
+titul	-
+toler	-
+tomatis	-
+tonsur	-
+torped	-
+torqu	-
+totalis	-
+touch	-
+toup	-
+trad	-
+# trag	-
+train	- ab/ an/ durch/ ein/
+trakt	-
+tranch	-
+transch	-
+transfer	-
+transfund	-
+transistor	-
+transistoris	-
+transit	-
+transliter	-
+transloz	-
+transmitt	-
+transpir	-
+transplant	-
+transpon	-
+transzend	-
+trass	-
+travers	-
+travest	-
+tremol	-
+tremul	-
+tress	-
+triangul	-
+triumph	-
+turkis	-
+turn	-
+tusch	-
+typis	-
+tyrannis	-
+tätow	- ein/
+ulzer	-
+untermin	-
+urbanis	-
+urbaris	-
+urgieren	- 
+urin	-
+usurp	-
+vagabund	-
+vag	-
+vakzin	-
+valid	-
+valoris	-
+valut	-
+valv	-
+vaporis	-
+vari	-
+veget	-
+ventil	-
+absolut	ver-
+verbalis	-
+barrikad	ver-
+dünnis	ver-
+verifiz	-
+klausul	ver-
+lust	ver-
+schimpf	ver-
+versifiz	-
+vertikut	-
+vex	-
+vibr	-
+vid	-
+vigil	-
+vikari	-
+vindiz	-
+vinkul	-
+vis	- an/
+visit	-
+visualis	-
+vitalis	- re-
+vitamin	-
+vitaminis	-
+vivisez	-
+vokalis	-
+volont	-
+volt	-
+voltig	-
+vom	-
+vot	-
+vulgaris	-
+vulkanis	-
+ward	-
+watt	-
+zapon	-
+zed	-
+zelebr	-
+zement	- ein/
+zens	-
+zensur	-
+zentralis	- de-
+zentr	- kon-
+zentrifug	-
+zertifiz	-
+zirkul	-
+zirkumflekt	-
+zisel	-
+zit	- her-bei/
+zivilis	-
+ästheties	-
+ästim	-
+ätheris	-

@@ -1,0 +1,27 @@
+# e-n;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'n')
+  AND b.entry like '%e';
+print OUT "$cols[0]\tSbF9N,$cols[1]=SbF1N\n";
+
+# e.um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, 'e', ':');
+print OUT "$cols[0]\tSbM9N,$cols[1]=SbM1N\n";
+
+# en.um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(substring(b.entry, 1, length(b.entry) - 2), 'en', ':');
+print OUT "$cols[0]\tSbM9A,$cols[1]=SbM1N\n";
+
+en-um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, ':')
+  AND b.entry like '%en';
+print OUT "$cols[0]\tSbM9N,$cols[1]=SbM1N\n";
+
+er-um;
+SELECT a.entry, b.entry FROM forge a, forge b 
+WHERE a.entry = concat(b.entry, ':')
+  AND b.entry like '%er';
+print OUT "$cols[0]\tSbM9N,$cols[1]=SbM1N\n";

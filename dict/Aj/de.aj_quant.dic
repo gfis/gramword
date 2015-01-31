@@ -1,0 +1,207 @@
+# unusual German adjectives:
+# - quantitative or
+# - designating and
+# - those which have no comparative and superlative
+#
+# @(#) $Id: de.aj_quant.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-05-28: UTF-8, äöüÄÖÜß
+# 2006-08-29, Georg Fischer
+
+manch			=AjQant
+manche			=AjQant,manch,AjRootQant
+manchem			=AjQant,manch,AjRootQant
+manchen			=AjQant,manch,AjRootQant
+mancher			=AjQant,manch,AjRootQant
+manches			=AjQant,manch,AjRootQant
+        		
+solch			=AjQant
+solche			=AjQant,solch,AjRootQant
+solchem			=AjQant,solch,AjRootQant
+solchen			=AjQant,solch,AjRootQant
+solcher			=AjQant,solch,AjRootQant
+solches			=AjQant,solch,AjRootQant
+        		
+welch			=AjQant
+welche			=AjQant,welch,AjRootQant
+welchem			=AjQant,welch,AjRootQant
+welchen			=AjQant,welch,AjRootQant
+welcher			=AjQant,welch,AjRootQant
+welches			=AjQant,welch,AjRootQant
+        		
+erst			=AjQant
+erste			=AjQant,erst,AjRootQant
+erstem			=AjQant,erst,AjRootQant
+ersten			=AjQant,erst,AjRootQant
+erster			=AjQant,erst,AjRootQant
+erstes			=AjQant,erst,AjRootQant
+
+einzeln			=AjQant
+einzelne		=AjQant,einzeln,AjRootQant
+einzelnem		=AjQant,einzeln,AjRootQant
+einzelnen		=AjQant,einzeln,AjRootQant
+einzelner		=AjQant,einzeln,AjRootQant
+einzelnes		=AjQant,einzeln,AjRootQant
+
+kein			=AjQant
+keine			=AjQant,kein,AjRootQant
+keinem			=AjQant,kein,AjRootQant
+keinen			=AjQant,kein,AjRootQant
+keiner			=AjQant,kein,AjRootQant
+keines			=AjQant,kein,AjRootQant
+        		
+dies			=AjQant
+diese			=AjQant,dies,AjRootQant
+diesem			=AjQant,dies,AjRootQant
+diesen			=AjQant,dies,AjRootQant
+dieser			=AjQant,dies,AjRootQant
+dieses			=AjQant,dies,AjRootQant
+        		
+einzig			=AjQant
+einzige			=AjQant,einzig,AjRootQant
+einzigem		=AjQant,einzig,AjRootQant
+einzigen		=AjQant,einzig,AjRootQant
+einziger		=AjQant,einzig,AjRootQant
+einziges		=AjQant,einzig,AjRootQant
+
+gleich			=AjQant
+gleiche			=AjQant,gleich,AjRootQant
+gleichem		=AjQant,gleich,AjRootQant
+gleichen		=AjQant,gleich,AjRootQant
+gleicher		=AjQant,gleich,AjRootQant
+gleiches		=AjQant,gleich,AjRootQant
+
+tot				=AjQant
+tote			=AjQant,tot,AjRootQant
+totem			=AjQant,tot,AjRootQant
+toten			=AjQant,tot,AjRootQant
+toter			=AjQant,tot,AjRootQant
+totes			=AjQant,tot,AjRootQant
+
+ganz			=AjQant
+ganze			=AjQant,ganz,AjRootQant
+ganzem			=AjQant,ganz,AjRootQant
+ganzen			=AjQant,ganz,AjRootQant
+ganzer			=AjQant,ganz,AjRootQant
+ganzes			=AjQant,ganz,AjRootQant
+
+halb			=AjQant
+halbe			=AjQant,halb,AjRootQant
+halbem			=AjQant,halb,AjRootQant
+halben			=AjQant,halb,AjRootQant
+halber			=AjQant,halb,AjRootQant
+halbes			=AjQant,halb,AjRootQant
+
+optimal			=AjQant
+optimale		=AjQant,optimal,AjRootQant
+optimalem		=AjQant,optimal,AjRootQant
+optimalen		=AjQant,optimal,AjRootQant
+optimaler		=AjQant,optimal,AjRootQant
+optimales		=AjQant,optimal,AjRootQant
+
+maximal			=AjQant
+maximale		=AjQant,maximal,AjRootQant
+maximalem		=AjQant,maximal,AjRootQant
+maximalen		=AjQant,maximal,AjRootQant
+maximaler		=AjQant,maximal,AjRootQant
+maximales		=AjQant,maximal,AjRootQant
+            	
+bestimmt		=AjQant
+bestimmte		=AjQant,bestimmt,AjRootQant
+bestimmtem		=AjQant,bestimmt,AjRootQant
+bestimmten		=AjQant,bestimmt,AjRootQant
+bestimmter		=AjQant,bestimmt,AjRootQant
+bestimmtes		=AjQant,bestimmt,AjRootQant
+            	
+einfach			=AjQant
+einfache		=AjQant,einfach,AjRootQant
+einfachem		=AjQant,einfach,AjRootQant
+einfachen		=AjQant,einfach,AjRootQant
+einfacher		=AjQant,einfach,AjRootQant
+einfaches		=AjQant,einfach,AjRootQant
+            	
+vielfach		=AjQant
+vielfache		=AjQant,vielfach,AjRootQant
+vielfachem		=AjQant,vielfach,AjRootQant
+vielfachen		=AjQant,vielfach,AjRootQant
+vielfacher		=AjQant,vielfach,AjRootQant
+vielfaches		=AjQant,vielfach,AjRootQant
+            	
+mehrfach		=AjQant
+mehrfache		=AjQant,mehrfach,AjRootQant
+mehrfachem		=AjQant,mehrfach,AjRootQant
+mehrfachen		=AjQant,mehrfach,AjRootQant
+mehrfacher		=AjQant,mehrfach,AjRootQant
+mehrfaches		=AjQant,mehrfach,AjRootQant
+            	
+mannigfach		=AjQant
+mannigfache		=AjQant,mannigfach,AjRootQant
+mannigfachem	=AjQant,mannigfach,AjRootQant
+mannigfachen	=AjQant,mannigfach,AjRootQant
+mannigfacher	=AjQant,mannigfach,AjRootQant
+mannigfaches	=AjQant,mannigfach,AjRootQant
+
+alle			=AjQant,all,AjRootQant
+allem			=AjQant,all,AjRootQant
+allen			=AjQant,all,AjRootQant
+aller			=AjQant,all,AjRootQant
+alles			=AjQant,all,AjRootQant
+        		
+jede			=AjQant,jed,AjRootQant
+jedem			=AjQant,jed,AjRootQant
+jeden			=AjQant,jed,AjRootQant
+jeder			=AjQant,jed,AjRootQant
+jedes			=AjQant,jed,AjRootQant
+        		
+jene			=AjQant,jen,AjRootQant
+jenem			=AjQant,jen,AjRootQant
+jenen			=AjQant,jen,AjRootQant
+jener			=AjQant,jen,AjRootQant
+jenes			=AjQant,jen,AjRootQant
+        		
+andere			=AjQant,ander,AjRootQant
+anderem			=AjQant,ander,AjRootQant
+anderen			=AjQant,ander,AjRootQant
+anderer			=AjQant,ander,AjRootQant
+anderes			=AjQant,ander,AjRootQant
+        		
+beide			=AjQant,beid,AjRootQant
+beidem			=AjQant,beid,AjRootQant
+beiden			=AjQant,beid,AjRootQant
+beider			=AjQant,beid,AjRootQant
+beides			=AjQant,beid,AjRootQant
+        		
+einige			=AjQant,einig,AjRootQant
+einigem			=AjQant,einig,AjRootQant
+einigen			=AjQant,einig,AjRootQant
+einiger			=AjQant,einig,AjRootQant
+einiges			=AjQant,einig,AjRootQant
+        		
+weitere			=AjQant,weiter,AjRootQant
+weiterem		=AjQant,weiter,AjRootQant
+weiteren		=AjQant,weiter,AjRootQant
+weiterer		=AjQant,weiter,AjRootQant
+weiteres		=AjQant,weiter,AjRootQant
+
+erste			=AjQant,erst,AjRootQant
+erstem			=AjQant,erst,AjRootQant
+ersten			=AjQant,erst,AjRootQant
+erster			=AjQant,erst,AjRootQant
+erstes			=AjQant,erst,AjRootQant
+        		
+letzte			=AjQant,letzt,AjRootQant
+letztem			=AjQant,letzt,AjRootQant
+letzten			=AjQant,letzt,AjRootQant
+letzter			=AjQant,letzt,AjRootQant
+letztes			=AjQant,letzt,AjRootQant
+        		
+selbige			=AjQant,selbig,AjRootQant
+selbigem		=AjQant,selbig,AjRootQant
+selbigen		=AjQant,selbig,AjRootQant
+selbiger		=AjQant,selbig,AjRootQant
+selbiges		=AjQant,selbig,AjRootQant
+
+mehrere			=AjQant,mehrer,AjRootQant
+mehrerem		=AjQant,mehrer,AjRootQant
+mehreren		=AjQant,mehrer,AjRootQant
+mehrerer		=AjQant,mehrer,AjRootQant
+mehreres		=AjQant,mehrer,AjRootQant

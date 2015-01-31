@@ -1,0 +1,111 @@
+Alm	SbSgFm
+Banker	SbSgMsProf	Bank	SbSgFm
+Bob	NmMsPrenForgEn
+Bonner	SbSgMsGeogCity	Bonn	NmGeogCity
+Burger	NmSurn	
+Burg	SbSgFm
+Calwer	SbSgMsGeogCity	Calw	NmGeogCity
+Center	SbSgMsForgEn	Cent	SbSgMsCurr
+Cracker	SbSgMsForgNutr	Crack	SbSgMsForg
+Dauer	SbSgFm
+Delfter	SbSgMsGeogCity	Delft	NmGeogCityNl
+Eck	SbSgNt
+Eid	SbSgMs
+Emder	SbSgMsGeogCity	Emden	NmGeogCity
+Emser	SbSgMsGeogCity	Ems	NmGeogCity
+Farmer	SbSgMsProf	Farm	SbSg
+Flaum	SbSgMs
+Franz	NmMsPren
+Gans	SbSgFmZool
+Ganter	SbSgMsZool
+Genfer	SbSgMsGeogCity	Genf	NmGeogCityCh
+Germ	SbSgMsNutr
+Grazer	SbSgMsGeogCity	Graz	NmGeogCityAt
+Haager	SbSgMsGeogCity	Haag	NmGeogCityNl
+Hasch	SbSgMs
+Held	SbSgMs
+Herd	SbSgMs
+Hub	SbSgMs
+Kaffer	SbSgMsGeogRegn	Kaff	SbSgNtDial
+Kammer	SbSgFm
+Kamm	SbSgMs
+Kap	SbSgNtGeog
+Keeper	SbSgMsForgEn	Kiewer	SbSgMsGeogCity	Kiew	NmGeogCityRu
+Klammer	SbSgFm	
+Klamm	SbSgFm
+Kleister	SbSgMs	
+Kleist	NmSurn
+Klick	SbSgMs
+Knaster	SbSgMs	
+Knast	SbSgMs
+Knick	SbSgMs
+Knipser	SbSgMs	Knips	SbSgMs
+Knorz	SbSgMs
+Korb	SbSgMs
+Korn	SbSgNtNutr
+Kreis	SbSgMs
+Leier	SbSgFm
+Linzer	SbSgMsGeogCity	Linz	NmGeogCityAt
+Liter	SbSgMsMeas
+Lust	SbSgFM
+Mainzer	SbSgMsGeogCity	Mainz	NmGeogCity
+Meter	SbSgMsMeas	
+Met	SbSgMsNutr
+Milch	SbSgFmNutr
+Mut	SbSgMs
+Neusser	SbSgMsGeogCity	Neuss	NmGeogCity
+Niet	SbSgMs
+Ort	SbSgMs
+Pfad	SbSgMs
+Pier	SbSgNt
+Pi	SbSgNtMath
+Port	SbSgMsForg
+Poster	SbSgNtForgEn	
+Post	SbSgFM
+Puder	SbSgMs	
+Punch	SbSgMsForgEn
+Punker	SbSgMsPersForgEn	Punk	SbSgMsPersForgEn
+Quell	SbSgMs
+Ramsch	SbSgMs
+Rancher	SbSgMsProfForgEn	Ranch	SbSgFmForgEn
+Rat	SbSgMs
+Reims	NmGeogCityFr
+Ritz	SbSgMs
+Schanker	SbSgMsMedc	
+Schank	SbSgMs
+Schiss	SbSgMsDial
+Schleizer	SbSgMsGeogCity	Schleiz	NmGeogCity
+Schmelz	SbSgMs
+Schuber	SbSgMs	
+Schub	SbSgMs
+Schupf	SbSgMsDial
+Schusser	SbSgMs	
+Schuss	SbSgMs
+Soester	SbSgMsGeogCity	Soest	NmGeogCity
+Spa	NmGeogCity
+Spross	SbSgMs
+Stand	SbSgMs
+Standl	SbSgNtDimtDial
+Stricher	SbSgMs	
+Strich	SbSgMs
+Stromer	SbSgMs	
+Strom	SbSgMs
+Talk	SbSgMsForgEn
+Tanger	NmGeogCity	
+Tang	SbSgMs
+Tier	SbSgNt
+Timer	SbSgMsForgEn	
+Tim	NmMsPren
+Trainer	SbSgMsProfForgEn	
+Train	SbSgMsForgEn
+Trierer	SbSgMsGeogCity	Trier	NmGeogCity
+Triester	SbSgMsGeogCity	Triest	NmGeogCity
+Truck	SbSgMsForgEn
+Tschader	SbSgMsGeogCtry	Tschad	NmGeogCtry
+Volker	NmMsPren	
+Volk	SbSgNt
+Wiener	SbSgMsGeogCity	Wien	NmGeogCity
+Wormser	SbSgMsNmGeogCity	Worms	NmGeogCity
+Wurst	SbSgFmNutr
+Zuger	SbSgMsGeogCity	
+Zug	SbSgMs

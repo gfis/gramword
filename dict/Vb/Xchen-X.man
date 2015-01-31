@@ -1,0 +1,27 @@
+Aachen	NmGeogCityDe
+Bildchen	SbSgNtDimt	Bild	SbSgNt
+Brieschen	SbSgNtDimt	Bries	SbSgNt
+Buschen	SbPl	Busch	SbSgMs
+Bus	SbSgMs
+Freundchen	SbSgNtDimtPers	Freund	SbSgMsPers
+Groschen	SbSgMsCurr	
+Gros	SbSgNt
+Heimchen	SbSgNtDimt	Heim	SbSgNt
+Herrchen	SbSgNtDimtPers	Herr	SbSgMsPers
+Kerlchen	SbSgNtDimtPers	Kerl	SbSgMsPers
+Kindchen	SbSgNtDimtPers	Kind	SbSgNtPers
+Kittchen	SbSgNtDimt	
+Kitt	SbSgMs
+Kleidchen	SbSgNtDimt	Kleid	SbSgNt
+Laib	SbSgMsNutr
+Leibchen	SbSgNtDimt	
+Leib	SbSgMs
+Liedchen	SbSgNtDimt	Lied	SbSgNt
+Nestchen	SbSgNtDimt	Nest	SbSgNt
+Quellchen	SbSgNtDimt	Quelle	SbSgFm
+Quentchen	SbSgNtDimt
+Schiffchen	SbSgNtDimt	Schiff	SbSgNt
+Schuhchen	SbSgNtDimt	Schuh	SbSgMs
+Teilchen	SbSgNtDimt	Teil	SbSgNt
+Veilchen	SbSgNtDimtBota
+Weibchen	SbSgNtDimtPers	Weib	SbSgNtPers

@@ -1,0 +1,12 @@
+Mann hasSex male
+Frau hasSex female
+Sohn hasSex male
+Sohn hasMother Mutter
+Sohn hasFather Vater
+a = Tochter(b) : a = Kind(b) and female(b) : b = Vater(a) or b = Mutter(a)
+a = Sohn   (b) : a = Kind(b) and male  (b)
+
+a = Tochter(b) : female(b) and (b = Vater(a) or b = Mutter(a))
+Tochter hasFather Vater
+a = Bruder   (b) : Vater(a) = Vater(b) and Mutter(a) = Mutter(b) and male  (a)
+a = Schwester(b) : Vater(a) = Vater(b) and Mutter(a) = Mutter(b) and female(a)

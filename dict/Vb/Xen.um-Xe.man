@@ -1,0 +1,3 @@
+Butten:	SbPlFm	Butte:	SbSgFm
+Lauschen:	SbPlNtDimt	Laus	SbSgFm
+Tranchen:	SbSgFmDimt	Trane:	SbSgFm

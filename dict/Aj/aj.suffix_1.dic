@@ -1,0 +1,49 @@
+# declination endings of German adjectives
+# @(#) $Id: aj.suffix_1.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-27, Georg Fischer
+# caution, encoded in URF-8 äöüÄÖÜß
+#
+# adjective
+~        	=Aj
+än       	=Aj
+är       	=Aj
+al       	=Aj
+bar      	=Aj
+ell      	=Aj
+fach     	=Aj
+frei     	=Aj
+fern     	=Aj
+gemäß    	=Aj
+haft     	=Aj
+ial      	=Aj
+icht     	=Aj
+iell     	=Aj
+ig       	=Aj
+isch     	=Aj
+iv       	=Aj
+lich     	=Aj
+los      	=Aj
+mäßig    	=Aj
+nah      	=Aj
+ön       	=Aj
+ös       	=Aj
+phob     	=Aj
+phil     	=Aj
+reich    	=Aj
+sam      	=Aj
+selb	 	=Aj
+trop     	=Aj
+voll     	=Aj
+weis     	=Aj
+weit     	=Aj
+
+# alisch   	=Aj
+# arm      	=Aj
+# artig    	=Aj
+# atisch   	=Aj
+# gen    	=Aj
+# imal    	=Aj
+# orientiert=Aj
+# ologisch 	=Aj
+# orisch   	=Aj
+# weise    	=Aj

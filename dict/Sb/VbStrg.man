@@ -1,0 +1,3 @@
+Gefallen	SbSgNt	gefallen	VbInStrg
+Verderben	SbSgNt	verderben	VbInStrg
+Vergessen	SbSgNt	vergessen	VbInStrg

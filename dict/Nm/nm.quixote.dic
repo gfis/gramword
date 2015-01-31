@@ -1,0 +1,22 @@
+# frequent names in "Don Quixote"  
+# UTF-8: äöüÄÖÜß
+# @(#) $Id: nm.quixote.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-06-29, Georg Fischer = 59
+Quijote		=NmSurnForg.Es
+Dulcinea	=NmFmPrenForg.Es
+Tolosa		=NmSurnForg.Es
+Rosinante	=NmFmZool
+Sancho 		=NmMsPrenForg.Es
+Pansa 		=NmSurnForg.Es
+Mancha  	=NmGeogRegnForg.Es
+Toledo		=NmGeogCityForg.Es
+
+Grisóstomo	=NmMsPren
+Toboso		=NmGeogCityForg.Es
+Kastellan	=SbSgMsProf
+Romanze		=SbSgFm
+Biskayer	=SbSgMsPers
+Zwerchsack	=SbSgMs
+Ziegenhirte	=SbSgMsProf
+Verfasser	=SbSgMsProf
+Autor		=SbSgMsProf

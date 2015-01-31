@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>gramword index</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+    <h2>gramword</h2>
+    <p><em>gramword</em> is a Java package which uses a relational 
+    (MySql) database 
+    to recognize a limited set of German words. 
+    </p><p>
+    Sets of common words, names,
+    roots and endings of verbs, substantives, adjectives and adverbs,
+    together with their grammatical type and conjugation/declination
+    are preloaded from dictionary files into database tables.
+    </p><p>
+    Several decision algorithms use these tables to determine the
+    grammatical type of all words in a text. In the HTML output,
+    the recognized words are shown in different colors.
+    </p>
+    <strong>Short Example</strong> (sentence from "Don Quijote")
+    <blockquote>
+        <span class="Av" morph="Time">Zuletzt</span>, <span class="Cj" morph="">da</span> <span class="Pp" morph="N1N3">es</span> <span class="Pr" morph="MD">mit</span> <span class="Ps" morph="D1M31M">seinem</span> <span class="Sb" morph="SgMs">Verstand</span> <span class="Aj" morph="XP">völlig</span> <span class="Pr" morph="LM">zu</span> <span class="Sb" morph="SgFm">Ende</span> <span class="Vb" morph="SPa0">gegangen</span>, 
+        <span class="Vb" morph="SIp13">verfiel</span> <span class="Pp" morph="N1M3">er</span> <span class="Pr" morph="LD">auf</span> <span class="Ar" morph="D9X">den</span> <span class="Aj" morph="XS">seltsamsten</span> <span class="Sb" morph="Pl">Gedanken</span>, <span class="Pr" morph="LD">auf</span> <span class="Ar" morph="D9X">den</span> jemals <span class="Pr" morph="LD">in</span> <span class="Ar" morph="N1M">der</span> 
+        <span class="Sb" morph="SgFm">Welt</span> <span class="Au" morph="N1M">ein</span> <span class="Sb" morph="SgMsPers">Narr</span> <span class="Vb" morph="RtWeak">verfallen</span>; <span class="Aj" morph="XP">nämlich</span> <span class="Pp" morph="N1N3">es</span> <span class="Vb" morph="SIp11">deuchte</span> <span class="Pp" morph="D1M3">ihm</span> <span class="Vb" morph="SCs93">angemessen</span> <span class="Cj" morph="">und</span> 
+        <span class="Aj" morph="XP">notwendig</span>, <span class="Cj" morph="">sowohl</span> <span class="Cc" morph="">zur</span> <span class="Sb" morph="SgFm">Mehrung</span> <span class="Pp" morph="N1M3">seiner</span> <span class="Sb" morph="SgFm">Ehre</span> <span class="Un" morph="">als</span> <span class="Un" morph="">auch</span> <span class="Cc" morph="">zum</span> <span class="Sb" morph="Pl">Dienste</span> 
+        <span class="Ar" morph="G1M">des</span> Gemeinwesens, <span class="Pp" morph="D1X3">sich</span> <span class="Cc" morph="">zum</span> <span class="Vb" morph="Ge1A">fahrenden</span> <span class="Nm" morph="PSX">Ritter</span> <span class="Pr" morph="LM">zu</span> <span class="Vb" morph="RtWeak">machen</span> <span class="Cj" morph="">und</span> <span class="Pr" morph="MA">durch</span> 
+        <span class="Ar" morph="N1F">die</span> <span class="Aj" morph="XP">ganze</span> <span class="Sb" morph="SgFm">Welt</span> <span class="Pr" morph="MD">mit</span> <span class="Nm" morph="PSX">Roß</span> <span class="Cj" morph="">und</span> <span class="Sb" morph="Pl">Waffen</span> <span class="Pr" morph="LM">zu</span> <span class="Vb" morph="SIp91">ziehen</span>, <span class="Pr" morph="MD">um</span> Abenteuer <span class="Pr" morph="LM">zu</span> 
+        <span class="Vb" morph="RtWeak">suchen</span> <span class="Cj" morph="">und</span> <span class="Aj" morph="RtQant">all</span> <span class="Ar" morph="N1N">das</span> <span class="Pr" morph="LM">zu</span> <span class="Vb" morph="RtWeak">üben</span>, <span class="Ir" morph="">was</span>, <span class="Ir" morph="">wie</span> <span class="Pp" morph="N1M3">er</span> <span class="Vb" morph="SPa0">gelesen</span>, <span class="Ar" morph="N1F">die</span> <span class="Vb" morph="Ge1A">fahrenden</span> 
+        <span class="Nm" morph="PSX">Ritter</span> übten, <span class="Ar" morph="N1N">das</span> <span class="Vb" morph="SPr12">heißt</span> <span class="Aj" morph="XP">jegliche</span> <span class="Sb" morph="SgFm">Art</span> <span class="Pr" morph="MG">von</span> Unbill 
+        <span class="Vb" morph="Xzu">wiedergutzumachen</span> <span class="Cj" morph="">und</span> <span class="Pp" morph="D1X3">sich</span> <span class="Pr" morph="LD">in</span> <span class="Sb" morph="Pl">Gelegenheiten</span> <span class="Cj" morph="">und</span> Gefahren <span class="Pr" morph="LM">zu</span> 
+        <span class="Vb" morph="RtWeak">begeben</span>, <span class="Pr" morph="MA">durch</span> <span class="Ps" morph="">deren</span> <span class="Sb" morph="SgFm">Überwindung</span> <span class="Pp" morph="N1M3">er</span> ewigen <span class="Sb" morph="Pl">Namen</span> <span class="Cj" morph="">und</span> <span class="Sb" morph="SgMs">Ruhm</span> 
+        <span class="Vb" morph="SIn0">gewinnen</span> <span class="Vb" morph="SCt11">würde</span>. </p>
+    </blockquote>
+
+    <strong><a href="tempx.html">Longer Example</a></strong> (Chapters 1 - 4 from "Don Quijote")
+    <br />
+    <strong><a href="docs/api/index.html">API documentation</a></strong> (Javadoc)
+    <br />
+    <strong><a href="docs/coding.html">Coding of Syntactic and Semantic Attributes of Words</a>
+    </strong>
+    <br />
+    <strong><a href="docs/decisions.html">Decision Algorithms</a>
+    </strong>
+    <br />
+    <strong><a href="docs/developer.html">Hints for developers</a>
+    </strong>
+    <br />
+    <strong><a href="docs/bugs.html">Limitations and Bugs</a>
+    </strong>
+
+    <p>
+    <font size="-2">
+    Questions, remarks to: <a href="mailto:punctum@punctum.com">Dr. Georg Fischer</a>
+    </font>
+    </p>
+
+</body>
+</html>

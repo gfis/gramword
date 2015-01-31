@@ -1,0 +1,8 @@
+Bunden:	SbPlAc	Bund	SbSg
+Kroten:	SbPlAc	Krote:	SbSgFmZool
+Mahren:	SbPlAc	
+Mahr:	SbSgFm
+Marchen:	SbSgNt
+Munchen:	NmGeogCity
+Suden:	SbSgMs	
+Sud	SbSgMs

@@ -1,0 +1,61 @@
+# German personal pronouns
+# @(#) $Id: de.pn_pers.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-08-29: only PnPers
+# 2006-05-28: UTF-8, äöüÄÖÜß
+# 2003-10-02  dativ
+# 2001-04-13, Georg Fischer
+
+# Nominativ - wer steht hier
+ich  	=PnSgPersNomv1
+du   	=PnSgPersNomv2
+Du   	=PnSgPersNomv2Honr
+er   	=PnSgPersNomvMs3
+sie  	=PnSgPersNomvFm3
+es   	=PnSgPersNomvNt3
+wir  	=PnPlPersNomv1
+ihr  	=PnPlPersNomv2
+Ihr  	=PnPlPersNomv2Honr
+sie  	=PnPlPersNomv3
+Sie  	=PnPlPersNomv3Honr
+
+# old form, only nominative:
+Er   	=PnSgPersNomv3Honr
+
+# Genitiv - wessen entledigen wir uns
+meiner 	=PnSgPersGenv1
+deiner 	=PnSgPersGenv2
+Deiner 	=PnSgPersGenv2Honr
+seiner 	=PnSgPersGenv3Ms
+ihrer  	=PnSgPersGenv3Fm
+seiner 	=PnSgPersGenv3Nt
+unserer	=PnPlPersGenv1
+eurer  	=PnPlPersGenv2
+Eurer  	=PnPlPersGenv2Honr
+ihrer  	=PnPlPersGenv3
+Ihrer  	=PnPlPersGenv3Honr
+
+# Dativ - wem gefällt das
+mir  	=PnSgPersDatv1
+dir  	=PnSgPersDatv2
+Dir  	=PnSgPersDatv2Honr
+ihm  	=PnSgPersDatv3Ms
+ihr  	=PnSgPersDatv3Fm
+ihm  	=PnSgPersDatv3Nt
+uns  	=PnPlPersDatv1
+euch 	=PnPlPersDatv2
+Euch 	=PnPlPersDatv2Honr
+ihnen	=PnPlPersDatv3
+Ihnen	=PnPlPersDatv3Honr
+
+# Akkusativ - wen besuchen wir
+mich 	=PnSgPersAccv1
+dich 	=PnSgPersAccv2
+Dich 	=PnSgPersAccv2Honr
+ihn  	=PnSgPersAccv3Ms
+sie  	=PnSgPersAccv3Fm
+es   	=PnSgPersAccv3Nt
+uns  	=PnPlPersAccv1
+euch 	=PnPlPersAccv2
+Euch 	=PnPlPersAccv2Honr
+sie  	=PnPlPersAccv3
+Sie  	=PnPlPersAccv3Honr

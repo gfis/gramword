@@ -1,0 +1,23 @@
+# German personal pronouns
+# @(#) $Id: de.pn_undef.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-08-29: only PnPers
+# 2006-05-28: UTF-8, ‰ˆ¸ƒ÷‹ﬂ
+# 2003-10-02  dativ
+# 2001-04-13, Georg Fischer
+
+man  	=Pn
+
+eine	=Pn
+einen	=PpA3XX
+einem	=PpD3XX
+
+jemand		=PpN3XX
+niemand		=PpN3XX
+jemandes	=PpG3XX
+niemandes	=PpG3XX
+jemanden	=PpD3XX
+niemanden	=PpD3XX
+jemanden	=PpA3XX
+niemanden	=PpA3XX
+
+sich 	=PnRefl

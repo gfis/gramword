@@ -1,0 +1,145 @@
+Asche	SbSgFm
+Ascher	SbSgMs
+Blaue:	SbSgFm
+Bloße:	SbSgFm
+Bluse	SbSgFm
+Brat:	SbSgNtNutr
+Braune:	SbSgFm
+Buhne:	SbSgFm
+Burger:	SbSgMsPers
+Butt:	SbSgFm	
+Butt	SbSgMsZool
+Buttel:	SbSgMsPers	
+Bußer:	SbSgMsPers
+Dampfer:	SbSgMs	
+Dampfer	SbSgMs
+Dobel	SbSgMs
+Drucker:	SbSgMs	
+Drucker	SbSgMs
+Druse:	SbSgFm	
+Druse	SbSgFm
+Dune:	SbSgFm	
+Floßer:	SbSgMsProf
+Frachter	SbSgMs
+Fuhre	SbSgFm
+Fußchen:	SbSgNtDitm	Fuß	SbSgMs
+Gau	SbSgMs
+Gluck:	SbSgNt	
+Große:	SbSgFm
+Gruppe	SbSgFm
+Gunther:	NmMsPren	
+Gunther	NmMsPren
+Hafen:	SbPl	Hafen	SbSgMs
+Hafner	SbSgMsProf
+Handel:	SbPlMs	Handel	SbSgMs
+Hansel:	NmMsPrenDimt	Hansel	NmMsPren
+Harte:	SbSgFm
+Hascher:	SbSgMsPers
+Hauer	SbSgMsProf
+Hock	SbSgMs
+Hocker:	SbSgMs	
+Hocker	SbSgMs
+Holle:	SbSgFm	
+Holle	NmSurn
+Holler	SbSgMs
+Hupfer:	SbSgMs	
+Hupfer	SbSgMs
+Hurde:	SbSgFm
+Hutte:	SbSgFm	
+Jute	SbSgFm
+Kampfer:	SbSgMsPers	
+Kampfer	SbSgMs
+Kaser:	SbSgMsProf	
+Kloben	SbSgMs
+Kloßchen:	SbSgNtDimtNutr	Kloß	SbSgMsNutr
+Kocher:	SbSgMs	
+Kocher	SbSgMs
+Korner:	SbPl	Korn	SbSgNtNutr
+Kotze	SbSgFm
+Kratzer	SbSgMs
+Krauter:	SbPl	Kraut	SbSgMs
+Krucke:	SbSgFm
+Kuhle:	SbSgFm	
+Kuhle	SbSgFm
+Kurze:	SbSgFm	
+Kurze	SbSgFmPers
+Loss:	SbSgMs
+Lummel:	SbSgMsPers
+Luster:	SbSgMs
+Makler	SbSgMsProf
+Marke	SbSgFm
+Marker	SbSgMsForg
+Master:	SbSgMsProf	
+Master	SbSgMsForgEn
+Mose:	SbSgFmBody
+Mull:	SbSgMs
+Mull	SbSgMs
+Obstler	SbSgMsNutr
+Ohm	SbSgNtPhysElec
+Ohr	SbSgNtBody
+Pfuhl	SbSgMs
+Plane:	SbPl	Plan	SbSgMs
+Plane	SbSgFm
+Planer	SbSgMsProf
+Platte	SbSgFm
+Poker	SbSgMsForg
+Postler	SbSgMsProf
+Prager	SbSgMsGeogCity	Prag	NmGeogCityForgCz
+Putz	SbSgMs
+Rabe	SbSgMsZool
+Rahm	SbSgMsNutr
+Ranke:	SbSgFm	
+Ranke	SbSgFm
+Rat	SbSgMs
+Ratsche:	SbSgFm
+Ratsche	SbSgFm
+Runde	SbSgFm
+Sage:	SbSgFm
+Sage	SbSgFm
+Sager:	SbSgMsProf	
+Sauger:	SbSgMs
+Sauger	SbSgMs	saugen	VbIn
+Schabe	SbSgFmZool
+Schacher:	SbSgMsPers	
+Schacher	SbSgMs
+Schlachter:	SbSgMsPers
+Schlachter	SbSgMsProf
+Schlager:	SbSgMs	
+Schlager	SbSgMs
+Schlurfer:	SbSgMs	
+Schoßchen:	SbSgNtDimtBody	Schoß	SbSgMsBody
+Schuhchen:	SbSgNtDimt	Schuh	SbSgMs
+Schuppe	SbSgMs
+Schussel:	SbSgFm	
+Schussel	SbSgMsPers
+Schutz:	SbSgMs	
+Schutz	SbSgMs
+Schwarze:	SbSgMs	schwarz	AjColr
+Schwule:	SbSgFm	
+Schwule	SbSgMsPers
+Spaßchen:	SbSgNtDimt	Spaß	SbSgMs
+Spule:	SbSgFm
+Spule	SbSgFm
+Stander:	SbSgMs
+Star	SbSgMsForg
+Stovchen:	SbSgNtDimt
+Stoßchen:	SbSgNtDimt	Stoß	SbSgMs
+Stoßel:	SbSgMs
+Strahler	SbSgMs
+Straußchen:	SbSgNtDimt	Strauß	SbSgMs
+Straßchen:	SbSgNtDimt	Straße	SbSgFm
+Stuck:	SbSgNt	
+Stuck	SbSgMs
+Stutz	SbSgMsCurr
+Sud:	SbSg	
+Sud	SbSgMs
+Suße:	SbSgFm	
+Taschner:	SbSgMsProf
+Tummler:	SbSgMsZool
+Tute:	SbSgFm
+Ulk	SbSgMs
+Walzer	SbSgMs
+Zahler:	SbSgMs	zahlen:	VbIn
+Zahler	SbSgMs	zahlen	VbIn
+Zunder:	SbSgMs
+Zunder	SbSgMs

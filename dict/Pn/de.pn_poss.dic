@@ -1,0 +1,201 @@
+# German possessive pronouns
+# @(#) $Id: de.pn_poss.dic 36 2008-09-08 06:05:06Z gfis $
+# 2006-08-29: only PnPoss
+# 2006-05-28: UTF-8, äöüÄÖÜß
+# 2003-10-02  dativ
+# 2001-04-13, Georg Fischer
+
+# Poss = Possessivpronomen
+
+# Nominativ - Ms; das ist ... Baum
+mein	=PnSgPossNomvMs1
+dein	=PnSgPossNomvMs2
+Dein	=PnSgPossNomvMs2Honr
+sein	=PnSgPossNomvMs3
+ihr		=PnSgPossNomvMs3
+unser	=PnPlPossNomvMs1
+euer	=PnPlPossNomvMs2
+Euer	=PnPlPossNomvMs2Honr
+ihr		=PnPlPossNomvMs3
+Ihr		=PnPlPossNomvMs3Honr
+
+# Nominativ - Fm; das ist ... Blume
+meine	=PnSgPossNomvFm1
+deine	=PnSgPossNomvFm2
+Deine	=PnSgPossNomvFm2Honr
+seine	=PnSgPossNomvFm3
+ihre	=PnSgPossNomvFm3
+unsere	=PnPlPossNomvFm1
+eure	=PnPlPossNomvFm2
+Eure	=PnPlPossNomvFm2Honr
+ihre	=PnPlPossNomvFm3
+Ihre	=PnPlPossNomvFm3Honr
+
+# Nominativ - Nt; das ist ... Netz
+mein	=PnSgPossNomvNt1
+dein	=PnSgPossNomvNt2
+Dein	=PnSgPossNomvNt2Honr
+sein	=PnSgPossNomvNt3
+ihr		=PnSgPossNomvNt3
+unser	=PnPlPossNomvNt1
+euer	=PnPlPossNomvNt2
+Euer	=PnPlPossNomvNt2Honr
+ihr		=PnPlPossNomvNt3
+Ihr		=PnPlPossNomvNt3Honr
+
+# Nominativ - Pl; das sind ... Kinder
+meine	=PnSgPossNomvPl1
+deine	=PnSgPossNomvPl2
+Deine	=PnSgPossNomvPl2Honr
+seine	=PnSgPossNomvPl3
+ihre	=PnSgPossNomvPl3
+unsere	=PnPlPossNomvPl1
+eure	=PnPlPossNomvPl2
+Eure	=PnPlPossNomvPl2Honr
+ihre	=PnPlPossNomvPl3
+Ihre	=PnPlPossNomvPl3Honr
+
+#---------------------------
+# Genitiv - Ms; man entledigt sich ... Baums
+meines	=PnSgPossGenvMs1
+deines	=PnSgPossGenvMs2
+Deines	=PnSgPossGenvMs2Honr
+seines	=PnSgPossGenvMs3
+ihres	=PnSgPossGenvMs3
+unseres	=PnPlPossGenvMs1
+eures	=PnPlPossGenvMs2
+Eures	=PnPlPossGenvMs2Honr
+ihres	=PnPlPossGenvMs3
+Ihres	=PnPlPossGenvMs3Honr
+                 
+# Genitiv - Nt; man entledigt sich ... Tuchs
+meines	=PnSgPossGenvNt1
+deines	=PnSgPossGenvNt2
+Deines	=PnSgPossGenvNt2Honr
+seines	=PnSgPossGenvNt3
+ihres	=PnSgPossGenvNt3
+unseres	=PnPlPossGenvNt1
+eures	=PnPlPossGenvNt2
+Eures	=PnPlPossGenvNt2Honr
+ihres	=PnPlPossGenvNt3
+Ihres	=PnPlPossGenvNt3Honr
+
+# Genitiv - Fm; man entledigt sich ... Hose
+meiner	=PnSgPossGenvFm1
+deiner	=PnSgPossGenvFm2
+Deiner	=PnSgPossGenvFm2Honr
+seiner	=PnSgPossGenvFm3
+ihrer	=PnSgPossGenvFm3
+unserer	=PnPlPossGenvFm1
+eurer	=PnPlPossGenvFm2
+Eurer	=PnPlPossGenvFm2Honr
+ihrer	=PnPlPossGenvFm3
+Ihrer	=PnPlPossGenvFm3Honr
+
+# Genitiv - Pl; man entledigt sich ... Hosen
+meiner	=PnSgPossGenvPl1
+deiner	=PnSgPossGenvPl2
+Deiner	=PnSgPossGenvPl2Honr
+seiner	=PnSgPossGenvPl3
+ihrer	=PnSgPossGenvPl3
+unserer	=PnPlPossGenvPl1
+eurer	=PnPlPossGenvPl2
+Eurer	=PnPlPossGenvPl2Honr
+ihrer	=PnPlPossGenvPl3
+Ihrer	=PnPlPossGenvPl3Honr
+#---------------------------
+# Dativ - Ms; man gibt ... Mann
+meinem	=PnSgPossDatvMs1
+deinem	=PnSgPossDatvMs2
+Deinem	=PnSgPossDatvMs2Honr
+seinem	=PnSgPossDatvMs3
+ihrem	=PnSgPossDatvMs3
+unserem	=PnPlPossDatvMs1
+eurem	=PnPlPossDatvMs2
+Eurem	=PnPlPossDatvMs2Honr
+ihrem	=PnPlPossDatvMs3
+Ihrem	=PnPlPossDatvMs3Honr
+                 
+# Dativ - Nt; man gibt ... Kind    
+meinem	=PnSgPossDatvNt1
+deinem	=PnSgPossDatvNt2
+Deinem	=PnSgPossDatvNt2Honr
+seinem	=PnSgPossDatvNt3
+ihrem	=PnSgPossDatvNt3
+unserem	=PnPlPossDatvNt1
+eurem	=PnPlPossDatvNt2
+Eurem	=PnPlPossDatvNt2Honr
+ihrem	=PnPlPossDatvNt3
+Ihrem	=PnPlPossDatvNt3Honr
+
+# Dativ - Fm; man gibt ... Frau
+meiner	=PnSgPossDatvFm1
+deiner	=PnSgPossDatvFm2
+Deiner	=PnSgPossDatvFm2Honr
+seiner	=PnSgPossDatvFm3
+ihrer	=PnSgPossDatvFm3
+unserer	=PnPlPossDatvFm1
+eurer	=PnPlPossDatvFm2
+Eurer	=PnPlPossDatvFm2Honr
+ihrer	=PnPlPossDatvFm3
+Ihrer	=PnPlPossDatvFm3Honr
+
+# Dativ, Pl; man gibt ... Kindern
+meinen	=PnSgPossDatvPl1
+deinen	=PnSgPossDatvPl2
+Deinen	=PnSgPossDatvPl2Honr
+seinen	=PnSgPossDatvPl3
+ihren	=PnSgPossDatvPl3
+unseren	=PnPlPossDatvPl1
+euren	=PnPlPossDatvPl2
+Euren	=PnPlPossDatvPl2Honr
+ihren	=PnPlPossDatvPl3
+Ihren	=PnPlPossDatvPl3Honr
+#---------------------------
+# Akkusativ, Ms; man sieht ... Baum
+meinen	=PnSgPossAccvMs1
+deinen	=PnSgPossAccvMs2
+Deinen	=PnSgPossAccvMs2Honr
+seinen	=PnSgPossAccvMs3
+ihren	=PnSgPossAccvMs3
+unseren	=PnPlPossAccvMs1
+euren	=PnPlPossAccvMs2
+Euren	=PnPlPossAccvMs2Honr
+ihren	=PnPlPossAccvMs3
+Ihren	=PnPlPossAccvMs3Honr
+
+# Akkusativ, Fm; man sieht ... Blume
+meine	=PnSgPossAccvFm1
+deine	=PnSgPossAccvFm2
+Deine	=PnSgPossAccvFm2Honr
+seine	=PnSgPossAccvFm3
+ihre	=PnSgPossAccvFm3
+unsere	=PnPlPossAccvFm1
+eure	=PnPlPossAccvFm2
+Eure	=PnPlPossAccvFm2Honr
+ihre	=PnPlPossAccvFm3
+Ihre	=PnPlPossAccvFm3Honr
+
+# Akkusativ - Nt; man trifft ... Kind
+mein	=PnSgPossAccvNt1
+dein	=PnSgPossAccvNt2
+Dein	=PnSgPossAccvNt2Honr
+sein	=PnSgPossAccvNt3
+ihr		=PnSgPossAccvNt3
+unser	=PnPlPossAccvNt1
+euer	=PnPlPossAccvNt2
+Euer	=PnPlPossAccvNt2Honr
+ihr		=PnPlPossAccvNt3
+Ihr		=PnPlPossAccvNt3Honr
+
+# Akkusativ, Pl; man sieht ... Kinder
+meine	=PnSgPossAccvPl1
+deine	=PnSgPossAccvPl2
+Deine	=PnSgPossAccvPl2Honr
+seine	=PnSgPossAccvPl3
+ihre	=PnSgPossAccvPl3
+unsere	=PnPlPossAccvPl1
+eure	=PnPlPossAccvPl2
+Eure	=PnPlPossAccvPl2Honr
+ihre	=PnPlPossAccvPl3
+Ihre	=PnPlPossAccvPl3Honr
