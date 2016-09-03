@@ -1,6 +1,7 @@
 /*  Highlights European IBANs and SWIFT BICs in the neighbourhood.
     @(#) $Id: IBANFilter.java 805 2011-09-20 06:41:22Z gfis $
-	2010-10-19: transformer.initialize()
+    2016-09-02: checkdig.account.IBANChecker
+    2010-10-19: transformer.initialize()
     2007-05-24: copied from KontoFilter
 */
 /*
@@ -26,10 +27,10 @@ import  org.teherba.gramword.MorphemTester;
 import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  org.teherba.checkdig.account.DeAccountChecker;
-import  org.teherba.checkdig.IBANChecker;
+import  org.teherba.checkdig.account.IBANChecker;
 import  java.util.ArrayList;
 import  java.net.URLEncoder;
-import	java.io.UnsupportedEncodingException;
+import  java.io.UnsupportedEncodingException;
 import  org.xml.sax.Attributes;
 import  org.xml.sax.SAXParseException;
 import  org.apache.log4j.Logger;
@@ -44,7 +45,7 @@ import  org.apache.log4j.Logger;
  *  </ul>
  *  @author Dr. Georg Fischer
  */
-public class IBANFilter extends KontoFilter { 
+public class IBANFilter extends KontoFilter {
     public final static String CVSID = "@(#) $Id: IBANFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** Debugging switch */
@@ -70,7 +71,7 @@ public class IBANFilter extends KontoFilter {
     private int   endSpan;
     /** initialize account object */
     private DeAccountChecker deAccountChecker;
-    
+
     /** Constructor.
      */
     public IBANFilter() {
@@ -79,19 +80,19 @@ public class IBANFilter extends KontoFilter {
         setDescription("Highlight IBANs");
         setFileExtensions("html");
     } // Constructor()
-    
-	/** Initializes the (quasi-constant) global structures and variables.
-	 *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
-	 *  selected generator and serializer.
-	 */
-	public void initialize() {
-		super.initialize();
+
+    /** Initializes the (quasi-constant) global structures and variables.
+     *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
+     *  selected generator and serializer.
+     */
+    public void initialize() {
+        super.initialize();
         log = Logger.getLogger(IBANFilter.class.getName());
         keyWords = new ArrayList/*<1.5*/<String>/*1.5>*/(8);
         keyWords.add("BLZ");
         maxBlz = keyWords.size();
         queueSize = queue.getSize();
-        distBlz   = queueSize; // outside 
+        distBlz   = queueSize; // outside
         distKto   = queueSize; // outside
         keyWords.add("KTO");
         keyWords.add("KTNR");
@@ -100,19 +101,19 @@ public class IBANFilter extends KontoFilter {
         keyWords.add("KONTONUMMER");
         maxKto = keyWords.size();
         deAccountChecker = new DeAccountChecker();
-	} // initialize
-    
+    } // initialize
+
     /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and 
+     *  append a new segment to the queue and
      *  prints the segment which is shifted out of the queue.
      *  @param segment the new segment to be appended to the queue
      *  <p>
-     *  This implementation tries to find a German account and bank id number, 
-     *  and if found, surrounds them with "span" HTML elements. 
+     *  This implementation tries to find a German account and bank id number,
+     *  and if found, surrounds them with "span" HTML elements.
      *  The result of the check digit algorithm is marked with a color
      *  over the account number (span class=), and the bank name is shown when
      *  the mouse is moved over the bank id (span title=).
@@ -133,51 +134,51 @@ public class IBANFilter extends KontoFilter {
                 if (blz.length() == 8) { // German BLZ
                     // http://www.google.com/search?q=goobly+googly+gook
                     String bankName = getBankName(blz);
-					String googleURL = "http://www.google.de/search?q="
-							+ bankName.replaceAll("\\s+", "+");
-					try {
-						googleURL = "http://www.google.de/search?q="
-							+ URLEncoder.encode(bankName, getResultEncoding());
-					} catch (UnsupportedEncodingException exc) {
-						// ignore, default was set above
-					}
- 					int blzStartSpan = startSpan;
- 					int blzEndSpan   = endSpan;
-                
+                    String googleURL = "http://www.google.de/search?q="
+                            + bankName.replaceAll("\\s+", "+");
+                    try {
+                        googleURL = "http://www.google.de/search?q="
+                            + URLEncoder.encode(bankName, getResultEncoding());
+                    } catch (UnsupportedEncodingException exc) {
+                        // ignore, default was set above
+                    }
+                    int blzStartSpan = startSpan;
+                    int blzEndSpan   = endSpan;
+
                     int ktoIndex = getNearestKto(istart);
                     if (ktoIndex != istart) { // KTO was found before or behind
-                        String ktoNr = getNextNumber(ktoIndex); 
+                        String ktoNr = getNextNumber(ktoIndex);
                         if (ktoNr.length() <= 10 && ktoNr.length() >= 3) {
-                        	String newKtoNr = deAccountChecker.check(ktoNr, blz);
-		               		if (newKtoNr.equals(ktoNr)) { // checkdigit ok
-			                    queue.get(startSpan).appendBefore ("<span"
-    		    	                    + " style=\"background-color: lightgreen\">");
-        		    	        queue.get(  endSpan).prependBehind("</span>");
-        		    	    } else { // checkdigit wrong
-			                    queue.get(startSpan).appendBefore ("<span"
-			                            + " title=\"" + newKtoNr + "\""
-    		    	                    + " style=\"background-color: lightsalmon\">");
-        		    	        queue.get(  endSpan).prependBehind("</span>");
-        		    	    }
-						}
-						Segment ktoSegment = queue.get(ktoIndex);
+                            String newKtoNr = deAccountChecker.check(ktoNr, blz);
+                            if (newKtoNr.equals(ktoNr)) { // checkdigit ok
+                                queue.get(startSpan).appendBefore ("<span"
+                                        + " style=\"background-color: lightgreen\">");
+                                queue.get(  endSpan).prependBehind("</span>");
+                            } else { // checkdigit wrong
+                                queue.get(startSpan).appendBefore ("<span"
+                                        + " title=\"" + newKtoNr + "\""
+                                        + " style=\"background-color: lightsalmon\">");
+                                queue.get(  endSpan).prependBehind("</span>");
+                            }
+                        }
+                        Segment ktoSegment = queue.get(ktoIndex);
                         ktoSegment.appendBefore ("<span"
                                   + " style=\"background-color: khaki\">");
                         ktoSegment.prependBehind("</span>");
                     } // KTO was found
                     queue.get(blzStartSpan).appendBefore ("<a href=\"" + googleURL + "\">"
-                    		+ "<span"
+                            + "<span"
                             + " title=\"" + bankName + "\""
                             + " style=\"background-color: lightblue\">"
                             );
                     queue.get(blzEndSpan).prependBehind("</span></a>");
-                } // German BLZ         
+                } // German BLZ
             } else if (pos < maxKto) { // variation of "KTO"
             /*
                 startSegment.appendBefore("<span style=\"background-color: khaki\">");
                 startSegment.prependBehind("</span>");
             */
-            }               
+            }
         } // uppercase, non-empty word
 
         if (inA) {
@@ -185,12 +186,12 @@ public class IBANFilter extends KontoFilter {
         }
         charWriter.print(queue.add(segment));
     } // enqueue
- 
+
     /** Assembles the next number from numeric segments. There may be
-     *  glue and at  most one word before the number, but no HTML tag. 
+     *  glue and at  most one word before the number, but no HTML tag.
      *  @param index negative offset to queue element which contains
-     *  the keyword (BLZ or KTO) before the number. 
-     *  @return a sequence of digits, or the empty string if no number is found 
+     *  the keyword (BLZ or KTO) before the number.
+     *  @return a sequence of digits, or the empty string if no number is found
      *  after the (over-)next word and before an HTML tag
      */
     protected String getNextNumber(int index) {
@@ -230,8 +231,8 @@ public class IBANFilter extends KontoFilter {
      *  which has the fewest words in between. Stops at the end of the queue,
      *  or at HTML tags.
      *  @param blzIndex negative offset to queue element which contains
-     *  the keyword BLZ. 
-     *  @return the index (negative queue offset) of the 
+     *  the keyword BLZ.
+     *  @return the index (negative queue offset) of the
      *  KTO element which is nearer, or <em>blzIndex</em> if there is none
      */
     protected int getNearestKto(int blzIndex) {
@@ -309,8 +310,8 @@ public class IBANFilter extends KontoFilter {
         if (morphems.size() > 0) {
             int imorph = 0;
             boolean busy = true;
-            while (busy && imorph < morphems.size()) { 
-                // search for the proper one with "blz" 
+            while (busy && imorph < morphems.size()) {
+                // search for the proper one with "blz"
                if (DEBUG) {
                     StringBuffer trace = new StringBuffer(64);
                     for (int iseg = segmentPivot - 1; iseg < segmentPivot + 10; iseg ++) {
@@ -329,16 +330,16 @@ public class IBANFilter extends KontoFilter {
         } // some morphems found
         return result;
     } // getBankName
-    
+
     /** Receive notification of the start of an element.
      *  Looks for the element which contains raw lines.
-     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
-     *  @param attrs the attributes attached to the element. 
+     *  @param attrs the attributes attached to the element.
      *  If there are no attributes, it shall be an empty Attributes object.
      */
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
@@ -347,8 +348,8 @@ public class IBANFilter extends KontoFilter {
             qName = qName.substring(namespace.length());
         }
         if (false) {
-        } else if (qName.equals(BODY_TAG    )) { 
-        } else if (qName.equals(HEAD_TAG    )) { 
+        } else if (qName.equals(BODY_TAG    )) {
+        } else if (qName.equals(HEAD_TAG    )) {
             // insert special stylesheets
             String path = "file:///C|/var/www/teherba.org/gramword/web/"; // if not run in servlet container
             path = ""; // relative .css file paths in servlet container
@@ -357,5 +358,5 @@ public class IBANFilter extends KontoFilter {
             );
         }
     } // startElement
-    
+
 } // IBANFilter

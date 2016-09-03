@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="US-ASCII" ?>
 <!--
+    ant-buildfile for commandline, web application and web service
+    @(#) $Id: build.xml 976 2013-02-02 16:44:18Z gfis $
+    2016-09-02: properties ${tomcat.*}, core.jar
+    2007-02-14: use ant import - test doesn't work yet
+    2006-05-27: copied from numword
+-->
+<!--
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,58 +21,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 -->
-<!--
-    ant-buildfile for commandline, web application and web service
-    @(#) $Id: build.xml 976 2013-02-02 16:44:18Z gfis $
-    2007-02-14: use ant import - test doesn't work yet
-    2006-05-27: copied from numword
--->
-
 <project name="gramword" default="all" basedir=".">
     <property name="app.version"        value="1.4"/>
     <property name="app.main-class"     value="org.teherba.gramword.MainFilter"/>
+    <property name="tomcat.base"        value="/var/lib/tomcat" />
+    <property name="tomcat.home"        value="/usr/share/tomcat" />
     <import file="build-import.xml" />
 
-    <target name="generate">
-        <copy todir="${src.home}/org/teherba/xtrans">
-            <fileset dir="../xtrans/src/main/java/org/teherba/xtrans">
-                <include name="BaseTransformer.java"/>
-                <include name="BaseRecord.java"/>
-                <include name="ByteRecord.java"/><!-- not used, only for javadoc completeness -->
-                <include name="CharRecord.java"/>
-                <include name="CharTransformer.java"/>
-                <include name="Field.java"/>
-                <include name="XMLTransformer.java"/>
-            <!--
-                <include name="QueueTransformer.java"/>
-                <include name="Segment.java"/>
-                <include name="SegmentQueue.java"/>
-            -->
-            </fileset>
-        </copy>
-        <copy todir="${src.home}/org/teherba/dbat">
-            <fileset dir="../dbat/src/main/java/org/teherba/dbat">
-                <include name="Configuration.java"/>
-                <include name="CommandTokenizer.java"/>
-                <include name="DBCPoolingListener"/>
-                <include name="TableColumn"/>
-                <include name="TableMetaData"/>
-            </fileset>
-        </copy>
-        <copy todir="${src.home}/org/teherba/dbat/format">
-            <fileset dir="../dbat/src/main/java/org/teherba/dbat/format">
-                <include name="BaseTable"/>
-            </fileset>
-        </copy>
-		<copy todir="${lib.home}">
-			<fileset dir="../checkdig/dist">
-				<include name="*.jar"/>
-			</fileset>
-			<fileset dir="../numword/dist">
-				<include name="*.jar"/>
-			</fileset>
-		</copy>
+    <target name="populate.lib">
+        <get  src="ftp://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/logging/log4j/1.2.17/log4j-1.2.17.zip" dest="${lib.home}" 
+                skipexisting="true" />
+        <unzip src="${lib.home}/log4j-1.2.17.zip" dest="${lib.home}"
+                overwrite="true">
+            <patternset>
+                <include name="apache-log4j-1.2.17/log4j-1.2.17.jar" />
+            </patternset>
+        </unzip>
+        <move file="${lib.home}/apache-log4j-1.2.17/log4j-1.2.17.jar" todir="${lib.home}" />
+        <delete dir="${lib.home}/apache-log4j-1.2.17" />
+        <copy file="../common/dist/common-core.jar"     todir="${lib.home}" />
+        <copy file="../checkdig/dist/checkdig-core.jar" todir="${lib.home}" />
+        <copy file="../numword/dist/numword-core.jar"   todir="${lib.home}" />
     </target>                                               
+
+    <target name="core.jar">
+        <!-- without libraries, without web files 
+        <jar jarfile="${dist.home}/${ant.project.name}-core.jar"
+                basedir="${build.classes}"
+                manifest="${build.classes}/META-INF/MANIFEST.MF"
+                excludes="web/** **/web/*.class **/format/*.class **/*Servlet.class"
+                >
+        </jar>
+        -->
+    </target>
+    
+    <target name="generate">
+    </target>
 
     <target name="test.simple">
         <java classname="org.teherba.gramword.GrammarClient" classpathref="compile.classpath" fork="true">

@@ -116,7 +116,7 @@ public class MorphemTester {
             numSpeller      = new DeuSpeller();
             config = new Configuration();
             config.configure(config.CLI_CALL);
-            con = config.getConnection();
+            con = config.getOpenConnection();
             int MAXSEL = 16;
             wordsStmt   = con.prepareStatement("SELECT entry, morph, enrel, morel FROM words  WHERE"
                     + " entry =  ? ");

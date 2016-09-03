@@ -274,7 +274,7 @@ public class GrammarServlet extends HttpServlet {
         PreparedStatement selectStmt = null;
         PreparedStatement updateStmt = null;
         try {
-            con = config.getConnection();
+            con = config.getOpenConnection();
             selectStmt = con.prepareStatement("SELECT enrel FROM    temp where entry = ?");
             response.setContentType("text/plain");
             String id    = getInputField(request, "id");

@@ -1,6 +1,7 @@
 /*  SOAP Client which calls GrammarService
     @(#) $Id: GrammarClient.java 976 2013-02-02 16:44:18Z gfis $
-	2008-12-10: use service.properties
+    2015-08-06: deactivated
+    2008-12-10: use service.properties
     2005-08-26, Dr. Georg Fischer
 */
 /*
@@ -20,8 +21,10 @@
  */
 
 package org.teherba.gramword;
+/*
 import  org.apache.axis.client.Call;
 import  org.apache.axis.client.Service;
+*/
 import  java.io.File;
 import  java.io.FileInputStream;
 import  java.util.Properties;
@@ -43,15 +46,16 @@ public class GrammarClient {
      *  </ul>
      */
     public static void main(String [] args) {
+/*
         try {
-	        Properties props = new Properties();
-    	    String propsName = "service.properties";
-    	    props.load(GrammarClient.class.getClassLoader().getResourceAsStream(propsName)); // (1) load from classpath (jar)
-    	    File propsFile = new File(propsName);
-    	    if (propsFile.exists()) {
-    	        props.load(new FileInputStream(propsFile)); // (2) add any properties from a file in the current directory
-    	    }
-        	String axisURL = props.getProperty("axis_url", "http://localhost:8180/axis");
+            Properties props = new Properties();
+            String propsName = "service.properties";
+            props.load(GrammarClient.class.getClassLoader().getResourceAsStream(propsName)); // (1) load from classpath (jar)
+            File propsFile = new File(propsName);
+            if (propsFile.exists()) {
+                props.load(new FileInputStream(propsFile)); // (2) add any properties from a file in the current directory
+            }
+            String axisURL = props.getProperty("axis_url", "http://localhost:8180/axis");
 
             String   endpoint = axisURL + "/services/GrammarService";
             Service  service  = new Service();
@@ -82,6 +86,7 @@ public class GrammarClient {
             System.err.println(exc.getMessage());
             exc.printStackTrace();
         }
+*/
     } // main
     
 } // GrammarCLient

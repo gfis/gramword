@@ -87,7 +87,7 @@ public class FlexTester {
         try {
 	        config = new Configuration();
             config.configure(config.CLI_CALL);
-			con = config.getConnection();
+			con = config.getOpenConnection();
             occursStmt   = con.prepareStatement("SELECT entry, count FROM occurs WHERE entry IN "
                     + "('dummy')");
         } catch (Exception exc) {
