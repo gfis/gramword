@@ -1,6 +1,7 @@
 /*  Servlet which
     checks the parameters and calls GrammarFilter
     @(#) $Id: GrammarServlet.java 976 2013-02-02 16:44:18Z gfis $
+    2016-09-11: javadoc
     2011-09-17: dbat.Configuration
     2010-10-19: Dbat with DBCP
     2008-05-16: evaluate the 'view' parameter; with log4j
@@ -75,7 +76,6 @@ public class GrammarServlet extends HttpServlet {
 
     /** Called by the servlet container to indicate to a servlet
      *  that the servlet is being placed into service.
-     *  @param config object containing the servlet's configuration and initialization parameters
      *  @throws ServletException
      */
     public void init() throws ServletException {

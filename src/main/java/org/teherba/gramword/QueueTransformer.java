@@ -3,6 +3,7 @@
     the local analysis of several words, which are surrounded by "glue"
     (HTML tags, whitespace and punctuation).
     @(#) $Id: QueueTransformer.java 805 2011-09-20 06:41:22Z gfis $
+    2016-09-11: javadoc
 	2010-07-05: initialize()
     2007-04-19: no 'generate'
     2007-02-21: copied from xtrans.LineTransformer

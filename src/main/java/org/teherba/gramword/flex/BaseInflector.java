@@ -1,5 +1,6 @@
 /*  Base class for conjugation and declination of words in different languages
     @(#) $Id: BaseInflector.java 978 2013-02-04 11:06:08Z gfis $
+    2016-09-11: javadoc
     2013-01-27, Georg Fischer: copied from numword.BaseSpeller
 
     caution: UTF-8 is essential! ("[^a-zA-ZäöüÄÖÜßáéíóúÉÓÚàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛåøçãõ]+");
@@ -27,7 +28,7 @@ import  java.util.Iterator;
 import  java.util.regex.Matcher;
 import  java.util.regex.Pattern;
 
-/** Base class for conjugation and declination of words in natural languages, 
+/** Base class for conjugation and declination of words in natural languages,
  *  with common properties and methods.
  *  @author Dr. Georg Fischer
  */
@@ -40,7 +41,7 @@ public abstract class BaseInflector {
      */
     public BaseInflector() {
     } // Constructor()
-    
+
     //=========================================
     // Bean properties
     //----------------
@@ -125,12 +126,12 @@ public abstract class BaseInflector {
     //=====================================
     // inflecting methods
     //=====================================
-    
+
     /** Conjugates a verb and generates the forms for
      *  all persons, numeri and tempi.
-     *  @parm level how many forms should be generated: 1 = few, 2 = more, 3 = even more, 4 = all (with participe declination)
+     *  @param level how many forms should be generated: 1 = few, 2 = more, 3 = even more, 4 = all (with participe declination)
      *  @param infinitive the verb's infinitive form ending with <em>-en, -eln, -ern, -ieren</em>
-     *  @result list of generated morphems
+     *  @return list of generated morphems
      */
     public MorphemList conjugateVb(int level, String infinitive) {
         MorphemList result = new MorphemList();
@@ -140,14 +141,13 @@ public abstract class BaseInflector {
     /** Declinates a regular German adjective and generates all forms for
      *  case, person, numerus and type of determinism (but no comparision level).
      *  Sometimes it omits an <em>e</em>,
-     *  {@see http://deutsch.lingolia.com/de/grammatik/adjektive/deklination}.
-     *  @parm level how many forms should be generated: 1 = few, 2 = more, 3 = even more, 4 = all
-     *  @param adjective the adjective (or participe)
-     *  @result list of generated morphems
+     *  C.f. <a target="_new" href="http://deutsch.lingolia.com/de/grammatik/adjektive/deklination">deutsch.lingolia.com</a>.
+     *  @param word the adjective (or participe)
+     *  @return list of generated morphems
      */
     public MorphemList declinateAj(int level, String word) {
         MorphemList result  = new MorphemList();
-		return result;
-	} // declinateAj(2)
-	
+        return result;
+    } // declinateAj(2)
+
 } // BaseInflector

@@ -2,6 +2,7 @@
 <!--
     ant-buildfile for commandline, web application and web service
     @(#) $Id: build.xml 976 2013-02-02 16:44:18Z gfis $
+    2016-09-11: fill.lib
     2016-09-02: properties ${tomcat.*}, core.jar
     2007-02-14: use ant import - test doesn't work yet
     2006-05-27: copied from numword
@@ -28,8 +29,8 @@
     <property name="tomcat.home"        value="/usr/share/tomcat" />
     <import file="build-import.xml" />
 
-    <target name="populate.lib">
-        <get  src="ftp://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/logging/log4j/1.2.17/log4j-1.2.17.zip" dest="${lib.home}" 
+    <target name="get.log4j">
+        <get  src="ftp://ftp-stud.hs-esslingen.de/pub/Mirrors/ftp.apache.org/dist/logging/log4j/1.2.17/log4j-1.2.17.zip" dest="${lib.home}"
                 skipexisting="true" />
         <unzip src="${lib.home}/log4j-1.2.17.zip" dest="${lib.home}"
                 overwrite="true">
@@ -39,13 +40,10 @@
         </unzip>
         <move file="${lib.home}/apache-log4j-1.2.17/log4j-1.2.17.jar" todir="${lib.home}" />
         <delete dir="${lib.home}/apache-log4j-1.2.17" />
-        <copy file="../common/dist/common-core.jar"     todir="${lib.home}" />
-        <copy file="../checkdig/dist/checkdig-core.jar" todir="${lib.home}" />
-        <copy file="../numword/dist/numword-core.jar"   todir="${lib.home}" />
-    </target>                                               
+    </target>
 
     <target name="core.jar">
-        <!-- without libraries, without web files 
+        <!-- without libraries, without web files
         <jar jarfile="${dist.home}/${ant.project.name}-core.jar"
                 basedir="${build.classes}"
                 manifest="${build.classes}/META-INF/MANIFEST.MF"
@@ -54,7 +52,25 @@
         </jar>
         -->
     </target>
-    
+
+    <target name="fill.lib">
+        <copy todir="${lib.home}">
+            <fileset dir="${tomcat.base}/openlib">
+                <include name="activation.jar" />
+                <include name="checkdig-core.jar" />
+                <include name="common-core.jar" />
+                <include name="commons-fileupload-1.2.2.jar" />
+                <include name="commons-io-2.1.jar" />
+                <include name="dbat-core.jar" />
+                <include name="log4j-1.2.17.jar" />
+                <include name="mysql-connector-java-5.1.11-bin.jar" />
+                <include name="numword-core.jar" />
+                <include name="serializer.jar" />
+                <include name="tomcat-dbcp.jar" />
+                <include name="xtrans-core.jar" />
+            </fileset>
+        </copy>
+    </target>
     <target name="generate">
     </target>
 
@@ -62,7 +78,7 @@
         <java classname="org.teherba.gramword.GrammarClient" classpathref="compile.classpath" fork="true">
             <arg line="de spell" />
         </java>
-    </target>                                               
+    </target>
 
     <target name="test" depends="deploy,test.command,test.servlet,test.service,test.queue" />
     <target name="test.command"><!-- run the program from the commandline -->
@@ -87,7 +103,7 @@
         <!-- mark uppercase words and numbers -->
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -queue  web/wordtype/quixote0.html web/queue.html"/>
         </antcall>
     </target>
@@ -96,12 +112,12 @@
         <!-- link bible references to online bibles -->
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -bibleref -enc1 ISO-8859-1 -enc2 ISO-8859-1 web/bibleref/luther_perikope.htm web/bibleref/luther_perikope.html"/>
         </antcall>
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -bibleref -enc1 ISO-8859-1 -enc2 ISO-8859-1 web/bibleref/wiki_perikope.htm web/bibleref/wiki_perikope.html"/>
         </antcall>
     </target>
@@ -110,7 +126,7 @@
         <!-- show German account numbers and BLZs -->
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -konto -enc1 UTF-8 -enc2 UTF-8 web/konto/collect.html web/konto.html"/>
         </antcall>
     </target>
@@ -119,7 +135,7 @@
         <!-- show numbers and their spelling, or parse number words -->
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -number -enc1 UTF-8 -enc2 UTF-8 web/number/genesis5.html web/number.html"/>
         </antcall>
     </target>
@@ -128,7 +144,7 @@
         <!-- show word types with background colors -->
         <antcall target="run">
             <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"  
+            <param name="args"
             value="-xml -wordtype web/wordtype/quixote0.html web/wordtype.html"/>
         </antcall>
     </target>
