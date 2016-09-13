@@ -43,8 +43,8 @@ xiffus_create:
 forge_create:
 	$(DBAT) -f forge_create.sql
 temp_create:
-	$(DBAT) -f                     ..####################################################################### ......................................................................................................................................................................................................................................................####################################################################################### .#.... 
-
+	$(DBAT) -f temp_create.sql
+names_create:
 	$(DBAT) -f names_create.sql
 
 infos: infos_create infos_bible infos_checkdig
@@ -53,37 +53,37 @@ infos_bible:
 	cd bible/cantata ; make 
 	cd bible/perikope ; make
 infos_checkdig:
-	cd ../../checkdig/test/blz ; make infos
+	cd ../../checkdig/test/blz # ; make infos ???
 
-words: words_create load_strong load_special load_common \
-		load_ar load_av load_nu load_pn load_pr \
-		load_time delete_dass
+words: words_create words_strong words_special words_common \
+		words_ar words_av words_nu words_pn words_pr \
+		words_time delete_dass
 	$(DBAT) -n words
-load_strong:
+words_strong:
 	$(LOAD) Vb/de.vbconj.dic 		| $(DBAT) -r words
 	$(DBAT)   -16 words
-load_special:
+words_special:
 	$(LOAD) Vb/de.vb_special.dic 	| $(DBAT) -r words
-load_common: 
+words_common: 
 	$(LOAD) de.common.dic 			| $(DBAT) -r words
-load_ar:
+words_ar:
 	$(LOAD) Pn/de.ar.dic			| $(DBAT) -r words
-load_pn:
+words_pn:
 	$(LOAD) Pn/de.pn_pers.dic		| $(DBAT) -r words
 	$(LOAD) Pn/de.pn_poss.dic		| $(DBAT) -r words
 	$(LOAD) Pn/de.pn_undt.dic		| $(DBAT) -r words
-load_pr:
+words_pr:
 	perl Pr/pr_rootgen.pl | $(LOAD) | $(DBAT) -r words
-load_sb:
+words_sb:
 	$(LOAD) Sb/de.sb_irreg_vb.dic	| $(DBAT) -r words
 	$(LOAD) Sb/de.sb_chemelem.dic	| $(DBAT) -r words
 	$(LOAD) Sb/de.sb_aj.dic			| $(DBAT) -r words
 	$(LOAD) Sb/de.sb_ei.dic			| $(DBAT) -r words
-load_nu:
+words_nu:
 	$(LOAD) Nu/de.nu_words.dic 		| $(DBAT) -r words
-load_av: 
+words_av: 
 	$(LOAD) Av/de.av.dic 			| $(DBAT) -r words
-load_time:
+words_time:
 	$(LOAD) de.time.dic 			| $(DBAT) -r words
 delete_dass:
 	$(DBAT) "delete from words where entry like '%dass' and morph like 'ExNrul%'"

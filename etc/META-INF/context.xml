@@ -35,6 +35,6 @@
 			driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/worddb"
 			/>
 	<!-- all JDBC resources above must be listed in the value of this environment string -->
-	<Environment name="dataSources" value="worddb" type="java.lang.String" override="false" />
+<Environment name="dataSources" value="worddb" type="java.lang.String" override="false" />
 
 </Context>

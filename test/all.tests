@@ -1,0 +1,24 @@
+#!java -cp dist/gramword.jar org.teherba.common.RegressionTester
+
+# Collection of Testcases for gramword
+# @(#) $Id$
+# 2016-09-12, Dr. Georg Fischer
+#-----------------------------------
+# Caution:
+#
+#======================================================================
+PACKAGE=org.teherba.gramword
+
+ECHO 000
+
+TEST GF01 rund_sa
+CALL GrammarFilter -m dict -s sasplit test/gn_de.txt
+
+TEST GF02 wachstube
+CALL GrammarFilter -m dict -s lexsplit test/wachstube.txt
+
+TEST GF03 fraglich
+CALL GrammarFilter test/fraglich.txt            tempf.html
+
+TEST GF04 gn_de
+CALL GrammarFilter test/gn_de.txt               tempg.html

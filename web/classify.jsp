@@ -52,7 +52,7 @@ response.setContentType("text/html; charset=utf-8");
     field = session.getAttribute("infile"   );  String infile       = (field != null) ? (String) field : "";
     Configuration dbatConfig = new Configuration();
     dbatConfig.configure(dbatConfig.CLI_CALL);
-    Connection con = dbatConfig.getConnection();
+    Connection con = dbatConfig.getOpenConnection();
     PreparedStatement pstmt = con.prepareStatement("SELECT entry, enrel FROM temp order by 1");
     pstmt.clearParameters();
     // pstmt.setString(1, word);

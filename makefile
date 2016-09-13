@@ -1,19 +1,57 @@
 #!/usr/bin/make
 
 # @(#) $Id: makefile 36 2008-09-08 06:05:06Z gfis $
+# 2016-09-13: regression
 # 2006-07-20, Georg Fischer
 
 APPL=gramword
 JAVA=java -classpath "dist/gramword.jar;lib/mysql.jar;lib/log4j.jar;../numword/dist/numword.jar"
 UNSHIELD=$(JAVA) org.teherba.gramword.ReEncode -u
 LANG=de
+DIFF=diff -y --suppress-common-lines --width=160
+DIFF=diff -w -rs -C0
+SRC=src/main/java/org/teherba/$(APPL)
+TOMC=/var/lib/tomcat/webapps/jextra
+TOMC=c:/var/lib/tomcat/webapps/jextra
+METHOD=post
+LANG=en
+TESTDIR=test
+# the following can be overriden outside for single or subset tests,
+# for example make regression TEST=U%
+TEST="%"
+# for Windows, SUDO should be empty
+SUDO=
 
-all: javadoc deploy zip
- 
-javadoc:
-	ant javadoc
-deploy:
-	ant deploy
+all: regression
+#-------------------------------------------------------------------
+# Perform a regression test 
+regression: 
+	java -cp dist/gramword.jar \
+			org.teherba.common.RegressionTester $(TESTDIR)/all.tests $(TEST) 2>&1 \
+	| tee $(TESTDIR)/regression.log
+	grep FAILED $(TESTDIR)/regression.log
+#
+# Recreate all testcases which failed (i.e. remove xxx.prev.tst)
+# Handle with care!
+# Failing testcases are turned into "passed" and are manifested by this target!
+recreate: recr1 regr2
+recr0:
+	grep -E '> FAILED' $(TESTDIR)/regression*.log | cut -f 3 -d ' ' | xargs -l -ißß echo rm -v test/ßß.prev.tst
+recr1:
+	grep -E '> FAILED' $(TESTDIR)/regression*.log | cut -f 3 -d ' ' | xargs -l -ißß rm -v test/ßß.prev.tst
+regr2:
+	make regression TEST=$(TEST) > x.tmp
+# test whether all defined tests in mysql.tests have *.prev.tst results and vice versa
+check_tests:
+	grep -E "^TEST" $(TESTDIR)/all.tests | cut -b 6-8 | sort | uniq -c > $(TESTDIR)/tests_formal.tmp
+	ls -1 $(TESTDIR)/*.prev.tst          | cut -b 6-8 | sort | uniq -c > $(TESTDIR)/tests_actual.tmp
+	diff -y --suppress-common-lines --width=32 $(TESTDIR)/tests_formal.tmp $(TESTDIR)/tests_actual.tmp
+#---------------------------------------------------
+jfind:
+	find src -iname "*.java" | xargs -l grep -H "$(JF)"
+rmbak:
+	find src -iname "*.bak"  | xargs -l rm -v
+#---------------------------------------------------
 zip:
 	rm -f $(APPL).zip
 	find . | grep -v "test/" | zip -@ $(APPL).zip
@@ -25,7 +63,6 @@ tgz: clean
 #-----------------------------------------------------------------------------------
 refactor:
 	find . -type f | xargs -l perl refactor.pl
-
 #--------------------
 rund_sa:
 	$(JAVA) org.teherba.gramword.GrammarFilter -m dict -s sasplit test/duden.txt > x.tmp

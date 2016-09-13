@@ -190,7 +190,7 @@ public class MorphemTester {
             stmt = con.createStatement();
             stmt.executeUpdate("DELETE FROM forge");
             con.commit();
-            stmt.executeUpdate("INSERT INTO FORGE (" + select + ")");
+            stmt.executeUpdate("INSERT INTO forge (" + select + ")");
             con.commit();
             stmt.close();
         } catch (Exception exc) {

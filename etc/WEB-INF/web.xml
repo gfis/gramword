@@ -4,6 +4,7 @@
 <!--
     @(#) $Id: web.xml 805 2011-09-20 06:41:22Z gfis $
     Copyright (c) 2007 Dr. Georg Fischer <punctum@punctum.com>
+    2016-09-12: servlet moved to package gramword.web
     2011-09-17: with org.teherba.dbat.DBCPoolingListener
     2007-02-15: minimal version
 -->
@@ -33,27 +34,23 @@
         <param-name>user</param-name>
         <param-value>georg</param-value>
     </context-param>
-<!--    
-	<listener>
-		<listener-class>org.teherba.dbat.DBCPoolingListener</listener-class>
-	</listener>
--->
+
     <!-- Servlets -->
     <servlet> 
-        <servlet-name>grammarservlet</servlet-name>
-        <servlet-class>org.teherba.gramword.GrammarServlet</servlet-class>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>org.teherba.gramword.web.GrammarServlet</servlet-class>
     </servlet>
 
     <servlet-mapping> 
-        <servlet-name>grammarservlet</servlet-name>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>Servlet</servlet-name>
         <url-pattern>/grammarservlet</url-pattern>
     </servlet-mapping>
     
-<!--    
-    <session-config>
-        <session-timeout>600</session-timeout>
-    </session-config>
---> 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>

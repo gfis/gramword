@@ -1,6 +1,6 @@
--- caution - do not edit here - c.f. makefile.create_ddl
+-- Caution: generated file - do not edit here - c.f. makefile.create_ddl
 -- @(#) $Id: temp_create.sql 36 2008-09-08 06:05:06Z gfis $
--- 2006-08-13, Dr. Georg Fischer
+-- 2006-08-13, Georg Fischer
 DROP TABLE IF EXISTS temp;
 CREATE TABLE temp
 	( entry		varchar(64) NOT NULL
