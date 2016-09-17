@@ -56,7 +56,6 @@ public class ClassifyPage implements Serializable {
      *  @param request request with header fields
      *  @param response response with writer
      *  @param basePage refrence to common methods and error messages
-     *  @param language 2-letter code en, de etc.
      */
     public void dialog(HttpServletRequest request, HttpServletResponse response
             , BasePage basePage

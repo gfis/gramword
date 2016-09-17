@@ -2,6 +2,7 @@
 <!--
 	Configuration of context /dbat 
     @(#) $Id: context.xml 805 2011-09-20 06:41:22Z gfis $
+    2016-09-16: copied from dbat again
     2011-09-17: 16 -> 4 connections
 	2010-10-19, Dr. Georg Fischer: copied from dbat/etc/META-INF
 -->
@@ -21,20 +22,22 @@
  * limitations under the License.
 -->
 <Context
-		path="/gramword" docBase="gramword" 
+		path="/dbat" docBase="dbat" 
 		debug="5"
 		reloadable="true" 
 		crossContext="true"
 		>
+	<!-- all JDBC resources below must be listed in the value of this environment string -->
+	<Environment name="dataSources" value="worddb:worddb" type="java.lang.String" override="false" />
+
 	<Resource name="jdbc/worddb" 
 			auth="Container" type="javax.sql.DataSource" 
 			factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
 			removeAbandoned="true" removeAbandonedTimeout="30" logAbandoned="true"
-			maxActive="4" maxIdle="1" maxWait="10000" 
+			maxActive="16" maxIdle="1" maxWait="10000" 
 			username="worduser" password="wordpass"
 			driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/worddb"
 			/>
 	<!-- all JDBC resources above must be listed in the value of this environment string -->
-<Environment name="dataSources" value="worddb" type="java.lang.String" override="false" />
 
 </Context>

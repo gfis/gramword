@@ -33,15 +33,15 @@ import  org.apache.log4j.Logger;
  *  to and from XML.
  *  @author Dr. Georg Fischer
  */
-public class MainFilter { 
+public class MainFilter {
     public final static String CVSID = "@(#) $Id: MainFilter.java 36 2008-09-08 06:05:06Z gfis $";
 
     /** log4j logger (category) */
     private Logger log;
-    
+
     /** Factory for transformers for different file formats */
     private FilterFactory factory = null;
-    
+
     /**
      *  Constructor
      */
@@ -62,7 +62,7 @@ public class MainFilter {
             BaseTransformer serializer  = null;
             int iarg = 0; // index for command line arguments
             if (iarg >= args.length) { // usage, with known ISO codes and formats
-                System.err.println("usage:\tjava org.teherba.xtrans.Transformer "
+                System.out.println("usage:\tjava org.teherba.gramword.MainFilter "
                         + " [-enc1 srcenc [-enc2 tarenc]]"
                         + " [-nsp namespace]"
                         + " [-informat|-xml] [-xml|-outformat]"
@@ -70,13 +70,14 @@ public class MainFilter {
                 Iterator iter = factory.getIterator();
                 while (iter.hasNext()) {
                     generator = (BaseTransformer) iter.next();
-                    System.err.println( "\t" + generator.getFirstFormatCode() 
-                                +       "\t" + generator.getDescription    ());
+                    System.out.println(String.format("    %-10s %s"
+                            , generator.getFirstFormatCode()
+                            , generator.getDescription    ()));
                 } // while iter
-            } else { // >= 1 argument 
+            } else { // >= 1 argument
                 String[] fileNames = new String[] {null, null};
                 String options = ""; //  = "-test 2 ";
-                int ifmt  = 0; 
+                int ifmt  = 0;
                 int ifile = 0;
                 // get all commandline parameters
                 while (iarg < args.length) {
@@ -86,7 +87,7 @@ public class MainFilter {
                     } else if (args[iarg].startsWith("-")) { // is an option
                         String option = args[iarg ++].substring(1); // without the hyphen
                         BaseTransformer base = factory.getTransformer(option);
-                        if (base != null) {
+                        if (base != null) { // valid format code 
                             if (ifmt < MAX_FILE) {
                                 if (ifmt == 0) {
                                     generator  = base;
@@ -94,14 +95,14 @@ public class MainFilter {
                                     serializer = base;
                                 }
                                 ifmt ++;
-                            } 
+                            }
                         } else { // other option
                             String value = "1";
                             if (iarg < args.length && ! args[iarg].startsWith("-")) {
                                 value = args[iarg ++];
                             }
                             options += "-" + option + " " + value + " ";
-                            log.debug("addOption(\"" + option + "\", \"" + value + "\");"); 
+                            // log.debug("addOption(\"" + option + "\", \"" + value + "\");");
                         }
                     } else { // no option -> filename
                         if (ifile < MAX_FILE) {
@@ -115,16 +116,16 @@ public class MainFilter {
                 } else {
                     ifile = 0;
                     generator .parseOptionString(options);
-                    generator .openFile(ifile, fileNames[ifile]); 
+                    generator .openFile(ifile, fileNames[ifile]);
                     ifile ++;
                     serializer.parseOptionString(options);
                     serializer.openFile(ifile, fileNames[ifile]);
                     generator.setCharWriter(serializer.getCharWriter());
-                    
+
                     generator .setContentHandler(serializer);
                     serializer.setContentHandler(generator );
                     generator .generate();
-                    
+
                     generator .closeAll();
                     serializer.closeAll();
                 }
@@ -134,11 +135,11 @@ public class MainFilter {
             exc.printStackTrace();
         }
     } // processArgs
-    
+
     /** Main program, processes the commandline arguments
      *  @param args Arguments; if missing, print the following:
      *  <pre>
-     *  usage:\tjava org.teherba.xtrans.MainFilter 
+     *  usage:\tjava org.teherba.xtrans.MainFilter
      *  [-enc1 srcenc [-enc2 tarenc]]
      *  [-nsp namespace]
      *  [-informat|-xml] [-xml|-outformat]

@@ -1,7 +1,7 @@
 /*  Shows the syntactical type of words in plain text
     @(#) $Id: MorphemTester.java 807 2011-09-20 16:54:21Z gfis $
     2011-09-17: dbat.Configuration
-	2008-02-13: Java 1.5 types
+    2008-02-13: Java 1.5 types
     2007-01-04: Dbat.getConnection instead of DbAccess
     2006-08-09: stack of DeuPartList.s; Veronika = 25
     2006-05-31: copied from NumberSpeller
@@ -76,7 +76,7 @@ public class MorphemTester {
     String[] intraLexems;
 
     /** Database configuration */
-    private Configuration config;
+    private Configuration dbatConfig;
     /** Database connection */
     private Connection con;
     /** SQL SELECT statement for <em>words</em> table */
@@ -114,9 +114,14 @@ public class MorphemTester {
             wordUpperCase   = Pattern.compile("[A-ZÄÖÜ]");
             numberPattern   = Pattern.compile("\\d+");
             numSpeller      = new DeuSpeller();
-            config = new Configuration();
-            config.configure(config.CLI_CALL);
-            con = config.getOpenConnection();
+            dbatConfig = new Configuration();
+            dbatConfig.configure(dbatConfig.CLI_CALL);
+            
+            String connectionId = "worddb";
+            dbatConfig.addProperties(connectionId + ".properties");
+            dbatConfig.setConnectionId(connectionId);
+            
+            con = dbatConfig.getOpenConnection();
             int MAXSEL = 16;
             wordsStmt   = con.prepareStatement("SELECT entry, morph, enrel, morel FROM words  WHERE"
                     + " entry =  ? ");
@@ -159,7 +164,7 @@ public class MorphemTester {
             rootsStmt   .close();
             suffixStmt  .close();
             xiffusStmt  .close();
-            config.closeConnection();
+            dbatConfig.closeConnection();
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }

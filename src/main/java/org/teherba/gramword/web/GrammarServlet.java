@@ -79,16 +79,13 @@ public class GrammarServlet extends HttpServlet {
     private static final String APP_NAME = "gramword";
     /** Debugging switch */
     private static int debug = 1;
-
     /** Dbat configuration */
-    private Configuration config;
+    private Configuration dbatConfig;
     /** Maps connection identifiers (short database instance ids) to {@link DataSource Datasources} */
     private LinkedHashMap<String, DataSource> dsMap;
 
-
     /** Called by the servlet container to indicate to a servlet
      *  that the servlet is being placed into service.
-     *  @param config configuration data
      *  @throws ServletException
      */
     public void init() throws ServletException {
@@ -96,17 +93,12 @@ public class GrammarServlet extends HttpServlet {
         basePage = new BasePage(APP_NAME);
         Messages.addMessageTexts(basePage);
         
-        config = new Configuration();
-        dsMap = config.getDataSourceMap();        
+        dbatConfig = new Configuration();
+        dsMap = dbatConfig.getDataSourceMap(); 
+        String connectionId = "worddb";
+        dbatConfig.addProperties(connectionId + ".properties");
+        dbatConfig.setConnectionId(connectionId);
     } // init()
-
-    /** Sets the DataSource appropriate for a web call
-     *  @param config instance to be configured
-     */
-    @SuppressWarnings(value="unchecked")
-    private void uncheckedConfigure(Configuration config) {
-        config.configure(config.WEB_CALL, dsMap);
-    } // uncheckedConfigure
 
     /** Creates the response for a HTTP GET request.
      *  @param request fields from the client input form
@@ -132,7 +124,7 @@ public class GrammarServlet extends HttpServlet {
      *  @throws IOException
      */
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        config.configure(config.WEB_CALL, dsMap);
+        dbatConfig.configure(dbatConfig.WEB_CALL, dsMap);
         try {
             String view = basePage.getInputField(request, "view", "index");
             if (false) {
@@ -262,7 +254,7 @@ public class GrammarServlet extends HttpServlet {
         PreparedStatement selectStmt = null;
         PreparedStatement updateStmt = null;
         try {
-            Connection con = config.getOpenConnection();
+            Connection con = dbatConfig.getOpenConnection();
             selectStmt = con.prepareStatement("SELECT enrel FROM    temp where entry = ?");
             response.setContentType("text/plain");
             String id    = basePage.getInputField(request, "id",    "");
@@ -305,7 +297,7 @@ public class GrammarServlet extends HttpServlet {
             } catch (Exception exc) {
                log.error(exc.getMessage(), exc);
             }
-            config.closeConnection();
+            dbatConfig.closeConnection();
         }
     } // generateToggleResponse
 

@@ -62,7 +62,7 @@ public class FlexTester {
     private int minMatches = 2;
 
     /** Database configuration */
-    private Configuration config;
+    private Configuration dbatConfig;
     /** Database connection */
     private Connection con;
     /** SQL SELECT statement for <em>occurs</em> table */
@@ -86,9 +86,9 @@ public class FlexTester {
         newline = System.getProperty("line.separator");
         this.strategy = strategy;
         try {
-            config = new Configuration();
-            config.configure(config.CLI_CALL);
-            con = config.getOpenConnection();
+            dbatConfig = new Configuration();
+            dbatConfig.configure(dbatConfig.CLI_CALL);
+            con = dbatConfig.getOpenConnection();
             occursStmt   = con.prepareStatement("SELECT entry, count FROM occurs WHERE entry IN "
                     + "('dummy')");
         } catch (Exception exc) {
@@ -101,7 +101,7 @@ public class FlexTester {
     public void destroy() {
         try {
             occursStmt   .close();
-            config.closeConnection();
+            dbatConfig.closeConnection();
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }

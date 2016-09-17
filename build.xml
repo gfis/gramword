@@ -80,34 +80,8 @@
         </java>
     </target>
 
-    <target name="test" depends="deploy,test.command,test.servlet,test.service,test.queue" />
-    <target name="test.command"><!-- run the program from the commandline -->
-        <antcall target="run">
-            <param name="class" value="org.teherba.gramword.GrammarFilter" />
-            <param name="args"  value="web/wordtype/wachstube.txt"/>
-        </antcall>
-    </target>
-    <target name="test.servlet"><!-- call the web page -->
-        <exec executable="lynx">
-            <arg line="-dump http://localhost/gramword/" />
-        </exec>
-    </target>
-    <target name="test.service"><!-- call the webservice -->
-        <antcall target="run">
-            <param name="class" value="org.teherba.gramword.GrammarClient"  />
-            <param name="args"  value="lightyear m"              />
-        </antcall>
-    </target>
-
-    <target name="test.queue" depends="test.bibleref,test.konto,test.number,test.wordtype">
-        <!-- mark uppercase words and numbers -->
-        <antcall target="run">
-            <param name="class" value="org.teherba.gramword.MainFilter" />
-            <param name="args"
-            value="-xml -queue  web/wordtype/quixote0.html web/queue.html"/>
-        </antcall>
-    </target>
-
+    <target name="test" />
+    
     <target name="test.bibleref">
         <!-- link bible references to online bibles -->
         <antcall target="run">

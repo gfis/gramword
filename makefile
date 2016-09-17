@@ -5,7 +5,7 @@
 # 2006-07-20, Georg Fischer
 
 APPL=gramword
-JAVA=java -classpath "dist/gramword.jar;lib/mysql.jar;lib/log4j.jar;../numword/dist/numword.jar"
+JAVA=java -cp dist/gramword.jar
 UNSHIELD=$(JAVA) org.teherba.gramword.ReEncode -u
 LANG=de
 DIFF=diff -y --suppress-common-lines --width=160
