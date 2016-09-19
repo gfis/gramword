@@ -6,10 +6,8 @@
 --%>
 <%@page import="java.util.Iterator"%>
 <%
-response.setContentType("text/html; charset=utf-8"); 
+response.setContentType("text/html; charset=utf-8");
 %>
-<%-- 
---%>
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -41,38 +39,38 @@ response.setContentType("text/html; charset=utf-8");
 </head>
 <%
     String CVSID = "@(#) $Id: index.jsp 976 2013-02-02 16:44:18Z gfis $";
-    String[] optEnc    = new String [] 
+    String[] optEnc    = new String []
             /*  0 */ { "ISO-8859-1"
             /*  1 */ , "UTF-8"
             } ;
-    String[] enEnc    = new String [] 
+    String[] enEnc    = new String []
             /*  0 */ { "ISO-8859-1"
             /*  1 */ , "UTF-8"
             } ;
-    String[] optFormat = new String [] 
+    String[] optFormat = new String []
             /*  0 */ { "html"
             /*  1 */ , "text"
             /*  2 */ , "dict"
             } ;
-    String[] enFormat = new String [] 
+    String[] enFormat = new String []
             /*  0 */ { "HTML"
             /*  1 */ , "Text"
             /*  2 */ , "Dictionary"
             } ;
-    String[] optLang = new String [] 
+    String[] optLang = new String []
             /*  0 */ { "de"
     //      /*  1 */ , "en"
             } ;
-    String[] enLang = new String [] 
+    String[] enLang = new String []
             /*  0 */ { "Deutsch"
     //      /*  1 */ , "English"
             } ;
-    String[] optStrat  = new String [] 
+    String[] optStrat  = new String []
             /*  0 */ { "all"
             /*  1 */ , "prsplit"
             /*  2 */ , "sasplit"
             } ;
-    String[] enStrat  = new String [] 
+    String[] enStrat  = new String []
             /*  0 */ { "all"
             /*  1 */ , "prsplit"
             /*  2 */ , "sasplit"
@@ -88,12 +86,12 @@ response.setContentType("text/html; charset=utf-8");
 %>
 <body>
     <!--
-    format="<%=format%>", lang="<%=language%>", enc="<%=encoding%>", strat="<%=strategy%>, infile="<%=infile%>" 
+    format="<%=format%>", lang="<%=language%>", enc="<%=encoding%>", strat="<%=strategy%>, infile="<%=infile%>"
     -->
     <h2>gramword</h2>
-    <p><em>gramword</em> is a Java package which uses a relational 
-    (MySql) database 
-    to recognize a limited set of German words. 
+    <p><em>gramword</em> is a Java package which uses a relational
+    (MySql) database
+    to recognize a limited set of German words.
     </p><p>
     Sets of common words, names,
     roots and endings of verbs, substantives, adjectives and adverbs,
@@ -104,7 +102,7 @@ response.setContentType("text/html; charset=utf-8");
     grammatical type of the words in a text. In the HTML output,
     the recognized words are shown in different colors.
     </p><p>
-        <em>gramword</em> uses its sister projects 
+        <em>gramword</em> uses its sister projects
         <ul>
         <li><a href="../dbat/"    >dbat</a> for database access,</li>
         <li><a href="../numword/" >numword</a> for number words, months and weekdays and</li>
@@ -113,7 +111,7 @@ response.setContentType("text/html; charset=utf-8");
     </p>
 
     <strong>Short Example</strong> (sentence from "Don Quijote")
-    <blockquote>
+<blockquote>
 <span class="Pr" morph="">Nachdem</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Aj" morph="Qant">alle</span> <span class="Aj" morph="Qant">diese</span> <span class="Sb" morph="Pl">Vorkehrungen</span> <span class="Vb" morph="SPa0">getroffen</span>, <span class="Vb" morph="SIp11">wollte</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Un" morph="">nicht</span>
 <span class="Aj" morph="Cmpr">l&#xe4;nger</span> <span class="Vb" morph="SIn0">warten</span>, <span class="Vb" morph="SIn0">sein</span> <span class="Vb" morph="RtWeak">Vorhaben</span> <span class="Pr" morph="Shor">ins</span> <span class="Sb" morph="SgNt">Werk</span> <span class="Pr" morph="Prim">zu</span> <span class="Vb" morph="RtWeak">setzen</span>; <span class="Pn" morph="SgPersNomvNt3">es</span> dr&#xe4;ngte <span class="Pn" morph="SgPersAccv3Ms">ihn</span>
 <span class="Av" morph="">dazu</span> <span class="Ar" morph="DetmNomvSgMs">der</span> <span class="Sb" morph="SgMs">Gedanke</span> <span class="Pr" morph="Prim">an</span> <span class="Ar" morph="DetmNomvSgFm">die</span> <span class="Sb" morph="SgFm">Entbehrung</span>, <span class="Ar" morph="DetmNomvSgFm">die</span> <span class="Ar" morph="DetmNomvSgFm">die</span> <span class="Sb" morph="SgFm">Welt</span> <span class="Pr" morph="">durch</span> <span class="Vb" morph="SIn0">sein</span>
@@ -130,24 +128,21 @@ zusammengeflickten Turnierhelm aufgesetzt, fa&#xdf;te <span class="Pn" morph="Sg
 <span class="Pn" morph="SgPossGenvMs3">seines</span> <span class="Sb" morph="SgGe">Hofes</span> <span class="Pr" morph="">hinaus</span> <span class="Pr" morph="Shor">aufs</span> <span class="Sb" morph="SgNt">Feld</span>, <span class="Pr" morph="Prim">mit</span> <span class="Aj" morph="XC">gewaltiger</span> <span class="Sb" morph="SgFm">Befriedigung</span> <span class="Cj" morph="">und</span>
 Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" morph="Prim">mit</span> <span class="Ir" morph="Prim">wie</span> <span class="Nm" morph="PersSurn">gro&#xdf;er</span> <span class="Sb" morph="SgFm">Leichtigkeit</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Vb" morph="SIn0">sein</span>
 <span class="Aj" morph="XP">l&#xf6;bliches</span> <span class="Vb" morph="RtWeak">Vorhaben</span> <span class="Vb" morph="SCt93">auszuf&#xfc;hren</span> <span class="Vb" morph="SPa0">begonnen</span>.
-    </blockquote>
+</blockquote>
 
-    <form action="grammarservlet" method="post" enctype="multipart/form-data">
+    <form action="servlet" method="POST" enctype="multipart/form-data">
         <input type = "hidden" name="view" value="index" />
         <br /><strong>Upload a text file:</strong><br />
-        <input name="infile" type="file" style="font-family: Courier, monospace" 
-                maxsize="256" size="80" value="<%=infile%>"/>
-	<%--
-    --%>            
+        <input name="infile" type="file" style="font-family: Courier, monospace" maxsize="256" size="80" value="<%=infile%>" />
         <br />&nbsp;
         <table cellpadding="8">
             <tr valign="top">
-                <td><strong>Source Encoding</strong><br /> 
+                <td><strong>Source Encoding</strong><br />
                     <select name="enc" size="<%= optEnc.length %>">
                     <%
                         index = 0;
                         while (index < optEnc.length) {
-                            out.write("<option value=\"" 
+                            out.write("<option value=\""
                                     + optEnc[index] + "\""
                                     + (optEnc[index].equals(encoding) ? " selected" : "")
                                     + ">"
@@ -162,7 +157,7 @@ Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" m
                     <%
                         index = 0;
                         while (index < optFormat.length) {
-                            out.write("<option value=\"" 
+                            out.write("<option value=\""
                                     + optFormat[index] + "\""
                                     + (optFormat[index].equals(format) ? " selected" : "")
                                     + ">"
@@ -177,7 +172,7 @@ Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" m
                     <%
                         index = 0;
                         while (index < optLang.length) {
-                            out.write("<option value=\"" 
+                            out.write("<option value=\""
                                     + optLang[index] + "\""
                                     + (optLang[index].equals(language) ? " selected" : "")
                                     + ">"
@@ -187,12 +182,12 @@ Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" m
                     %>
                     </select>
                 </td>
-                <td><strong>Strategy</strong><br /> 
+                <td><strong>Strategy</strong><br />
                     <select name="strat" size="<%= optStrat.length %>">
                     <%
                         index = 0;
                         while (index < optStrat.length) {
-                            out.write("<option value=\"" 
+                            out.write("<option value=\""
                                     + optStrat[index] + "\""
                                     + (optStrat[index].equals(strategy) ? " selected" : "")
                                     + ">"
@@ -202,62 +197,46 @@ Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" m
                     %>
                     </select>
                 </td>
-                <td>
-                    <input type="submit" value="Submit" />
-                </td>
-	<%--
-	--%>
+                <td><input type="submit" value="Submit" /></td>
             </tr>
         </table>
     </form>
     <p />
     <table>
         <tr valign="top"><td>
-        	<table border="0">
-            	<tr><td><a href="quixote1-4.html">Longer Example</a> (Chapters 1 - 4 from "Don Quijote")
+            <table border="0">
+                <tr><td><a href="quixote1-4.html">Longer Example</a> (Chapters 1 - 4 from "Don Quijote")</td></tr>
+                <tr><td><a href="docs/api/index.html">API documentation</a> (Javadoc)</td></tr>
+                <tr><td><a href="docs/coding.html">Coding of Syntactic and Semantic Attributes of Words</a></td></tr>
+                <tr><td><a href="docs/decisions.html">Decision Algorithms</a></td></tr>
+                <tr><td><a href="docs/developer.html">Hints for developers</a></td></tr>
+                <tr><td><a href="docs/bugs.html">Limitations and Bugs</a></td></tr>
+                <tr><td><a href="grammarservlet?view=table">Classify Words</a></td></tr>
+                <tr><td><a href="metaInf.jsp?view=manifest">Manifest</a>,
+                        <a href="metaInf.jsp?view=license" >License</a>,
+                        <a href="metaInf.jsp?view=notice"  >References</a>
                 </td></tr>
-                <tr><td><a href="docs/api/index.html">API documentation</a> (Javadoc)
-                </td></tr>
-                <tr><td><a href="docs/coding.html">Coding of Syntactic and Semantic Attributes of Words</a>
-                </td></tr>
-                <tr><td><a href="docs/decisions.html">Decision Algorithms</a>
-                </td></tr>
-                <tr><td><a href="docs/developer.html">Hints for developers</a>
-                </td></tr>
-                <tr><td><a href="docs/bugs.html">Limitations and Bugs</a>
-                </td></tr>
-				<tr><td><a href="grammarservlet?view=table">Classify Words</a>
-                </td></tr>
-				<tr><td><a href="metaInf.jsp?view=manifest">Manifest</a>, 
-  			            <a href="metaInf.jsp?view=license" >License</a>, 
-          				<a href="metaInf.jsp?view=notice"  >References</a>
-                </td></tr>
-			</table>
+            </table>
         </td><td>
-        	<table border="0">
-        		<tr><th colspan="2" align="left">Applications of <em>QueueTransformer</em></th></tr>
-            	<tr><td>bibleref:</td><td>Table of Luther's pericopes - <a href="bibleref/luther_perikope.htm">(original)</a> and with
-		            <a href="bibleref/luther_perikope.html">autolinked</a> bible references
-            		</td></tr>
-        		<tr><td>&nbsp;</td><td><a href="bibleref/wiki_perikope.htm">Table of pericopes</a> from de.wikipedia -  
-           			<a href="bibleref/wiki_perikope.html">autolinked</a>
-            		</td></tr>
-            	<tr><td>konto:</td><td>Autolinked German bank ids with <a href="konto.html">check/correction</a> 
-            		of account numbers nearby
-            		</td></tr>
-            	<tr><td>number:</td><td>Parsing of German number words in <a href="number.html">Genesis 5</a>
-            		</td></tr>
-            	<tr><td>wordtype:</td><td>Don Quixote <a href="wordtype/quixote0.html">(original)</a>, with 
-            		<a href="queue.html">green</a> uppercase words, and with <a href="wordtype.html">colored word types</a>.   
-            		</td></tr>
-        	</table>
+            <table border="0">
+                <tr><th colspan="2" align="left">Applications of <em>QueueTransformer</em></th></tr>
+                <tr><td>bibleref:</td><td>Table of Luther's pericopes - <a href="bibleref/luther_perikope.htm">(original)</a> and with
+                    <a href="bibleref/luther_perikope.html">autolinked</a> bible references</td></tr>
+                <tr><td>&nbsp;</td><td><a href="bibleref/wiki_perikope.htm">Table of pericopes</a> from de.wikipedia -
+                    <a href="bibleref/wiki_perikope.html">autolinked</a></td></tr>
+                <tr><td>konto:</td><td>Autolinked German bank ids with <a href="konto.html">check/correction</a>
+                    of account numbers nearby</td></tr>
+                <tr><td>number:</td><td>Parsing of German number words in <a href="number.html">Genesis 5</a></td></tr>
+                <tr><td>wordtype:</td><td>Don Quixote <a href="wordtype/quixote0.html">(original)</a>, with
+                    <a href="queue.html">green</a> uppercase words, and with <a href="wordtype.html">colored word types</a>.</td></tr>
+            </table>
         </td></tr>
-    </table>        
+    </table>
     <p />
     <font size="-1">
     Questions, remarks to: <a href="mailto:punctum@punctum.com">Dr. Georg Fischer</a>
     </font>
     </p>
-    
+
 </body>
 </html>

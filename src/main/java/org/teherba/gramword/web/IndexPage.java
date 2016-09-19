@@ -1,10 +1,6 @@
 /*  IndexPage.java - main web page for GramWord
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
- *  2016-09-12, Dr. Georg Fischer: adopted from xslTrans.jsp
- *  2011-04-06: MultiFormatFactory
- *  2008-07-30: svn tests
- *  2008-05-31: with field 'view'
- *  2006-10-13: copied from numword
+ *  2016-09-19, Dr. Georg Fischer: adopted from xslTrans.jsp
  */
 /*
  * Copyright 2016 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -22,15 +18,15 @@
  * limitations under the License.
  */
 package org.teherba.gramword.web;
+import  org.teherba.gramword.GrammarFilter;
 import  org.teherba.common.web.BasePage;
-import  org.teherba.xtrans.BaseTransformer;
-import  org.teherba.xtrans.XtransFactory;
 import  java.io.PrintWriter;
+import  java.io.StringReader;
 import  java.io.Serializable;
 import  java.util.Iterator;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
-import  javax.servlet.http.HttpSession;
+import  org.apache.commons.fileupload.FileItem;
 import  org.apache.log4j.Logger;
 
 /** Xtrans main dialog page
@@ -46,66 +42,40 @@ public class IndexPage implements Serializable {
     /** No-args Constructor
      */
     public IndexPage() {
-        log      = Logger.getLogger(IndexPage.class.getName());
+        log = Logger.getLogger(IndexPage.class.getName());
     } // Constructor
 
     /** Output the main dialog page for Xtrans
      *  @param request request with header fields
      *  @param response response with writer
      *  @param basePage refrence to common methods and error messages
-     *  @param language 2-letter code en, de etc.
      */
     public void dialog(HttpServletRequest request, HttpServletResponse response
             , BasePage basePage
-            , String language
-            , String format
-            , String dir
-            , String options
-            , String namespace
-            , String enc1
-            , String enc2
-            , String infile
-            , String intext
             ) {
         try {
-            String target = "xml";
+            FileItem fileItem = basePage.getFormFile(0);
+            String language = basePage.getFormField("language"  );
+            String format   = basePage.getFormField("format"    );
+            String encoding = basePage.getFormField("encoding"  );
+            String strategy = basePage.getFormField("strategy"  );
+            response.setHeader("Content-Disposition", "inline; filename=\""
+                    + fileItem.getName() + ".xml\"");
+
             PrintWriter out = basePage.writeHeader(request, response, language);
             out.write("<title>" + basePage.getAppName() + " Main Page</title>\n");
             out.write("</head>\n<body>\n");
-
-            XtransFactory factory = new XtransFactory();
-            String border = "0";
-            int index = 0;
-            out.write("<!-- dir=\"" + dir + "\", format=\"" + format + "\", target=\""+  target
-                    + "\", namespace=\""+ namespace + "\", options=\""+ options + "\" -->\n");
-            out.write("<h2>xtrans - Format Transformation to/from XML</h2>\n");
-            out.write("<form action=\"servlet\" method=\"post\" enctype=\"multipart/form-data\">\n");
-            out.write("    <input type = \"hidden\" name=\"view\" value=\"index2\" />\n");
-            out.write("    <table cellpadding=\"8\" border=\"" + border + "\">\n");
-
-            out.write("        <tr valign=\"top\">\n");
-            out.write("            <td rowspan=\"2\"><strong>Format</strong><br />\n");
-            out.write("                <select name=\"format\" size=\"" + factory.size() + "\">\n");
-                                       Iterator iter = factory.getIterator();
-                                       index = 0;
-                                       while (iter.hasNext()) {
-                                           BaseTransformer transformer = (BaseTransformer) iter.next();
-                                           String code = transformer.getFirstFormatCode();
-                                           out.write("<option value=\"" + code + "\""
-                                                   + (code.equals(format) ? " selected" : "" )
-                                                   + ">" + code + " - " + transformer.getDescription() + "</option>\n");
-                                       } // while iter
-            out.write("                </select>\n");
-            out.write("            </td>\n");
-
-            out.write("            <td>\n");
-                                       IndexPage.writeFormOptions(basePage, out, language, dir
-                                            , options, namespace, enc1, enc2, infile, intext);
-            out.write("            </td>\n");
-            out.write("        </tr>\n");
-            out.write("    </table><!-- main layout -->\n");
-            out.write("</form>\n");
-
+            GrammarFilter filter = new GrammarFilter();
+           // System.out.println("GrammarServlet.startFilter");
+            filter.getOptions(new String []
+                { "-l", language
+                , "-m", format
+                , "-e", encoding
+                , "-s", strategy
+                });
+            filter.setReader(new StringReader(fileItem.getString(encoding)));
+            filter.setWriter(out);
+            filter.process(new String[] { fileItem.getName() });
             basePage.writeTrailer(language, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);

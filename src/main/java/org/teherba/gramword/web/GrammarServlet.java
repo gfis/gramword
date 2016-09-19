@@ -92,11 +92,12 @@ public class GrammarServlet extends HttpServlet {
         log = Logger.getLogger(GrammarServlet.class.getName());
         basePage = new BasePage(APP_NAME);
         Messages.addMessageTexts(basePage);
-        
+
         dbatConfig = new Configuration();
-        dsMap = dbatConfig.getDataSourceMap(); 
+        dbatConfig.configure(Configuration.WEB_CALL);
+        dsMap = dbatConfig.getDataSourceMap();
         String connectionId = "worddb";
-        dbatConfig.addProperties(connectionId + ".properties");
+        // dbatConfig.addProperties(connectionId + ".properties");
         dbatConfig.setConnectionId(connectionId);
     } // init()
 
@@ -125,126 +126,59 @@ public class GrammarServlet extends HttpServlet {
      */
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
         dbatConfig.configure(dbatConfig.WEB_CALL, dsMap);
+        String newPage      = ""; // no error so far
         try {
-            String view = basePage.getInputField(request, "view", "index");
+        	String language = "de";
+            String view = basePage.getFilesAndFields(request, new String[]
+                    { "view"    , "index"
+                    , "language", "de"
+                    , "format"  , "html"
+                    , "encoding", "UTF-8"
+                    , "strategy", "all"
+                    } );
             if (false) {
-            } else if (view.equals("index" ))   { // introductory page
-                generateIndexResponse (request, response);
+
+            } else if (true || view.equals("index" ))   { // introductory page
+                language        = basePage.getFormField("language"  );
+                String format   = basePage.getFormField("format"    );
+                String encoding = basePage.getFormField("encoding"  );
+                String strategy = basePage.getFormField("strategy"  );
+            	log.info("view=" + view + ", language=" + language + ", format=" + format + ", encoding=" + encoding + ",strategy=" + strategy);
+                String fileName = "";
+                if (false) {
+                } else if (",html,text,dict,".indexOf("," + format + ",") < 0) {
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", format, "format" } );
+                } else if (",de,".indexOf("," + language + ",") < 0) {
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", language, "language" } );
+                } else if (",all,prsplit,sasplit,".indexOf("," + strategy + ",") < 0) {
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", strategy, "strategy" } );
+                } else if (",ISO-8859-1,UTF-8,".indexOf(("," + encoding.toUpperCase() + ",")) < 0) {
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", encoding, "encoding" } );
+                } else if (basePage.getFormFileCount() <= 0) { // no file was uploaded
+                    basePage.writeMessage(request, response, language, new String[] { "406" } );
+                } else {
+                    (new IndexPage()).dialog(request, response, basePage);
+                } // there was an uploaded file
+
             } else if (view.equals("table" ))   { // show the contents of table 'temp'
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/classify.jsp");
                 dispatcher.forward(request, response);
+
             } else if (view.equals("toggle"))   { // switch the attribute of a table element
                 generateToggleResponse(request, response);
+
             } else {
-                // generateIndexResponse (request, response);
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", view, "view" } );
             }
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }
     } // generateResponse
-
-    /** Creates the response for the introductory page.
-     *  @param request fields from the client input form
-     *  @param response data to be sent back the user's browser
-     */
-    public void generateIndexResponse(HttpServletRequest request, HttpServletResponse response) {
-        try {
-            String newPage      = ""; // no error so far
-            HttpSession session = request.getSession();
-            String format       = "html";
-            String fileName     = "";
-            String language     = "de";
-            String encoding     = "UTF-8";
-            String strategy     = "all";
-
-            FileItemFactory fuFactory = new DiskFileItemFactory(); // Create a factory for disk-based file items
-            ServletFileUpload upload = new ServletFileUpload(fuFactory); // Create a new file upload handler
-            List /* FileItem */ items = upload.parseRequest(request); // Parse the request
-            FileItem fileItem = null; // not seen so far
-            Iterator iter = items.iterator();
-            while (iter.hasNext()) { // Process the uploaded items
-                FileItem item = (FileItem) iter.next();
-                if (item.isFormField()) {
-                    String name  = item.getFieldName();
-                    String value = item.getString();
-                    session.setAttribute(name, value);
-                    if (false) {
-                    } else if (name.equals("mode" )) {
-                        format = value;
-                        if (",html,text,dict,".indexOf("," + format + ",") < 0) {
-                            newPage = "/message.jsp";
-                            session.setAttribute("messno"  , "004"); // invalid format code
-                        }
-                    } else if (name.equals("lang")) {
-                        language = value;
-                        if (",de,".indexOf("," + language + ",") < 0) {
-                            newPage = "/message.jsp";
-                            session.setAttribute("messno"  , "003"); // invalid language code
-                        }
-                    } else if (name.equals("strat")) {
-                        strategy = value;
-                        if (",all,prsplit,sasplit,".indexOf("," + strategy + ",") < 0) {
-                            newPage = "/message.jsp";
-                            session.setAttribute("messno"  , "001"); // invalid strategy
-                        }
-                    } else if (name.equals("enc")) {
-                         encoding = value;
-                         if (",ISO-8859-1,UTF-8,".indexOf(("," + encoding + ",").toUpperCase()) < 0) {
-                            newPage = "/message.jsp";
-                            session.setAttribute("messno"  , "006"); // invalid encoding
-                        }
-                    } else { // unknown field name
-                    }
-                } else {
-                    fileItem = item;
-                }
-            } // while uploaded items
-            response.setCharacterEncoding(encoding);
-
-            if (debug >= 1) {
-                log.info("GrammarServlet.generateResponse"
-                        + ", format=\"" + format + "\""
-                        + ", lang=\""   + language + "\""
-                        + ", strat=\"" + strategy + "\""
-                        + ", enc=\"" + encoding + "\""
-                        + ", infile=\"" + fileItem.getName() + "\""
-                        + ", newPage=\"" + newPage + "\""
-                        );
-            }
-
-            if (newPage.length() > 0) { // fall through
-            } else if (fileItem == null) { // no file was uploaded
-                newPage = "/message.jsp";
-                session.setAttribute("messno"  , "005");
-            } else {
-                GrammarFilter filter = new GrammarFilter();
-                response.setHeader("Content-Disposition", "inline; filename=\""
-                        + fileItem.getName() + ".xml\"");
-                response.setContentType("text/" + (format.equals("html") ? "html" : "plain"));
-                // System.out.println("GrammarServlet.startFilter");
-                filter.getOptions(new String []
-                    { "-l", language
-                    , "-m", format
-                    , "-e", encoding
-                    , "-s", strategy
-                    });
-                filter.setReader(new StringReader(fileItem.getString(encoding)));
-                filter.setWriter(response.getWriter());
-                filter.process(new String[] { fileItem.getName() });
-                if (debug >= 1) {
-                    response.getWriter().write("\n\n" + fileItem.getString(encoding));
-                    response.getWriter().write("GrammarServlet.endFilter");
-                }
-            } // there was an uploaded file
-
-            if (newPage.length() > 0) { // error message
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(newPage);
-                dispatcher.forward(request, response);
-            }
-        } catch (Exception exc) {
-            log.error(exc.getMessage(), exc);
-        }
-    } // generateIndexResponse
 
     /** Creates the response for a toggle request form JavaScript/Ajax.
      *  @param request fields from the client input form

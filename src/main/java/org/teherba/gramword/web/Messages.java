@@ -1,6 +1,7 @@
 /*  Messages.java - Static help texts and other language specific messages for GramWord
+ *  Caution: must be UTF-8 - äöüÄÖÜß
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
- *  2016-09-12: Dr. Georg Fischer: copied from Xtrans
+ *  2016-09-17: Dr. Georg Fischer: copied from Xtrans
  */
 /*
  * Copyright 2016 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -41,7 +42,7 @@ public class Messages implements Serializable {
      */
     public Messages() {
     } // Constructor
-    
+
     /** Sets the application-specific error message texts
      *  @param basePage reference to the hash for message texts
      */
@@ -90,7 +91,19 @@ public class Messages implements Serializable {
         basePage.add("en", smess, "{parm}References</a>");
         basePage.add("de", smess, "{parm}Referenzen</a>");
         //--------
-        basePage.add("en", "401", "Invalid {parm} <em>{par2}</em>");
+        basePage.add("en", "401", "Invalid value <em>{par2}</em> for parameter <em>{parm}</em>");
+        basePage.add("de", "401", "Ungültiger Wert <em>{par2}</em> für Parameter <em>{parm}</em>");
+        basePage.add("en", "406", "No upload file specified");
+        basePage.add("de", "406", "Angabe für Eingabedatei fehlt");
+    /*
+        000 "unspecified system error"
+        001 "invalid strategy"
+        002 "invalid message number"
+        003 "invalid language code"
+        004 "invalid output mode"
+        005 "no upload file specified"
+        006 "invalid encoding"
+    */
         basePage.add("en", "407", "Either input file or text area must be specified");
         //--------
     } // addMessageTexts
@@ -99,7 +112,7 @@ public class Messages implements Serializable {
     // Main method
     //================
 
-    /** Test driver 
+    /** Test driver
      *  @param args language code: "en", "de"
      */
     public static void main(String[] args) {
