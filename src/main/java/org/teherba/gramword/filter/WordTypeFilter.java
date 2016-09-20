@@ -27,8 +27,8 @@
  */
 
 package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
-import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  java.text.DecimalFormat;
 import  java.util.Iterator;
@@ -40,7 +40,7 @@ import  org.apache.log4j.Logger;
 /** Shows the syntactical type of words in an HTML file by different background colors
  *  @author Dr. Georg Fischer
  */
-public class WordTypeFilter extends QueueTransformer { 
+public class WordTypeFilter extends BaseFilter { 
     public final static String CVSID = "@(#) $Id: WordTypeFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */

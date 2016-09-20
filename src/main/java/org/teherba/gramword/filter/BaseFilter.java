@@ -1,8 +1,9 @@
-/*  Superclass for XHTML transformers which perform some 
+/*  Superclass for XHTML serializers which perform some 
     modification (coloring, linking and the like) based on
     the local analysis of several words, which are surrounded by "glue"
     (HTML tags, whitespace and punctuation).
-    @(#) $Id: QueueTransformer.java 805 2011-09-20 06:41:22Z gfis $
+    @(#) $Id: BaseFilter.java 805 2011-09-20 06:41:22Z gfis $
+    2016-09-20: this was the former QueueTransformer
     2016-09-11: javadoc
     2010-07-05: initialize()
     2007-04-19: no 'generate'
@@ -23,12 +24,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.teherba.gramword;
-import  org.teherba.xtrans.CharTransformer;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemTester;
 import  org.teherba.gramword.Segment;
 import  org.teherba.gramword.SegmentQueue;
+import  org.teherba.xtrans.CharTransformer;
 import  java.io.BufferedReader;
 import  java.io.FileInputStream;
 import  java.io.FileOutputStream;
@@ -49,8 +50,8 @@ import  org.apache.log4j.Logger;
  *  (HTML tags, whitespace and punctuation).
  *  @author Dr. Georg Fischer
  */
-public class QueueTransformer extends CharTransformer { 
-    public final static String CVSID = "@(#) $Id: QueueTransformer.java 805 2011-09-20 06:41:22Z gfis $";
+public class BaseFilter extends CharTransformer { 
+    public final static String CVSID = "@(#) $Id: BaseFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */
     private Logger log;
@@ -91,10 +92,10 @@ public class QueueTransformer extends CharTransformer {
     
     /** Constructor.
      */
-    public QueueTransformer() {
+    public BaseFilter() {
         super();
         setFormatCodes("queue");
-        setDescription("Test for subclasses of QueueTransformer");
+        setDescription("Test for subclasses of BaseFilter");
         setFileExtensions("html");
     } // Constructor()
     
@@ -105,7 +106,7 @@ public class QueueTransformer extends CharTransformer {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(QueueTransformer.class.getName());
+        log = Logger.getLogger(BaseFilter.class.getName());
         cntWords        = 0;
         cntKnown        = 0;
         morphCounts     = new TreeMap<String, Integer>();
@@ -434,4 +435,4 @@ public class QueueTransformer extends CharTransformer {
         charWriter.println("\n<!-- warning: " + exc + "-->");
     } // warning
 
-} // QueueTransformer
+} // BaseFilter

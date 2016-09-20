@@ -22,9 +22,9 @@
  */
 
 package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  org.teherba.checkdig.account.DeAccountChecker;
 import  java.util.ArrayList;
@@ -44,7 +44,7 @@ import  org.apache.log4j.Logger;
  *  </ul>
  *  @author Dr. Georg Fischer
  */
-public class KontoFilter extends QueueTransformer {
+public class KontoFilter extends BaseFilter {
     public final static String CVSID = "@(#) $Id: KontoFilter.java 976 2013-02-02 16:44:18Z gfis $";
 
     /** Debugging switch */
@@ -58,9 +58,9 @@ public class KontoFilter extends QueueTransformer {
     private int maxBlz;
     /** Maximum index of "Kto" key words */
     private int maxKto;
-    /** Negative distance to {@link QueueTransformer#segmentPivot} element for "BLZ"   keyword */
+    /** Negative distance to {@link BaseFilter#segmentPivot} element for "BLZ"   keyword */
     private int distBlz;
-    /** Negative distance to {@link QueueTransformer#segmentPivot} element for "Konto" keyword */
+    /** Negative distance to {@link BaseFilter#segmentPivot} element for "Konto" keyword */
     private int distKto;
     /** Size of queue */
     private int queueSize;

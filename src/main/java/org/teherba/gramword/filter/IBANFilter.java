@@ -22,10 +22,10 @@
  */
 
 package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
 import  org.teherba.gramword.MorphemTester;
-import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  org.teherba.checkdig.account.DeAccountChecker;
 import  org.teherba.checkdig.account.IBANChecker;

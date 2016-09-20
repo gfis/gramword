@@ -126,6 +126,7 @@ public class GramwordServlet extends HttpServlet {
             String view = basePage.getFilesAndFields(request, new String[]
                     { "view"    , "index"
                     , "enc"     , "UTF-8"       // of infile
+                    , "filter"  , "simple"      // filter to be applied
                     , "format"  , "html"        // for target output
                     , "grammar" , "de"          // for analysis of infile
                     , "lang"    , "en"          // for user interface
@@ -133,6 +134,7 @@ public class GramwordServlet extends HttpServlet {
                     , "strat"   , "all"
                     } );
             String encoding = basePage.getFormField("enc"       );
+            String filter   = basePage.getFormField("filter"    );
             String format   = basePage.getFormField("format"    );
             String grammar  = basePage.getFormField("grammar"   );
             String language = basePage.getFormField("lang"      );
@@ -141,6 +143,7 @@ public class GramwordServlet extends HttpServlet {
             if (true) {
                 log.info("view=" + view
                         + ", enc="      + encoding
+                        + ", filter="   + filter
                         + ", format="   + format
                         + ", grammar="  + grammar
                         + ", lang="     + language
@@ -173,63 +176,23 @@ public class GramwordServlet extends HttpServlet {
             } else if (view.equals("index"   ))   { // start page
                     (new IndexPage()).dialog(request, response, basePage);
 
-            } else if (view.equals("simple"  ))   { // former result page
-                (new SimpleTypePage()).dialog(request, response, basePage);
+            } else if (view.equals("index2"  ))   { // former result page
+                if (false) {
+                } else if (filter.equals("simple")) {
+                    (new SimpleTypePage()).showResult(request, response, basePage);
+                } else if (filter.equals("simple"  )
+                        || filter.equals("queue"   )
+                        || filter.equals("bibleref")
+                //      || filter.equals("iban"    ) 
+                        || filter.equals("konto"   ) 
+                        || filter.equals("number"  ) 
+                        || filter.equals("wordtype") ) {
+                    (new FilterPage()).showResult(request, response, basePage);
+                } else {
+                    basePage.writeMessage(request, response, language, new String[]
+                            { "401", "filter"    , filter } );
+                }
 
-         /*
-            } else if (view.equals("index2")) { // do the main transform
-                String options = ""; //  = "-test 2 ";
-                int ifmt  = 0;
-                int ifile = 0;
-                // get all commandline parameters
-                while (iarg < args.length) {
-                    log.debug("args[" + iarg + "]=\"" + args[iarg] + "\"");
-                    if (args[iarg].length() == 0) { // parameter String[]
-                        iarg ++;
-                    } else if (args[iarg].startsWith("-")) { // is an option
-                        String option = args[iarg ++].substring(1); // without the hyphen
-                        BaseTransformer base = factory.getTransformer(option);
-                        if (base != null) { // valid format code
-                            if (ifmt < MAX_FILE) {
-                                if (ifmt == 0) {
-                                    generator  = base;
-                                } else {
-                                    serializer = base;
-                                }
-                                ifmt ++;
-                            }
-                        } else { // other option
-                            String value = "1";
-                            if (iarg < args.length && ! args[iarg].startsWith("-")) {
-                                value = args[iarg ++];
-                            }
-                            options += "-" + option + " " + value + " ";
-                            // log.debug("addOption(\"" + option + "\", \"" + value + "\");");
-                        }
-                    } else { // no option -> filename
-                        if (ifile < MAX_FILE) {
-                            fileNames[ifile ++] = args[iarg];
-                        }
-                        iarg ++;
-                    }
-                } // while commandline
-
-                generator  = factory.getTransformer(format); // try whether the format is valid
-                if (generator == null) {
-                    basePage.writeMessage(request, response, language, new String[] { "401", "format", format } );
-                } else { // valid generator
-                    serializer   = factory.getTransformer(resultFormat); // xml
-                    generator .parseOptionString(options);
-                    generator .setSourceEncoding(generator .getOption("enc1", "UTF-8")); // should be symmetrical for testing
-                    serializer.parseOptionString(options);
-                    serializer.setResultEncoding(serializer.getOption("enc2", "UTF-8"));
-                    generator .setContentHandler(serializer);
-                    generator .setLexicalHandler(serializer);
-                    response.setCharacterEncoding(serializer.getResultEncoding());
-
-                    this.doTransform(generator, serializer, fileItem, intext, response);
-                } // valid generator
-        */
             } else if (view.equals("table" ))   { // show the contents of table 'temp'
             //  RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/classify.jsp");
             //  dispatcher.forward(request, response);
@@ -250,59 +213,6 @@ public class GramwordServlet extends HttpServlet {
             log.error(exc.getMessage(), exc);
         }
     } // generateResponse
-
-    /** Runs the transformation.
-     *  @param generator parser for the input format
-     *  @param serializer generates the output format
-     *  @param fileItem handle for an uploaded file
-     *  @param intext input String from a form field, overtakes <em>fileItem</em> if non-empty
-     *  @param response wher to write the output
-     */
-    private void doTransform(BaseTransformer generator
-            , BaseTransformer serializer
-            , FileItem fileItem
-            , String intext
-            , HttpServletResponse response
-            ) {
-        try {
-            if (serializer instanceof XMLTransformer) {
-                generator.setMimeType("text/xml"); // is needed sometimes because of "&amp;" multiplication
-                response.setHeader("Content-Disposition", "inline; filename=\"" + fileItem.getName() + ".xml\"");
-                // to XML
-            } else { // from XML
-                String name = fileItem.getName();
-                name = (name.endsWith(".xml"))
-                        ? name.substring(0, name.length() - 4) // remove ".xml"
-                        : name + "." + generator.getFileExtension(); // append default extension
-                response.setHeader("Content-Disposition", "attachment; filename=\"" + name + "\"");
-            } // from XML
-
-            response.setContentType(generator.getMimeType());
-            generator.setCharReader(new StringReader(fileItem.getString(generator.getSourceEncoding())));
-            serializer.setCharWriter(response.getWriter      ());
-            generator.generate();
-            generator .closeAll();
-            serializer.closeAll();
-            /*
-                    ifile = 0;
-                    generator .parseOptionString(options);
-                    generator .openFile(ifile, fileNames[ifile]);
-                    ifile ++;
-                    serializer.parseOptionString(options);
-                    serializer.openFile(ifile, fileNames[ifile]);
-                    generator.setCharWriter(serializer.getCharWriter());
-
-                    generator .setContentHandler(serializer);
-                    serializer.setContentHandler(generator );
-                    generator .generate();
-
-                    generator .closeAll();
-                    serializer.closeAll();
-            */
-        } catch (Exception exc) {
-            log.error(exc.getMessage(), exc);
-        }
-    } // doTransform
 
     /** Creates the response for a toggle request form JavaScript/Ajax.
      *  @param request fields from the client input form

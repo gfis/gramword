@@ -21,9 +21,9 @@
  */
 
 package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  org.apache.log4j.Logger;
 
@@ -50,7 +50,7 @@ import  org.apache.log4j.Logger;
  *  </ul>
  *  @author Dr. Georg Fischer
  */
-public class BibleRefFilter extends QueueTransformer {
+public class BibleRefFilter extends BaseFilter {
     public final static String CVSID = "@(#) $Id: BibleRefFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** Debugging switch */

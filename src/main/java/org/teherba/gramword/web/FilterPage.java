@@ -1,4 +1,4 @@
-/*  SimpleTypePage.java - show results from GrammarHandler
+/*  FilterPage.java - show the results of a filter
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
  *  2016-09-20, Dr. Georg Fischer: former GrammarPage.java
  */
@@ -18,23 +18,24 @@
  * limitations under the License.
  */
 package org.teherba.gramword.web;
-import  org.teherba.gramword.handler.GrammarHandler;
+import  org.teherba.gramword.filter.FilterFactory;
 import  org.teherba.common.web.BasePage;
+import  org.teherba.xtrans.BaseTransformer;
+import  org.teherba.xtrans.XMLTransformer;
 import  java.io.PrintWriter;
 import  java.io.StringReader;
 import  java.io.Serializable;
-import  java.util.Iterator;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
 import  org.apache.commons.fileupload.FileItem;
 import  org.apache.log4j.Logger;
 
-/** Starts a transformation with {@link GrammarHandler},
+/** Determines the proper filter for serialization,
+ *  starts a transformation with that filter,
  *  and shows the web page with the response.
- *  This class is the predecessor for the filters bases on <em>QueueTransformer</em>.
  *  @author Dr. Georg Fischer
  */
-public class SimpleTypePage implements Serializable {
+public class FilterPage implements Serializable {
     public final static String CVSID = "@(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $";
     public final static long serialVersionUID = 19470629;
 
@@ -43,11 +44,12 @@ public class SimpleTypePage implements Serializable {
 
     /** No-args Constructor
      */
-    public SimpleTypePage() {
-        log = Logger.getLogger(SimpleTypePage.class.getName());
+    public FilterPage() {
+        log = Logger.getLogger(FilterPage.class.getName());
     } // Constructor
 
-    /** Starts a transformation with {@link GrammarHandler},
+    /** Determines the proper filter for serialization,
+     *  starts a transformation with that filter,
      *  and shows the web page with the response.
      *  @param request request with header fields
      *  @param response response with writer
@@ -59,32 +61,42 @@ public class SimpleTypePage implements Serializable {
         try {
             FileItem fileItem = basePage.getFormFile(0);
             String encoding = basePage.getFormField("enc"       );
+            String filter   = basePage.getFormField("filter"    );
             String format   = basePage.getFormField("format"    );
             String grammar  = basePage.getFormField("grammar"   );
             String language = basePage.getFormField("lang"      );
             String strategy = basePage.getFormField("strat"     );
-            response.setHeader("Content-Disposition", "inline; filename=\""
-                    + fileItem.getName() + ".xml\"");
 
-            PrintWriter out = basePage.writeHeader(request, response, language);
-            out.write("<title>" + basePage.getAppName() + " Handler Result</title>\n");
-            out.write("</head>\n<body>\n");
-            GrammarHandler handler = new GrammarHandler();
-            handler.getOptions(new String []
-                { "-l", grammar
-                , "-m", format
-                , "-e", encoding
-                , "-s", strategy
-                });
-            handler.setReader(new StringReader(fileItem.getString(encoding)));
-            handler.setWriter(out);
-            handler.process(new String[] { fileItem.getName() });
+            FilterFactory factory = new FilterFactory();
+            BaseTransformer generator  = factory.getTransformer("xml");
+            BaseTransformer serializer = factory.getTransformer(filter);
+            if (generator == null) { // not found - bad software configuration
+                basePage.writeMessage(request, response, language, new String[] { "401", "filter", filter } );
+            } else { // generator was found
+                generator .setSourceEncoding(encoding);
+                serializer.setResultEncoding("UTF-8");
+                response  .setCharacterEncoding(serializer.getResultEncoding());
+                response  .setContentType(generator.getMimeType());
+                generator .setCharReader(new StringReader( fileItem.getString(generator.getSourceEncoding())));
+                serializer.setCharWriter(response.getWriter      ());
+                generator .setCharWriter(serializer.getCharWriter());
+                generator .setContentHandler(serializer);
+                serializer.setContentHandler(generator );
+
+                PrintWriter out = basePage.writeHeader(request, response, language);
+                out.write("<title>" + basePage.getAppName() + " Filter Result</title>\n");
+                out.write("</head>\n<body>\n");
+
+                generator .generate();
+                generator .closeAll();
+                serializer.closeAll();
+            } // valid generator
             basePage.writeTrailer(language, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }
     } // showResult
-    
+
     //================
     // Main method
     //================
@@ -93,8 +105,8 @@ public class SimpleTypePage implements Serializable {
      *  @param args language code: "en", "de"
      */
     public static void main(String[] args) {
-        SimpleTypePage help = new SimpleTypePage();
+        FilterPage help = new FilterPage();
         System.out.println("no messages");
     } // main
 
-} // SimpleTypePage
+} // FilterPage

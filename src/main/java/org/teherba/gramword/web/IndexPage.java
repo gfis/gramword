@@ -55,6 +55,7 @@ public class IndexPage implements Serializable {
         try {
             String language   = basePage.getFormField("lang"     );
             String encoding   = basePage.getFormField("enc"      );
+            String filter     = basePage.getFormField("filter"   );
             String format     = basePage.getFormField("format"   );
             String grammar    = basePage.getFormField("grammar"  );
             String infile     = basePage.getFormField("infile"   );
@@ -68,6 +69,7 @@ public class IndexPage implements Serializable {
             out.write("</head>\n<body>\n");
             out.write("<!--lang=\""     + language
                     + "\", enc=\""      + encoding 
+                    + "\", filter=\""   + filter  
                     + "\", format=\""   + format  
                     + "\", grammar=\""  + grammar 
                     + "\", infile=\""   + infile
@@ -80,6 +82,24 @@ public class IndexPage implements Serializable {
             String[] enEnc    = new String []
                     /*  0 */ { "ISO-8859-1"
                     /*  1 */ , "UTF-8"
+                    } ;
+            String[] optFilter = new String []
+                    /*  0 */ { "simple"
+                    /*  1 */ , "queue"
+                    /*  2 */ , "bibleref"
+                    /*  3 */ , "iban"     
+                    /*  4 */ , "konto"    
+                    /*  5 */ , "number"   
+                    /*  6 */ , "wordtype"
+                    } ;
+            String[] enFilter = new String []
+                    /*  0 */ { "simple"
+                    /*  1 */ , "queue"
+                    /*  2 */ , "bibleref"
+                    /*  3 */ , "iban"     
+                    /*  4 */ , "konto"    
+                    /*  5 */ , "number"   
+                    /*  6 */ , "wordtype"
                     } ;
             String[] optFormat = new String []
                     /*  0 */ { "html"
@@ -145,7 +165,7 @@ public class IndexPage implements Serializable {
             out.write("<span class=\"Aj\" morph=\"XP\">l&#xf6;bliches</span> <span class=\"Vb\" morph=\"RtWeak\">Vorhaben</span> <span class=\"Vb\" morph=\"SCt93\">auszuf&#xfc;hren</span> <span class=\"Vb\" morph=\"SPa0\">begonnen</span>.\n");
             out.write("</blockquote>\n");
             out.write("<form action=\"servlet\" method=\"POST\" enctype=\"multipart/form-data\">\n");
-            out.write("    <input type = \"hidden\" name=\"view\" value=\"simple\" />\n");
+            out.write("    <input type = \"hidden\" name=\"view\" value=\"index2\" />\n");
             out.write("    <table cellpadding=\"4\" border=\"0\">\n");
             out.write("        <tr valign=\"top\">\n");
             out.write("           <td colspan=\"5\"><strong>Source file to be uploaded: </strong>");
@@ -177,6 +197,19 @@ public class IndexPage implements Serializable {
                                                    + (optFormat[index].equals(format) ? " selected" : "")
                                                    + ">"
                                                    + enFormat[index] + "</option>\n");
+                                           index ++;
+                                       } // while index
+            out.write("                </select>\n");
+            out.write("            </td>\n");
+            out.write("            <td><strong>Filter<br />to be used</strong><br />\n");
+            out.write("                <select name=\"filter\" size=\"" + optFilter.length + "\">\n");
+                                       index = 0;
+                                       while (index < optFilter.length) {
+            out.write("                    <option value=\""
+                                                   + optFilter[index] + "\""
+                                                   + (optFilter[index].equals(filter) ? " selected" : "")
+                                                   + ">"
+                                                   + enFilter[index] + "</option>\n");
                                            index ++;
                                        } // while index
             out.write("                </select>\n");

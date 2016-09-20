@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 package org.teherba.gramword.filter;
-import  org.teherba.gramword.QueueTransformer;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.xtrans.BaseTransformer;
 import  org.teherba.xtrans.XMLTransformer;
 import  java.util.ArrayList;
@@ -29,8 +29,11 @@ import  java.util.Iterator;
 import  java.util.StringTokenizer;
 import  org.apache.log4j.Logger;
 
-/** Selects a specific filter, and iterates over the descriptions
- *  of all filters and their codes
+/** Selects a specific filter and iterates over the descriptions
+ *  of all filters and their codes.
+ *  A filter is a subclass of {@link BaseFilter} which in turn 
+ *  is based on {@link BaseTransformer}. 
+ *  The output of a filter is serialized by @link XMLTransformer}.
  *  @author Dr. Georg Fischer
  */
 public class FilterFactory {
@@ -49,11 +52,11 @@ public class FilterFactory {
             transformers.add(new XMLTransformer());
             // the order here defines the order in documentation.jsp,
             // should be: "... group by package order by package, name"
-            this.addClass("QueueTransformer");
-            this.addClass("filter.BibleRefFilter");
-            this.addClass("filter.KontoFilter");
-            this.addClass("filter.NumberFilter");
-            this.addClass("filter.WordTypeFilter");
+            this.addClass("BaseFilter");
+            this.addClass("BibleRefFilter");
+            this.addClass("KontoFilter");
+            this.addClass("NumberFilter");
+            this.addClass("WordTypeFilter");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }
@@ -68,14 +71,15 @@ public class FilterFactory {
      */
     private void addClass(String transformerName) {
         try {
-            BaseTransformer transformer = (BaseTransformer) Class.forName("org.teherba.gramword."
-                    + transformerName).newInstance();
+            BaseTransformer transformer = (BaseTransformer)
+                    Class.forName("org.teherba.gramword.filter." + transformerName)
+                    .newInstance();
             if (transformer != null) {
                 // transformer.initialize();
                 transformers.add(transformer);
             } // != null
         } catch (Exception exc) {
-            log.debug(exc.getMessage(), exc);
+            // log.info(exc.getMessage(), exc);
             // ignore any error silently - this format will not be known
         }
     } // addClass
