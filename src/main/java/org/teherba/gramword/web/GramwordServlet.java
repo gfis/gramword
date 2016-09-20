@@ -30,12 +30,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.teherba.gramword.web;
 import  org.teherba.gramword.web.ClassifyPage;
-import  org.teherba.gramword.web.GrammarPage;
 import  org.teherba.gramword.web.IndexPage;
 import  org.teherba.gramword.web.Messages;
+import  org.teherba.gramword.web.SimpleTypePage;
 import  org.teherba.common.web.BasePage;
 import  org.teherba.common.web.MetaInfPage;
 import  org.teherba.dbat.Configuration;
@@ -44,25 +43,22 @@ import  org.teherba.xtrans.XMLTransformer;
 import  java.io.IOException;
 import  java.io.StringReader;
 import  java.util.Iterator;
-import  java.util.HashMap;
 import  java.util.LinkedHashMap;
 import  java.util.List;
 import  java.sql.Connection;
 import  java.sql.PreparedStatement;
 import  java.sql.ResultSet;
-import  javax.servlet.RequestDispatcher;
 import  javax.servlet.ServletConfig;
 import  javax.servlet.ServletContext;
 import  javax.servlet.ServletException;
 import  javax.servlet.http.HttpServlet;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
-import  javax.servlet.http.HttpSession;
 import  javax.sql.DataSource;
 import  org.apache.commons.fileupload.FileItem;
 import  org.apache.log4j.Logger;
 /**
- *  This class is the servlet interface to the GramWord application 
+ *  This class is the servlet interface to the GramWord application
  *  and ressembles the functionality of the commandline interface.
  *  @author Dr. Georg Fischer
  */
@@ -127,46 +123,59 @@ public class GramwordServlet extends HttpServlet {
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
         dbatConfig.configure(dbatConfig.WEB_CALL, dsMap);
         try {
-            String lang = "en";
             String view = basePage.getFilesAndFields(request, new String[]
                     { "view"    , "index"
-                    , "lang"    , "en"   // user interface
-                    , "language", "de"   // of input file
-                    , "format"  , "html"
-                    , "encoding", "UTF-8"
-                    , "strategy", "all"
+                    , "enc"     , "UTF-8"       // of infile
+                    , "format"  , "html"        // for target output
+                    , "grammar" , "de"          // for analysis of infile
+                    , "lang"    , "en"          // for user interface
+                    , "infile"  , ""
+                    , "strat"   , "all"
                     } );
-            lang            = basePage.getFormField("lang"      );
-            String language = basePage.getFormField("language"  );
+            String encoding = basePage.getFormField("enc"       );
             String format   = basePage.getFormField("format"    );
-            String encoding = basePage.getFormField("encoding"  );
-            String strategy = basePage.getFormField("strategy"  );
+            String grammar  = basePage.getFormField("grammar"   );
+            String language = basePage.getFormField("lang"      );
+            String infile   = basePage.getFormField("infile"    );
+            String strategy = basePage.getFormField("strat"     );
+            if (true) {
+                log.info("view=" + view
+                        + ", enc="      + encoding
+                        + ", format="   + format
+                        + ", grammar="  + grammar
+                        + ", lang="     + language
+                        + ", infile="   + infile
+                        + ", strat="    + strategy
+                        );
+            }
+            //-------------------------------------
+            // first check any parameters
             if (false) {
-
+            } else if (",ISO-8859-1,UTF-8,"     .indexOf(("," + encoding.toUpperCase() + ",")) < 0) {
+                basePage.writeMessage(request, response, language, new String[]
+                        { "401", "enc"      , encoding  } );
+            } else if (",html,text,dict,"       .indexOf("," + format   + ",") < 0) {
+                basePage.writeMessage(request, response, language, new String[]
+                        { "401", "format"   , format    } );
+            } else if (",de,"                   .indexOf("," + grammar  + ",") < 0) {
+                basePage.writeMessage(request, response, language, new String[]
+                        { "401", "grammar"  , grammar   } );
+            } else if (",de,en,"                .indexOf("," + language + ",") < 0) {
+                basePage.writeMessage(request, response, language, new String[]
+                        { "401", "lang"     , language  } );
+            } else if (",all,prsplit,sasplit,"  .indexOf("," + strategy + ",") < 0) {
+                basePage.writeMessage(request, response, language, new String[]
+                        { "401", "strat"    , strategy  } );
+            } else if (basePage.getFormFileCount() <= 0 && ! view.equals("index")) { // no file was uploaded
+                basePage.writeMessage(request, response, language, new String[] { "406" } );
+            //-------------------------------------
+            // then switch for the different views
             } else if (view.equals("index"   ))   { // start page
                     (new IndexPage()).dialog(request, response, basePage);
 
-            } else if (view.equals("grammar" ))   { // former result page
-                log.info("view=" + view + ", language=" + language + ", format=" + format + ", encoding=" + encoding + ",strategy=" + strategy);
-                String fileName = "";
-                if (false) {
-                } else if (",html,text,dict,".indexOf("," + format + ",") < 0) {
-                    basePage.writeMessage(request, response, lang, new String[]
-                            { "401", format, "format" } );
-                } else if (",de,".indexOf("," + language + ",") < 0) {
-                    basePage.writeMessage(request, response, lang, new String[]
-                            { "401", language, "language" } );
-                } else if (",all,prsplit,sasplit,".indexOf("," + strategy + ",") < 0) {
-                    basePage.writeMessage(request, response, lang, new String[]
-                            { "401", strategy, "strategy" } );
-                } else if (",ISO-8859-1,UTF-8,".indexOf(("," + encoding.toUpperCase() + ",")) < 0) {
-                    basePage.writeMessage(request, response, lang, new String[]
-                            { "401", encoding, "encoding" } );
-                } else if (basePage.getFormFileCount() <= 0) { // no file was uploaded
-                    basePage.writeMessage(request, response, lang, new String[] { "406" } );
-                } else {
-                    (new GrammarPage()).dialog(request, response, basePage);
-                } // there was an uploaded file
+            } else if (view.equals("simple"  ))   { // former result page
+                (new SimpleTypePage()).dialog(request, response, basePage);
+
          /*
             } else if (view.equals("index2")) { // do the main transform
                 String options = ""; //  = "-test 2 ";
@@ -204,10 +213,10 @@ public class GramwordServlet extends HttpServlet {
                         iarg ++;
                     }
                 } // while commandline
-                
+
                 generator  = factory.getTransformer(format); // try whether the format is valid
                 if (generator == null) {
-                    basePage.writeMessage(request, response, lang, new String[] { "401", "format", format } );
+                    basePage.writeMessage(request, response, language, new String[] { "401", "format", format } );
                 } else { // valid generator
                     serializer   = factory.getTransformer(resultFormat); // xml
                     generator .parseOptionString(options);
@@ -222,22 +231,20 @@ public class GramwordServlet extends HttpServlet {
                 } // valid generator
         */
             } else if (view.equals("table" ))   { // show the contents of table 'temp'
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/classify.jsp");
-                dispatcher.forward(request, response);
+            //  RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/classify.jsp");
+            //  dispatcher.forward(request, response);
 
             } else if (view.equals("toggle"))   { // switch the attribute of a table element
-                generateToggleResponse(request, response);
+            //  generateToggleResponse(request, response);
 
             } else if (view.equals("license")
                     || view.equals("manifest")
                     || view.equals("notice")
                     ) {
-                lang            = basePage.getFormField("lang"      );
-                (new MetaInfPage()).showMetaInf (request, response, basePage, lang, view, this);
+                (new MetaInfPage()).showMetaInf (request, response, basePage, language, view, this);
 
             } else {
-                lang            = basePage.getFormField("lang"      );
-                basePage.writeMessage(request, response, lang, new String[] { "401", view, "view" });
+                basePage.writeMessage(request, response, language, new String[] { "401", view, "view" });
             }
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
@@ -269,7 +276,7 @@ public class GramwordServlet extends HttpServlet {
                         : name + "." + generator.getFileExtension(); // append default extension
                 response.setHeader("Content-Disposition", "attachment; filename=\"" + name + "\"");
             } // from XML
-            
+
             response.setContentType(generator.getMimeType());
             generator.setCharReader(new StringReader(fileItem.getString(generator.getSourceEncoding())));
             serializer.setCharWriter(response.getWriter      ());
@@ -296,7 +303,7 @@ public class GramwordServlet extends HttpServlet {
             log.error(exc.getMessage(), exc);
         }
     } // doTransform
-    
+
     /** Creates the response for a toggle request form JavaScript/Ajax.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser

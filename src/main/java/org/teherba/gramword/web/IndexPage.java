@@ -1,6 +1,6 @@
-/*  IndexPage.java - main web page for GramWord
+/*  IndexPage.java - starting web page for GramWord
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
- *  2016-09-19, Dr. Georg Fischer: adopted from xslTrans.jsp
+ *  2016-09-20, Dr. Georg Fischer
  */
 /*
  * Copyright 2016 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -18,8 +18,6 @@
  * limitations under the License.
  */
 package org.teherba.gramword.web;
-import  org.teherba.gramword.filter.GrammarFilter;
-import  org.teherba.gramword.filter.WordTypeFilter;
 import  org.teherba.common.web.BasePage;
 import  java.io.PrintWriter;
 import  java.io.StringReader;
@@ -55,18 +53,26 @@ public class IndexPage implements Serializable {
             , BasePage basePage
             ) {
         try {
+            String language   = basePage.getFormField("lang"     );
+            String encoding   = basePage.getFormField("enc"      );
             String format     = basePage.getFormField("format"   );
-            String lang       = basePage.getFormField("lang"     );
-            String language   = basePage.getFormField("language" );
-            String encoding   = basePage.getFormField("encoding" );
-            String strategy   = basePage.getFormField("strategy" );
+            String grammar    = basePage.getFormField("grammar"  );
             String infile     = basePage.getFormField("infile"   );
-            PrintWriter out = basePage.writeHeader(request, response, lang);
+            String strategy   = basePage.getFormField("strat"    );
             FileItem fileItem = basePage.getFormFile(0);
+
+            PrintWriter out = basePage.writeHeader(request, response, language);
             out.write("<title>" + basePage.getAppName() + " Main Page</title>\n");
             out.write("    <script src=\"script.js\" type=\"text/javascript\">\n");
             out.write("    </script>\n");
             out.write("</head>\n<body>\n");
+            out.write("<!--lang=\""     + language
+                    + "\", enc=\""      + encoding 
+                    + "\", format=\""   + format  
+                    + "\", grammar=\""  + grammar 
+                    + "\", infile=\""   + infile
+                    + "\", strat=\""    + strategy 
+                    + "\"-->\n");
             String[] optEnc    = new String []
                     /*  0 */ { "ISO-8859-1"
                     /*  1 */ , "UTF-8"
@@ -85,11 +91,11 @@ public class IndexPage implements Serializable {
                     /*  1 */ , "Text"
                     /*  2 */ , "Dictionary"
                     } ;
-            String[] optLang = new String []
+            String[] optGrammar = new String []
                     /*  0 */ { "de"
             //      /*  1 */ , "en"
                     } ;
-            String[] enLang = new String []
+            String[] enGrammar = new String []
                     /*  0 */ { "Deutsch"
             //      /*  1 */ , "English"
                     } ;
@@ -105,8 +111,6 @@ public class IndexPage implements Serializable {
                     } ;
             int index = 0;
 
-            out.write("<!-- format=\"" + format + "\", language=\"" + language + "\", encoding=\""
-                    + encoding + "\", strategy=\"" + strategy + ", infile=\"" + infile + " -->\n");
             out.write("    <h2>GramWord</h2>\n");
             out.write("    <p><strong>GramWord</strong> is a Java package which uses a relational\n");
             out.write("    (MySql) database\n");
@@ -140,73 +144,75 @@ public class IndexPage implements Serializable {
             out.write("Herzensfreude <span class=\"Av\" morph=\"ModlAnct\">darob</span>, <span class=\"Pr\" morph=\"Prim\">mit</span> <span class=\"Ir\" morph=\"Prim\">wie</span> <span class=\"Nm\" morph=\"PersSurn\">gro&#xdf;er</span> <span class=\"Sb\" morph=\"SgFm\">Leichtigkeit</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Vb\" morph=\"SIn0\">sein</span>\n");
             out.write("<span class=\"Aj\" morph=\"XP\">l&#xf6;bliches</span> <span class=\"Vb\" morph=\"RtWeak\">Vorhaben</span> <span class=\"Vb\" morph=\"SCt93\">auszuf&#xfc;hren</span> <span class=\"Vb\" morph=\"SPa0\">begonnen</span>.\n");
             out.write("</blockquote>\n");
-            out.write("    <form action=\"servlet\" method=\"POST\" enctype=\"multipart/form-data\">\n");
-            out.write("        <input type = \"hidden\" name=\"view\" value=\"grammar\" />\n");
-            out.write("        <br /><strong>Upload a text file:</strong><br />\n");
-            out.write("        <input name=\"infile\" type=\"file\" style=\"font-family: Courier, monospace\" ");
-            out.write("            maxsize=\"256\" size=\"80\" value=\"" + infile + "\" />\n");
-            out.write("        <br />&nbsp;\n");
-            out.write("        <table cellpadding=\"8\">\n");
-            out.write("            <tr valign=\"top\">\n");
-            out.write("                <td><strong>Source Encoding</strong><br />\n");
-            out.write("                    <select name=\"encoding\" size=\"" + optEnc.length  + "\">\n");
-                                           index = 0;
-                                           while (index < optEnc.length) {
-            out.write("                        <option value=\""
-                                                       + optEnc[index] + "\""
-                                                       + (optEnc[index].equals(encoding) ? " selected" : "")
-                                                       + ">"
-                                                       + enEnc[index] + "</option>\n");
-                                               index ++;
-                                           } // while index
+            out.write("<form action=\"servlet\" method=\"POST\" enctype=\"multipart/form-data\">\n");
+            out.write("    <input type = \"hidden\" name=\"view\" value=\"simple\" />\n");
+            out.write("    <table cellpadding=\"4\" border=\"0\">\n");
+            out.write("        <tr valign=\"top\">\n");
+            out.write("           <td colspan=\"5\"><strong>Source file to be uploaded: </strong>");
+            out.write("               <input name=\"infile\" type=\"file\" style=\"font-family: Courier, monospace\" ");
+            out.write("                       maxsize=\"256\" size=\"80\" value=\"" + infile + "\" />\n");
+            out.write("           </td>\n");
+            out.write("        </tr>\n");
+            out.write("        <tr valign=\"top\">\n");
+            out.write("            <td><strong>Source<br />Encoding</strong><br />\n");
+            out.write("                <select name=\"enc\" size=\"" + optEnc.length  + "\">\n");
+                                       index = 0;
+                                       while (index < optEnc.length) {
+            out.write("                    <option value=\""
+                                                   + optEnc[index] + "\""
+                                                   + (optEnc[index].equals(encoding) ? " selected" : "")
+                                                   + ">"
+                                                   + enEnc[index] + "</option>\n");
+                                           index ++;
+                                       } // while index
 
-            out.write("                    </select>\n");
-            out.write("                </td>\n");
-            out.write("                <td><strong>Format</strong><br />\n");
-            out.write("                    <select name=\"format\" size=\"" + optFormat.length + "\">\n");
-                                           index = 0;
-                                           while (index < optFormat.length) {
-            out.write("                        <option value=\""
-                                                       + optFormat[index] + "\""
-                                                       + (optFormat[index].equals(format) ? " selected" : "")
-                                                       + ">"
-                                                       + enFormat[index] + "</option>\n");
-                                               index ++;
-                                           } // while index
-            out.write("                    </select>\n");
-            out.write("                </td>\n");
-            out.write("                <td><strong>Language</strong><br />\n");
-            out.write("                    <select name=\"language\" size=\""+ optLang.length + "\">\n");
-                                           index = 0;
-                                           while (index < optLang.length) {
-            out.write("                        <option value=\""
-                                                       + optLang[index] + "\""
-                                                       + (optLang[index].equals(language) ? " selected" : "")
-                                                       + ">"
-                                                       + enLang[index] + "</option>\n");
-                                               index ++;
-                                           } // while index
-            out.write("                    </select>\n");
-            out.write("                </td>\n");
-            out.write("                <td><strong>Strategy</strong><br />\n");
-            out.write("                    <select name=\"strategy\" size=\"" + optStrat.length + "\">\n");
-                                           index = 0;
-                                           while (index < optStrat.length) {
-            out.write("                        <option value=\""
-                                                       + optStrat[index] + "\""
-                                                       + (optStrat[index].equals(strategy) ? " selected" : "")
-                                                       + ">"
-                                                       + enStrat[index] + "</option>\n");
-                                               index ++;
-                                           } // while index
-            out.write("                    </select>\n");
-            out.write("                </td>\n");
-            out.write("                <td><input type=\"submit\" value=\"Submit\" /></td>\n");
-            out.write("            </tr>\n");
-            out.write("        </table>\n");
-            out.write("    </form>\n");
+            out.write("                </select>\n");
+            out.write("            </td>\n");
+            out.write("            <td><strong>Target<br />Format</strong><br />\n");
+            out.write("                <select name=\"format\" size=\"" + optFormat.length + "\">\n");
+                                       index = 0;
+                                       while (index < optFormat.length) {
+            out.write("                    <option value=\""
+                                                   + optFormat[index] + "\""
+                                                   + (optFormat[index].equals(format) ? " selected" : "")
+                                                   + ">"
+                                                   + enFormat[index] + "</option>\n");
+                                           index ++;
+                                       } // while index
+            out.write("                </select>\n");
+            out.write("            </td>\n");
+            out.write("            <td><strong>Source<br />Grammar</strong><br />\n");
+            out.write("                <select name=\"grammar\" size=\""+ optGrammar.length + "\">\n");
+                                       index = 0;
+                                       while (index < optGrammar.length) {
+            out.write("                    <option value=\""
+                                                   + optGrammar[index] + "\""
+                                                   + (optGrammar[index].equals(language) ? " selected" : "")
+                                                   + ">"
+                                                   + enGrammar[index] + "</option>\n");
+                                           index ++;
+                                       } // while index
+            out.write("                </select>\n");
+            out.write("            </td>\n");
+            out.write("            <td><strong>Strategy</strong><br />\n");
+            out.write("                <select name=\"strat\" size=\"" + optStrat.length + "\">\n");
+                                       index = 0;
+                                       while (index < optStrat.length) {
+            out.write("                    <option value=\""
+                                                   + optStrat[index] + "\""
+                                                   + (optStrat[index].equals(strategy) ? " selected" : "")
+                                                   + ">"
+                                                   + enStrat[index] + "</option>\n");
+                                           index ++;
+                                       } // while index
+            out.write("                </select>\n");
+            out.write("            </td>\n");
+            out.write("            <td><input type=\"submit\" value=\"Submit\" /></td>\n");
+            out.write("        </tr>\n");
+            out.write("    </table>\n");
+            out.write("</form>\n");
 
-            basePage.writeAuxiliaryLinks(lang, "main");
+            basePage.writeAuxiliaryLinks(language, "main");
 
             out.write("<h4>Applications of <em>QueueTransformer</em></h4>\n");
             out.write("<table border=\"0\">\n");
@@ -221,7 +227,7 @@ public class IndexPage implements Serializable {
             out.write("        <a href=\"queue.html\">green</a> uppercase words, and with <a href=\"wordtype.html\">colored word types</a>.</td></tr>\n");
             out.write("</table>\n");
 
-            basePage.writeTrailer(lang, "quest");
+            basePage.writeTrailer(language, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }

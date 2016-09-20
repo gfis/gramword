@@ -3,7 +3,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%--
     @(#) $Id$
-    2016-09-19, Georg Fischer
+    2016-09-20, Georg Fischer
 --%>
 <%@page isErrorPage="true" contentType="text/html"%>
 <%@page import="java.io.PrintWriter"%>
@@ -32,8 +32,10 @@
 </head>
 <body>
 <h4>Message</h4>
+<p>${exception.message}</p>
+<!--
 <%= exception.getMessage() %>
-
+-->
 <h4>StackTrace</h4>
 <pre>
 <% exception.printStackTrace(response.getWriter()); %>

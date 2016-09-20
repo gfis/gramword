@@ -1,6 +1,6 @@
-/*  GrammarPage.java - main web page for GramWord
+/*  SimpleTypePage.java - main web page for GramWord
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
- *  2016-09-19, Dr. Georg Fischer: adopted from xslTrans.jsp
+ *  2016-09-20, Dr. Georg Fischer: former GrammarPage.java
  */
 /*
  * Copyright 2016 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -18,8 +18,7 @@
  * limitations under the License.
  */
 package org.teherba.gramword.web;
-import  org.teherba.gramword.filter.GrammarFilter;
-import  org.teherba.gramword.filter.WordTypeFilter;
+import  org.teherba.gramword.handler.GrammarHandler;
 import  org.teherba.common.web.BasePage;
 import  java.io.PrintWriter;
 import  java.io.StringReader;
@@ -33,7 +32,7 @@ import  org.apache.log4j.Logger;
 /** Xtrans main dialog page
  *  @author Dr. Georg Fischer
  */
-public class GrammarPage implements Serializable {
+public class SimpleTypePage implements Serializable {
     public final static String CVSID = "@(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $";
     public final static long serialVersionUID = 19470629;
 
@@ -42,8 +41,8 @@ public class GrammarPage implements Serializable {
 
     /** No-args Constructor
      */
-    public GrammarPage() {
-        log = Logger.getLogger(GrammarPage.class.getName());
+    public SimpleTypePage() {
+        log = Logger.getLogger(SimpleTypePage.class.getName());
     } // Constructor
 
     /** Output the main dialog page for Xtrans
@@ -56,28 +55,27 @@ public class GrammarPage implements Serializable {
             ) {
         try {
             FileItem fileItem = basePage.getFormFile(0);
-            String language = basePage.getFormField("language"  );
+            String encoding = basePage.getFormField("enc"       );
             String format   = basePage.getFormField("format"    );
-            String encoding = basePage.getFormField("encoding"  );
-            String strategy = basePage.getFormField("strategy"  );
+            String grammar  = basePage.getFormField("grammar"   );
+            String language = basePage.getFormField("lang"      );
+            String strategy = basePage.getFormField("strat"     );
             response.setHeader("Content-Disposition", "inline; filename=\""
                     + fileItem.getName() + ".xml\"");
 
             PrintWriter out = basePage.writeHeader(request, response, language);
             out.write("<title>" + basePage.getAppName() + " Main Page</title>\n");
             out.write("</head>\n<body>\n");
-            GrammarFilter filter = new GrammarFilter();
-            // WordTypeFilter filter = new WordTypeFilter();
-            // filter.initialize();
-            filter.getOptions(new String []
-                { "-l", language
+            GrammarHandler handler = new GrammarHandler();
+            handler.getOptions(new String []
+                { "-l", grammar
                 , "-m", format
                 , "-e", encoding
                 , "-s", strategy
                 });
-            filter.setReader(new StringReader(fileItem.getString(encoding)));
-            filter.setWriter(out);
-            filter.process(new String[] { fileItem.getName() });
+            handler.setReader(new StringReader(fileItem.getString(encoding)));
+            handler.setWriter(out);
+            handler.process(new String[] { fileItem.getName() });
             basePage.writeTrailer(language, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
@@ -242,8 +240,8 @@ public class GrammarPage implements Serializable {
      *  @param args language code: "en", "de"
      */
     public static void main(String[] args) {
-        GrammarPage help = new GrammarPage();
+        SimpleTypePage help = new SimpleTypePage();
         System.out.println("no messages");
     } // main
 
-} // GrammarPage
+} // SimpleTypePage

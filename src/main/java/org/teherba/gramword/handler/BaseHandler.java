@@ -1,5 +1,5 @@
-/*  Superclass for all types of word filters
- *   @(#) $Id: BaseFilter.java 36 2008-09-08 06:05:06Z gfis $
+/*  Superclass for all types of word handlers
+ *   @(#) $Id: BaseHandler.java 36 2008-09-08 06:05:06Z gfis $
  *   2016-09-19: old package was gramword.filters; default input encoding was ISO-8859-1
  *   2008-02-13: Java 1.5 types
  *   2007-02-21: copied from GrammarFilter
@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword.filter;
+package org.teherba.gramword.handler;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemTester;
 import  java.io.FileInputStream;
@@ -45,8 +45,8 @@ import  org.apache.log4j.Logger;
 /** Superclass for all types of word filters
  *  @author Dr. Georg Fischer
  */
-public class BaseFilter extends DefaultHandler2 {
-    public final static String CVSID = "@(#) $Id: BaseFilter.java 36 2008-09-08 06:05:06Z gfis $";
+public class BaseHandler extends DefaultHandler2 {
+    public final static String CVSID = "@(#) $Id: BaseHandler.java 36 2008-09-08 06:05:06Z gfis $";
 
     /** Newline string (CR+LF for Windows, LF for Unix) */
     protected String nl;
@@ -96,8 +96,8 @@ public class BaseFilter extends DefaultHandler2 {
 
     /** No-args Constructor
      */
-    public BaseFilter() {
-        log = Logger.getLogger(BaseFilter.class.getName());
+    public BaseHandler() {
+        log = Logger.getLogger(BaseHandler.class.getName());
         nl  = System.getProperty("line.separator");
         sentenceTerminator  = Pattern.compile("[\\.\\:\\!\\?\\»]");
         wordBoundary        = Pattern.compile("\\b");
@@ -149,7 +149,7 @@ public class BaseFilter extends DefaultHandler2 {
     /** Evaluates the arguments of the command line, and processes them.
      *  @param args Arguments; if missing, print the following:
      *  <pre>
-     *  usage:\tjava org.teherba.gramword.BaseFilter [-e encoding] [-l iso] [-m mode] [-s strategy] file
+     *  usage:\tjava org.teherba.gramword.BaseHandler [-e encoding] [-l iso] [-m mode] [-s strategy] file
      *  -e  UTF-8 (default), ISO-8859-1 : input encoding
      *  -l  de (default) : source language
      *  -m  html (default) | text | dict : output mode
@@ -160,7 +160,7 @@ public class BaseFilter extends DefaultHandler2 {
         try {
             int iarg = 0;
             if (iarg >= args.length) { // usage, with known ISO codes and languages
-                System.err.println("usage:\tjava org.teherba.gramword.filter.BaseFilter "
+                System.err.println("usage:\tjava org.teherba.gramword.handler.BaseHandler "
                         + " [-e encoding] [-l iso] [-m mode] [-s strategy] [infile [outfile]]");
                 System.out.println("  -e UTF-8 (default) | ISO-8859-1 : source encoding ");
                 System.out.println("  -l source language code (default 'de')");
@@ -222,7 +222,7 @@ public class BaseFilter extends DefaultHandler2 {
     public boolean serialize() {
         boolean result = true;
         if (handler == null) {
-            log.error("BaseFilter.serialize - not implemented");
+            log.error("BaseHandler.serialize - not implemented");
             result = false;
         } else {
             try {
@@ -236,4 +236,4 @@ public class BaseFilter extends DefaultHandler2 {
         return result;
     } // serialize
 
-} // BaseFilter
+} // BaseHandler
