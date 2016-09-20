@@ -3,7 +3,7 @@
 <head><link rel="stylesheet" title="all"    type="text/css" href="stylesheet.css" /><link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   /><link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" /><link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   /><link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   /><script type="text/javascript" src="/style.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body><table><tr><th width="85%" align="left">Colored Word Types</th><th align="left">Morphem Codes</th></tr><tr><td>
+<body><table><tr><th width="85%" align="left">Colored Word Types</th><th align="left">Morphem Codes</th></tr><tr><td><em>Move the mouse over the highlighted words:</em><br />
 
 <span class="Pr" morph="">Nachdem</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Aj" morph="Qant">alle</span> <span class="Aj" morph="Qant">diese</span> <span class="Sb" morph="Pl">Vorkehrungen</span> <span class="Vb" morph="SPa0">getroffen</span>, <span class="Vb" morph="SIp11">wollte</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Un" morph="">nicht</span>
 <span class="Aj" morph="Cmpr">länger</span> <span class="Vb" morph="SIn0">warten</span>, <span class="Vb" morph="SIn0">sein</span> <span class="Vb" morph="SCs93">Vorhaben</span> <span class="Pr" morph="Shor">ins</span> <span class="Sb" morph="SgNt">Werk</span> <span class="Pr" morph="Prim">zu</span> setzen; <span class="Pn" morph="SgPersNomvNt3">es</span> drängte <span class="Pn" morph="SgPersAccv3Ms">ihn</span>

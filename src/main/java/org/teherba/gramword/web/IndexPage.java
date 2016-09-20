@@ -18,7 +18,8 @@
  * limitations under the License.
  */
 package org.teherba.gramword.web;
-import  org.teherba.gramword.GrammarFilter;
+import  org.teherba.gramword.filter.GrammarFilter;
+import  org.teherba.gramword.filter.WordTypeFilter;
 import  org.teherba.common.web.BasePage;
 import  java.io.PrintWriter;
 import  java.io.StringReader;
@@ -54,29 +55,173 @@ public class IndexPage implements Serializable {
             , BasePage basePage
             ) {
         try {
+            String format     = basePage.getFormField("format"   );
+            String lang       = basePage.getFormField("lang"     );
+            String language   = basePage.getFormField("language" );
+            String encoding   = basePage.getFormField("encoding" );
+            String strategy   = basePage.getFormField("strategy" );
+            String infile     = basePage.getFormField("infile"   );
+            PrintWriter out = basePage.writeHeader(request, response, lang);
             FileItem fileItem = basePage.getFormFile(0);
-            String language = basePage.getFormField("language"  );
-            String format   = basePage.getFormField("format"    );
-            String encoding = basePage.getFormField("encoding"  );
-            String strategy = basePage.getFormField("strategy"  );
-            response.setHeader("Content-Disposition", "inline; filename=\""
-                    + fileItem.getName() + ".xml\"");
-
-            PrintWriter out = basePage.writeHeader(request, response, language);
             out.write("<title>" + basePage.getAppName() + " Main Page</title>\n");
+            out.write("    <script src=\"script.js\" type=\"text/javascript\">\n");
+            out.write("    </script>\n");
             out.write("</head>\n<body>\n");
-            GrammarFilter filter = new GrammarFilter();
-           // System.out.println("GrammarServlet.startFilter");
-            filter.getOptions(new String []
-                { "-l", language
-                , "-m", format
-                , "-e", encoding
-                , "-s", strategy
-                });
-            filter.setReader(new StringReader(fileItem.getString(encoding)));
-            filter.setWriter(out);
-            filter.process(new String[] { fileItem.getName() });
-            basePage.writeTrailer(language, "quest");
+            String[] optEnc    = new String []
+                    /*  0 */ { "ISO-8859-1"
+                    /*  1 */ , "UTF-8"
+                    } ;
+            String[] enEnc    = new String []
+                    /*  0 */ { "ISO-8859-1"
+                    /*  1 */ , "UTF-8"
+                    } ;
+            String[] optFormat = new String []
+                    /*  0 */ { "html"
+                    /*  1 */ , "text"
+                    /*  2 */ , "dict"
+                    } ;
+            String[] enFormat = new String []
+                    /*  0 */ { "HTML"
+                    /*  1 */ , "Text"
+                    /*  2 */ , "Dictionary"
+                    } ;
+            String[] optLang = new String []
+                    /*  0 */ { "de"
+            //      /*  1 */ , "en"
+                    } ;
+            String[] enLang = new String []
+                    /*  0 */ { "Deutsch"
+            //      /*  1 */ , "English"
+                    } ;
+            String[] optStrat  = new String []
+                    /*  0 */ { "all"
+                    /*  1 */ , "prsplit"
+                    /*  2 */ , "sasplit"
+                    } ;
+            String[] enStrat  = new String []
+                    /*  0 */ { "all"
+                    /*  1 */ , "prsplit"
+                    /*  2 */ , "sasplit"
+                    } ;
+            int index = 0;
+
+            out.write("<!-- format=\"" + format + "\", language=\"" + language + "\", encoding=\""
+                    + encoding + "\", strategy=\"" + strategy + ", infile=\"" + infile + " -->\n");
+            out.write("    <h2>GramWord</h2>\n");
+            out.write("    <p><strong>GramWord</strong> is a Java package which uses a relational\n");
+            out.write("    (MySql) database\n");
+            out.write("    to recognize a limited set of German words.\n");
+            out.write("    </p><p>\n");
+            out.write("    Sets of common words, names,\n");
+            out.write("    roots and endings of verbs, substantives, adjectives and adverbs,\n");
+            out.write("    together with their grammatical type and conjugation/declination\n");
+            out.write("    are preloaded from dictionary files into database tables.\n");
+            out.write("    </p><p>\n");
+            out.write("    Several decision algorithms use these tables to determine the\n");
+            out.write("    grammatical type of the words in a text. In the HTML output,\n");
+            out.write("    the recognized words are shown in different colors.\n");
+            out.write("    </p>\n");
+            out.write("    <strong>Short Example</strong> (sentence from \"Don Quijote\")\n");
+            out.write("<blockquote>\n");
+            out.write("<span class=\"Pr\" morph=\"\">Nachdem</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Aj\" morph=\"Qant\">alle</span> <span class=\"Aj\" morph=\"Qant\">diese</span> <span class=\"Sb\" morph=\"Pl\">Vorkehrungen</span> <span class=\"Vb\" morph=\"SPa0\">getroffen</span>, <span class=\"Vb\" morph=\"SIp11\">wollte</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Un\" morph=\"\">nicht</span>\n");
+            out.write("<span class=\"Aj\" morph=\"Cmpr\">l&#xe4;nger</span> <span class=\"Vb\" morph=\"SIn0\">warten</span>, <span class=\"Vb\" morph=\"SIn0\">sein</span> <span class=\"Vb\" morph=\"RtWeak\">Vorhaben</span> <span class=\"Pr\" morph=\"Shor\">ins</span> <span class=\"Sb\" morph=\"SgNt\">Werk</span> <span class=\"Pr\" morph=\"Prim\">zu</span> <span class=\"Vb\" morph=\"RtWeak\">setzen</span>; <span class=\"Pn\" morph=\"SgPersNomvNt3\">es</span> dr&#xe4;ngte <span class=\"Pn\" morph=\"SgPersAccv3Ms\">ihn</span>\n");
+            out.write("<span class=\"Av\" morph=\"\">dazu</span> <span class=\"Ar\" morph=\"DetmNomvSgMs\">der</span> <span class=\"Sb\" morph=\"SgMs\">Gedanke</span> <span class=\"Pr\" morph=\"Prim\">an</span> <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Sb\" morph=\"SgFm\">Entbehrung</span>, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Sb\" morph=\"SgFm\">Welt</span> <span class=\"Pr\" morph=\"\">durch</span> <span class=\"Vb\" morph=\"SIn0\">sein</span>\n");
+            out.write("<span class=\"Vb\" morph=\"RtWeak\">Z&#xf6;gern</span> <span class=\"Vb\" morph=\"SCs13\">erleide</span>, derart <span class=\"Vb\" morph=\"SIp91\">waren</span> <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> Unbilden, <span class=\"Pn\" morph=\"Relt\">denen</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Pr\" morph=\"Prim\">zu</span> <span class=\"Vb\" morph=\"RtWeak\">steuern</span>,\n");
+            out.write("<span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Sb\" morph=\"Pl\">Ungerechtigkeiten</span>, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Vb\" morph=\"SCs93\">zurechtzubringen</span>, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> Ungeb&#xfc;hr,\n");
+            out.write("<span class=\"Ar\" morph=\"DetmNomvSgMs\">der</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Vb\" morph=\"SCs93\">abzuhelfen</span>, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> Mi&#xdf;br&#xe4;uche, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> wiedergutzumachen,\n");
+            out.write("<span class=\"Aj\" morph=\"Root\">kurz</span>, <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> <span class=\"Sb\" morph=\"Pl\">Pflichten</span>, <span class=\"Pn\" morph=\"Relt\">denen</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Pr\" morph=\"Prim\">zu</span> <span class=\"Vb\" morph=\"RtWeak\">gen&#xfc;gen</span> <span class=\"Vb\" morph=\"SIp13\">gedachte</span>. <span class=\"Cj\" morph=\"\">Und</span> <span class=\"Un\" morph=\"\">so</span>, <span class=\"Un\" morph=\"\">ohne</span>\n");
+            out.write("irgendeinem <span class=\"Pr\" morph=\"Prim\">von</span> <span class=\"Pn\" morph=\"SgPersGenv3Ms\">seiner</span> Absicht <span class=\"Sb\" morph=\"SgFm\">Kunde</span> <span class=\"Pr\" morph=\"Prim\">zu</span> <span class=\"Vb\" morph=\"SIn0\">geben</span> <span class=\"Cj\" morph=\"\">und</span> <span class=\"Un\" morph=\"\">ohne</span> <span class=\"Cj\" morph=\"\">da&#xdf;</span>\n");
+            out.write("<span class=\"Pn\" morph=\"UndtNomv\">jemand</span> <span class=\"Pn\" morph=\"SgPersAccv3Ms\">ihn</span> <span class=\"Vb\" morph=\"SIp11\">sah</span>, bewehrte <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Pn\" morph=\"ReflSg3\">sich</span> <span class=\"Ar\" morph=\"UndtGenvSgMs\">eines</span> <span class=\"Nm\" morph=\"PersSurn\">Morgens</span> <span class=\"Pr\" morph=\"Prim\">vor</span> Anbruch <span class=\"Ar\" morph=\"DetmGenvSgMs\">des</span>\n");
+            out.write("<span class=\"Sb\" morph=\"SgGe\">Tages</span> - <span class=\"Pn\" morph=\"SgPersNomvNt3\">es</span> <span class=\"Vb\" morph=\"SIp11\">war</span> <span class=\"Ar\" morph=\"UndtGenvSgFm\">einer</span> <span class=\"Ar\" morph=\"DetmNomvSgMs\">der</span> <span class=\"Vb\" morph=\"SIn0\">hei&#xdf;en</span> Julitage - <span class=\"Pr\" morph=\"Prim\">mit</span> <span class=\"Pn\" morph=\"SgPersGenv3Ms\">seiner</span> <span class=\"Aj\" morph=\"Qant\">ganzen</span>\n");
+            out.write("<span class=\"Sb\" morph=\"SgFm\">R&#xfc;stung</span>, <span class=\"Vb\" morph=\"SIp11\">stieg</span> <span class=\"Pr\" morph=\"Prim\">auf</span> <span class=\"Ar\" morph=\"DetmDatvPl\">den</span> <span class=\"Nm\" morph=\"FmZool\">Rosinante</span>, <span class=\"Pr\" morph=\"\">nachdem</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Pn\" morph=\"SgPossDatvPl3\">seinen</span>\n");
+            out.write("zusammengeflickten Turnierhelm aufgesetzt, fa&#xdf;te <span class=\"Pn\" morph=\"SgPossNomvFm3\">seine</span> <span class=\"Sb\" morph=\"SgFm\">Tartsche</span>\n");
+            out.write("<span class=\"Pr\" morph=\"Prim\">in</span> <span class=\"Ar\" morph=\"DetmDatvPl\">den</span> <span class=\"Sb\" morph=\"SgMsBody\">Arm</span>, <span class=\"Vb\" morph=\"SIp11\">nahm</span> <span class=\"Pn\" morph=\"SgPossDatvPl3\">seinen</span> <span class=\"Sb\" morph=\"SgMs\">Speer</span> <span class=\"Cj\" morph=\"\">und</span> <span class=\"Vb\" morph=\"SIp11\">zog</span> <span class=\"Pr\" morph=\"\">durch</span> <span class=\"Ar\" morph=\"DetmNomvSgFm\">die</span> Hinterpforte\n");
+            out.write("<span class=\"Pn\" morph=\"SgPossGenvMs3\">seines</span> <span class=\"Sb\" morph=\"SgGe\">Hofes</span> <span class=\"Pr\" morph=\"\">hinaus</span> <span class=\"Pr\" morph=\"Shor\">aufs</span> <span class=\"Sb\" morph=\"SgNt\">Feld</span>, <span class=\"Pr\" morph=\"Prim\">mit</span> <span class=\"Aj\" morph=\"XC\">gewaltiger</span> <span class=\"Sb\" morph=\"SgFm\">Befriedigung</span> <span class=\"Cj\" morph=\"\">und</span>\n");
+            out.write("Herzensfreude <span class=\"Av\" morph=\"ModlAnct\">darob</span>, <span class=\"Pr\" morph=\"Prim\">mit</span> <span class=\"Ir\" morph=\"Prim\">wie</span> <span class=\"Nm\" morph=\"PersSurn\">gro&#xdf;er</span> <span class=\"Sb\" morph=\"SgFm\">Leichtigkeit</span> <span class=\"Pn\" morph=\"SgPersNomvMs3\">er</span> <span class=\"Vb\" morph=\"SIn0\">sein</span>\n");
+            out.write("<span class=\"Aj\" morph=\"XP\">l&#xf6;bliches</span> <span class=\"Vb\" morph=\"RtWeak\">Vorhaben</span> <span class=\"Vb\" morph=\"SCt93\">auszuf&#xfc;hren</span> <span class=\"Vb\" morph=\"SPa0\">begonnen</span>.\n");
+            out.write("</blockquote>\n");
+            out.write("    <form action=\"servlet\" method=\"POST\" enctype=\"multipart/form-data\">\n");
+            out.write("        <input type = \"hidden\" name=\"view\" value=\"grammar\" />\n");
+            out.write("        <br /><strong>Upload a text file:</strong><br />\n");
+            out.write("        <input name=\"infile\" type=\"file\" style=\"font-family: Courier, monospace\" ");
+            out.write("            maxsize=\"256\" size=\"80\" value=\"" + infile + "\" />\n");
+            out.write("        <br />&nbsp;\n");
+            out.write("        <table cellpadding=\"8\">\n");
+            out.write("            <tr valign=\"top\">\n");
+            out.write("                <td><strong>Source Encoding</strong><br />\n");
+            out.write("                    <select name=\"encoding\" size=\"" + optEnc.length  + "\">\n");
+                                           index = 0;
+                                           while (index < optEnc.length) {
+            out.write("                        <option value=\""
+                                                       + optEnc[index] + "\""
+                                                       + (optEnc[index].equals(encoding) ? " selected" : "")
+                                                       + ">"
+                                                       + enEnc[index] + "</option>\n");
+                                               index ++;
+                                           } // while index
+
+            out.write("                    </select>\n");
+            out.write("                </td>\n");
+            out.write("                <td><strong>Format</strong><br />\n");
+            out.write("                    <select name=\"format\" size=\"" + optFormat.length + "\">\n");
+                                           index = 0;
+                                           while (index < optFormat.length) {
+            out.write("                        <option value=\""
+                                                       + optFormat[index] + "\""
+                                                       + (optFormat[index].equals(format) ? " selected" : "")
+                                                       + ">"
+                                                       + enFormat[index] + "</option>\n");
+                                               index ++;
+                                           } // while index
+            out.write("                    </select>\n");
+            out.write("                </td>\n");
+            out.write("                <td><strong>Language</strong><br />\n");
+            out.write("                    <select name=\"language\" size=\""+ optLang.length + "\">\n");
+                                           index = 0;
+                                           while (index < optLang.length) {
+            out.write("                        <option value=\""
+                                                       + optLang[index] + "\""
+                                                       + (optLang[index].equals(language) ? " selected" : "")
+                                                       + ">"
+                                                       + enLang[index] + "</option>\n");
+                                               index ++;
+                                           } // while index
+            out.write("                    </select>\n");
+            out.write("                </td>\n");
+            out.write("                <td><strong>Strategy</strong><br />\n");
+            out.write("                    <select name=\"strategy\" size=\"" + optStrat.length + "\">\n");
+                                           index = 0;
+                                           while (index < optStrat.length) {
+            out.write("                        <option value=\""
+                                                       + optStrat[index] + "\""
+                                                       + (optStrat[index].equals(strategy) ? " selected" : "")
+                                                       + ">"
+                                                       + enStrat[index] + "</option>\n");
+                                               index ++;
+                                           } // while index
+            out.write("                    </select>\n");
+            out.write("                </td>\n");
+            out.write("                <td><input type=\"submit\" value=\"Submit\" /></td>\n");
+            out.write("            </tr>\n");
+            out.write("        </table>\n");
+            out.write("    </form>\n");
+
+            basePage.writeAuxiliaryLinks(lang, "main");
+
+            out.write("<h4>Applications of <em>QueueTransformer</em></h4>\n");
+            out.write("<table border=\"0\">\n");
+            out.write("    <tr><td>bibleref:</td><td>Table of Luther's pericopes - <a href=\"bibleref/luther_perikope.htm\">(original)</a> and with\n");
+            out.write("        <a href=\"bibleref/luther_perikope.html\">autolinked</a> bible references</td></tr>\n");
+            out.write("    <tr><td>&nbsp;</td><td><a href=\"bibleref/wiki_perikope.htm\">Table of pericopes</a> from de.wikipedia -\n");
+            out.write("        <a href=\"bibleref/wiki_perikope.html\">autolinked</a></td></tr>\n");
+            out.write("    <tr><td>konto:</td><td>Autolinked German bank ids with <a href=\"konto.html\">check/correction</a>\n");
+            out.write("        of account numbers nearby</td></tr>\n");
+            out.write("    <tr><td>number:</td><td>Parsing of German number words in <a href=\"number.html\">Genesis 5</a></td></tr>\n");
+            out.write("    <tr><td>wordtype:</td><td>Don Quixote <a href=\"wordtype/quixote0.html\">(original)</a>, with\n");
+            out.write("        <a href=\"queue.html\">green</a> uppercase words, and with <a href=\"wordtype.html\">colored word types</a>.</td></tr>\n");
+            out.write("</table>\n");
+
+            basePage.writeTrailer(lang, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }

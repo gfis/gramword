@@ -38,17 +38,12 @@
     <!-- Servlets -->
     <servlet> 
         <servlet-name>Servlet</servlet-name>
-        <servlet-class>org.teherba.gramword.web.GrammarServlet</servlet-class>
+        <servlet-class>org.teherba.gramword.web.GramwordServlet</servlet-class>
     </servlet>
-
+   
     <servlet-mapping> 
         <servlet-name>Servlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
-    </servlet-mapping>
-    
-    <servlet-mapping> 
-        <servlet-name>Servlet</servlet-name>
-        <url-pattern>/grammarservlet</url-pattern>
     </servlet-mapping>
     
     <welcome-file-list>

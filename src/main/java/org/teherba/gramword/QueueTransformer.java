@@ -4,12 +4,12 @@
     (HTML tags, whitespace and punctuation).
     @(#) $Id: QueueTransformer.java 805 2011-09-20 06:41:22Z gfis $
     2016-09-11: javadoc
-	2010-07-05: initialize()
+    2010-07-05: initialize()
     2007-04-19: no 'generate'
     2007-02-21: copied from xtrans.LineTransformer
 */
 /*
- * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
+ * Copyright 2007 Dr. Georg Fischer <punctum at punctum dot kom>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,14 @@ import  org.teherba.gramword.MorphemTester;
 import  org.teherba.gramword.Segment;
 import  org.teherba.gramword.SegmentQueue;
 import  java.io.BufferedReader;
+import  java.io.FileInputStream;
+import  java.io.FileOutputStream;
+import  java.io.Reader;
+import  java.io.PrintWriter;
+import  java.nio.channels.Channels;
+import  java.nio.channels.ReadableByteChannel;
+import  java.nio.channels.WritableByteChannel;
 import  java.util.TreeMap;
-import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
 import  org.xml.sax.SAXParseException;
 import  org.apache.log4j.Logger;
@@ -39,7 +45,7 @@ import  org.apache.log4j.Logger;
 /** (Pseudo-abstract) superclass for XHTML filters which perform some 
  *  modification (coloring, linking and the like) based on
  *  the local analysis of several queue elements.
- *	The queue contains words and numbers, which are surrounded by "glue"
+ *  The queue contains words and numbers, which are surrounded by "glue"
  *  (HTML tags, whitespace and punctuation).
  *  @author Dr. Georg Fischer
  */
@@ -67,11 +73,21 @@ public class QueueTransformer extends CharTransformer {
     /** Classificator used to determine morphologies of words */
     protected MorphemTester tester;
     /** Stores the occurrences of various morphem */
-    protected TreeMap/*<1.5*/<String, Integer>/*1.5>*/ morphCounts;
-    /** Strategy to be used to classify the words */
-    protected String strategy;
+    protected TreeMap<String, Integer> morphCounts;
     /** Index of segment where to start checking; doesn't matter, look only at 1 segment */
     protected int segmentPivot;
+    /** Reader for the input file */
+    protected Reader reader;
+    /** Writer for the output file (maybe set by servlet) */
+    protected PrintWriter writer;
+    /** Output format */
+    protected String mode;
+    /** Natural language of the input text */
+    protected String language;
+    /** Encoding of the input file */
+    protected String encoding;
+    /** Strategy to be used to classify the words */
+    protected String strategy;
     
     /** Constructor.
      */
@@ -82,22 +98,25 @@ public class QueueTransformer extends CharTransformer {
         setFileExtensions("html");
     } // Constructor()
     
-	/** Initializes the (quasi-constant) global structures and variables
-	 *  common to generator and serializer.
-	 *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
-	 *  selected generator and serializer.
-	 */
-	public void initialize() {
-		super.initialize();
+    /** Initializes the (quasi-constant) global structures and variables
+     *  common to generator and serializer.
+     *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
+     *  selected generator and serializer.
+     */
+    public void initialize() {
+        super.initialize();
         log = Logger.getLogger(QueueTransformer.class.getName());
         cntWords        = 0;
         cntKnown        = 0;
+        morphCounts     = new TreeMap<String, Integer>();
         strategy        = getOption("strat", "all");    // default: apply all tests
-        morphCounts     = new TreeMap/*<1.5*/<String, Integer>/*1.5>*/();
         tester          = new MorphemTester(strategy);
-		segmentPivot 	= -4;
-	} // initialize
-	
+        segmentPivot    = -4;
+        mode            = "html";   // default output mode
+        language        = "de";     // default source language
+        encoding        = "UTF-8";  // default input encoding (output is always in UTF-8)
+     } // initialize
+    
    /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
@@ -170,12 +189,73 @@ public class QueueTransformer extends CharTransformer {
         charWriter.print(queue.add(segment));
     } // enqueue
 
-	/** Tests for &lt;head&gt; and &lt;body&gt; tags, and inserts 
-	 *	the stylesheet links and table cells for the statistics on word types.
-	 *	@param qName qualified tag name from the SAX parser
-	 *	@param title title of the page
-	 */
-	protected void insertStylesheet(String qName, String title) {
+    /** Evaluates the arguments of the command line, and processes them.
+     *  @param args Arguments; if missing, print the following:
+     *  <pre>
+     *  usage:\tjava org.teherba.gramword.BaseFilter [-e encoding] [-l iso] [-m mode] [-s strategy] file
+     *  -e  UTF-8 (default), ISO-8859-1 : input encoding
+     *  -l  de (default) : source language
+     *  -m  html (default) | text | dict : output mode
+     *  -s  all (default) | prsplit | sasplit : strategy for word recognition
+     *  </pre>
+     */
+    public void getOptions(String args[]) {
+        try {
+            int iarg = 0;
+            if (iarg >= args.length) { // usage, with known ISO codes and languages
+                System.err.println("usage:\tjava org.teherba.gramword.filter.BaseFilter "
+                        + " [-e encoding] [-l iso] [-m mode] [-s strategy] [infile [outfile]]");
+                System.out.println("  -e UTF-8 (default) | ISO-8859-1 : source encoding ");
+                System.out.println("  -l source language code (default 'de')");
+                System.out.println("  -m html(default) | text | dict : output mode ");
+                System.out.println("  -s all (default) | prsplit | sasplit : strategy for word recognition");
+            } else { // >= 1 argument
+
+                // get all options
+                while (iarg < args.length && args[iarg].startsWith("-")) {
+                    String option = args[iarg ++].substring(1);
+                    if (false) {
+                    } else if (option.startsWith("e")) {
+                        if (iarg < args.length) {
+                            encoding = args[iarg ++];
+                        }
+                    } else if (option.startsWith("l")) {
+                        if (iarg < args.length) {
+                            language = args[iarg ++];
+                        }
+                    } else if (option.startsWith("m")) {
+                        if (iarg < args.length) {
+                            mode = args[iarg ++];
+                        }
+                    } else if (option.startsWith("s")) {
+                        if (iarg < args.length) {
+                            strategy = args[iarg ++];
+                        }
+                    }
+                } // while options
+
+                if (iarg < args.length) { // with 1 or 2 additional (filename) arguments
+                    ReadableByteChannel source = iarg < args.length
+                            ? (new FileInputStream (args[iarg ++])).getChannel()
+                            : Channels.newChannel(System.in);
+                    WritableByteChannel target = iarg < args.length
+                            ? (new FileOutputStream (args[iarg ++])).getChannel()
+                            : Channels.newChannel(System.out);
+                    reader = new BufferedReader(Channels.newReader(source, encoding));
+                    writer = new PrintWriter   (Channels.newWriter(target, "UTF-8"));
+                }
+            } // args.length >= 1
+        } catch (Exception exc) {
+            log.error(exc.getMessage(), exc);
+        }
+    } // getOptions
+
+    /** Tests for &lt;head&gt; and &lt;body&gt; tags, and inserts 
+     *  the stylesheet links and table cells for the statistics on word types.
+     *  @param qName qualified tag name from the SAX parser
+     *  @param title title of the page
+     */
+    protected void insertStylesheet(String qName, String title) {
         if (false) {
         } else if (qName.equals(BODY_TAG    )) { 
             // insert <table> start
@@ -198,10 +278,10 @@ public class QueueTransformer extends CharTransformer {
             + "<script type=\"text/javascript\" src=\"" + path + "/style.js\"></script>"
             );
         }
-	} // insertStylesheet
-	
+    } // insertStylesheet
+    
     /** Receive notification of the beginning of the document.
-     *	Initializes the queue.
+     *  Initializes the queue.
      */
     public void startDocument() {
         fireStartDocument();
@@ -215,7 +295,7 @@ public class QueueTransformer extends CharTransformer {
     } // startDocument
     
     /** Receive notification of the end of the document.
-     *	Flushes the queue.
+     *  Flushes the queue.
      */
     public void endDocument() {
         int size = queue.getSize();
@@ -275,11 +355,11 @@ public class QueueTransformer extends CharTransformer {
     } // endElement
     
     /** Receive notification of character data inside an element.
-     *	The method generates a new segment for each word (consisting of
-     *	letters only), and for each number (consisting of digits only).
-     *	Whitespace and punctuation is appended to the previous segment.
-     *	HTML tags are placed around queue elements such that they
-     *	can still be wrapped into outer HTML elements.
+     *  The method generates a new segment for each word (consisting of
+     *  letters only), and for each number (consisting of digits only).
+     *  Whitespace and punctuation is appended to the previous segment.
+     *  HTML tags are placed around queue elements such that they
+     *  can still be wrapped into outer HTML elements.
      *  @param ch the characters.
      *  @param start the start position in the character array.
      *  @param length the number of characters to use from the character array. 

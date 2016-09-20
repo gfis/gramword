@@ -1,4 +1,4 @@
-usage:	java org.teherba.gramword.MainFilter  [-enc1 srcenc [-enc2 tarenc]] [-nsp namespace] [-informat|-xml] [-xml|-outformat] [infile [outfile]]
+usage:	java org.teherba.gramword.MainFilter  [-enc1 srcenc [-enc2 tarenc]] [-nsp namespace] [-xml] [-outformat] [infile [outfile]]
     xml        XML (eXtensible Markup Language)
     queue      Test for subclasses of QueueTransformer
     bibleref   Links bible references to online bibles

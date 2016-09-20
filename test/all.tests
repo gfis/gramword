@@ -7,23 +7,25 @@
 # Caution:
 #
 #======================================================================
-PACKAGE=org.teherba.gramword
+PACKAGE=org.teherba.gramword.filter
 
 ECHO 000
 
 TEST GF01 rund_sa
-CALL GrammarFilter -m dict -s sasplit test/gn_de.txt
+CALL GrammarFilter -m dict -s sasplit  test/gn_de.txt
 
 TEST GF02 wachstube
 CALL GrammarFilter -m dict -s lexsplit test/wachstube.txt
 
 TEST GF03 fraglich
-CALL GrammarFilter test/fraglich.txt            tempf.html
+CALL GrammarFilter -m dict -s lexsplit test/fraglich.txt
 
 TEST GF04 gn_de
-CALL GrammarFilter test/gn_de.txt               tempg.html
+CALL GrammarFilter -m dict -s sasplit  test/gn_de.txt
 
 #-----------------------------------
+PACKAGE=org.teherba.gramword.filter
+
 TEST FF01 FilterFactory
 CALL FilterFactory
 

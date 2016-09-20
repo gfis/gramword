@@ -1,15 +1,15 @@
 /*  Shows the syntactical type of words in an HTML file by different background colors
-    @(#) $Id: WordTypeFilter.java 805 2011-09-20 06:41:22Z gfis $
-	2010-10-19: transformer.initialize()
-    2007-02-27: copied from GrammarFilter
-    2007-02-21: general parts extracted to BaseFilter
-    2007-02-14: refactored for teherba.org
-    2006-08-02: strategies prsplit, sasplit
-    2006-07-21: MorphemTester instead of Classificator
-    2006-05-31: copied from NumberSpeller
-
-    must be stored in UTF-8 encoding äöüÄÖÜß!
-*/
+ *  must be stored in UTF-8 encoding äöüÄÖÜß!
+ *  @(#) $Id: WordTypeFilter.java 805 2011-09-20 06:41:22Z gfis $
+ *  2016-09-19: old package name was gramword
+ *  2010-10-19: transformer.initialize()
+ *  2007-02-27: copied from GrammarFilter
+ *  2007-02-21: general parts extracted to BaseFilter
+ *  2007-02-14: refactored for teherba.org
+ *  2006-08-02: strategies prsplit, sasplit
+ *  2006-07-21: MorphemTester instead of Classificator
+ *  2006-05-31: copied from NumberSpeller
+ */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
  *
@@ -26,7 +26,7 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword.filters;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
@@ -122,28 +122,7 @@ public class WordTypeFilter extends QueueTransformer {
         if (namespace.length() > 0 && qName.startsWith(namespace)) {
             qName = qName.substring(namespace.length());
         }
-        if (false) {
-        } else if (qName.equals(BODY_TAG    )) { 
-            // insert <table> start
-            String title = "Colored Word Types";
-            queue.appendBehind(""
-            + "<table><tr><th width=\"85%\" align=\"left\">" + title + "</th>"
-            + "<th align=\"left\">Morphem Codes</th></tr>"
-            + "<tr><td>"
-            );
-        } else if (qName.equals(HEAD_TAG    )) { 
-            // insert special stylesheets
-            String path = "file:///C|/var/www/teherba.org/gramword/web/"; // if not run in servlet container
-            path = ""; // relative .css file paths in servlet container
-            queue.appendBehind(""
-            + "<link rel=\"stylesheet\" title=\"all\"    type=\"text/css\" href=\"" + path + "stylesheet.css\" />"
-            + "<link rel=\"stylesheet\" title=\"vbav\"   type=\"text/css\" href=\"" + path + "vbav.css\"   />"
-            + "<link rel=\"stylesheet\" title=\"sbajar\" type=\"text/css\" href=\"" + path + "sbajar.css\" />"
-            + "<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"" + path + "nmnu.css\"   />"
-            + "<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"" + path + "prcj.css\"   />"
-            + "<script type=\"text/javascript\" src=\"" + path + "/style.js\"></script>"
-            );
-        }
+        insertStylesheet(qName, "Colored Word Types");
     } // startElement
     
     /** Receive notification of the end of an element.

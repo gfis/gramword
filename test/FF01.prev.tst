@@ -1,6 +1,6 @@
 org.teherba.xtrans.XMLTransformer xml
 org.teherba.gramword.QueueTransformer queue
-org.teherba.gramword.filters.BibleRefFilter bibleref
-org.teherba.gramword.filters.KontoFilter konto
-org.teherba.gramword.filters.NumberFilter number
-org.teherba.gramword.filters.WordTypeFilter wordtype
+org.teherba.gramword.filter.BibleRefFilter bibleref
+org.teherba.gramword.filter.KontoFilter konto
+org.teherba.gramword.filter.NumberFilter number
+org.teherba.gramword.filter.WordTypeFilter wordtype

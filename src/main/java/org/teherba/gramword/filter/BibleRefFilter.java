@@ -1,7 +1,8 @@
 /*  Links bible references to the first verse in online bibles
-    @(#) $Id: BibleRefFilter.java 805 2011-09-20 06:41:22Z gfis $
-	2010-10-19: transformer.initialize()
-    2007-02-27: copied from WordTypeFilter
+ *  @(#) $Id: BibleRefFilter.java 805 2011-09-20 06:41:22Z gfis $
+ *  2016-09-19: old package was gramword.filters
+ *  2010-10-19: transformer.initialize()
+ *  2007-02-27: copied from WordTypeFilter
 */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -19,7 +20,7 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword.filters;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
 import  org.teherba.gramword.QueueTransformer;
@@ -30,15 +31,15 @@ import  org.apache.log4j.Logger;
  *  The algorithm is as follows:
  *  <ul>
  *  <li>Check segment[-12] for names of bible books (or their abbreviations)
- *  in table INFOS, with MORPH=de.name, 
+ *  in table INFOS, with MORPH=de.name,
  *  which are followed by a numeric segment in the queue.</li>
  *  <li>If MOREL is non-empty (a small digit),
  *  try to find a digit segment before the book name, and select the corresponding
- *  morphem in the result list. Tags are stored as empty segments to prevent 
+ *  morphem in the result list. Tags are stored as empty segments to prevent
  *  a misinterpretation of "Mt 1,1 &lt;/td&gt;&lt;td&gt;Joh 17..." as "1 Joh 17".
  *  </li>
  *  <li>Get ENREL, which is the normalized book number (01..73).</li>
- *  <li>Fetch the URL pattern with <em>code</em>.00, 
+ *  <li>Fetch the URL pattern with <em>code</em>.00,
  *  where <em>code</em> is the code for the desired online bible</li>
  *  <li>Prefix the normalized book number with that code, too,</li>
  *  <li>and use it as a key to select another ENTRY in INFOS.</li>
@@ -49,14 +50,14 @@ import  org.apache.log4j.Logger;
  *  </ul>
  *  @author Dr. Georg Fischer
  */
-public class BibleRefFilter extends QueueTransformer { 
+public class BibleRefFilter extends QueueTransformer {
     public final static String CVSID = "@(#) $Id: BibleRefFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** Debugging switch */
     private static final boolean DEBUG = false;
     /** log4j logger (category) */
     private Logger log;
-    
+
     /** Constructor.
      */
     public BibleRefFilter() {
@@ -65,28 +66,28 @@ public class BibleRefFilter extends QueueTransformer {
         setDescription("Links bible references to online bibles");
         setFileExtensions("html");
     } // Constructor()
-    
-	/** Initializes the (quasi-constant) global structures and variables.
-	 *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
-	 *  selected generator and serializer.
-	 */
-	public void initialize() {
-		super.initialize();
+
+    /** Initializes the (quasi-constant) global structures and variables.
+     *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
+     *  selected generator and serializer.
+     */
+    public void initialize() {
+        super.initialize();
         log = Logger.getLogger(BibleRefFilter.class.getName());
-		segmentPivot = -12;
-	} // initialize
-    
+        segmentPivot = -12;
+    } // initialize
+
     /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and 
+     *  append a new segment to the queue and
      *  prints the segment which is shifted out of the queue.
      *  @param segment the new segment to be appended to the queue
      *  <p>
      *  This implementation tries to find a bible reference, and if found,
-     *  surrounds it with an "a" HTML element pointing to an online bible 
+     *  surrounds it with an "a" HTML element pointing to an online bible
      *  fragment URL.
      */
     protected void enqueue(Segment segment) {
@@ -102,8 +103,8 @@ public class BibleRefFilter extends QueueTransformer {
                 String normBookNo = null;
                 int imorph = 0;
                 boolean busy = true;
-                while (busy && imorph < morphems.size()) { 
-                    // search for the proper one with "de.name" 
+                while (busy && imorph < morphems.size()) {
+                    // search for the proper one with "de.name"
                     // and the right book number prefix
                     if (DEBUG) {
                         StringBuffer trace = new StringBuffer(64);
@@ -130,7 +131,7 @@ public class BibleRefFilter extends QueueTransformer {
                                 busy = false;
                             }
                         } else {
-                            if (word_1.equals(numPrefix)) { 
+                            if (word_1.equals(numPrefix)) {
                                 // with proper book numeric prefix ("1 Joh")?
                                 busy = false;
                                 istart --;
@@ -141,7 +142,7 @@ public class BibleRefFilter extends QueueTransformer {
                     } // if "de.name"
                     imorph ++;
                 } // while imorph
-                
+
                 if (! busy) { // start was found, now scan for the end
                     String chaptNo  = "1";
                     String verseNo  = "1";
@@ -176,7 +177,7 @@ public class BibleRefFilter extends QueueTransformer {
                         // build the link tags and surround the reference with them
                         morphems = tester.getInfos(normBookNo);
                         if (morphems.size() != 1) {
-                            log.error(morphems.size() 
+                            log.error(morphems.size()
                                     + " instead of 1 entry for normalized book number " + normBookNo);
                         } else {
                             Morphem morphem = (Morphem) morphems.get(0);
@@ -220,5 +221,5 @@ public class BibleRefFilter extends QueueTransformer {
         }
         charWriter.print(queue.add(segment));
     } // enqueue
-    
+
 } // BibleRefFilter

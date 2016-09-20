@@ -1,9 +1,9 @@
 /*  Selects the applicable filter
-    @(#) $Id: FilterFactory.java 564 2010-10-19 16:29:18Z gfis $
-    2016-09-17: dynamic class testing
-	2010-10-19: transformer.initialize()
-    2007-04-18: NumberFilter, KontoFilter
-    2007-02-27: copied from TransformerFactory
+ *  @(#) $Id: FilterFactory.java 564 2010-10-19 16:29:18Z gfis $
+ *  2016-09-19: old package was gramword.filters; dynamic class testing
+ *  2010-10-19: transformer.initialize()
+ *  2007-04-18: NumberFilter, KontoFilter
+ *  2007-02-27: copied from TransformerFactory
 */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -20,10 +20,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.teherba.gramword;
+package org.teherba.gramword.filter;
+import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.xtrans.BaseTransformer;
 import  org.teherba.xtrans.XMLTransformer;
-import  org.teherba.gramword.QueueTransformer;
 import  java.util.ArrayList;
 import  java.util.Iterator;
 import  java.util.StringTokenizer;
@@ -33,7 +33,7 @@ import  org.apache.log4j.Logger;
  *  of all filters and their codes
  *  @author Dr. Georg Fischer
  */
-public class FilterFactory { 
+public class FilterFactory {
     public final static String CVSID = "@(#) $Id: FilterFactory.java 564 2010-10-19 16:29:18Z gfis $";
 
     /** log4j logger (category) */
@@ -50,10 +50,10 @@ public class FilterFactory {
             // the order here defines the order in documentation.jsp,
             // should be: "... group by package order by package, name"
             this.addClass("QueueTransformer");
-            this.addClass("filters.BibleRefFilter");
-            this.addClass("filters.KontoFilter");
-            this.addClass("filters.NumberFilter");
-            this.addClass("filters.WordTypeFilter");
+            this.addClass("filter.BibleRefFilter");
+            this.addClass("filter.KontoFilter");
+            this.addClass("filter.NumberFilter");
+            this.addClass("filter.WordTypeFilter");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }
@@ -140,8 +140,8 @@ public class FilterFactory {
         StringBuffer result = new StringBuffer(1024);
         Iterator<BaseTransformer> iter = this.getIterator();
         while (iter.hasNext()) {
-            BaseTransformer trans = iter.next();  
-            String name = trans.getClass().getName(); 
+            BaseTransformer trans = iter.next();
+            String name = trans.getClass().getName();
             result.append(name);
             result.append(' ');
             result.append(trans.getFormatCodes());
@@ -149,7 +149,7 @@ public class FilterFactory {
         } // while hasNext
         return result.toString();
     } // toString
-    
+
     /** Main program, writes the list of available filters
      *  @param args commandline arguments (none)
      */

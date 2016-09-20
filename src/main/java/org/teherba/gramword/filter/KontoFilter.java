@@ -1,9 +1,10 @@
-/*  Highlights European IBANs and SWIFT BICs in the neighbourhood.
-    @(#) $Id: IBANFilter.java 805 2011-09-20 06:41:22Z gfis $
-    2016-09-02: checkdig.account.IBANChecker
-    2010-10-19: transformer.initialize()
-    2007-05-24: copied from KontoFilter
-*/
+/*  Highlights German account and bank id numbers.
+ *  @(#) $Id: KontoFilter.java 976 2013-02-02 16:44:18Z gfis $
+ *  2016-09-19: old package name was gramword/filters
+ *  2016-09-11: javaodc
+ *  2010-10-19: transformer.initialize()
+ *  2007-04-18: copied from BibleRefFilter
+ */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
  *
@@ -20,14 +21,12 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword.filters;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.teherba.gramword.MorphemTester;
 import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
 import  org.teherba.checkdig.account.DeAccountChecker;
-import  org.teherba.checkdig.account.IBANChecker;
 import  java.util.ArrayList;
 import  java.net.URLEncoder;
 import  java.io.UnsupportedEncodingException;
@@ -41,12 +40,12 @@ import  org.apache.log4j.Logger;
  *  <li>Check for key words "BLZ", "Kto", "Kontonummer" etc.
  *  against a constant array.</li>
  *  <li>Insert the "span title=" start and end tags around the BLZ,
- *  and highlight the account number depending on the check digit.</li>
+ *  and highlight the account number depending on the correct check digit.</li>
  *  </ul>
  *  @author Dr. Georg Fischer
  */
-public class IBANFilter extends KontoFilter {
-    public final static String CVSID = "@(#) $Id: IBANFilter.java 805 2011-09-20 06:41:22Z gfis $";
+public class KontoFilter extends QueueTransformer {
+    public final static String CVSID = "@(#) $Id: KontoFilter.java 976 2013-02-02 16:44:18Z gfis $";
 
     /** Debugging switch */
     private static final boolean DEBUG = true;
@@ -59,25 +58,25 @@ public class IBANFilter extends KontoFilter {
     private int maxBlz;
     /** Maximum index of "Kto" key words */
     private int maxKto;
-    /** Negative distance to segmentPivot element for "BLZ"   keyword */
+    /** Negative distance to {@link QueueTransformer#segmentPivot} element for "BLZ"   keyword */
     private int distBlz;
-    /** Negative distance to segmentPivot element for "Konto" keyword */
+    /** Negative distance to {@link QueueTransformer#segmentPivot} element for "Konto" keyword */
     private int distKto;
     /** Size of queue */
     private int queueSize;
-    /** Start of number span (offset to tail of queue) - side effect result of <em>getNextNumber</em> */
+    /** Start of number span (offset to tail of queue) - side effect result of {@link #getNextNumber} */
     private int startSpan;
-    /** End   of number span (offset to tail of queue) - side effect result of <em>getNextNumber</em> */
-    private int   endSpan;
+    /** End   of number span (offset to tail of queue) - side effect result of {@link #getNextNumber} */
+    private int endSpan;
     /** initialize account object */
     private DeAccountChecker deAccountChecker;
 
     /** Constructor.
      */
-    public IBANFilter() {
+    public KontoFilter() {
         super();
-        setFormatCodes("iban");
-        setDescription("Highlight IBANs");
+        setFormatCodes("konto");
+        setDescription("Highlight German account and bank id numbers");
         setFileExtensions("html");
     } // Constructor()
 
@@ -87,13 +86,11 @@ public class IBANFilter extends KontoFilter {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(IBANFilter.class.getName());
+        log = Logger.getLogger(KontoFilter.class.getName());
+        segmentPivot = -16;
         keyWords = new ArrayList/*<1.5*/<String>/*1.5>*/(8);
         keyWords.add("BLZ");
         maxBlz = keyWords.size();
-        queueSize = queue.getSize();
-        distBlz   = queueSize; // outside
-        distKto   = queueSize; // outside
         keyWords.add("KTO");
         keyWords.add("KTNR");
         keyWords.add("KONTO");
@@ -150,7 +147,7 @@ public class IBANFilter extends KontoFilter {
                         String ktoNr = getNextNumber(ktoIndex);
                         if (ktoNr.length() <= 10 && ktoNr.length() >= 3) {
                             String newKtoNr = deAccountChecker.check(ktoNr, blz);
-                            if (newKtoNr.equals(ktoNr)) { // checkdigit ok
+                            if (newKtoNr.indexOf(ktoNr) >= 0) { // checkdigit ok
                                 queue.get(startSpan).appendBefore ("<span"
                                         + " style=\"background-color: lightgreen\">");
                                 queue.get(  endSpan).prependBehind("</span>");
@@ -331,6 +328,16 @@ public class IBANFilter extends KontoFilter {
         return result;
     } // getBankName
 
+    /** Receive notification of the beginning of the document.
+     *  Initializes the queue.
+     */
+    public void startDocument() {
+        super.startDocument();
+        queueSize = queue.getSize();
+        distBlz   = queueSize; // outside
+        distKto   = queueSize; // outside
+    } // startDocument
+
     /** Receive notification of the start of an element.
      *  Looks for the element which contains raw lines.
      *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
@@ -359,4 +366,4 @@ public class IBANFilter extends KontoFilter {
         }
     } // startElement
 
-} // IBANFilter
+} // KontoFilter

@@ -26,24 +26,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="robots" content="noindex, nofollow"
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     <title>Error Page</title>
 </head>
 <body>
 <h4>Message</h4>
-<%=exception.getMessage()%>
+<%= exception.getMessage() %>
 
 <h4>StackTrace</h4>
 <pre>
-<%
-    StringWriter stringWriter = new StringWriter();
-    PrintWriter printWriter = new PrintWriter(stringWriter);
-    exception.printStackTrace(printWriter);
-    out.println(stringWriter);
-    printWriter.close();
-    stringWriter.close();
-%>
+<% exception.printStackTrace(response.getWriter()); %>
 </pre>
 </body>
 </html>

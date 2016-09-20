@@ -50,6 +50,7 @@ public class Messages implements Serializable {
         String appLink = "<a href=\"servlet?view=index\">" + basePage.getAppName() + "</a>";
         //--------
         basePage.add("en", "001", appLink);
+        basePage.add("de", "001", appLink);
         //--------
         String laux = basePage.LANG_AUX;  // pseudo language code for links to auxiliary information
         int imess   = basePage.START_AUX; // start of messages    for links to auxiliary information
@@ -59,13 +60,9 @@ public class Messages implements Serializable {
         basePage.add("en", smess, "{parm}GramWord</a> Main Page");
         basePage.add("de", smess, "{parm}GramWord</a>-Startseite");
         smess = String.format("%03d", imess ++);
-        basePage.add(laux, smess, "<a title=\"xsltrans\"    href=\"servlet?view=xslTrans\">");
-        basePage.add("en", smess, "{parm}XSL</a> Transformation Pipeline");
-        basePage.add("de", smess, "{parm}GramWord</a>-Transformationskette");
-        smess = String.format("%03d", imess ++);
-        basePage.add(laux, smess, "<a title=\"packlist\"    href=\"servlet?view=packList\">");
-        basePage.add("en", smess, "{parm}List of Transformers</a>");
-        basePage.add("de", smess, "{parm}Liste der Transformer</a>");
+        basePage.add(laux, smess, "<a title=\"longex\"    href=\"quixote1-4.html\">");
+        basePage.add("en", smess, "{parm}Longer Example</a> (Chapters 1 - 4 from \"Don Quijote\")");
+        basePage.add("de", smess, "{parm}L&auml;ngeres Beispiel</a> (Kapitel 1 - 4 aus \"Don Quijote\")");
         smess = String.format("%03d", imess ++);
         basePage.add(laux, smess, "<a title=\"wiki\"        href=\"http://www.teherba.org/index.php/GramWord\" target=\"_new\">");
         basePage.add("en", smess, "{parm}Wiki</a> Documentation");

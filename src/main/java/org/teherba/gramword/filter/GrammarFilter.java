@@ -1,12 +1,13 @@
 /*  Shows the syntactical type of words in plain text
-    @(#) $Id: GrammarFilter.java 36 2008-09-08 06:05:06Z gfis $
-    2008-04-01: style.js incorporated
-    2007-02-21: general parts extracted to BaseFilter
-    2007-02-14: refactored for teherba.org
-    2006-08-02: strategies prsplit, sasplit
-    2006-07-21: MorphemTester instead of Classificator
-    2006-05-31: copied from NumberSpeller
-    must be stored in UTF-8 encoding äöüÄÖÜß!
+ *  @(#) $Id: GrammarFilter.java 36 2008-09-08 06:05:06Z gfis $
+ *  2016-09-19: old package name was gramword/filters
+ *  2008-04-01: style.js incorporated
+ *  2007-02-21: general parts extracted to BaseFilter
+ *  2007-02-14: refactored for teherba.org
+ *  2006-08-02: strategies prsplit, sasplit
+ *  2006-07-21: MorphemTester instead of Classificator
+ *  2006-05-31: copied from NumberSpeller
+ *  must be stored in UTF-8 encoding äöüÄÖÜß!
 */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -24,8 +25,8 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword;
-import  org.teherba.gramword.BaseFilter;
+package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemTester;
 import  java.io.BufferedReader;
@@ -78,25 +79,25 @@ public class GrammarFilter extends BaseFilter {
                 writer.println("<link rel=\"stylesheet\" title=\"sbajar\" type=\"text/css\" href=\"" + path + "sbajar.css\" />");
                 writer.println("<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"" + path + "nmnu.css\"   />");
                 writer.println("<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"" + path + "prcj.css\"   />");
-            	writer.println("<script type=\"text/javascript\" src=\"" + path + "script.js\">");
-				writer.println("</script>");
+                writer.println("<script type=\"text/javascript\" src=\"" + path + "script.js\">");
+                writer.println("</script>");
             /*
                 writer.println("<script type=\"text/javascript\">");
-				writer.println("<!--");
-				writer.println("function setActiveStyleSheet(title) {");
-				writer.println("    var i, a;");
-				writer.println("    for (i = 0; (a = document.getElementsByTagName(\"link\")[i]); i ++) {");
-				writer.println("        if (a.getAttribute(\"rel\").indexOf(\"style\") != -1 && a.getAttribute(\"title\")) {");
-				writer.println("            a.disabled = true;");
-				writer.println("            if (a.getAttribute(\"title\") == title) {");
-				writer.println("                a.disabled = false;");
-				writer.println("            }");
-				writer.println("        }");
-				writer.println("    } // for i");
-				writer.println("}");
-				writer.println("-->");
+                writer.println("<!--");
+                writer.println("function setActiveStyleSheet(title) {");
+                writer.println("    var i, a;");
+                writer.println("    for (i = 0; (a = document.getElementsByTagName(\"link\")[i]); i ++) {");
+                writer.println("        if (a.getAttribute(\"rel\").indexOf(\"style\") != -1 && a.getAttribute(\"title\")) {");
+                writer.println("            a.disabled = true;");
+                writer.println("            if (a.getAttribute(\"title\") == title) {");
+                writer.println("                a.disabled = false;");
+                writer.println("            }");
+                writer.println("        }");
+                writer.println("    } // for i");
+                writer.println("}");
+                writer.println("-->");
                 writer.println("</script>");
-			*/	
+            */  
                 writer.println("</head>");
                 writer.println("<body>");
                 writer.println("<table><tr><th width=\"85%\" align=\"left\">" + title + "</th>");

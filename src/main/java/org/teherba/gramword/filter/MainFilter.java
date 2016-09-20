@@ -1,9 +1,10 @@
 /*  Commandline tool which
-    transforms various file formats to and from XML.
-    @(#) $Id: MainFilter.java 36 2008-09-08 06:05:06Z gfis $
-    Copyright (c) 2007 Dr. Georg Fischer <punctum@punctum.com>
-    2007-04-04: tested with XMLTransformer
-    2007-02-27: copied from xtrans.MainTransformer
+ *  transforms various file formats to and from XML.
+ *  @(#) $Id: MainFilter.java 36 2008-09-08 06:05:06Z gfis $
+ *  Copyright (c) 2007 Dr. Georg Fischer <punctum@punctum.com>
+ *  2016-09-19: old package name was gramword
+ *  2007-04-04: tested with XMLTransformer
+ *  2007-02-27: copied from xtrans.MainTransformer
 */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -21,11 +22,10 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword;
+package org.teherba.gramword.filter;
+import  org.teherba.gramword.filter.FilterFactory;
 import  org.teherba.xtrans.BaseTransformer;
-import  org.teherba.gramword.FilterFactory;
-import  java.util.Arrays; // asList
-import  java.util.ArrayList; // asList
+import  java.util.ArrayList;
 import  java.util.Iterator;
 import  org.apache.log4j.Logger;
 
@@ -65,15 +65,15 @@ public class MainFilter {
                 System.out.println("usage:\tjava org.teherba.gramword.MainFilter "
                         + " [-enc1 srcenc [-enc2 tarenc]]"
                         + " [-nsp namespace]"
-                        + " [-informat|-xml] [-xml|-outformat]"
+                        + " [-xml] [-outformat]"
                         + " [infile [outfile]]");
-                Iterator iter = factory.getIterator();
-                while (iter.hasNext()) {
-                    generator = (BaseTransformer) iter.next();
+                Iterator fiter = factory.getIterator();
+                while (fiter.hasNext()) {
+                    generator = (BaseTransformer) fiter.next();
                     System.out.println(String.format("    %-10s %s"
                             , generator.getFirstFormatCode()
                             , generator.getDescription    ()));
-                } // while iter
+                } // while fiter
             } else { // >= 1 argument
                 String[] fileNames = new String[] {null, null};
                 String options = ""; //  = "-test 2 ";
@@ -87,7 +87,7 @@ public class MainFilter {
                     } else if (args[iarg].startsWith("-")) { // is an option
                         String option = args[iarg ++].substring(1); // without the hyphen
                         BaseTransformer base = factory.getTransformer(option);
-                        if (base != null) { // valid format code 
+                        if (base != null) { // valid format code
                             if (ifmt < MAX_FILE) {
                                 if (ifmt == 0) {
                                     generator  = base;

@@ -1,15 +1,16 @@
 /*  Shows the syntactical type of words in an HTML file by different background colors
-    @(#) $Id: NumberFilter.java 805 2011-09-20 06:41:22Z gfis $
-	2010-10-19: transformer.initialize()
-    2007-02-27: copied from GrammarFilter
-    2007-02-21: general parts extracted to BaseFilter
-    2007-02-14: refactored for teherba.org
-    2006-08-02: strategies prsplit, sasplit
-    2006-07-21: MorphemTester instead of Classificator
-    2006-05-31: copied from NumberSpeller
-
-    must be stored in UTF-8 encoding äöüÄÖÜß!
-*/
+ *  must be stored in UTF-8 encoding äöüÄÖÜß!
+ *  @(#) $Id: NumberFilter.java 805 2011-09-20 06:41:22Z gfis $
+ *  2016-09-19: old package name was gramword
+ *  2010-10-19: transformer.initialize()
+ *  2007-02-27: copied from GrammarFilter
+ *  2007-02-21: general parts extracted to BaseFilter
+ *  2007-02-14: refactored for teherba.org
+ *  2006-08-02: strategies prsplit, sasplit
+ *  2006-07-21: MorphemTester instead of Classificator
+ *  2006-05-31: copied from NumberSpeller
+ *
+ */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
  *
@@ -26,7 +27,7 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword.filters;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.QueueTransformer;
 import  org.teherba.gramword.Segment;
@@ -39,7 +40,7 @@ import  org.apache.log4j.Logger;
 /** Shows the syntactical type of words in an HTML file by different background colors
  *  @author Dr. Georg Fischer
  */
-public class NumberFilter extends QueueTransformer { 
+public class NumberFilter extends QueueTransformer {
     public final static String CVSID = "@(#) $Id: NumberFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */
@@ -53,22 +54,22 @@ public class NumberFilter extends QueueTransformer {
         setDescription("Numbers in text");
         setFileExtensions("html");
     } // Constructor
-    
-	/** Initializes the (quasi-constant) global structures and variables.
-	 *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
-	 *  selected generator and serializer.
-	 */
-	public void initialize() {
-		super.initialize();
+
+    /** Initializes the (quasi-constant) global structures and variables.
+     *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
+     *  selected generator and serializer.
+     */
+    public void initialize() {
+        super.initialize();
         log = Logger.getLogger(NumberFilter.class.getName());
-	} // initialize
-    
+    } // initialize
+
     /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and 
+     *  append a new segment to the queue and
      *  prints the segment which is shifted out of the queue.
      *  @param segment the new segment to be appended to the queue
      *  <p>
@@ -86,14 +87,14 @@ public class NumberFilter extends QueueTransformer {
                 String wordClass = morphem.getMorph();
                 String morphCode = wordClass.substring(0, 2);
                 if (wordClass.startsWith("Nu.")) {
-	                element.appendBefore("<span class=\"" 
+                    element.appendBefore("<span class=\""
                             + morphCode
-                            + "\" title=\"" 
+                            + "\" title=\""
                             + wordClass.substring(3)
                             + "\">");
-    	            element.prependBehind("</span>");
-        	        cntKnown ++;
-        	    }
+                    element.prependBehind("</span>");
+                    cntKnown ++;
+                }
                 morphIncr(morphCode);
             } else {
             }
@@ -106,16 +107,16 @@ public class NumberFilter extends QueueTransformer {
         }
         charWriter.print(queue.add(segment));
     } // enqueue
-    
+
     /** Receive notification of the start of an element.
      *  Looks for the element which contains raw lines.
-     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
-     *  @param attrs the attributes attached to the element. 
+     *  @param attrs the attributes attached to the element.
      *  If there are no attributes, it shall be an empty Attributes object.
      */
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
@@ -123,17 +124,17 @@ public class NumberFilter extends QueueTransformer {
         if (namespace.length() > 0 && qName.startsWith(namespace)) {
             qName = qName.substring(namespace.length());
         }
-		insertStylesheet(qName, "Number Words");
+        insertStylesheet(qName, "Number Words");
     } // startElement
-    
+
     /** Receive notification of the end of an element.
      *  Looks for the element which contains raw lines.
      *  Terminates the line.
-     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
      */
     public void endElement(String uri, String localName, String qName) {
@@ -142,9 +143,9 @@ public class NumberFilter extends QueueTransformer {
         }
         tagBoundary();
         if (false) {
-        } else if (qName.equals(BODY_TAG    )) { 
+        } else if (qName.equals(BODY_TAG    )) {
             // insert <table> end
-            DecimalFormat form = (DecimalFormat) DecimalFormat.getInstance(); 
+            DecimalFormat form = (DecimalFormat) DecimalFormat.getInstance();
             form.applyPattern("##0.0");
             queue.appendBehind(""
             + "</td><td>highlight:<br />"
@@ -155,16 +156,16 @@ public class NumberFilter extends QueueTransformer {
             + "<a href=\"\" onclick=\"setActiveStyleSheet('prcj');   return false;\">Pr+Cj+Cc+Un</a><br />"
             + "<table>"
             + "<tr><td>total</td><td align=\"right\">" + cntWords + "</td></tr>"
-            + "<tr><td>known</td><td align=\"right\">" + cntKnown + "</td></tr>" 
-            + "<tr><td>=</td><td align=\"right\"><strong>" 
+            + "<tr><td>known</td><td align=\"right\">" + cntKnown + "</td></tr>"
+            + "<tr><td>=</td><td align=\"right\"><strong>"
                         + form.format(cntKnown * 100.0 / cntWords) + "%</strong></td></tr>"
             );
             Iterator iter = morphCounts.keySet().iterator();
             while (iter.hasNext()) {
                 String morph = (String) iter.next();
-                int count = ((Integer) morphCounts.get(morph)).intValue(); 
-                queue.appendBehind("<tr><td><span class=\"" + morph + "\">" + morph 
-                        + "</span></td><td align=\"right\">" + count + "</td></tr>"); 
+                int count = ((Integer) morphCounts.get(morph)).intValue();
+                queue.appendBehind("<tr><td><span class=\"" + morph + "\">" + morph
+                        + "</span></td><td align=\"right\">" + count + "</td></tr>");
             } // while iter
             queue.appendBehind(""
             + "</table>"
@@ -186,5 +187,5 @@ public class NumberFilter extends QueueTransformer {
         nonEmpty = false;
         inA = false;
     } // endElement
-    
+
 } // NumberFilter
