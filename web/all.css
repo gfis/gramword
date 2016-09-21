@@ -1,6 +1,6 @@
-/*  gramword.css - Cascaded Style Sheet
-    @(#) $Id: all.css 36 2008-09-08 06:05:06Z gfis $
-    2016-09-17: was "background-color"; undo colors with web/unclass.pl
+/*  all.css - Cascaded Style Sheet with all morphem codes
+    @(#) $Id$
+    2016-09-20: revised; undo colors with web/unclass.pl
     2006-06-09: colored morphology
     2005-08-18: copied from html/gfis.css
     2003-07-25: body font-family
@@ -10,7 +10,7 @@
 .Ab { color:white    ; background-color: goldenrod  }
 .Aj { color:black    ; background-color: lightblue  }
 .Ar { color:white    ; background-color: green      }
-.Au { color:black    ; background:lightgreen }
+.Au { color:black    ; background-color: lightgreen }
 .Av { color:black    ; background-color: red        }
 .Cc { color:lightred ; background-color: yellow     }
 .Cj { color:blue     ; background-color: yellow     }
@@ -19,9 +19,9 @@
 .Nm { color:blue     ; background-color: chartreuse }
 .Nu { color:black    ; background-color: yellow     }
 .Pn { color:white    ; background-color: crimson    }
-.Pp { color:white    ; background:crimson    }
+.Pp { color:white    ; background-color: crimson    }
 .Pr { color:red      ; background-color: yellow     }
-.Ps { color:white    ; background:red        }
+.Ps { color:white    ; background-cclor: red        }
 .Rp { color:black    ; background-color: yellow     }
 .Sb { color:black    ; background-color: pink       }
 .Un { color:white    ; background-color: gray       }

@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-<head><link rel="stylesheet" title="all"    type="text/css" href="stylesheet.css" /><link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   /><link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" /><link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   /><link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   /><script type="text/javascript" src="/style.js"></script>
+<head><title>Colored Word Types</title>
+<link rel="stylesheet" title="all"    type="text/css" href="all.css"    />
+<link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   />
+<link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" />
+<link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   />
+<link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   />
+<script type="text/javascript">
+function activateStyles(title) {
+    var i, a;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]); i ++) {
+        if (a.getAttribute("rel").indexOf("stylesheet") >= 0 && a.getAttribute("title")) {
+            a.disabled = true;
+            if (a.getAttribute("title") == title) {
+                a.disabled = false;
+            }
+        }
+    } // for i
+} // setActiveStyleSheet
+</script>
 	<title>Number words</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body><table><tr><th width="85%" align="left">Number Words</th><th align="left">Morphem Codes</th></tr><tr><td><em>Move the mouse over the highlighted words:</em><br />
+<body><h2>Colored Word Types</h2>
+
 <p>
 5,1 Das ist die Liste der Geschlechterfolge nach Adam: Am Tag, da Gott den Menschen erschuf, machte er ihn Gott ähnlich.<br />
 5,2 Als Mann und Frau erschuf er sie, er segnete sie und nannte sie Mensch an dem Tag, da sie erschaffen wurden. <br />
@@ -39,5 +58,17 @@
 5,31 Die gesamte Lebenszeit Lamechs betrug <span class="Nu" title="777">siebenhundertsiebenundsiebzig</span> Jahre, dann starb er. <br />
 5,32 Noach zeugte im Alter von <span class="Nu" title="500">fünfhundert</span> Jahren Sem, Ham und Jafet.
 </p>
-</td><td>highlight:<br /><a href="" onclick="setActiveStyleSheet('all');    return false;">all found</a><br /><a href="" onclick="setActiveStyleSheet('vbav');   return false;">Vb+Av</a><br /><a href="" onclick="setActiveStyleSheet('sbajar'); return false;">Sb+Aj+Ar</a><br /><a href="" onclick="setActiveStyleSheet('nmnu');   return false;">Nm+Nu</a><br /><a href="" onclick="setActiveStyleSheet('prcj');   return false;">Pr+Cj+Cc+Un</a><br /><table><tr><td>total</td><td align="right">476</td></tr><tr><td>known</td><td align="right">28</td></tr><tr><td>=</td><td align="right"><strong>5.9%</strong></td></tr><tr><td><span class="Aj">Aj</span></td><td align="right">22</td></tr><tr><td><span class="Ar">Ar</span></td><td align="right">32</td></tr><tr><td><span class="Cj">Cj</span></td><td align="right">42</td></tr><tr><td><span class="Ir">Ir</span></td><td align="right">1</td></tr><tr><td><span class="Nm">Nm</span></td><td align="right">19</td></tr><tr><td><span class="Nu">Nu</span></td><td align="right">92</td></tr><tr><td><span class="Pn">Pn</span></td><td align="right">37</td></tr><tr><td><span class="Pr">Pr</span></td><td align="right">20</td></tr><tr><td><span class="Sb">Sb</span></td><td align="right">69</td></tr><tr><td><span class="Un">Un</span></td><td align="right">14</td></tr><tr><td><span class="Vb">Vb</span></td><td align="right">46</td></tr></table></td></tr></table></body></html></body>
+<br /><br />Morphem codes: <span class="Aj">Aj</span> 22
+<span class="Ar">Ar</span> 32
+<span class="Cj">Cj</span> 42
+<span class="Ir">Ir</span> 1
+<span class="Nm">Nm</span> 19
+<span class="Nu">Nu</span> 92
+<span class="Pn">Pn</span> 37
+<span class="Pr">Pr</span> 20
+<span class="Sb">Sb</span> 69
+<span class="Un">Un</span> 14
+<span class="Vb">Vb</span> 46
+<br />
+</body>
 </html>

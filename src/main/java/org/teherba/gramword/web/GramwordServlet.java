@@ -1,5 +1,6 @@
 /*  Servlet which checks the parameters and calls pages for different views
     @(#) $Id: GramwordServlet.java 976 2013-02-02 16:44:18Z gfis $
+    2016-09-21: handler deprecated
     2016-09-19: previous name was GrammarServlet
     2016-09-12: moved to package gramword.web, use BasePage
     2016-09-11: javadoc
@@ -34,7 +35,6 @@ package org.teherba.gramword.web;
 import  org.teherba.gramword.web.ClassifyPage;
 import  org.teherba.gramword.web.IndexPage;
 import  org.teherba.gramword.web.Messages;
-import  org.teherba.gramword.web.SimpleTypePage;
 import  org.teherba.common.web.BasePage;
 import  org.teherba.common.web.MetaInfPage;
 import  org.teherba.dbat.Configuration;
@@ -178,8 +178,6 @@ public class GramwordServlet extends HttpServlet {
 
             } else if (view.equals("index2"  ))   { // former result page
                 if (false) {
-                } else if (filter.equals("simple")) {
-                    (new SimpleTypePage()).showResult(request, response, basePage);
                 } else if (filter.equals("simple"  )
                         || filter.equals("queue"   )
                         || filter.equals("bibleref")

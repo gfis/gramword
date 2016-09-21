@@ -355,15 +355,43 @@ public class KontoFilter extends BaseFilter {
             qName = qName.substring(namespace.length());
         }
         if (false) {
-        } else if (qName.equals(BODY_TAG    )) {
-        } else if (qName.equals(HEAD_TAG    )) {
-            // insert special stylesheets
-            String path = "file:///C|/var/www/teherba.org/gramword/web/"; // if not run in servlet container
-            path = ""; // relative .css file paths in servlet container
-            queue.appendBehind(""
-            + "<link rel=\"stylesheet\" title=\"all\"    type=\"text/css\" href=\"" + path + "stylesheet.css\" />"
-            );
+        } else if (qName.equals(HEAD_TAG    )) { 
+            writeHeadEnd  ("Colored Word Types");
+        } else if (qName.equals(BODY_TAG    )) { 
+            writeBodyStart("Colored Word Types");
         }
     } // startElement
+
+    /** Receive notification of the end of an element.
+     *  Looks for the element which contains raw lines.
+     *  Terminates the line.
+     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI 
+     *  or if Namespace processing is not being performed.
+     *  @param localName the local name (without prefix), 
+     *  or the empty string if Namespace processing is not being performed.
+     *  @param qName the qualified name (with prefix), 
+     *  or the empty string if qualified names are not available.
+     */
+    public void endElement(String uri, String localName, String qName) {
+        if (namespace.length() > 0 && qName.startsWith(namespace)) {
+            qName = qName.substring(namespace.length());
+        }
+        tagBoundary();
+        if (qName.equals(BODY_TAG    )) { 
+            writeBodyEnd("code,bar,switch");
+        }
+        if (! nonEmpty && qName.equals(currentTag)) {
+            // reduce start tag to empty element tag
+            StringBuffer tail = new StringBuffer(128);
+            tail.append(queue.get(0).toString());
+            tail.insert(tail.length() - 1, " /");
+            queue.set(0, new Segment(tail.toString(), new Morphem(), ""));
+        } else {
+            enqueue(new Segment(getEndTag(qName), new Morphem(), ""));
+        }
+        currentTag = "";
+        nonEmpty = false;
+        inA = false;
+    } // endElement
 
 } // KontoFilter

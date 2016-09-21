@@ -77,7 +77,7 @@ public class FilterPage implements Serializable {
                 serializer.setResultEncoding("UTF-8");
                 response  .setCharacterEncoding(serializer.getResultEncoding());
                 response  .setContentType(generator.getMimeType());
-                generator .setCharReader(new StringReader( fileItem.getString(generator.getSourceEncoding())));
+                generator .setCharReader(new StringReader(fileItem.getString(generator.getSourceEncoding())));
                 serializer.setCharWriter(response.getWriter      ());
                 generator .setCharWriter(serializer.getCharWriter());
                 generator .setContentHandler(serializer);

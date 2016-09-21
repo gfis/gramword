@@ -1,5 +1,6 @@
 /*  IndexPage.java - starting web page for GramWord
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
+    2016-09-21: simple handler deprecated
  *  2016-09-20, Dr. Georg Fischer
  */
 /*
@@ -84,22 +85,20 @@ public class IndexPage implements Serializable {
                     /*  1 */ , "UTF-8"
                     } ;
             String[] optFilter = new String []
-                    /*  0 */ { "simple"
-                    /*  1 */ , "queue"
-                    /*  2 */ , "bibleref"
-                    /*  3 */ , "iban"     
-                    /*  4 */ , "konto"    
-                    /*  5 */ , "number"   
-                    /*  6 */ , "wordtype"
+                    /*  0 */ { "queue"
+                    /*  1 */ , "bibleref"
+                    /*  2 */ , "iban"     
+                    /*  3 */ , "konto"    
+                    /*  4 */ , "number"   
+                    /*  5 */ , "wordtype"
                     } ;
             String[] enFilter = new String []
-                    /*  0 */ { "simple"
-                    /*  1 */ , "queue"
-                    /*  2 */ , "bibleref"
-                    /*  3 */ , "iban"     
-                    /*  4 */ , "konto"    
-                    /*  5 */ , "number"   
-                    /*  6 */ , "wordtype"
+                    /*  0 */ { "queue"
+                    /*  1 */ , "bibleref"
+                    /*  2 */ , "iban"     
+                    /*  3 */ , "konto"    
+                    /*  4 */ , "number"   
+                    /*  5 */ , "wordtype"
                     } ;
             String[] optFormat = new String []
                     /*  0 */ { "html"

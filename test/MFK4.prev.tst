@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-<head><link rel="stylesheet" title="all"    type="text/css" href="stylesheet.css" />
+<head><title>Colored Word Types</title>
+<link rel="stylesheet" title="all"    type="text/css" href="all.css"    />
+<link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   />
+<link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" />
+<link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   />
+<link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   />
+<script type="text/javascript">
+function activateStyles(title) {
+    var i, a;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]); i ++) {
+        if (a.getAttribute("rel").indexOf("stylesheet") >= 0 && a.getAttribute("title")) {
+            a.disabled = true;
+            if (a.getAttribute("title") == title) {
+                a.disabled = false;
+            }
+        }
+    } // for i
+} // setActiveStyleSheet
+</script>
 	<title>German Bank Id and Account numbers</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
+<body><h2>Colored Word Types</h2>
+
 <p>
 LetsWorkIt GmbH     <span style="background-color: khaki">Konto</span>: <span style="background-color: lightgreen">48 333 959</span>  Steuernummer: 215/5826/1475
 Komödienstraße 48   <span style="background-color: gainsboro">BLZ</span>: <a href="http://www.google.de/search?q=unknown"><span title="unknown" style="background-color: lightblue">390 500 00</span></a>    Finanzamt Köln-Mitte
@@ -275,5 +294,7 @@ Sparkasse Nördlicher Breisgau (<span style="background-color: gainsboro">BLZ</s
 </p><p>
 Züricher Vers. <span style="background-color: gainsboro">BLZ</span> <a href="http://www.google.de/search?q=unknown"><span title="unknown" style="background-color: lightblue">50070010</span></a>  <span style="background-color: khaki">Kto</span> <span style="background-color: lightgreen">0105230700</span>
 </p>
+<br /><br />Morphem codes: <br />
+Highlight: <a href="#" title="Click to switch" onclick="activateStyles('all');    return false;">all found</a>, <a href="#" title="Click to switch" onclick="activateStyles('vbav');   return false;">Vb+Av</a>, <a href="#" title="Click to switch" onclick="activateStyles('sbajar'); return false;">Sb+Aj+Ar</a>, <a href="#" title="Click to switch" onclick="activateStyles('nmnu');   return false;">Nm+Nu</a>, <a href="#" title="Click to switch" onclick="activateStyles('prcj');   return false;">Pr+Cj+Cc+Un</a> <br />
 </body>
 </html>

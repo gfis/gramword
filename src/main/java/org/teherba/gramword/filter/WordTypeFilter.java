@@ -30,8 +30,6 @@ package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.Segment;
-import  java.text.DecimalFormat;
-import  java.util.Iterator;
 import  java.util.TreeMap;
 import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
@@ -122,7 +120,12 @@ public class WordTypeFilter extends BaseFilter {
         if (namespace.length() > 0 && qName.startsWith(namespace)) {
             qName = qName.substring(namespace.length());
         }
-        insertStylesheet(qName, "Colored Word Types");
+        if (false) {
+        } else if (qName.equals(HEAD_TAG    )) { 
+            writeHeadEnd  ("Colored Word Types");
+        } else if (qName.equals(BODY_TAG    )) { 
+            writeBodyStart("Colored Word Types");
+        }
     } // startElement
     
     /** Receive notification of the end of an element.
@@ -140,37 +143,8 @@ public class WordTypeFilter extends BaseFilter {
             qName = qName.substring(namespace.length());
         }
         tagBoundary();
-        if (false) {
-        } else if (qName.equals(BODY_TAG    )) { 
-            // insert <table> end
-            DecimalFormat form = (DecimalFormat) DecimalFormat.getInstance(); 
-            form.applyPattern("##0.0");
-            queue.appendBehind(""
-            + "</td><td>highlight:<br />"
-            + "<a href=\"\" onclick=\"setActiveStyleSheet('all');    return false;\">all found</a><br />"
-            + "<a href=\"\" onclick=\"setActiveStyleSheet('vbav');   return false;\">Vb+Av</a><br />"
-            + "<a href=\"\" onclick=\"setActiveStyleSheet('sbajar'); return false;\">Sb+Aj+Ar</a><br />"
-            + "<a href=\"\" onclick=\"setActiveStyleSheet('nmnu');   return false;\">Nm+Nu</a><br />"
-            + "<a href=\"\" onclick=\"setActiveStyleSheet('prcj');   return false;\">Pr+Cj+Cc+Un</a><br />"
-            + "<table>"
-            + "<tr><td>total</td><td align=\"right\">" + cntWords + "</td></tr>"
-            + "<tr><td>known</td><td align=\"right\">" + cntKnown + "</td></tr>" 
-            + "<tr><td>=</td><td align=\"right\"><strong>" 
-                        + form.format(cntKnown * 100.0 / cntWords) + "%</strong></td></tr>"
-            );
-            Iterator iter = morphCounts.keySet().iterator();
-            while (iter.hasNext()) {
-                String morph = (String) iter.next();
-                int count = ((Integer) morphCounts.get(morph)).intValue(); 
-                queue.appendBehind("<tr><td><span class=\"" + morph + "\">" + morph 
-                        + "</span></td><td align=\"right\">" + count + "</td></tr>"); 
-            } // while iter
-            queue.appendBehind(""
-            + "</table>"
-            + "</td></tr></table>"
-            + "</body>"
-            + "</html>"
-            );
+        if (qName.equals(BODY_TAG    )) { 
+            writeBodyEnd("code,bar,sum,switch");
         }
         if (! nonEmpty && qName.equals(currentTag)) {
             // reduce start tag to empty element tag

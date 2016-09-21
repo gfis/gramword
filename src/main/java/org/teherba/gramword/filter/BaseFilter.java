@@ -1,4 +1,4 @@
-/*  Superclass for XHTML serializers which perform some 
+/*  Superclass for XHTML serializers which perform some
     modification (coloring, linking and the like) based on
     the local analysis of several words, which are surrounded by "glue"
     (HTML tags, whitespace and punctuation).
@@ -35,27 +35,25 @@ import  java.io.FileInputStream;
 import  java.io.FileOutputStream;
 import  java.io.Reader;
 import  java.io.PrintWriter;
-import  java.nio.channels.Channels;
-import  java.nio.channels.ReadableByteChannel;
-import  java.nio.channels.WritableByteChannel;
+import  java.util.Iterator;
 import  java.util.TreeMap;
 import  org.xml.sax.Attributes;
 import  org.xml.sax.SAXParseException;
 import  org.apache.log4j.Logger;
 
-/** (Pseudo-abstract) superclass for XHTML filters which perform some 
+/** (Pseudo-abstract) superclass for XHTML filters which perform some
  *  modification (coloring, linking and the like) based on
  *  the local analysis of several queue elements.
  *  The queue contains words and numbers, which are surrounded by "glue"
  *  (HTML tags, whitespace and punctuation).
  *  @author Dr. Georg Fischer
  */
-public class BaseFilter extends CharTransformer { 
+public class BaseFilter extends CharTransformer {
     public final static String CVSID = "@(#) $Id: BaseFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */
     private Logger log;
-    
+
     /** Anchor element tag */
     protected static final String A_TAG     = "a";
     /** Body element tag */
@@ -77,19 +75,7 @@ public class BaseFilter extends CharTransformer {
     protected TreeMap<String, Integer> morphCounts;
     /** Index of segment where to start checking; doesn't matter, look only at 1 segment */
     protected int segmentPivot;
-    /** Reader for the input file */
-    protected Reader reader;
-    /** Writer for the output file (maybe set by servlet) */
-    protected PrintWriter writer;
-    /** Output format */
-    protected String mode;
-    /** Natural language of the input text */
-    protected String language;
-    /** Encoding of the input file */
-    protected String encoding;
-    /** Strategy to be used to classify the words */
-    protected String strategy;
-    
+
     /** Constructor.
      */
     public BaseFilter() {
@@ -98,7 +84,7 @@ public class BaseFilter extends CharTransformer {
         setDescription("Test for subclasses of BaseFilter");
         setFileExtensions("html");
     } // Constructor()
-    
+
     /** Initializes the (quasi-constant) global structures and variables
      *  common to generator and serializer.
      *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
@@ -110,14 +96,11 @@ public class BaseFilter extends CharTransformer {
         cntWords        = 0;
         cntKnown        = 0;
         morphCounts     = new TreeMap<String, Integer>();
-        strategy        = getOption("strat", "all");    // default: apply all tests
+        String strategy = "all";    // default: apply all tests
         tester          = new MorphemTester(strategy);
         segmentPivot    = -4;
-        mode            = "html";   // default output mode
-        language        = "de";     // default source language
-        encoding        = "UTF-8";  // default input encoding (output is always in UTF-8)
      } // initialize
-    
+
    /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
@@ -136,18 +119,18 @@ public class BaseFilter extends CharTransformer {
     protected boolean nonEmpty;
     /** whether in HTML "a" element */
     protected boolean inA;
-        
+
     /** Increments the count for the specified morphem type.
      *  @param morph type of morphem, Aj, Vb ...
      */
-    protected void morphIncr(String morph) { 
+    protected void morphIncr(String morph) {
         Object value = morphCounts.get(morph);
-        morphCounts.put(morph, new Integer ((value == null) 
-                ? 1 
+        morphCounts.put(morph, new Integer ((value == null)
+                ? 1
                 : ((Integer) value).intValue() + 1));
     } // morphIncr
 
-    /** Terminates the word or the glue at 
+    /** Terminates the word or the glue at
      *  the start of a new tag, comment, processing instruction
      *  or at the end of the document
      */
@@ -161,9 +144,9 @@ public class BaseFilter extends CharTransformer {
         }
         glueBuffer.setLength(0);
     } // tagBoundary
-    
+
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and 
+     *  append a new segment to the queue and
      *  prints the segment which is shifted out of the queue.
      *  @param segment the new segment to be appended to the queue
      *  <p>
@@ -189,98 +172,95 @@ public class BaseFilter extends CharTransformer {
         }
         charWriter.print(queue.add(segment));
     } // enqueue
-
-    /** Evaluates the arguments of the command line, and processes them.
-     *  @param args Arguments; if missing, print the following:
-     *  <pre>
-     *  usage:\tjava org.teherba.gramword.BaseFilter [-e encoding] [-l iso] [-m mode] [-s strategy] file
-     *  -e  UTF-8 (default), ISO-8859-1 : input encoding
-     *  -l  de (default) : source language
-     *  -m  html (default) | text | dict : output mode
-     *  -s  all (default) | prsplit | sasplit : strategy for word recognition
-     *  </pre>
-     */
-    public void getOptions(String args[]) {
-        try {
-            int iarg = 0;
-            if (iarg >= args.length) { // usage, with known ISO codes and languages
-                System.err.println("usage:\tjava org.teherba.gramword.filter.BaseFilter "
-                        + " [-e encoding] [-l iso] [-m mode] [-s strategy] [infile [outfile]]");
-                System.out.println("  -e UTF-8 (default) | ISO-8859-1 : source encoding ");
-                System.out.println("  -l source language code (default 'de')");
-                System.out.println("  -m html(default) | text | dict : output mode ");
-                System.out.println("  -s all (default) | prsplit | sasplit : strategy for word recognition");
-            } else { // >= 1 argument
-
-                // get all options
-                while (iarg < args.length && args[iarg].startsWith("-")) {
-                    String option = args[iarg ++].substring(1);
-                    if (false) {
-                    } else if (option.startsWith("e")) {
-                        if (iarg < args.length) {
-                            encoding = args[iarg ++];
-                        }
-                    } else if (option.startsWith("l")) {
-                        if (iarg < args.length) {
-                            language = args[iarg ++];
-                        }
-                    } else if (option.startsWith("m")) {
-                        if (iarg < args.length) {
-                            mode = args[iarg ++];
-                        }
-                    } else if (option.startsWith("s")) {
-                        if (iarg < args.length) {
-                            strategy = args[iarg ++];
-                        }
-                    }
-                } // while options
-
-                if (iarg < args.length) { // with 1 or 2 additional (filename) arguments
-                    ReadableByteChannel source = iarg < args.length
-                            ? (new FileInputStream (args[iarg ++])).getChannel()
-                            : Channels.newChannel(System.in);
-                    WritableByteChannel target = iarg < args.length
-                            ? (new FileOutputStream (args[iarg ++])).getChannel()
-                            : Channels.newChannel(System.out);
-                    reader = new BufferedReader(Channels.newReader(source, encoding));
-                    writer = new PrintWriter   (Channels.newWriter(target, "UTF-8"));
-                }
-            } // args.length >= 1
-        } catch (Exception exc) {
-            log.error(exc.getMessage(), exc);
-        }
-    } // getOptions
-
-    /** Tests for &lt;head&gt; and &lt;body&gt; tags, and inserts 
-     *  the stylesheet links and table cells for the statistics on word types.
-     *  @param qName qualified tag name from the SAX parser
+    //--------------------------------------------------------
+    /** Inserts some HTML before any &lt;/head&gt; tag.
+     *  By default, a series of stylesheet references is included.
+     *  These stylesheet must lay in the root directory of the container
+     *  (gits/gramword/web/ resp. tomcat/webapps/gramword/).
      *  @param title title of the page
      */
-    protected void insertStylesheet(String qName, String title) {
-        if (false) {
-        } else if (qName.equals(BODY_TAG    )) { 
-            // insert <table> start
-            queue.appendBehind(""
-            + "<table><tr><th width=\"85%\" align=\"left\">" + title + "</th>"
-            + "<th align=\"left\">Morphem Codes</th></tr>"
-            + "<tr><td>"
-            + "<em>Move the mouse over the highlighted words:</em><br />"
+    protected void writeHeadEnd  (String title) {
+        queue.appendBehind("<title>" + title + "</title>"
+        + "\n<link rel=\"stylesheet\" title=\"all\"    type=\"text/css\" href=\"all.css\"    />"
+        + "\n<link rel=\"stylesheet\" title=\"vbav\"   type=\"text/css\" href=\"vbav.css\"   />"
+        + "\n<link rel=\"stylesheet\" title=\"sbajar\" type=\"text/css\" href=\"sbajar.css\" />"
+        + "\n<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"nmnu.css\"   />"
+        + "\n<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"prcj.css\"   />"
+        + "\n<script type=\"text/javascript\">"
+        + "\nfunction activateStyles(title) {"
+        + "\n    var i, a;"
+        + "\n    for (i = 0; (a = document.getElementsByTagName(\"link\")[i]); i ++) {"
+        + "\n        if (a.getAttribute(\"rel\").indexOf(\"stylesheet\") >= 0 && a.getAttribute(\"title\")) {"
+        + "\n            a.disabled = true;"
+        + "\n            if (a.getAttribute(\"title\") == title) {"
+        + "\n                a.disabled = false;"
+        + "\n            }"
+        + "\n        }"
+        + "\n    } // for i"
+        + "\n} // setActiveStyleSheet"
+        + "\n</script>"
+        );
+    } // writeHeadEnd
+
+    /** Inserts some HTML after the &lt;body&gt; tag.
+     *  By default, a header line is inserted.
+     *  @param title title of the page
+     */
+    protected void writeBodyStart(String title) {
+        queue.appendBehind("<h2>" + title + "</h2>\n"
+        );
+    } // writeBodyStart
+
+    /** Inserts some HTML before the &lt;/body&gt; tag.
+     *  There are several variations which are controlled by <em>features</em>.
+     *  @param features comma-separated list of features:
+     *  <ul>
+     *  <li>code   - show the morphem codes with their colors and counts</li>
+     *  <li>bar    - show the distribution as a colored bar</li>
+     *  <li>sum -  - show the sum of total and recognized words</li>
+     *  <li>switch - show the links for the activation of subsets of morphem code colors</li>
+     *  </ul>
+     */
+    protected void writeBodyEnd  (String features) {
+        features = "," + features + ",";
+
+        if (features.indexOf("code"     ) >= 0) {
+        	queue.appendBehind("<br /><br />Morphem codes: ");
+            Iterator<String> miter = morphCounts.keySet().iterator();
+            while (miter.hasNext()) {
+                String morph = miter.next();
+                int count = morphCounts.get(morph).intValue();
+                queue.appendBehind("<span class=\"" + morph + "\">"
+                        + morph + "</span> " + String.valueOf(count) + "\n");
+            } // while iter
+            queue.appendBehind("<br />\n");
+        } // code
+
+        if (features.indexOf("bar"      ) >= 0) {
+        } // bar
+        
+        if (features.indexOf("sum"      ) >= 0) {
+            queue.appendBehind("<strong>"      + String.format("%.1f", cntKnown * 100.0 / cntWords) 
+            + "%</strong> = "+ String.valueOf(cntKnown) + " recognized "
+            + "and "         + String.valueOf(cntWords - cntKnown)  + " unknown "
+            + "out of "      + String.valueOf(cntWords)  + " total words"
+            + "<br />\n"
             );
-        } else if (qName.equals(HEAD_TAG    )) { 
-            // insert special stylesheets
-            String path = "file:///C|/var/www/teherba.org/gramword/web/"; // if not run in servlet container
-            path = ""; // relative .css file paths in servlet container
-            queue.appendBehind(""
-            + "<link rel=\"stylesheet\" title=\"all\"    type=\"text/css\" href=\"" + path + "stylesheet.css\" />"
-            + "<link rel=\"stylesheet\" title=\"vbav\"   type=\"text/css\" href=\"" + path + "vbav.css\"   />"
-            + "<link rel=\"stylesheet\" title=\"sbajar\" type=\"text/css\" href=\"" + path + "sbajar.css\" />"
-            + "<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"" + path + "nmnu.css\"   />"
-            + "<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"" + path + "prcj.css\"   />"
-            + "<script type=\"text/javascript\" src=\"" + path + "/style.js\"></script>"
+        } // sum
+
+        if (features.indexOf("switch"   ) >= 0) {
+            queue.appendBehind("Highlight: "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('all');    return false;\">all found</a>, "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('vbav');   return false;\">Vb+Av</a>, "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('sbajar'); return false;\">Sb+Aj+Ar</a>, "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('nmnu');   return false;\">Nm+Nu</a>, "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('prcj');   return false;\">Pr+Cj+Cc+Un</a> "
             );
-        }
-    } // insertStylesheet
-    
+            queue.appendBehind("<br />\n");
+        } // switch
+
+    } // writeBodyEnd
+    //--------------------------------------------------------
     /** Receive notification of the beginning of the document.
      *  Initializes the queue.
      */
@@ -294,26 +274,26 @@ public class BaseFilter extends CharTransformer {
         nonEmpty    = false;
         inA         = false;
     } // startDocument
-    
+
     /** Receive notification of the end of the document.
      *  Flushes the queue.
      */
     public void endDocument() {
         int size = queue.getSize();
         while (size > 0) { // flush the queue
-            enqueue(new Segment("", new Morphem(), "")); 
+            enqueue(new Segment("", new Morphem(), ""));
             size --;
         } // while flushing
     } // endDocument
-    
+
     /** Receive notification of the start of an element.
-     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
-     *  @param attrs the attributes attached to the element. 
+     *  @param attrs the attributes attached to the element.
      *  If there are no attributes, it shall be an empty Attributes object.
      */
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
@@ -326,14 +306,14 @@ public class BaseFilter extends CharTransformer {
         currentTag = qName;
         nonEmpty = false;
     } // startElement
-    
+
     /** Receive notification of the end of an element.
      *  Handles the special case of an empty XML element.
-     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
      */
     public void endElement(String uri, String localName, String qName) {
@@ -354,7 +334,7 @@ public class BaseFilter extends CharTransformer {
         nonEmpty = false;
         inA = false;
     } // endElement
-    
+
     /** Receive notification of character data inside an element.
      *  The method generates a new segment for each word (consisting of
      *  letters only), and for each number (consisting of digits only).
@@ -363,14 +343,14 @@ public class BaseFilter extends CharTransformer {
      *  can still be wrapped into outer HTML elements.
      *  @param ch the characters.
      *  @param start the start position in the character array.
-     *  @param length the number of characters to use from the character array. 
+     *  @param length the number of characters to use from the character array.
      */
     public void characters(char[] ch, int start, int length) {
         int ich = start;
         int endCh = start + length;
         int segmStart = ich;
         while (ich < endCh) {
-            if (false) { 
+            if (false) {
             } else if (Character.isLetter(ch[ich])) { // new word character
                 if (isGlue) { // append glue and start new word
                     queue.appendBehind(glueBuffer.toString());
@@ -396,7 +376,7 @@ public class BaseFilter extends CharTransformer {
                 } else { // in glue
                 }
                 glueBuffer.append(ch[ich]);
-            } 
+            }
             ich ++;
         } // while ich
         nonEmpty = nonEmpty || length > 0;
@@ -405,7 +385,7 @@ public class BaseFilter extends CharTransformer {
     /** Receive notification of an XML comment.
      *  @param ch the characters.
      *  @param start the start position in the character array.
-     *  @param length the number of characters to use from the character array. 
+     *  @param length the number of characters to use from the character array.
      */
     public void comment(char[] ch, int start, int length) {
         tagBoundary();
@@ -414,7 +394,7 @@ public class BaseFilter extends CharTransformer {
 
     /** Receive notification of a processing instruction.
      *  @param target The processing instruction target.
-     *  @param data The processing instruction data, or null if none is supplied. 
+     *  @param data The processing instruction data, or null if none is supplied.
      */
     public void processingInstruction(String target, String data) {
         tagBoundary();

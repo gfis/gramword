@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
-<head><link rel="stylesheet" title="all"    type="text/css" href="stylesheet.css" /><link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   /><link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" /><link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   /><link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   /><script type="text/javascript" src="/style.js"></script>
+<head><title>Colored Word Types</title>
+<link rel="stylesheet" title="all"    type="text/css" href="all.css"    />
+<link rel="stylesheet" title="vbav"   type="text/css" href="vbav.css"   />
+<link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" />
+<link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   />
+<link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   />
+<script type="text/javascript">
+function activateStyles(title) {
+    var i, a;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]); i ++) {
+        if (a.getAttribute("rel").indexOf("stylesheet") >= 0 && a.getAttribute("title")) {
+            a.disabled = true;
+            if (a.getAttribute("title") == title) {
+                a.disabled = false;
+            }
+        }
+    } // for i
+} // setActiveStyleSheet
+</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body><table><tr><th width="85%" align="left">Colored Word Types</th><th align="left">Morphem Codes</th></tr><tr><td><em>Move the mouse over the highlighted words:</em><br />
+<body><h2>Colored Word Types</h2>
+
 
 <span class="Pr" morph="">Nachdem</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Aj" morph="Qant">alle</span> <span class="Aj" morph="Qant">diese</span> <span class="Sb" morph="Pl">Vorkehrungen</span> <span class="Vb" morph="SPa0">getroffen</span>, <span class="Vb" morph="SIp11">wollte</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Un" morph="">nicht</span>
 <span class="Aj" morph="Cmpr">länger</span> <span class="Vb" morph="SIn0">warten</span>, <span class="Vb" morph="SIn0">sein</span> <span class="Vb" morph="SCs93">Vorhaben</span> <span class="Pr" morph="Shor">ins</span> <span class="Sb" morph="SgNt">Werk</span> <span class="Pr" morph="Prim">zu</span> setzen; <span class="Pn" morph="SgPersNomvNt3">es</span> drängte <span class="Pn" morph="SgPersAccv3Ms">ihn</span>
@@ -21,4 +40,18 @@ zusammengeflickten Turnierhelm aufgesetzt, faßte <span class="Pn" morph="SgPoss
 <span class="Pn" morph="SgPossGenvMs3">seines</span> <span class="Sb" morph="SgGe">Hofes</span> <span class="Pr" morph="">hinaus</span> <span class="Pr" morph="Shor">aufs</span> <span class="Sb" morph="SgNt">Feld</span>, <span class="Pr" morph="Prim">mit</span> <span class="Aj" morph="XC">gewaltiger</span> <span class="Sb" morph="SgFm">Befriedigung</span> <span class="Cj" morph="">und</span>
 Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" morph="Prim">mit</span> <span class="Ir" morph="Prim">wie</span> <span class="Aj" morph="XP">großer</span> <span class="Sb" morph="SgFm">Leichtigkeit</span> <span class="Pn" morph="SgPersNomvMs3">er</span> <span class="Vb" morph="SIn0">sein</span>
 <span class="Aj" morph="XP">löbliches</span> <span class="Vb" morph="SCs93">Vorhaben</span> <span class="Vb" morph="SCt93">auszuführen</span> <span class="Vb" morph="SPa0">begonnen</span>.
-</td><td>highlight:<br /><a href="" onclick="setActiveStyleSheet('all');    return false;">all found</a><br /><a href="" onclick="setActiveStyleSheet('vbav');   return false;">Vb+Av</a><br /><a href="" onclick="setActiveStyleSheet('sbajar'); return false;">Sb+Aj+Ar</a><br /><a href="" onclick="setActiveStyleSheet('nmnu');   return false;">Nm+Nu</a><br /><a href="" onclick="setActiveStyleSheet('prcj');   return false;">Pr+Cj+Cc+Un</a><br /><table><tr><td>total</td><td align="right">139</td></tr><tr><td>known</td><td align="right">120</td></tr><tr><td>=</td><td align="right"><strong>86.3%</strong></td></tr><tr><td><span class="Aj">Aj</span></td><td align="right">7</td></tr><tr><td><span class="Ar">Ar</span></td><td align="right">19</td></tr><tr><td><span class="Av">Av</span></td><td align="right">3</td></tr><tr><td><span class="Cj">Cj</span></td><td align="right">5</td></tr><tr><td><span class="Ir">Ir</span></td><td align="right">1</td></tr><tr><td><span class="Nm">Nm</span></td><td align="right">1</td></tr><tr><td><span class="Pn">Pn</span></td><td align="right">24</td></tr><tr><td><span class="Pr">Pr</span></td><td align="right">19</td></tr><tr><td><span class="Sb">Sb</span></td><td align="right">18</td></tr><tr><td><span class="Un">Un</span></td><td align="right">4</td></tr><tr><td><span class="Vb">Vb</span></td><td align="right">19</td></tr></table></td></tr></table></body></html></body></html>
+<br /><br />Morphem codes: <span class="Aj">Aj</span> 7
+<span class="Ar">Ar</span> 19
+<span class="Av">Av</span> 3
+<span class="Cj">Cj</span> 5
+<span class="Ir">Ir</span> 1
+<span class="Nm">Nm</span> 1
+<span class="Pn">Pn</span> 24
+<span class="Pr">Pr</span> 19
+<span class="Sb">Sb</span> 18
+<span class="Un">Un</span> 4
+<span class="Vb">Vb</span> 19
+<br />
+<strong>86.3%</strong> = 120 recognized and 19 unknown out of 139 total words<br />
+Highlight: <a href="#" title="Click to switch" onclick="activateStyles('all');    return false;">all found</a>, <a href="#" title="Click to switch" onclick="activateStyles('vbav');   return false;">Vb+Av</a>, <a href="#" title="Click to switch" onclick="activateStyles('sbajar'); return false;">Sb+Aj+Ar</a>, <a href="#" title="Click to switch" onclick="activateStyles('nmnu');   return false;">Nm+Nu</a>, <a href="#" title="Click to switch" onclick="activateStyles('prcj');   return false;">Pr+Cj+Cc+Un</a> <br />
+</body></html>

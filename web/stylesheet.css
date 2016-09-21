@@ -1,14 +1,16 @@
-/*	gramword.css - Cascaded Style Sheet
-	@(#) $Id: stylesheet.css 36 2008-09-08 06:05:06Z gfis $
-	2006-06-09: colored morphology
-	2005-08-18: copied from html/gfis.css
-	2003-07-25:	body font-family
-	2003-03-22:	without HTML comments and tags
-	2000-11-20,	Georg Fischer
+/*  stylesheet.css - Cascaded Style Sheet for general use
+    @(#) $Id$
+    2016-09-20: revised; undo colors with web/unclass.pl
+    2006-06-09: colored morphology
+    2005-08-18: copied from html/gfis.css
+    2003-07-25: body font-family
+    2003-03-22: without HTML comments and tags
+    2000-11-20, Georg Fischer
 */
 .Ab { color:white    ; background-color: goldenrod  }
 .Aj { color:black    ; background-color: lightblue  }
 .Ar { color:white    ; background-color: green      }
+.Au { color:black    ; background-color: lightgreen }
 .Av { color:black    ; background-color: red        }
 .Cc { color:lightred ; background-color: yellow     }
 .Cj { color:blue     ; background-color: yellow     }
@@ -17,20 +19,22 @@
 .Nm { color:blue     ; background-color: chartreuse }
 .Nu { color:black    ; background-color: yellow     }
 .Pn { color:white    ; background-color: crimson    }
+.Pp { color:white    ; background-color: crimson    }
 .Pr { color:red      ; background-color: yellow     }
+.Ps { color:white    ; background-cclor: red        }
 .Rp { color:black    ; background-color: yellow     }
 .Sb { color:black    ; background-color: pink       }
 .Un { color:white    ; background-color: gray       }
 .Vb { color:yellow   ; background-color: blue       }
 
 body,p,h1,h2,h3,h4,dl,dd,dt,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,a,br,img
-	{ font-family:Verdana,Arial,sans-serif; }
-dt	
-	{ font-weight: bold }
+    { font-family:Verdana,Arial,sans-serif; }
+dt  
+    { font-weight: bold }
 tt
-	{ font-family:Courier; }
+    { font-family:Courier; }
 td
-	{ vertical-align:top }
+    { vertical-align:top }
 body
-	{ background-color:white }
+    { background-color:white }
 

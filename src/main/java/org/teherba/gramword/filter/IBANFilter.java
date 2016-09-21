@@ -332,32 +332,7 @@ public class IBANFilter extends KontoFilter {
         return result;
     } // getBankName
 
-    /** Receive notification of the start of an element.
-     *  Looks for the element which contains raw lines.
-     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
-     *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix),
-     *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix),
-     *  or the empty string if qualified names are not available.
-     *  @param attrs the attributes attached to the element.
-     *  If there are no attributes, it shall be an empty Attributes object.
-     */
-    public void startElement(String uri, String localName, String qName, Attributes attrs) {
-        super.startElement(uri, localName, qName, attrs);
-        if (namespace.length() > 0 && qName.startsWith(namespace)) {
-            qName = qName.substring(namespace.length());
-        }
-        if (false) {
-        } else if (qName.equals(BODY_TAG    )) {
-        } else if (qName.equals(HEAD_TAG    )) {
-            // insert special stylesheets
-            String path = "file:///C|/var/www/teherba.org/gramword/web/"; // if not run in servlet container
-            path = ""; // relative .css file paths in servlet container
-            queue.appendBehind(""
-            + "<link rel=\"stylesheet\" title=\"all\"    type=\"text/css\" href=\"" + path + "stylesheet.css\" />"
-            );
-        }
-    } // startElement
-
+    // super.startElement
+    // super.endElement
+    
 } // IBANFilter
