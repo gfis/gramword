@@ -1,7 +1,7 @@
 /*  Bean with properties and methods for words
     and surrounding glue (HTML tags, whitespace and punctuation)
     @(#) $Id: Segment.java 976 2013-02-02 16:44:18Z gfis $
-    2016-09-22: moved to subpackage gramword.filter
+    2016-09-22: moved to subpackage gramword.filter; had a Morphem only
     2007-02-23: copied from Morphem.java
     pure ASCII encoding
 */
@@ -23,6 +23,7 @@
 
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
+import  org.teherba.gramword.MorphemList;
 
 /** Bean with properties and methods for a word (with grammatical properties)
  *  and its surrounding glue (HTML tags, whitespace and punctuation)
@@ -33,6 +34,8 @@ public class Segment {
 
     /** The Morphem (word with grammatical properties) at the center of the segment */
     private Morphem morphem;
+    /** The possible {@link Morphem}s (words with grammatical properties) at the center of the segment */
+    private MorphemList morphems;
     /** Glue (tags, whitespace and punctuation) before the word */
     private StringBuffer prefix;
     /** Glue (tags, whitespace and punctuation) behind the word */
@@ -45,7 +48,7 @@ public class Segment {
     /** No-args Constructor
      */
     public Segment() {
-        this("", new Morphem(), "");
+        this("", new MorphemList(new Morphem()), "");
     } // Constructor()
 
     /** Constructor with prefix, morphem and suffix
@@ -54,7 +57,7 @@ public class Segment {
      *  @param behind glue behind the word (or empty string)
      */
     public Segment(String before, Morphem morphem, String behind) {
-        this.morphem = morphem;
+        setMorphem(morphem);
         prefix = new StringBuffer(GLUE_SIZE);
         prefix.append(before);
         suffix = new StringBuffer(GLUE_SIZE);
@@ -62,30 +65,46 @@ public class Segment {
         inLink = false;
     } // Constructor(3)
 
-    /** Constructor with         morphem and suffix
-     *  @param morphem the word and its grammatical properties
+    /** Constructor with prefix, morphems and suffix
+     *  @param morphems the word and all its possible grammatical properties
      *  @param behind glue behind the word (or empty string)
      */
-    public Segment(               Morphem morphem, String behind) {
-        this.morphem = morphem;
+
+    public Segment(String before, MorphemList morphems, String behind) {
+        setMorphems(morphems);
         prefix = new StringBuffer(8);
         suffix = new StringBuffer(GLUE_SIZE);
         suffix.append(behind);
-    } // Constructor(2)
+    } // Constructor(3s)
 
-    /** Sets the word with its grammatical type.
+    /** Sets the word with a unique grammatical type.
      *  @param morphem morphem for the word
      */
     public void setMorphem(Morphem morphem) {
-        this.morphem = morphem;
+        this.morphems = new MorphemList();
+        this.morphems.add(morphem);
     } // setMorphem
 
-    /** Gets the word with its grammatical type.
-     *  @return morphem for the word
+    /** Gets the first grammatical type.
+     *  @return first morphem for the word
      */
     public Morphem getMorphem() {
-        return morphem;
+        return size() > 0 ? this.morphems.get(0) : null;
     } // getMorphem
+
+    /** Sets the word with several possible grammatical types.
+     *  @param morphems possilbe morphems for the word
+     */
+    public void setMorphems(MorphemList morphems) {
+        this.morphems = morphems;
+    } // setMorphems
+
+    /** Gets the word with several possible grammatical types.
+     *  @return all possible morphems for the word
+     */
+    public MorphemList getMorphems() {
+        return this.morphems;
+    } // getMorphems
 
     /** Inserts a string before the glue before the word
      *  @param glue string to be prepended to the the prefix glue
@@ -143,11 +162,18 @@ public class Segment {
         inLink = link;
     } // setInLink
 
-    /** Returns the string representation of this segment
+    /** Returns the number of {@link Morphem}s in <em>this</em> Segment
+     *  @return nubmer of Morphems
+     */
+    public int size() {
+        return morphems.size();
+    } // size
+
+    /** Returns the string representation of <em>this</em> Segment
      *  @return prefix glue concatenated with word concatenated with suffix glue
      */
     public String toString() {
-        return prefix.toString() + morphem.getEntry() + suffix.toString();
+        return prefix.toString() + morphems.get(0).getEntry() + suffix.toString();
     } // toString
 
 } // Segment

@@ -30,6 +30,7 @@ package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
+import  org.teherba.gramword.MorphemList;
 import  java.util.TreeMap;
 import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
@@ -38,7 +39,7 @@ import  org.apache.log4j.Logger;
 /** Shows the syntactical type of words in an HTML file by different background colors
  *  @author Dr. Georg Fischer
  */
-public class WordTypeFilter extends BaseFilter { 
+public class WordTypeFilter extends BaseFilter {
     public final static String CVSID = "@(#) $Id: WordTypeFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */
@@ -52,7 +53,7 @@ public class WordTypeFilter extends BaseFilter {
         setDescription("word types in different colors");
         setFileExtensions("html");
     } // Constructor
-    
+
     /** Initializes the (quasi-constant) global structures and variables.
      *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
      *  selected generator and serializer.
@@ -61,13 +62,13 @@ public class WordTypeFilter extends BaseFilter {
         super.initialize();
         log = Logger.getLogger(WordTypeFilter.class.getName());
     } // initialize
-    
+
     /*===========================*/
     /* SAX handler for XML input */
     /*===========================*/
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and 
+     *  append a new segment to the queue and
      *  prints the segment which is shifted out of the queue.
      *  @param segment the new segment to be appended to the queue
      *  <p>
@@ -76,29 +77,33 @@ public class WordTypeFilter extends BaseFilter {
      */
     protected void enqueue(Segment segment) {
         Segment element = queue.get(segmentPivot);
-        Morphem morphem = element.getMorphem();
-        String entry = morphem.getEntry();
-        String morph = morphem.getMorph();
+        MorphemList morphems = element.getMorphems();
+        String entry = morphems.get(0).getEntry();
         if (entry.length() <= 0) {
             // ignore empty words - should never occur
         } else { // if (Character.isLetterOrDigit(entry.charAt(0))) {
+            String morph = morphems.get(0).getMorph();
             if (false) {
             } else if (morph.length() > 0) {
                 // we know it already
-            } else { 
-                morphem = tester.test(entry); // database lookup
+            } else {
+                morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
             }
-            if (morphem != null && morphem.getMorph() != null) {
-                String wordClass = morphem.getMorph();
-                String morphCode = wordClass.substring(0, 2);
-                element.appendBefore("<span class=\"" 
-                            + morphCode
-                            + "\" morph=\"" 
-                            + wordClass.substring(morphCode.length())
-                            + "\">");
+            if (morphems != null && morphems.size() > 0) {
+                StringBuffer attrList = new StringBuffer(128);
+                int imorph = 0;
+                while (imorph < morphems.size()) {
+                    attrList.append('|');
+                    attrList.append(morphems.get(imorph).getMorph());
+                    imorph ++;
+                } // while imorph
+                String morph1Code = attrList.substring(1, 3); 
+                element.appendBefore("<span class=\"" + morph1Code // only the 1st two for color
+                        + "\" title=\"" + attrList.substring(1)    // all separated by "|"
+                        + "\">");
                 element.prependBehind("</span>");
                 cntKnown ++;
-                morphIncr(morphCode);
+                morphIncr(morph1Code); // count colors
             } else {
             }
             cntWords ++;
@@ -108,16 +113,16 @@ public class WordTypeFilter extends BaseFilter {
         }
         charWriter.print(queue.add(segment));
     } // enqueue
-    
+
     /** Receive notification of the start of an element.
      *  Looks for the element which contains raw lines.
-     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri The Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
-     *  @param attrs the attributes attached to the element. 
+     *  @param attrs the attributes attached to the element.
      *  If there are no attributes, it shall be an empty Attributes object.
      */
     public void startElement(String uri, String localName, String qName, Attributes attrs) {
@@ -126,21 +131,21 @@ public class WordTypeFilter extends BaseFilter {
             qName = qName.substring(namespace.length());
         }
         if (false) {
-        } else if (qName.equals(HEAD_TAG    )) { 
+        } else if (qName.equals(HEAD_TAG    )) {
             writeHeadEnd  ("Colored Word Types");
-        } else if (qName.equals(BODY_TAG    )) { 
+        } else if (qName.equals(BODY_TAG    )) {
             writeBodyStart("Colored Word Types");
         }
     } // startElement
-    
+
     /** Receive notification of the end of an element.
      *  Looks for the element which contains raw lines.
      *  Terminates the line.
-     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI 
+     *  @param uri the Namespace URI, or the empty string if the element has no Namespace URI
      *  or if Namespace processing is not being performed.
-     *  @param localName the local name (without prefix), 
+     *  @param localName the local name (without prefix),
      *  or the empty string if Namespace processing is not being performed.
-     *  @param qName the qualified name (with prefix), 
+     *  @param qName the qualified name (with prefix),
      *  or the empty string if qualified names are not available.
      */
     public void endElement(String uri, String localName, String qName) {
@@ -148,7 +153,7 @@ public class WordTypeFilter extends BaseFilter {
             qName = qName.substring(namespace.length());
         }
         tagBoundary();
-        if (qName.equals(BODY_TAG    )) { 
+        if (qName.equals(BODY_TAG    )) {
             writeBodyEnd("code,bar,sum,switch");
         }
         if (! nonEmpty && qName.equals(currentTag)) {
@@ -164,5 +169,5 @@ public class WordTypeFilter extends BaseFilter {
         nonEmpty = false;
         inA = false;
     } // endElement
-    
+
 } // WordTypeFilter

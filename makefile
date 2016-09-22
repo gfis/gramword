@@ -13,6 +13,7 @@ DIFF=diff -w -rs -C0
 SRC=src/main/java/org/teherba/$(APPL)
 TOMC=/var/lib/tomcat/webapps/jextra
 TOMC=c:/var/lib/tomcat/webapps/jextra
+DBAT=java -jar ../dbat/dist/dbat.jar -c worddb -e UTF-8 
 METHOD=post
 LANG=en
 TESTDIR=test
@@ -51,6 +52,9 @@ jfind:
 	find src -iname "*.java" | xargs -l grep -H "$(JF)"
 rmbak:
 	find src -iname "*.bak"  | xargs -l rm -v
+#---------------------------------------------------
+lookup:
+	$(DBAT) "select * from words where entry like '$(ENTRY)%' order by 1,2,3,4;" 
 #---------------------------------------------------
 zip:
 	rm -f $(APPL).zip

@@ -67,54 +67,6 @@ public class SegmentQueue {
         return RING_SIZE;
     } // getSize
 
-    /** Adds an element to the queue.
-     *  @param morphem morphem for the word to be added
-     *  @return the string value of the oldest segment in the queue,
-     *  which is shifted out of the queue (maybe empty in the beginning).
-     */
-    public String add(Morphem morphem) {
-        tail ++;
-        if (tail >= RING_SIZE) {
-            tail = 0;
-        }
-        String result = segments[tail].toString();
-        segments[tail] = new Segment("", morphem, "");
-        return result; // previous content of the current element
-    } // add
-
-    /** Adds an element (the morphem for a word and the following glue) to the queue.
-     *  @param morphem morphem for the word to be added
-     *  @param glueBehind HTML tags, whitespace or punctuation following the word
-     *  @return the string value of the oldest segment in the queue,
-     *  which is shifted out of the queue (maybe empty in the beginning).
-     */
-    public String add(Morphem morphem, String glueBehind) {
-        tail ++;
-        if (tail >= RING_SIZE) {
-            tail = 0;
-        }
-        String result = segments[tail].toString();
-        segments[tail] = new Segment(morphem, glueBehind);
-        return result; // previous content of the current element
-    } // add
-
-    /** Adds an element (the morphem for a word and the following glue) to the queue.
-     *  @param glueBefore HTML tags, whitespace or punctuation preceeding the word
-     *  @param morphem morphem for the word to be added
-     *  @param glueBehind HTML tags, whitespace or punctuation following the word
-     *  @return the string value of the oldest segment in the queue,
-     *  which is shifted out of the queue (maybe empty in the beginning).
-     */
-    public String add(String glueBefore, Morphem morphem, String glueBehind) {
-        tail ++;
-        if (tail >= RING_SIZE) {
-            tail = 0;
-        }
-        String result = segments[tail].toString();
-        segments[tail] = new Segment(glueBefore, morphem, glueBehind);
-        return result; // previous content of the current element
-    } // add
-
     /** Adds a segment to the queue.
      *  @param segment segment to be appended to the end of the queue
      *  @return the string value of the oldest segment in the queue,
@@ -219,7 +171,7 @@ public class SegmentQueue {
         SegmentQueue
         queue = new SegmentQueue();
         for (int iring = 1; iring <= 40; iring ++) { // above the RING_SIZE
-            System.out.print(queue.add(new Morphem(Integer.toString(iring), ""), "; "));
+            System.out.print(queue.add(new Segment("", new Morphem(Integer.toString(iring), ""), "; ")));
         }
         System.out.println("----");
         System.out.print(queue.flush());
@@ -227,7 +179,7 @@ public class SegmentQueue {
 
         queue = new SegmentQueue();
         for (int iring = 1; iring <=  6; iring ++) { // below the RING_SIZE
-            System.out.print(queue.add(new Morphem(Integer.toString(iring), ""), "* "));
+            System.out.print(queue.add(new Segment("", new Morphem(Integer.toString(iring), ""), "* ")));
         }
         System.out.println("----");
         System.out.print(queue.flush());

@@ -38,6 +38,7 @@ import  java.sql.PreparedStatement;
 import  java.sql.ResultSet;
 import  java.sql.Statement;
 import  java.util.ArrayList;
+import  java.util.HashMap;
 import  java.util.Iterator;
 import  java.util.Properties;
 import  java.util.regex.Pattern;
@@ -65,20 +66,24 @@ public class MorphemTester {
     private DeuSpeller numSpeller;
 
     /** List of adjective (declination) endings */
-    MorphemList ajSuffixes;
+    protected MorphemList ajSuffixes;
     /** List of number word (declination) endings */
-    MorphemList nuSuffixes;
+    protected MorphemList nuSuffixes;
     /** List of substantive declination endings */
-    MorphemList sbSuffixes;
+    protected MorphemList sbSuffixes;
     /** List of "primary" prepositions and other short, undeclinable words */
-    MorphemList prPrimes;
+    protected MorphemList prPrimes;
     /** Array of interspersed particles */
-    String[] intraLexems;
+    protected String[] intraLexems;
+    /** Maximum size of {@link #morphCache} */
+    private static final int MAX_CACHE = 2048;
+    /** Avoid repeated database requests by this cache */
+    protected HashMap<String, MorphemList> morphCache;
 
     /** Database configuration */
-    private Configuration dbatConfig;
+    protected  Configuration dbatConfig;
     /** Database connection */
-    private Connection con;
+    protected  Connection con;
     /** SQL SELECT statement for <em>words</em> table */
     private PreparedStatement wordsStmt;
     /** SQL SELECT statement for <em>forge</em> table */
@@ -148,6 +153,7 @@ public class MorphemTester {
                         + " WHERE substr(morph,1,2) IN ('Sb', 'Aj')");
             }
             intraLexems = new String[] {"e", "s", "n", "en", "es"};
+            morphCache  = new HashMap<String, MorphemList>(MAX_CACHE);
             if (debug >= 1) {
                 log.info("org.teherba.gramword.MorphemTester initialized with strategy \"" + strategy + "\"");
             }
@@ -207,7 +213,7 @@ public class MorphemTester {
      */
     private void storeSbSuffixes() {
         try {
-            sbSuffixes = new MorphemList(32);
+            sbSuffixes = new MorphemList();
         /*
             PreparedStatement pstmt = con.prepareStatement("SELECT entry, morph, enrel FROM suffix WHERE"
                     + " morph like \'SbX%\' order by 1");
@@ -257,10 +263,9 @@ public class MorphemTester {
                 }
                 if (word.equals(entry)) {
                     result.add(new Morphem(entry, morph, enrel, morel));
+                //  busy = false;
+                } else { // entry matches no longer
                     busy = false;
-                }
-                else { // entry matches no longer
-                    // busy = false;
                 }
             }
             resultSet.close();
@@ -1068,6 +1073,37 @@ public class MorphemTester {
         return result;
     } // testVariants
 
+    /** Determines all possiblemorphologies (grammatical types)
+     *  of a word, if possible
+     *  @param word word to be classified, starting with a letter or digit,
+     *  contains no punctuation or whitespace
+     *  @return a {@link MorphemList} for the possible types of the word, 
+     *  e.g. "VbIn", "SbSgMs" and so on,
+     *  or null if no morphology can be determined
+     */
+    public MorphemList getResults(String word) {
+        MorphemList morphems = morphCache.get(word);
+        if (morphems == null) { // was not yet cached
+            if (false) {
+            } else if (strategy.equals("all")) {
+                morphems = testVariants(word);
+            } else if (strategy.equals("prsplit")) {
+                morphems = testPrSplit(word);
+            } else if (strategy.equals("lexsplit")) {
+                morphems = testLexemSplit(word);
+            } else if (strategy.equals("sasplit")) {
+                morphems = testSASplit(word);
+            } else {
+                morphems = new MorphemList();
+                log.error("unknown strategy \"" + strategy + "\"");
+            }
+            if (morphCache.size() <= MAX_CACHE && morphems.isDetermined()) {
+                morphCache.put(word, morphems); // cache it now
+            }
+        } // not yet cached
+        return morphems;
+    } // getResults
+
     /** Determines the most probable morphology (grammatical type)
      *  of a word, if possible
      *  @param word word to be classified, starting with a letter or digit,
@@ -1077,27 +1113,16 @@ public class MorphemTester {
      */
     public Morphem test(String word) {
         Morphem result = null;
-        MorphemList morphems = new MorphemList();
-        if (false) {
-        } else if (strategy.equals("all")) {
-            morphems = testVariants(word);
-        } else if (strategy.equals("prsplit")) {
-            morphems = testPrSplit(word);
-        } else if (strategy.equals("lexsplit")) {
-            morphems = testLexemSplit(word);
-        } else if (strategy.equals("sasplit")) {
-            morphems = testSASplit(word);
-        } else {
-            log.error("unknown strategy \"" + strategy + "\"");
-        }
+        MorphemList morphems = this.getResults(word);
         if (morphems.isDetermined()) {
-            if (debug >= 3) {
-                log.debug("test(" + word + "): " + morphems.toString());
-            }
-            if (debug > 0 && morphems.size() >= 2) {
-                log.info(morphems.toString());
-            }
             result = morphems.getWinner();
+            if (debug > 0) {
+                if (morphems.size() >= 2) {
+                    log.info(morphems.toString());
+                } else if (debug >= 3) {
+                log.debug("test(" + word + "): " + morphems.toString());
+                }
+            } // debug
         }
         return result;
     } // test

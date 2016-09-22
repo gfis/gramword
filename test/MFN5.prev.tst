@@ -62,7 +62,7 @@ function activateStyles(title) {
 <span class="Ar">Ar</span> 32
 <span class="Cj">Cj</span> 42
 <span class="Ir">Ir</span> 1
-<span class="Nm">Nm</span> 19
+<span class="Nm">Nm</span> 20
 <span class="Nu">Nu</span> 92
 <span class="Pn">Pn</span> 37
 <span class="Pr">Pr</span> 20

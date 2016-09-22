@@ -49,16 +49,16 @@ public class MorphemList extends ArrayList<Morphem> {
     /** No-args Constructor
      */
     public MorphemList() {
-        this(32);
-    } // Constructor()
-
-    /** Constructor with capacity
-     *  @param capacity initial number of array elements
-     */
-    public MorphemList(int capacity) {
-        super(capacity);
+        super(32);
         log = Logger.getLogger(MorphemList.class.getName());
         newline = System.getProperty("line.separator");
+    } // Constructor()
+
+    /** Constructor with {@link Morphem}
+     *  @param morphem initial, single element for the list
+     */
+    public MorphemList(Morphem morphem) {
+        this.add(morphem);
     } // Constructor(1)
 
     /** Constructor which loads from a database table;

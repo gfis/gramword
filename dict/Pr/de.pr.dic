@@ -1,3 +1,8 @@
+# German prepositions and other undeclinable words (UTF-8, äöüÄÖÜß)
+# @(#) $Id: de.pr.dic 564 2010-10-19 16:29:18Z gfis $
+# 2016-09-22: "nicht" removed
+# 2006-06-26, Dr. Georg Fischer: UTF-8, äöüÄÖÜß
+#
 ab		PrPrim
 aber		Cj
 allerdings		Cj
@@ -86,7 +91,6 @@ nachdem		Pr
 nachher		Pr
 neben		PrPrim
 neben		PrPrim
-nicht		Un
 nichtsdestoweniger		Cj
 noch		Cj
 nur		Un

@@ -40,7 +40,44 @@ eine  		=ArUndtAccvSgFm
 ein   		=ArUndtAccvSgNt
 
 # relative pronouns
-dessen  	=PnRelt
-deren   	=PnRelt
-derer   	=PnRelt
-denen 		=PnRelt
+# Kasus 	Mask 	Neut 	Fem 	Pl                  
+# Nom 	der 	das 	die 	die                 
+# Gen 	dessen 	dessen 	deren, derer 	deren, derer
+# Dat 	dem 	dem 	der 	denen               
+# Akk 	den 	das 	die 	die                 
+der			=PnReltNomvSgMs
+die			=PnReltNomvSgFm
+das			=PnReltNomvSgNt
+die			=PnReltNomvPl
+dessen		=PnReltGenvSgMs
+deren		=PnReltGenvSgFm
+derer		=PnReltGenvSgFm
+dessen		=PnReltGenvSgNt
+deren		=PnReltGenvPl
+derer		=PnReltGenvPl
+dem			=PnReltDatvSgMs
+der			=PnReltDatvSgFm
+dem			=PnReltDatvSgNt
+denen		=PnReltDatvPl
+den			=PnReltAccvSgMs
+die			=PnReltAccvSgFm
+das			=PnReltAccvSgNt
+die			=PnReltAccvPl
+
+# Kasus 	Mask 	Neut 	Fem 	Pl
+# Nom 	welcher 	welches 	welche 	welche
+# (no genitive)
+# Dat 	welchem 	welchem 	welcher 	welchen
+# Akk 	welchen 	welches 	welche 	welche
+welcher		=PnReltNomvSgMs
+welche		=PnReltNomvSgFm
+welches		=PnReltNomvSgNt
+welche		=PnReltNomvPl
+welchem		=PnReltDatvSgMs
+welcher		=PnReltDatvSgFm
+welchem		=PnReltDatvSgNt
+welchen		=PnReltDatvPl
+welchen		=PnReltAccvSgMs
+welche		=PnReltAccvSgFm
+welches		=PnReltAccvSgNt
+welche		=PnReltAccvPl

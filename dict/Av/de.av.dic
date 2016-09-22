@@ -1,8 +1,9 @@
-# German adverbs and other undeclinable words
+# German adverbs and other undeclinable words (UTF-8, äöüÄÖÜß)
 # @(#) $Id: de.av.dic 564 2010-10-19 16:29:18Z gfis $
-# 2010-10-18: tagsüber
-# 2006-08-02: vorn(e), hinten
-# 2006-06-26, Dr. Georg Fischer: UTF-8, äöüÄÖÜß
+# 2016-09-22: 1 x "nicht" removed
+# 2010-10-18: "tagsüber"
+# 2006-08-02: "vorn(e)", "hinten"
+# 2006-06-26, Dr. Georg Fischer: 
 #
 da              =Un
 so              =Un
