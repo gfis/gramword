@@ -1,2 +1,2 @@
 # gramword
-Assigns grammatical Attributes to Words
+Java project which assigns grammatical attributes to words and sentences in German.
