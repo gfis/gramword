@@ -28,8 +28,8 @@
 
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
+import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
-import  org.teherba.gramword.Segment;
 import  java.util.TreeMap;
 import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
@@ -53,14 +53,14 @@ public class WordTypeFilter extends BaseFilter {
         setFileExtensions("html");
     } // Constructor
     
-	/** Initializes the (quasi-constant) global structures and variables.
-	 *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
-	 *  selected generator and serializer.
-	 */
-	public void initialize() {
-		super.initialize();
+    /** Initializes the (quasi-constant) global structures and variables.
+     *  This method is called by the {@link org.teherba.xtrans.XtransFactory} once for the
+     *  selected generator and serializer.
+     */
+    public void initialize() {
+        super.initialize();
         log = Logger.getLogger(WordTypeFilter.class.getName());
-	} // initialize
+    } // initialize
     
     /*===========================*/
     /* SAX handler for XML input */
@@ -76,11 +76,18 @@ public class WordTypeFilter extends BaseFilter {
      */
     protected void enqueue(Segment segment) {
         Segment element = queue.get(segmentPivot);
-        String word = element.getMorphem().getEntry();
-        if (word.length() <= 0) {
+        Morphem morphem = element.getMorphem();
+        String entry = morphem.getEntry();
+        String morph = morphem.getMorph();
+        if (entry.length() <= 0) {
             // ignore empty words - should never occur
-        } else if (Character.isLetterOrDigit(word.charAt(0))) {
-            Morphem morphem = tester.test(word);
+        } else { // if (Character.isLetterOrDigit(entry.charAt(0))) {
+            if (false) {
+            } else if (morph.length() > 0) {
+                // we know it already
+            } else { 
+                morphem = tester.test(entry); // database lookup
+            }
             if (morphem != null && morphem.getMorph() != null) {
                 String wordClass = morphem.getMorph();
                 String morphCode = wordClass.substring(0, 2);
@@ -95,8 +102,6 @@ public class WordTypeFilter extends BaseFilter {
             } else {
             }
             cntWords ++;
-        } else {
-            // ignore all others - should not occur
         }
         if (inA) {
             segment.setInLink(inA);

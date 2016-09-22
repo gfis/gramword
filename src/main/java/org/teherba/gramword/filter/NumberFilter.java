@@ -28,11 +28,8 @@
 
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
+import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
-import  org.teherba.gramword.Segment;
-import  java.text.DecimalFormat;
-import  java.util.Iterator;
-import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
 import  org.apache.log4j.Logger;
 
@@ -77,11 +74,11 @@ public class NumberFilter extends BaseFilter {
      */
     protected void enqueue(Segment segment) {
         Segment element = queue.get(segmentPivot);
-        String word = element.getMorphem().getEntry();
-        if (word.length() <= 0) {
+        String entry = element.getMorphem().getEntry();
+        if (entry.length() <= 0) {
             // ignore empty words - should never occur
-        } else if (Character.isLetterOrDigit(word.charAt(0))) {
-            Morphem morphem = tester.test(word);
+        } else if (Character.isLetterOrDigit(entry.charAt(0))) {
+            Morphem morphem = tester.test(entry);
             if (morphem != null && morphem.getMorph() != null) {
                 String wordClass = morphem.getMorph();
                 String morphCode = wordClass.substring(0, 2);

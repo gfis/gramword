@@ -116,11 +116,11 @@ public class MorphemTester {
             numSpeller      = new DeuSpeller();
             dbatConfig = new Configuration();
             dbatConfig.configure(dbatConfig.CLI_CALL);
-            
+
             String connectionId = "worddb";
             dbatConfig.addProperties(connectionId + ".properties");
             dbatConfig.setConnectionId(connectionId);
-            
+
             con = dbatConfig.getOpenConnection();
             int MAXSEL = 16;
             wordsStmt   = con.prepareStatement("SELECT entry, morph, enrel, morel FROM words  WHERE"

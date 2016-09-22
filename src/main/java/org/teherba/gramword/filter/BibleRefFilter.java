@@ -22,9 +22,9 @@
 
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
+import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.teherba.gramword.Segment;
 import  org.apache.log4j.Logger;
 
 /** Links bible references like "Joh 1,1" to a fragment URLs in online bibles.

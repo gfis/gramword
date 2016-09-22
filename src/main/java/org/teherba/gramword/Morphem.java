@@ -70,86 +70,90 @@ public class Morphem implements Cloneable {
     //====================================================
     // Particle codes for {@link #morph} and {@link morel}
     //----------------
-	// Word classes
-	/** Code for adjectives           */
-	public static final String ADJECT 		= "Aj";
-	/** Code for substantives         */
-	public static final String SUBSTAN 		= "Sb";
-	/** Code for verbs                */
-	public static final String VERB 		= "Vb";
+    // Word classes
+    /** Code for adjectives           */
+    public static final String ADJECT       = "Aj";
+    /** Code for substantives         */
+    public static final String SUBSTAN      = "Sb";
+    /** Code for verbs                */
+    public static final String VERB         = "Vb";
+    /** Code for numbers              */
+    public static final String NUMBER       = "Nu";
+    /** Code for punctuation          */
+    public static final String PUNCT        = "Pu";
     
-	// Attitudes and times
-	/** Code for gerundium            */
-	public static final String GERUND 		= "Ge";
-	/** Code for imperative           */
-	public static final String IMPER 		= "Im";
-	/** Code for infinitive           */
-	public static final String INFIN 		= "In";
-	/** Code for perfect              */
-	public static final String PERF 		= "Pf";
-	/** Code for praeteritum          */
-	public static final String PRAET 		= "Pt";
-	/** Code for present time         */
-	public static final String PRESENT 		= "Pr";
+    // Attitudes and times
+    /** Code for gerundium            */
+    public static final String GERUND       = "Ge";
+    /** Code for imperative           */
+    public static final String IMPER        = "Im";
+    /** Code for infinitive           */
+    public static final String INFIN        = "In";
+    /** Code for perfect              */
+    public static final String PERF         = "Pf";
+    /** Code for praeteritum          */
+    public static final String PRAET        = "Pt";
+    /** Code for present time         */
+    public static final String PRESENT      = "Pr";
 
-	// Person and Numerus
-	/** Code for 1st person singular  */
-	public static final String ME 			= "11";
-	/** Code for 2nd person singular  */
-	public static final String YO 			= "12";
-	/** Code for 3rd person singular  */
-	public static final String HI 			= "13";
-	/** Code for 1st person plural    */
-	public static final String US 	 		= "91";
-	/** Code for 2nd person plural    */
-	public static final String Y2 			= "92";
-	/** Code for 3rd person plural    */
-	public static final String TH 			= "93";
-	/** Code for unspecified person   */
-	public static final String UN 			= "0";
+    // Person and Numerus
+    /** Code for 1st person singular  */
+    public static final String ME           = "11";
+    /** Code for 2nd person singular  */
+    public static final String YO           = "12";
+    /** Code for 3rd person singular  */
+    public static final String HI           = "13";
+    /** Code for 1st person plural    */
+    public static final String US           = "91";
+    /** Code for 2nd person plural    */
+    public static final String Y2           = "92";
+    /** Code for 3rd person plural    */
+    public static final String TH           = "93";
+    /** Code for unspecified person   */
+    public static final String UN           = "0";
 
-	// Gender             
-	/** Code for masculine            */
-	public static final String MASC			= "Ms";
-	/** Code for feminine             */
-	public static final String FEMI			= "Fm";
-	/** Code for neuter               */
-	public static final String NEUT 		= "Nt";
+    // Gender             
+    /** Code for masculine            */
+    public static final String MASC         = "Ms";
+    /** Code for feminine             */
+    public static final String FEMI         = "Fm";
+    /** Code for neuter               */
+    public static final String NEUT         = "Nt";
 
-	// Numerus             
-	/** Code for singular             */
-	public static final String SING			= "1";
-	/** Code for plural               */
-	public static final String PLUR			= "9";
+    // Numerus             
+    /** Code for singular             */
+    public static final String SING         = "1";
+    /** Code for plural               */
+    public static final String PLUR         = "9";
 
-	// Cases
-	/** Code for nominative           */
-	public static final String NOM			= "Nom";
-	/** Code for genitive             */
-	public static final String GEN			= "Gen";
-	/** Code for dative               */
-	public static final String DAT			= "Dat";
-	/** Code for accusative           */
-	public static final String ACC			= "Acc";
-	/** Code for ablative             */
-	public static final String ABL			= "Abl";
+    // Cases
+    /** Code for nominative           */
+    public static final String NOM          = "Nom";
+    /** Code for genitive             */
+    public static final String GEN          = "Gen";
+    /** Code for dative               */
+    public static final String DAT          = "Dat";
+    /** Code for accusative           */
+    public static final String ACC          = "Acc";
+    /** Code for ablative             */
+    public static final String ABL          = "Abl";
 
-	// Comparision
-	/** Code for positive             */
-	public static final String POST			= "Pos";
-	/** Code for comparative          */
-	public static final String COMP			= "Cmp";
-	/** Code for superlative          */
-	public static final String SUPL			= "Sup";
+    // Comparision
+    /** Code for positive             */
+    public static final String POST         = "Pos";
+    /** Code for comparative          */
+    public static final String COMP         = "Cmp";
+    /** Code for superlative          */
+    public static final String SUPL         = "Sup";
 
-	// Determination
-	/** Code for determined article   */
-	public static final String DET			= "Det";
-	/** Code for undetermined article */
-	public static final String UND			= "Und";
-	/** Code for absent article       */
-	public static final String ABS			= "Abs";
-	
+    // Determination
+    /** Code for determined article   */
+    public static final String DET          = "Det";
+    /** Code for undetermined article */
+    public static final String UND          = "Und";
+    /** Code for absent article       */
+    public static final String ABS          = "Abs";
+    
     //=========================
     // Construction and Cloning
     //=========================
@@ -201,22 +205,22 @@ public class Morphem implements Cloneable {
         this.prio  = prio;
     } // Constructor(5)
 
-	/** Clones a Morphem
-	 */
-	public Morphem clone(){
-		Morphem result = new Morphem
-				( this.entry
-				, this.morph
-				, this.enrel
-				, this.morel
-				, this.prio
-				);
-		result.setOper(this.getOper());
-		return result;
-	} // clone
-	//=====================================
-	// Bean getters and setters
-	//=====================================
+    /** Clones a Morphem
+     */
+    public Morphem clone(){
+        Morphem result = new Morphem
+                ( this.entry
+                , this.morph
+                , this.enrel
+                , this.morel
+                , this.prio
+                );
+        result.setOper(this.getOper());
+        return result;
+    } // clone
+    //=====================================
+    // Bean getters and setters
+    //=====================================
     /** Sets the word whose grammatical type is determined.
      *  @param entry the entry to be classified
      */
@@ -328,9 +332,9 @@ public class Morphem implements Cloneable {
         return (oper & MARK) != 0;
     } // isMarked
 
-	/** Separator for properties of the morphem */
-	private static final char SEP = '\t';
-	
+    /** Separator for properties of the morphem */
+    private static final char SEP = '\t';
+    
     /** Represents the morphem in "escape" format.
      *  @return string representation: "{entry morph enrel morel}"
      */
@@ -347,7 +351,7 @@ public class Morphem implements Cloneable {
             }
         }
         if (isMarked()) {
-        	result.append(SEP);
+            result.append(SEP);
             result.append("#");
         }
         return result.toString();

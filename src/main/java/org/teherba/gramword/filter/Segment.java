@@ -1,6 +1,7 @@
 /*  Bean with properties and methods for words
     and surrounding glue (HTML tags, whitespace and punctuation)
     @(#) $Id: Segment.java 976 2013-02-02 16:44:18Z gfis $
+    2016-09-22: moved to subpackage gramword.filter
     2007-02-23: copied from Morphem.java
     pure ASCII encoding
 */
@@ -20,14 +21,14 @@
  * limitations under the License.
  */
 
-package org.teherba.gramword;
+package org.teherba.gramword.filter;
 import  org.teherba.gramword.Morphem;
 
 /** Bean with properties and methods for a word (with grammatical properties)
  *  and its surrounding glue (HTML tags, whitespace and punctuation)
  *  @author Dr. Georg Fischer
  */
-public class Segment { 
+public class Segment {
     public final static String CVSID = "@(#) $Id: Segment.java 976 2013-02-02 16:44:18Z gfis $";
 
     /** The Morphem (word with grammatical properties) at the center of the segment */
@@ -75,78 +76,78 @@ public class Segment {
     /** Sets the word with its grammatical type.
      *  @param morphem morphem for the word
      */
-    public void setMorphem(Morphem morphem) { 
+    public void setMorphem(Morphem morphem) {
         this.morphem = morphem;
     } // setMorphem
-    
+
     /** Gets the word with its grammatical type.
      *  @return morphem for the word
      */
-    public Morphem getMorphem() { 
+    public Morphem getMorphem() {
         return morphem;
     } // getMorphem
-    
+
     /** Inserts a string before the glue before the word
      *  @param glue string to be prepended to the the prefix glue
      */
-    public void prependBefore(String glue) { 
+    public void prependBefore(String glue) {
         prefix.insert(0, glue);
     } // prependBefore
 
     /** Inserts a string before the glue behind the word
      *  @param glue string to be prepended to the the suffix glue
      */
-    public void prependBehind(String glue) { 
+    public void prependBehind(String glue) {
         suffix.insert(0, glue);
     } // prependBehind
 
     /** Appends a string to the glue before the word
      *  @param glue string to be appended to the the prefix glue
      */
-    public void appendBefore(String glue) { 
+    public void appendBefore(String glue) {
         prefix.append(glue);
     } // appendBefore
 
     /** Appends a string to the glue behind the word
      *  @param glue string to be appended to the the suffix glue
      */
-    public void appendBehind(String glue) { 
+    public void appendBehind(String glue) {
         suffix.append(glue);
     } // appendBehind
 
-    /** Returns the prefix 
+    /** Returns the prefix
      *  @return glue before the word
      */
-    public String getPrefix() { 
+    public String getPrefix() {
         return prefix.toString();
     } // getSuffix
-    
-    /** Returns the suffix 
+
+    /** Returns the suffix
      *  @return glue behind the word
      */
-    public String getSuffix() { 
+    public String getSuffix() {
         return suffix.toString();
     } // setSuffix
-    
+
     /** Returns the link property
      *  @return whether this segment is contained in a link (HTML "a" element)
      */
-    public boolean getInLink() { 
+    public boolean isInLink() {
         return inLink;
-    } // getInLink
-    
+    } // isInLink
+
     /** Sets the link property
      *  @param link whether this segment is contained in a link (HTML "a" element)
      */
-    public void setInLink(boolean link) { 
+    public void setInLink(boolean link) {
         inLink = link;
     } // setInLink
-    
+
     /** Returns the string representation of this segment
      *  @return prefix glue concatenated with word concatenated with suffix glue
      */
-    public String toString() { 
+    public String toString() {
         return prefix.toString() + morphem.getEntry() + suffix.toString();
     } // toString
-    
+
 } // Segment

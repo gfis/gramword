@@ -38,20 +38,20 @@ import  org.apache.log4j.Logger;
  *  This class is general and independant of language specifica.
  *  @author Georg Fischer
  */
-public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ { 
+public class MorphemList extends ArrayList<Morphem> {
     public final static String CVSID = "@(#) $Id: MorphemList.java 978 2013-02-04 11:06:08Z gfis $";
     /** log4j logger (category) */
     private Logger log;
-    
+
     /** System-dependant newline string (CR/LF for Windows, LF for Unix) */
-    private String newline; 
+    private String newline;
 
     /** No-args Constructor
      */
     public MorphemList() {
-    	this(32);
+        this(32);
     } // Constructor()
-    
+
     /** Constructor with capacity
      *  @param capacity initial number of array elements
      */
@@ -60,9 +60,9 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
         log = Logger.getLogger(MorphemList.class.getName());
         newline = System.getProperty("line.separator");
     } // Constructor(1)
-    
+
     /** Constructor which loads from a database table;
-     *  fills the list with all rows in a database table 
+     *  fills the list with all rows in a database table
      *  which have a specified morphem pattern .
      *  @param con          open database connection
      *  @param table        name of the table to be read
@@ -74,9 +74,9 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
         try {
             PreparedStatement pstmt = con.prepareStatement
                     ( "SELECT entry, morph, enrel, morel FROM " + table + " WHERE"
-                    + " morph LIKE \'" + morphLike + "\' ORDER BY 1"); 
+                    + " morph LIKE \'" + morphLike + "\' ORDER BY 1");
             ResultSet resultSet = pstmt.executeQuery();
-            while (resultSet.next()) { 
+            while (resultSet.next()) {
                 add (new Morphem( resultSet.getString(1)
                                 , resultSet.getString(2)
                                 , resultSet.getString(3)
@@ -91,9 +91,9 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
             log.error(exc.getMessage(), exc);
         }
     } // Constructor(3)
-     
+
     /** Adds an element to the list, but if it is an explicit
-     *  replacement (starting with <em>Ex</em>), 
+     *  replacement (starting with <em>Ex</em>),
      *  adds the replacement morphem behind the "Ex" morphem
      *  @param morphem morphem to be added
      */
@@ -105,7 +105,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
         return result;
     } // add 1
 
-    /** Adds an element to the list built from 2 strings 
+    /** Adds an element to the list built from 2 strings
      *  (convenience method)
      *  @param entry word of the new element
      *  @param morph grammatical type of that word
@@ -155,7 +155,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
         return top;
     } // popToUnmarked
 
-    /** Concatenates all marked entries on the list, excluding the first 
+    /** Concatenates all marked entries on the list, excluding the first
      *  (dummy) element, and including the top (unmarked) element
      *  @return length of the concatenated string
      */
@@ -173,16 +173,16 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
         return len;
     } // getEdgeLength
 
-    /** Concatenates all <em>entry</em> and <em>morph</em> properties respectively 
-     *  of the top element and the marked elements in a non-empty list, and 
-     *  returns a single element built from the parameter and the 
-     *  concatenated strings, which are stored into 
+    /** Concatenates all <em>entry</em> and <em>morph</em> properties respectively
+     *  of the top element and the marked elements in a non-empty list, and
+     *  returns a single element built from the parameter and the
+     *  concatenated strings, which are stored into
      *  <em>enrel</em> and <em>morel</em>; the <em>morph</em> property
      *  is taken from the top element of the list.
      *  @param word word whose component parts are concatenated,
      *  put into the resulting morphem
-     *  @return a <em>Morphem</em> with shows the component parts of 
-     *  a word 
+     *  @return a <em>Morphem</em> with shows the component parts of
+     *  a word
      */
     public Morphem concatenate(String word) {
         StringBuffer enSum = new StringBuffer(128);
@@ -198,7 +198,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
             }
             index ++;
         } // while
-        return new Morphem 
+        return new Morphem
                 ( word
                 , morphem.getMorph() + "Conc" // the one from the 'top' element
                 , enSum.toString()
@@ -221,7 +221,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
     } // toString
 
     /** Returns all entries as a list suitable for an SQL "IN" clause.
-     *  @return a string of the form 
+     *  @return a string of the form
      *  <pre>
      *  ('entry1','entry2' ...)
      *  </pre>
@@ -235,16 +235,16 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
             Morphem morphem = (Morphem) iter.next();
             String entry = morphem.getEntry();
             if (words.get(entry) == null) { // did not yet occur
-            	words.put(entry, entry);
-	            result.append(sep);
-	            sep = ',';
-	            result.append('\'');
-	            result.append(entry);
-	            result.append('\'');
-	            // result.append(newline);
-        	} // did not yet occur
+                words.put(entry, entry);
+                result.append(sep);
+                sep = ',';
+                result.append('\'');
+                result.append(entry);
+                result.append('\'');
+                // result.append(newline);
+            } // did not yet occur
         } // while
-		result.append(')');
+        result.append(')');
         return result.toString();
     } // getListForSQL
 
@@ -256,7 +256,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
     } // isDetermined
 
     /** Checks whether the contents of the morphem list are
-     *  not yet 
+     *  not yet
      *  sufficiently probable to determine the word's morphology.
      */
     public boolean isUnsure() {
@@ -264,7 +264,7 @@ public class MorphemList extends ArrayList/*<1.5*/<Morphem>/*1.5>*/ {
     } // isUnsure
 
     /** Returns the most relevant entry of the list.
-     *  @return the "winning" morphem; 
+     *  @return the "winning" morphem;
      *  currently, this is the first which is not an explicit replacement
      */
     public Morphem getWinner() {

@@ -23,9 +23,9 @@
 
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
+import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.teherba.gramword.Segment;
 import  org.teherba.checkdig.account.DeAccountChecker;
 import  java.util.ArrayList;
 import  java.net.URLEncoder;
@@ -53,7 +53,7 @@ public class KontoFilter extends BaseFilter {
     private Logger log;
 
     /** Array of key words "BLZ", "Kto" etc. */
-    private ArrayList/*<1.5*/<String>/*1.5>*/ keyWords;
+    private ArrayList<String> keyWords;
     /** Maximum index of "BLZ" key words */
     private int maxBlz;
     /** Maximum index of "Kto" key words */
@@ -88,7 +88,7 @@ public class KontoFilter extends BaseFilter {
         super.initialize();
         log = Logger.getLogger(KontoFilter.class.getName());
         segmentPivot = -16;
-        keyWords = new ArrayList/*<1.5*/<String>/*1.5>*/(8);
+        keyWords = new ArrayList<String>(8);
         keyWords.add("BLZ");
         maxBlz = keyWords.size();
         keyWords.add("KTO");
