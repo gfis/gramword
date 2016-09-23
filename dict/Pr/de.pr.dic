@@ -81,7 +81,7 @@ in		PrPrim
 indem		Cj
 je		Un
 jedoch		Cj
-kraft		Un
+kraft		Pr
 mehr		Un
 minus		Cj
 mit		PrPrim
@@ -132,7 +132,7 @@ weiter		PrPrim
 wenn		Cj
 wiederum		Cj
 wiewohl		Cj
-willen		Un
+willen		PrPost
 wobei		Cj
 wor		PrPrimComb
 woran		Pr

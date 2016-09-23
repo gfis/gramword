@@ -64,7 +64,7 @@ forge_2_load:
 	$(DBAT) "delete from forge where substr(morph, 1, 2) not in ('Sb', 'Nm', 'Ex')"
 	$(DBAT) -n  forge
 sb_load:
-	$(DBAT) "insert into roots (select entry, morph, '' from forge)"
+	$(DBAT) "insert into roots (select entry, morph, enrel, morel from forge)"
 
 load_man:
 	$(DBAT) -f forge_create.sql

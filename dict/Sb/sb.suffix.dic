@@ -1,6 +1,7 @@
 # German endings/suffixes and their declinations
 # @(#) $Id: sb.suffix.dic 36 2008-09-08 06:05:06Z gfis $
 # caution, must be stored in UTF8: äöüÄÖÜß
+# 2016-09-23: kasse, werk a.o.
 # 2006-07-25: -tum =SbSgNt
 # 2006-06-14: -nahme =SbF
 # 2006-06-08, Georg Fischer
@@ -32,19 +33,29 @@ ie       =SbSgFm
 ik       =SbSgFm
 ion      =SbSgFm
 ismus    =SbSgMs
+kasse    =SbSgFm
 keit     =SbSgFm
+kunde    =SbSgFm
 kunft    =SbSgFm
 logie    =SbSgFm
 nahme	 =SbSgFm
 nis		 =SbSgFm
 sophie   =SbSgFm
 rie      =SbSgFm
+satz     =SbSgMs
 schaft   =SbSgFm
+stein    =SbSgMs
+stamm    =SbSgMs
+system   =SbSgNt
 tät      =SbSgFm
 tion     =SbSgFm
 tum      =SbSgNt
 ung      =SbSgFm
 ur       =SbSgFm
+werk	 =SbSgNt
+zahl	 =SbSgFm
+zeit	 =SbSgFm
+zeug	 =SbSgNt
 # plural
 anzen    =SbPl
 enzen    =SbPl
@@ -77,6 +88,7 @@ uren     =SbPl
 eur      =SbSgMsProf
 iker     =SbSgMsProf
 ist      =SbSgMsProf
+ler      =SbSgMsProf
 loge     =SbSgMsProf
 mann     =SbSgMsProf
 chef     =SbSgMsProf
@@ -95,18 +107,18 @@ rats     =SbSgMsGeProf
 örs      =SbSgMsGeProf
 ors      =SbSgMsGeProf
 # plural
-äre      =SbPlProf
-eure     =SbPlProf
-isten    =SbPlProf
-leute    =SbPlProf
-leuten   =SbPlProf
-logen    =SbPlProf
-männer   =SbPlProf
-chefs    =SbPlProf
-räte     =SbPlProf
-öre      =SbPlProf
-ore      =SbPlProf
-oren     =SbPlProf
+äre      =SbPlMsProf
+eure     =SbPlMsProf
+isten    =SbPlMsProf
+leute    =SbPlMsProf
+leuten   =SbPlMsProf
+logen    =SbPlMsProf
+männer   =SbPlMsProf
+chefs    =SbPlMsProf
+räte     =SbPlMsProf
+öre      =SbPlMsProf
+ore      =SbPlMsProf
+oren     =SbPlMsProf
              
 # female     
 in       =SbSgFmProf
@@ -123,7 +135,7 @@ frau     =SbSgFmProf
 chefin   =SbSgFmProf
 rätin    =SbSgFmProf
 örin     =SbSgFmProf
-innen    =SbPlProf
-eusen    =SbPlProf
-icen     =SbPlProf
-frauen   =SbPlProf
+innen    =SbPlFmProf
+eusen    =SbPlFmProf
+icen     =SbPlFmProf
+frauen   =SbPlFmProf

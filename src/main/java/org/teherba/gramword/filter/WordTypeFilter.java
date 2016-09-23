@@ -79,10 +79,12 @@ public class WordTypeFilter extends BaseFilter {
         Segment element = queue.get(segmentPivot);
         MorphemList morphems = element.getMorphems();
         String entry = morphems.get(0).getEntry();
+        String morphCode2 = "Xy"; // unrecognized so far
         if (entry.length() <= 0) {
             // ignore empty words - should never occur
         } else { // if (Character.isLetterOrDigit(entry.charAt(0))) {
             String morph = morphems.get(0).getMorph();
+            StringBuffer attrList = new StringBuffer(128);
             if (false) {
             } else if (morph.length() > 0) {
                 // we know it already
@@ -90,24 +92,23 @@ public class WordTypeFilter extends BaseFilter {
                 morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
             }
             if (morphems != null && morphems.size() > 0) {
-                StringBuffer attrList = new StringBuffer(128);
+                cntKnown ++;
                 int imorph = 0;
                 while (imorph < morphems.size()) {
                     attrList.append('|');
                     attrList.append(morphems.get(imorph).getMorph());
                     imorph ++;
                 } // while imorph
-                String morph1Code = attrList.substring(1, 3); 
-                element.appendBefore("<span class=\"" + morph1Code // only the 1st two for color
-                        + "\" title=\"" + attrList.substring(1)    // all separated by "|"
-                        + "\">");
-                element.prependBehind("</span>");
-                cntKnown ++;
-                morphIncr(morph1Code); // count colors
-            } else {
+                morphCode2 = attrList.substring(1, 3); 
+            } else { // not found in database
+                attrList.append(" ").append(morphCode2);
             }
+            element.appendBefore("<span class=\"" + morphCode2 // only the 1st two for color
+                    + "\" title=\"" + attrList.substring(1) + "\">"); // all separated by "|"
+            element.prependBehind("</span>");
+            morphIncr(morphCode2); // count colors
             cntWords ++;
-        }
+        } // entry.length() > 0
         if (inA) {
             segment.setInLink(inA);
         }

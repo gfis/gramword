@@ -1,7 +1,7 @@
 /*  stylesheet.css - Cascaded Style Sheet for general use
     @(#) $Id$
-    2016-09-22: .Pu = punctuation
-    2016-09-20: revised; undo colors with web/unclass.pl, same as all.css
+    2016-09-23: .Pu = punctuation; .Xy: unrecognized
+    2016-09-20: revised; undo colors with web/unclass.pl
     2006-06-09: colored morphology
     2005-08-18: copied from html/gfis.css
     2003-07-25: body font-family
@@ -23,14 +23,15 @@
 .Pp { color:white    ; background-color: crimson    }
 .Pr { color:red      ; background-color: yellow     }
 .Ps { color:white    ; background-cclor: red        }
-.Pu { color:white    ; background-color: black      }
+.Pu { color:white    ; background-color: black    ; font-weight:bold }
 .Rp { color:black    ; background-color: yellow     }
 .Sb { color:black    ; background-color: pink       }
 .Un { color:white    ; background-color: gray       }
-.Vb { color:yellow   ; background-color: blue       }
+.Vb { color:white    ; background-color: mediumblue }
+.Xy { color:black    ; background-color: azure      }
 
 body,p,h1,h2,h3,h4,dl,dd,dt,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,a,br,img
-    { font-family:Verdana,Arial,sans-serif; }
+    { font-family:Verdana,Arial,sans-serif;}
 dt  
     { font-weight: bold }
 tt
@@ -39,4 +40,3 @@ td
     { vertical-align:top }
 body
     { background-color:white }
-

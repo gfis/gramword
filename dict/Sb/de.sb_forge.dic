@@ -716,6 +716,7 @@ Cluster	SbSgNtForg.En
 Co	Ab	Companie	SbSgFm
 Cobbler	xx
 Code	SbSgMsForg.En
+Computer	SbSgMsForg.En
 Cop	SbSgProfAbbrForg.En	Corporal	SbSgMsProfForg.En
 Cord	SbSgMsClthForg.En
 Core	SbSgMsForg.En
@@ -3346,6 +3347,7 @@ Marter	SbSgFm
 Marx	NmSurn
 Marz:	SbSgMsTime
 Masche	SbSgFm
+Maschine	SbSgFm
 Masel	xx
 Maser	SbSgFm
 Maske	SbSgFm
@@ -4162,6 +4164,7 @@ Pritsche	SbSgFm
 Prix	SbSgMsForg.Fr	Preis	SbSgMs
 Probchen:	SbSgNtDimt	Probe	SbSgFm
 Probe	SbSgFm
+Programm	SbSgNt
 Prof	AbTitl	Professor	SbSgMsProf
 Proll	xx
 Propen	xx
@@ -4496,6 +4499,7 @@ Ritzer	xx
 Robbe	SbSgFmZool
 Robber	xx
 Robe	SbSgFm
+Roboter	SbSgMs
 Rochen	SbSgMsZool
 Rock	SbSgMs
 Rockchen:	SbSgNtDimt	Rock	SbSgMs
@@ -5964,6 +5968,7 @@ Swine	xx
 Swing	SbSgMsForg.En
 Swinger	SbSgMsPersForg.En	swingen	VbIn
 Swiss	SbSgFmForg.Ch
+System  SbSgNtForg
 Szekler	xx
 Szene	SbSgFm
 Szepter	SbSgNt
@@ -6092,6 +6097,7 @@ Thein	xx
 Theist	xx
 Theiß	xx
 Theke	SbSgFmForg
+Thema	SbSgFmForg
 Themse	SbSgFmFlumForg.En
 Therme	SbSgFm
 Thermen	SbPl	Therme	SbSgFm

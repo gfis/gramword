@@ -1,5 +1,6 @@
 /*  Filters from one encoding (default) ISO-8859-1 to another (default UTF-8).
     @(#) $Id: LoadDict.java 36 2008-09-08 06:05:06Z gfis $
+    2016-09-23: enc1 was ISO-8859-1
     2006-07-17: split on "(\\s|[\\=\\,])+"
     2006-06-19
     caution, this file must be encoded in UTF-8 (c.f. build.xml, ant target "compile")
@@ -111,7 +112,7 @@ public class LoadDict {
     public static void main(String args[]) {
         int iarg = 0;
         String nl = System.getProperty("line.separator");
-        String enc1 = "ISO-8859-1";
+        String enc1 = "UTF-8";
         String enc2 = "UTF-8";
         int ienc = 0; // number of "-enc" options already encountered
         int reversedColumn = -1; // no reversed column

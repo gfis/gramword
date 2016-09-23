@@ -2,6 +2,7 @@
 # and other short, undeclinable words
 # and their combinations
 # @(#) $Id: pr_rootgen.pl 36 2008-09-08 06:05:06Z gfis $
+# 2016-09-23: -hier
 # 2006-07-31, Georg Fischer
 # caution, must be stored in UTF-8 encoding: äöüÄÖÜß!
 
@@ -97,7 +98,6 @@ genug           CjPrim
 her             PrPrim
 heraus          Pr
 herein          Pr
-hier            PrPrim
 hierbei         Pr
 hin             PrPrim
 hinaus          Pr

@@ -7,7 +7,7 @@
       5 Ab
      10 Abbr
       1 Ac
-     55 Accv
+     59 Accv
      50 Aj
       5 Anct
      28 Ar
@@ -26,12 +26,13 @@
       2 Cmpr
      26 Colr
       2 Comb
+      2 Comp
      24 Cs
      24 Ct
      41 Ctry
       7 Curr
       2 D
-     55 Datv
+     59 Datv
      16 Detm
      13 Dial
       6 Diar
@@ -40,11 +41,11 @@
      11 Ex
       2 F
      20 Flum
-    130 Fm
+    136 Fm
     147 Forg
       5 Freq
      14 Ge
-     58 Genv
+     62 Genv
     159 Geog
       5 Holy
      63 Honr
@@ -66,12 +67,12 @@
       8 Modl
      13 Mont
       3 Move
-    245 Ms
+    253 Ms
      14 Musi
-    161 Nm
-     59 Nomv
+    163 Nm
+     63 Nomv
       4 Nrul
-    128 Nt
+    132 Nt
       7 Nu
      16 Numr
      17 Nutr
@@ -79,26 +80,26 @@
       4 P
       9 Pa
     115 Pers
-    176 Pl
-    206 Pn
+    182 Pl
+    221 Pn
     144 Poss
       1 Post
      38 Pr
      30 Pren
      10 Prim
-     25 Prof
+     27 Prof
       2 Qant
       1 Ratn
       8 Refl
      42 Regn
-      1 Relt
+     16 Relt
       5 Root
       7 Rp
       4 Rt
     124 S
-    338 Sb
+    340 Sb
       5 Seas
-    420 Sg
+    432 Sg
      10 Shor
       1 Spor
       2 Strg

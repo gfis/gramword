@@ -1,31 +1,12 @@
 # German adverbs and other undeclinable words (UTF-8, äöüÄÖÜß)
 # @(#) $Id: de.av.dic 564 2010-10-19 16:29:18Z gfis $
-# 2016-09-22: 1 x "nicht" removed
+# 2016-09-23: several from Pr/pr_rootgen.pl removed
 # 2010-10-18: "tagsüber"
 # 2006-08-02: "vorn(e)", "hinten"
 # 2006-06-26, Dr. Georg Fischer: 
 #
-da              =Un
-so              =Un
-auch            =Un
-nicht           =Un
-fast            =Un
-doch            =Un
-vielleicht      =Un
-einher          =Un
-weiter          =Un
-sehr            =Un
-mehr            =Un
-nur             =Un
-gar             =Un
-sogar           =Un
-nicht           =Un 
-etwa            =Un
-etwas           =Un
-dort            =Un
-hier            =Un
+hier            =Av
 nichts          =Av
-mitten          =Un
 behufs          =Av
 zwecks          =Av
 

@@ -53,9 +53,6 @@ jfind:
 rmbak:
 	find src -iname "*.bak"  | xargs -l rm -v
 #---------------------------------------------------
-lookup:
-	$(DBAT) "select * from words where entry like '$(ENTRY)%' order by 1,2,3,4;" 
-#---------------------------------------------------
 zip:
 	rm -f $(APPL).zip
 	find . | grep -v "test/" | zip -@ $(APPL).zip

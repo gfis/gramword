@@ -14,6 +14,14 @@ PACKAGE=org.teherba.gramword
 TEST MT01 MorphemTester heute ist das Wetter
 CALL MorphemTester heute ist das Wetter schön und wir wollen spazieren gehen
 
+TEST MT02 MorphemTester setzen 6
+CALL MorphemTester -d 6 setzen Sie sich Pfeifer 6
+
+TEST MT03 MorphemTester Proverb for project leaders
+CALL MorphemTester -d 6 ja macht nur einen Plan und seid ein großes Licht und macht noch einen anderen Plan gehen tun sie beide nicht
+
+TEST MT04 MorphemTester numeric
+CALL MorphemTester -d 6 einfacher eingestiegen einprogrammiert eins sechszehn neunundzwanzig
 #-----------------------------------
 PACKAGE=org.teherba.gramword.filter
 

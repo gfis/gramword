@@ -1,5 +1,6 @@
 /*  Shows the syntactical type of words in plain text
     @(#) $Id: MorphemTester.java 807 2011-09-20 16:54:21Z gfis $
+    2016-09-23: log.debug|.info -> System.out.println
     2011-09-17: dbat.Configuration
     2008-02-13: Java 1.5 types
     2007-01-04: Dbat.getConnection instead of DbAccess
@@ -51,7 +52,7 @@ public class MorphemTester {
     public final static String CVSID = "@(#) $Id: MorphemTester.java 807 2011-09-20 16:54:21Z gfis $";
 
     /** Level of test output (0 = none, 1 = some, 2 = more ...) */
-    private int debug = 0;
+    public int debug = 0;
     /** log4j logger (category) */
     private Logger log;
 
@@ -155,7 +156,7 @@ public class MorphemTester {
             intraLexems = new String[] {"e", "s", "n", "en", "es"};
             morphCache  = new HashMap<String, MorphemList>(MAX_CACHE);
             if (debug >= 1) {
-                log.info("org.teherba.gramword.MorphemTester initialized with strategy \"" + strategy + "\"");
+                System.out.println("org.teherba.gramword.MorphemTester initialized with strategy \"" + strategy + "\"");
             }
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
@@ -258,7 +259,7 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("words(" + word + "): " + entry + " =" + morph
+                    System.out.println("words(" + word + "): " + entry + " =" + morph
                             + "," + enrel + "," + morel);
                 }
                 if (word.equals(entry)) {
@@ -293,7 +294,7 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("infos(" + word + "): " + entry + " =" + morph
+                    System.out.println("infos(" + word + "): " + entry + " =" + morph
                             + "," + enrel + "," + morel);
                 }
                 if (word.equals(entry)) {
@@ -333,7 +334,7 @@ public class MorphemTester {
                         String enrel = resultSet.getString(3);
                         String morel = resultSet.getString(4);
                         if (debug >= 1) {
-                            log.debug("names(" + word + "): " + entry + " =" + morph
+                            System.out.println("names(" + word + "): " + entry + " =" + morph
                                     + "," + enrel + "," + morel);
                         }
                         if (word.equals(entry)) {
@@ -374,12 +375,12 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("getForge(" + word + "): " + entry + " =" + morph
+                    System.out.println("getForge(" + word + "): " + entry + " =" + morph
                             + "," + enrel + "," + morel);
                 }
                 if (word.startsWith(entry)) {
                     if (debug >= 1) {
-                        log.debug("getForge: add " + entry + " =" + morph
+                        System.out.println("getForge: add " + entry + " =" + morph
                                 + "," + enrel + "," + morel);
                     }
                     result.add(new Morphem(entry, morph, enrel, morel));
@@ -444,7 +445,7 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("getRoots(" + word + "): " + entry + " =" + morph
+                    System.out.println("getRoots(" + word + "): " + entry + " =" + morph
                             + "," + enrel + "," + morel);
                 }
             /*
@@ -456,7 +457,7 @@ public class MorphemTester {
             */
                 if (word.startsWith(entry)) {
                     if (debug >= 1) {
-                        log.debug("getRoots: add " + entry + " =" + morph
+                        System.out.println("getRoots: add " + entry + " =" + morph
                                 + "," + enrel + "," + morel);
                     }
                     result.add(new Morphem(entry, morph, enrel, morel));
@@ -499,7 +500,7 @@ public class MorphemTester {
                     // now check whether the suffix is known for the same infinitiveEnd
                     String infinitiveEnd = morphem.getEnrel();
                     if (debug >= 2) {
-                        log.debug("searchRoots(" + word + "): "
+                        System.out.println("searchRoots(" + word + "): "
                                 + prefix + "+" + suffix + " =" + morph
                                 + "," + enrel + "," + morel);
                     }
@@ -517,7 +518,7 @@ public class MorphemTester {
                             if (morph2.startsWith("Vb")) {
                                 String infinitiveEnd2 = morphem2.getEnrel();
                                 if (debug >= 1) {
-                                    log.debug("infEnd:" + infinitiveEnd
+                                    System.out.println("infEnd:" + infinitiveEnd
                                         + " <> " +    "infEnd2:" + infinitiveEnd2);
                                 }
                                 if (infinitiveEnd.equals(infinitiveEnd2)) {
@@ -571,7 +572,7 @@ public class MorphemTester {
                             }
                         } // while
                     }
-                } // if morph like "Aj%"
+                } // if morph like "Sb%"
                 // else ignore
 
                 imorph ++;
@@ -602,7 +603,7 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("suffix(" + word + "): " + entry + " =" + morph
+                    System.out.println("suffix(" + word + "): " + entry + " =" + morph
                             + "," + enrel + "," + morel);
                 }
                 if (word.equals(entry)) {
@@ -639,12 +640,12 @@ public class MorphemTester {
                 String enrel = resultSet.getString(3);
                 String morel = resultSet.getString(4);
                 if (debug >= 1) {
-                    log.debug("getXiffus(" + word + "/" + drow + "): "
+                    System.out.println("getXiffus(" + word + "/" + drow + "): "
                             + entry + " = " + morph + "," + enrel + "," + morel);
                 }
                 if  (word.endsWith(entry)) {
                     if (debug >= 4) {
-                        log.debug("getXiffus - add "
+                        System.out.println("getXiffus - add "
                                 + entry + " = " + morph + "," + enrel + "," + morel);
                     }
                     result.add(new Morphem(entry, morph, enrel, morel));
@@ -684,12 +685,12 @@ public class MorphemTester {
                 String enrel  = morphem.getEnrel();
                 String morel  = morphem.getMorel();
                 if (debug >= 4) {
-                    log.debug("searchXiffus(" + word + "): "
+                    System.out.println("searchXiffus(" + word + "): "
                             + suffix + " = " + morph + "," + enrel + "," + enrel);
                 }
                 if (morphem.isExplicitReplacement()) {
                     if (debug >= 2) {
-                        log.debug("searchXiffus.replace(" + word + "/" + drow + "): "
+                        System.out.println("searchXiffus.replace(" + word + "/" + drow + "): "
                                 + suffix + " =" + morph + "," + enrel + "," + enrel);
                     }
                     word = morphem.getEnrel(); // replace
@@ -697,14 +698,14 @@ public class MorphemTester {
                     imorph = -1; // restart the loop all over
                 } else if (word.length() - suffix.length() < 2 && ! suffix.equals("ung")) {
                     if (debug >= 2) {
-                        log.debug("ignore - prefix too short"); //  but     "Übung"
+                        System.out.println("ignore - prefix too short"); //  but     "Übung"
                     }
                 } else if ( morph.startsWith("Vb")
                         &&  ! wordUpperCase.matcher(word).lookingAt()
                         ) {
                     // now check whether it is a suffix
                     if (debug >= 2) {
-                        log.debug("searchXiffus.Vb(" + word + "/" + drow + "): "
+                        System.out.println("searchXiffus.Vb(" + word + "/" + drow + "): "
                                 + suffix + " =" + morph + "," + enrel + "," + morel);
                     }
                     if      (   word.endsWith(suffix)) {
@@ -715,7 +716,7 @@ public class MorphemTester {
                         ) {
                     // now check whether it is a suffix
                     if (debug >= 2) {
-                        log.debug("searchXiffus.Sb(" + word + "/" + drow + "): "
+                        System.out.println("searchXiffus.Sb(" + word + "/" + drow + "): "
                                 + suffix + " =" + morph + "," + enrel + "," + morel);
                     }
                     if      (   word.endsWith(suffix)) {
@@ -726,7 +727,7 @@ public class MorphemTester {
                         ) {
                     // now check whether it is a suffix
                     if (debug >= 2) {
-                        log.debug("searchXiffus.Aj/Av(" + word + "/" + drow + "): "
+                        System.out.println("searchXiffus.Aj/Av(" + word + "/" + drow + "): "
                                 + suffix + " =" + morph + "," + enrel + "," + morel);
                     }
                     if      (   word.endsWith(suffix)) {
@@ -734,7 +735,7 @@ public class MorphemTester {
                     }
                 } else {
                     if (debug >= 2) {
-                        log.debug("else searchXiffus(" + word + "): " + morph);
+                        System.out.println("else searchXiffus(" + word + "): " + morph);
                     }
                 }
                 imorph ++;
@@ -760,7 +761,7 @@ public class MorphemTester {
             if (pos >= 3) { // starting with at least "ein-" or "ers-"
                 String value = numSpeller.getResult();
                 if (debug >= 3) {
-                    log.debug("testNumeric: " + word + " = " + pos + ", " + value);
+                    System.out.println("testNumeric: " + word + " = " + pos + ", " + value);
                 }
                 if (pos >= word.length()) {
                     // exact match - pure number word
@@ -779,10 +780,12 @@ public class MorphemTester {
                             found = true;
                         }
                     } // while
+                /* - gives up too early
                     if (! found) {
                         result.add(new Morphem(word, "Nu." + numSpeller.getResult()
                                 , word.substring(pos), "Un"));
                     }
+                */
                 } // not exact
             } // pos >= 3
             // else not starting with a number word
@@ -906,7 +909,7 @@ public class MorphemTester {
         String lcWord = word.toLowerCase();
         String targetMorph = lcWord.equals(word) ? "Aj" : "Sb";
         if (debug == -5) {
-            log.debug("--------- testLexemSplit(" + word + ") ----------");
+            System.out.println("--------- testLexemSplit(" + word + ") ----------");
         }
         MorphemList result = new MorphemList();
         Morphem morphem = null;
@@ -922,13 +925,13 @@ public class MorphemTester {
                     // word exhausted
                     result.add(stack.concatenate(word));
                     if (debug == -5) {
-                        // log.debug("concat  " + stack.toString()  + " prefix=\"" + lcWord.substring(0, edgeLength));
-                        log.debug("result  " + result.toString());
+                        // System.out.println("concat  " + stack.toString()  + " prefix=\"" + lcWord.substring(0, edgeLength));
+                        System.out.println("result  " + result.toString());
                     }
                     top = stack.popToUnmarked();
                 } else {
                     if (debug == -5) {
-                        log.debug("start   " + stack.toString()
+                        System.out.println("start   " + stack.toString()
                                 + " prefix=\"" + lcWord.substring(0, edgeLength) + "\"");
                     }
                     int old = top;
@@ -937,7 +940,7 @@ public class MorphemTester {
                         top = stack.popToUnmarked();
                     }
                     if (debug == -5) {
-                        log.debug("pushed  " + stack.toString() + " prefix=\""
+                        System.out.println("pushed  " + stack.toString() + " prefix=\""
                                 + lcWord.substring(0, edgeLength) + "\"");
                     }
                 }
@@ -948,7 +951,7 @@ public class MorphemTester {
             log.error(exc.getMessage(), exc);
         }
         if (debug == -5) {
-            log.debug("finally " + result.toString());
+            System.out.println("finally " + result.toString());
         }
         return result;
     } // testLexemSplit
@@ -969,7 +972,7 @@ public class MorphemTester {
             boolean busy = true;
             while (busy && result.isUnsure()) {
                 if (debug >= 3) {
-                    log.debug("testTableLookup(" + word + "), state = " + state);
+                    System.out.println("testTableLookup(" + word + "), state = " + state);
                 }
                 switch(state) {
                     case 0:
@@ -1056,7 +1059,7 @@ public class MorphemTester {
 
                 if (! word2.equals(word)) {
                     if (debug >= 3) {
-                        log.debug("testVariants(" + word + "), state = " + state);
+                        System.out.println("testVariants(" + word + "), state = " + state);
                     }
                     result.addAll(testTableLookup(word2));
                 }
@@ -1077,7 +1080,7 @@ public class MorphemTester {
      *  of a word, if possible
      *  @param word word to be classified, starting with a letter or digit,
      *  contains no punctuation or whitespace
-     *  @return a {@link MorphemList} for the possible types of the word, 
+     *  @return a {@link MorphemList} for the possible types of the word,
      *  e.g. "VbIn", "SbSgMs" and so on,
      *  or null if no morphology can be determined
      */
@@ -1118,9 +1121,9 @@ public class MorphemTester {
             result = morphems.getWinner();
             if (debug > 0) {
                 if (morphems.size() >= 2) {
-                    log.info(morphems.toString());
+                    System.out.println(morphems.toString());
                 } else if (debug >= 3) {
-                log.debug("test(" + word + "): " + morphems.toString());
+                System.out.println("test(" + word + "): " + morphems.toString());
                 }
             } // debug
         }
@@ -1132,9 +1135,28 @@ public class MorphemTester {
      */
     public static void main(String args[]) {
         MorphemTester tester = new MorphemTester();
-        for (int iargs = 0; iargs < args.length; iargs ++) {
-            System.out.println(tester.test(args[iargs]).toString());
-        }
+        int iarg = 0;
+        while (iarg < args.length) {
+            String word = args[iarg ++]; // consume it
+            if (word.equals("-d")) { // debugging switch
+                tester.debug = 1;
+                if (iarg < args.length) {
+                    word = args[iarg];
+                    if (Character.isDigit(word.charAt(0))) { // numeric
+                        tester.debug = Integer.parseInt(word);
+                        iarg ++; // consume it
+                    }
+                }
+                // if --d
+            } else {
+                MorphemList morphems = tester.getResults(word);
+                if (morphems == null || morphems.size() <= 0) {
+                    System.out.println(word + "\tXy\n");
+                } else {
+                    System.out.println(morphems.toString());
+                }
+            }
+        } // while iargs
         tester.destroy();
     } // main
 
