@@ -76,22 +76,23 @@ public class FilterPage implements Serializable {
                 generator .setSourceEncoding(encoding);
                 serializer.setResultEncoding("UTF-8");
                 response  .setCharacterEncoding(serializer.getResultEncoding());
-                response  .setContentType(generator.getMimeType());
+                response.setContentType("text/html");
+            //  response  .setContentType(generator.getMimeType());
                 generator .setCharReader(new StringReader(fileItem.getString(generator.getSourceEncoding())));
                 serializer.setCharWriter(response.getWriter      ());
                 generator .setCharWriter(serializer.getCharWriter());
                 generator .setContentHandler(serializer);
                 serializer.setContentHandler(generator );
-
+            /*
                 PrintWriter out = basePage.writeHeader(request, response, language);
                 out.write("<title>" + basePage.getAppName() + " Filter Result</title>\n");
                 out.write("</head>\n<body>\n");
-
+            */
                 generator .generate();
                 generator .closeAll();
                 serializer.closeAll();
             } // valid generator
-            basePage.writeTrailer(language, "quest");
+            // basePage.writeTrailer(language, "quest");
         } catch (Exception exc) {
             log.error(exc.getMessage(), exc);
         }

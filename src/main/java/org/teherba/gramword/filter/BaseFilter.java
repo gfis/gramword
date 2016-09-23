@@ -198,6 +198,7 @@ public class BaseFilter extends CharTransformer {
         + "\n<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"nmnu.css\"   />"
         + "\n<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"prcj.css\"   />"
         + "\n<script type=\"text/javascript\">"
+        + "\n<!--"
         + "\nfunction activateStyles(title) {"
         + "\n    var i, a;"
         + "\n    for (i = 0; (a = document.getElementsByTagName(\"link\")[i]); i ++) {"
@@ -209,6 +210,7 @@ public class BaseFilter extends CharTransformer {
         + "\n        }"
         + "\n    } // for i"
         + "\n} // setActiveStyleSheet"
+        + "\n-->"
         + "\n</script>"
         );
     } // writeHeadEnd
@@ -236,7 +238,7 @@ public class BaseFilter extends CharTransformer {
         features = "," + features + ",";
 
         if (features.indexOf("code"     ) >= 0) {
-            queue.appendBehind("<br /><br />Morphem codes: ");
+            queue.appendBehind("<br /><br />Morphems: ");
             Iterator<String> miter = morphCounts.keySet().iterator();
             while (miter.hasNext()) {
                 String morph = miter.next();
@@ -261,11 +263,11 @@ public class BaseFilter extends CharTransformer {
 
         if (features.indexOf("switch"   ) >= 0) {
             queue.appendBehind("Highlight: "
-            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('all');    return false;\">all found</a>, "
-            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('vbav');   return false;\">Vb+Av</a>, "
-            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('sbajar'); return false;\">Sb+Aj+Ar</a>, "
-            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('nmnu');   return false;\">Nm+Nu</a>, "
-            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('prcj');   return false;\">Pr+Cj+Cc+Un</a> "
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('all');    return false;\">all found</a>, \n"
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('vbav');   return false;\">Vb+Av</a>, \n"
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('sbajar'); return false;\">Sb+Aj+Ar</a>, \n"
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('nmnu');   return false;\">Nm+Nu</a>, \n"
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('prcj');   return false;\">Pr+Cj+Cc+Un</a> \n"
             );
             queue.appendBehind("<br />\n");
         } // switch
@@ -358,11 +360,11 @@ public class BaseFilter extends CharTransformer {
      *  can still be wrapped into outer HTML elements.
      *  @param chars the characters.
      *  @param start the start position in the character array.
-     *  @param length the number of characters to use from the character array.
+     *  @param len the number of characters to use from the character array.
      */
-    public void characters(char[] chars, int start, int length) {
+    public void characters(char[] chars, int start, int len) {
         int ichar     = start;
-        int behind    = start + length;
+        int behind    = start + len;
         int segmStart = ichar;
         String entry  = null;
         while (ichar < behind) {
@@ -464,17 +466,17 @@ public class BaseFilter extends CharTransformer {
             } // end of if cascade for current character
             ichar ++;
         } // while ichar
-        nonEmpty = nonEmpty || length > 0;
+        nonEmpty = nonEmpty || len > 0;
     } // characters
 
     /** Receive notification of an XML comment.
      *  @param chars the characters.
      *  @param start the start position in the character array.
-     *  @param length the number of characters to use from the character array.
+     *  @param len the number of characters to use from the character array.
      */
-    public void comment(char[] chars, int start, int length) {
+    public void comment(char[] chars, int start, int len) {
         tagBoundary();
-        queue.appendBehind("<!--" + new String(chars, start, length) + "-->");
+        queue.appendBehind("<!--" + new String(chars, start, len) + "-->");
     } // comment
 
     /** Receive notification of a processing instruction.
