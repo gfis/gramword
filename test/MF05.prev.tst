@@ -50,13 +50,13 @@
 </p>
 <br /><br />Morphems: <span class="Aj">Aj</span> 22
 <span class="Ar">Ar</span> 32
-<span class="Cj">Cj</span> 55
+<span class="Cj">Cj</span> 54
 <span class="Ir">Ir</span> 1
-<span class="Nm">Nm</span> 22
-<span class="Nu">Nu</span> 92
+<span class="Nm">Nm</span> 19
+<span class="Nu">Nu</span> 91
 <span class="Pn">Pn</span> 37
 <span class="Pr">Pr</span> 20
-<span class="Sb">Sb</span> 77
+<span class="Sb">Sb</span> 76
 <span class="Un">Un</span> 2
 <span class="Vb">Vb</span> 77
 <br />

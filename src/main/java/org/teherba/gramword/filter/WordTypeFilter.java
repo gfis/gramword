@@ -29,6 +29,7 @@
 package org.teherba.gramword.filter;
 import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.filter.Segment;
+import  org.teherba.gramword.filter.SentenceTester;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
 import  java.util.TreeMap;
@@ -42,6 +43,8 @@ import  org.apache.log4j.Logger;
 public class WordTypeFilter extends BaseFilter {
     public final static String CVSID = "@(#) $Id: WordTypeFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
+    /** Detects structures on sentence level */
+    private SentenceTester sentenceTester;
     /** log4j logger (category) */
     private Logger log;
 
@@ -61,6 +64,8 @@ public class WordTypeFilter extends BaseFilter {
     public void initialize() {
         super.initialize();
         log = Logger.getLogger(WordTypeFilter.class.getName());
+        queue = new SegmentQueue(0, this); // no lookAhead
+        sentenceTester = new SentenceTester();
     } // initialize
 
     /*===========================*/
@@ -68,30 +73,35 @@ public class WordTypeFilter extends BaseFilter {
     /*===========================*/
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and
-     *  serializes the previous content of that queue element (which is shifted out of the queue).
-     *  @param segment the new segment to be appended to the queue
+     *  appends a new segment to the queue and
+     *  serializes the previous content of the element just replaced in the ring buffer.
+     *  @param segment the new segment to be appended to the queue.
+     *
+     *  This implementation
+     *  <ul>
+     *    <li>classifies words, nubmerbs, punctuation,</li>
+     *    <li>assigns one or more morphem codes to words,</li>
+     *    <li>counts the main morphem classes and encloses any word in corresponding color tags,</li>
+     *    <li>applies sentence reasoning on punctuation,</li>
+     *  </ul>
      */
     protected void enqueue(Segment segment) {
-        Segment element = queue.get(segmentPivot);
+        Segment element = queue.getFocus();
         MorphemList morphems = element.getMorphems();
         Morphem rawMorphem = morphems.get(0); // not further tested so far
         String entry = rawMorphem.getEntry();
         String morph = rawMorphem.getMorph();
         if (entry.length() <= 0) {
             // ignore empty words - should never occur
-        } else { // if (Character.isLetterOrDigit(entry.charAt(0))) {
-            if (false) {
-            } else if (morph.length() > 0) {
-                // we had recognized and cached it already
-            } else {
-                morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
-            }
-            String morphCode2 = Morphem.WORD; // "Xy" if unrecognized so far
+        } else { 
+            morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
+            String morphCode2 = Morphem.WORD; // assume "Xy" = unrecognized so far
             StringBuffer attrList = new StringBuffer(128);
             if (morphems != null && morphems.size() > 0) {
+			    morphems.get(0).setEntry(entry); // ???
+			    element.setMorphems(morphems);
                 cntKnown ++;
-                int imorph = 0; // only if there are more than 1
+                int imorph = 0;
                 while (imorph < morphems.size()) {
                     if (imorph > 0) {
                         attrList.append('|');
@@ -103,8 +113,11 @@ public class WordTypeFilter extends BaseFilter {
             } else { // not found in database
                 attrList.append(morphCode2); // Xy
             }
-            element.appendBefore("<span class=\"" + morphCode2 // only the 1st two for color
-                    + "\" title=\"" + attrList.substring(1) + "\">"); // all separated by "|"
+            element.appendBefore("<span class=\"" + morphCode2 + "\"" // only the 1st two for color
+                    + " id=\""    + queue.getTail() 
+                    + "." + sentenceTester.getLength()
+                    + "\""
+                    + " title=\"" + attrList + "\">"); // all separated by "|"
             element.prependBehind("</span>");
             morphIncr(morphCode2); // count colors
             cntWords ++;
@@ -112,7 +125,8 @@ public class WordTypeFilter extends BaseFilter {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment)); // serialize the previous content of the queue element
+        // serialize and overwrite
+        sentenceTester.addAndTest(queue, segment);
     } // enqueue
 
     /** Receive notification of the start of an element.

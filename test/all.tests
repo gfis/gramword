@@ -89,3 +89,8 @@ HTTP $(URL) view=index2 filter=queue -F "infile=@web/wordtype/quixote0.html"
 # CALL MainFilter -xml -wordtype                              web/wordtype/quixote0.html
 # DIFF test/$(CASE).prev.tst  web/wordtype.html
 # 
+#-------------------------
+PACKAGE=org.teherba.gramword.filter
+
+TEST SQ01 SegmentQueue
+CALL SegmentQueue

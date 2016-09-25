@@ -30,6 +30,7 @@ import  org.teherba.gramword.filter.SegmentQueue;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemTester;
 import  org.teherba.xtrans.CharTransformer;
+import  org.teherba.xtrans.XMLTransformer;
 import  java.io.BufferedReader;
 import  java.io.FileInputStream;
 import  java.io.FileOutputStream;
@@ -48,7 +49,7 @@ import  org.apache.log4j.Logger;
  *  (HTML tags, whitespace and punctuation).
  *  @author Dr. Georg Fischer
  */
-public class BaseFilter extends CharTransformer {
+public class BaseFilter extends XMLTransformer { // but still uses plain CharWriter therein
     public final static String CVSID = "@(#) $Id: BaseFilter.java 805 2011-09-20 06:41:22Z gfis $";
 
     /** log4j logger (category) */
@@ -73,8 +74,6 @@ public class BaseFilter extends CharTransformer {
     protected MorphemTester tester;
     /** Stores the number of occurrences of various morphems */
     protected TreeMap<String, Integer> morphCounts;
-    /** Index of the segment where to start checking; doesn't matter, look only at 1 segment */
-    protected int segmentPivot;
 
     /** Constructor.
      */
@@ -95,7 +94,7 @@ public class BaseFilter extends CharTransformer {
         log = Logger.getLogger(BaseFilter.class.getName());
         cntWords        = 0;
         cntKnown        = 0;
-        segmentPivot    = 0;
+        queue           = new SegmentQueue(8, this);
         morphCounts     = new TreeMap<String, Integer>();
         tester          = new MorphemTester("all"); // default: apply all tests
      } // initialize
@@ -212,7 +211,6 @@ public class BaseFilter extends CharTransformer {
      */
     public void startDocument() {
         fireStartDocument();
-        queue       = new SegmentQueue();
         wordBuffer  = new StringBuffer(128);
         glueBuffer  = new StringBuffer(128);
         prevState   = State.IN_GLUE; // start with no letter
@@ -319,32 +317,21 @@ public class BaseFilter extends CharTransformer {
                 } // switch for whitespace
                 prevState = State.IN_GLUE;
            // end copy
-/* old code:
-        if (prevState == State.IN_GLUE) { // still in glue
-            queue.appendBehind(glueBuffer.toString());
-            glueBuffer.setLength(0);
-        } else { // in word, number, punctuation
-            enqueue(new Segment(new Morphem(wordBuffer.toString())));
-            wordBuffer.setLength(0);
-            glueBuffer.setLength(0);
-            prevState = State.IN_GLUE;
-        }
-*/
     } // tagBoundary
 
     /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and
-     *  prints the segment which is shifted out of the queue.
+     *  appends a new segment to the queue and
+     *  serializes the previous content of the element just replaced in the ring buffer.
      *  @param segment the new segment to be appended to the queue
      *  <p>
      *  This implementation shows
      *  <ul>
-     *  <li>all words starting with an uppercase letter on a chartreuse background,</li>
-     *  <li>all words starting with a digit             on a lightblue  background.</li>
-     * </ul>
+     *    <li>all words starting with an uppercase letter on a chartreuse background,</li>
+     *    <li>all words starting with a digit             on a lightblue  background.</li>
+     *  </ul>
      */
     protected void enqueue(Segment segment) {
-        Segment element = queue.get(segmentPivot);
+        Segment element = queue.getFocus();
         if (! element.isInLink()) {
             String entry = element.getMorphem().getEntry();
             if (entry.length() <= 0) {
@@ -360,7 +347,7 @@ public class BaseFilter extends CharTransformer {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment));
+        queue.add(segment); // serialize and overwrite
     } // enqueue
 
     /** Receive notification of character data inside an element.

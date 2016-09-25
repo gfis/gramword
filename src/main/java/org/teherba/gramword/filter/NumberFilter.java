@@ -73,7 +73,7 @@ public class NumberFilter extends BaseFilter {
      *  and all numbers on a colored background.
      */
     protected void enqueue(Segment segment) {
-        Segment element = queue.get(segmentPivot);
+        Segment element = queue.getFocus();
         String entry = element.getMorphem().getEntry();
         if (entry.length() <= 0) {
             // ignore empty words - should never occur
@@ -101,7 +101,7 @@ public class NumberFilter extends BaseFilter {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment));
+        queue.add(segment); // serialize and overwrite
     } // enqueue
 
     /** Receive notification of the start of an element.

@@ -69,7 +69,7 @@ public class Segment {
      *  @param morphem the word and its grammatical properties
      */
     public Segment(Morphem morphem) {
-    	this("", morphem, "");
+        this("", morphem, "");
     } // Constructor(3)
 
     /** Constructor with prefix, morphems and suffix
@@ -182,5 +182,33 @@ public class Segment {
     public String toString() {
         return prefix.toString() + morphems.get(0).getEntry() + suffix.toString();
     } // toString
+
+    /** Determines whether the segment is some punctuation
+     *  @param puncts String of applicable punctuation characters
+     *  @return whether the segment is such a punctuation
+     */
+    public boolean isPunct(String puncts) {
+        int imorph = 0; 
+        Morphem morphem = morphems.get(imorph); // there is only one
+        return morphem.getMorph().startsWith(Morphem.PUNCT) 
+                && puncts.indexOf(morphem.getEntry()) >= 0;
+    } // isPunct
+
+    /** Determines whether the segment contains some morphem code
+     *  @param morphCode String which should occur at the beginning of morph
+     *  @return whether the segment contains such a morphem code
+     */
+    public boolean contains(String morphCode) {
+        boolean result = false;
+        MorphemList morphems = this.getMorphems();
+        int imorph = 0; 
+        while (! result && imorph < morphems.size()) {
+            if (morphems.get(imorph).getMorph().startsWith(morphCode)) {
+                result = true;
+            }
+            imorph ++;
+        } // while imorph
+        return result;
+    } // contains
 
 } // Segment

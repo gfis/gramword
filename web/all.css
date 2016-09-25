@@ -29,6 +29,7 @@
 .Un { color:white    ; background-color: gray       }
 .Vb { color:white    ; background-color: mediumblue }
 .Xy { color:black    ; background-color: azure      }
+.rels { font-style:italic; }
 
 body,p,h1,h2,h3,h4,dl,dd,dt,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,a,br,img
     { font-family:Verdana,Arial,sans-serif;}

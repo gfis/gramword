@@ -58,9 +58,9 @@ public class KontoFilter extends BaseFilter {
     private int maxBlz;
     /** Maximum index of "Kto" key words */
     private int maxKto;
-    /** Negative distance to {@link BaseFilter#segmentPivot} element for "BLZ"   keyword */
+    /** Negative distance to interesting element for "BLZ"   keyword */
     private int distBlz;
-    /** Negative distance to {@link BaseFilter#segmentPivot} element for "Konto" keyword */
+    /** Negative distance to interesting element for "Konto" keyword */
     private int distKto;
     /** Size of queue */
     private int queueSize;
@@ -87,10 +87,10 @@ public class KontoFilter extends BaseFilter {
     public void initialize() {
         super.initialize();
         log = Logger.getLogger(KontoFilter.class.getName());
-        segmentPivot = -16;
+        queue    = new SegmentQueue(16, this);
         keyWords = new ArrayList<String>(8);
         keyWords.add("BLZ");
-        maxBlz = keyWords.size();
+        maxBlz   = keyWords.size();
         keyWords.add("KTO");
         keyWords.add("KTNR");
         keyWords.add("KONTO");
@@ -116,7 +116,7 @@ public class KontoFilter extends BaseFilter {
      *  the mouse is moved over the bank id (span title=).
      */
     protected void enqueue(Segment segment) {
-        int istart = segmentPivot;
+        int istart = - queue.getLookAhead();
         Segment startSegment = queue.get(istart);
         String word0 = startSegment.getMorphem().getEntry().toUpperCase();
         if (word0.length() <= 0) {
@@ -181,7 +181,7 @@ public class KontoFilter extends BaseFilter {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment));
+        queue.add(segment);
     } // enqueue
 
     /** Assembles the next number from numeric segments. There may be
@@ -311,7 +311,7 @@ public class KontoFilter extends BaseFilter {
                 // search for the proper one with "blz"
                if (DEBUG) {
                     StringBuffer trace = new StringBuffer(64);
-                    for (int iseg = segmentPivot - 1; iseg < segmentPivot + 10; iseg ++) {
+                    for (int iseg = - queue.getLookAhead() - 1; iseg < - queue.getLookAhead() + 10; iseg ++) {
                         trace.append(' ');
                         trace.append(queue.get(iseg).getMorphem().getEntry());
                     }

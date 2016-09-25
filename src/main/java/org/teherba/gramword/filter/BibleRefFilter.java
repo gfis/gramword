@@ -74,7 +74,7 @@ public class BibleRefFilter extends BaseFilter {
     public void initialize() {
         super.initialize();
         log = Logger.getLogger(BibleRefFilter.class.getName());
-        segmentPivot = -12;
+        queue = new SegmentQueue(12, this);
     } // initialize
 
     /*===========================*/
@@ -91,7 +91,7 @@ public class BibleRefFilter extends BaseFilter {
      *  fragment URL.
      */
     protected void enqueue(Segment segment) {
-        int istart = segmentPivot;
+        int istart = - queue.getLookAhead();
         Segment startSegment = queue.get(istart);
         String word0 = startSegment.getMorphem().getEntry();
         int iend   = istart - 1;
@@ -108,7 +108,7 @@ public class BibleRefFilter extends BaseFilter {
                     // and the right book number prefix
                     if (DEBUG) {
                         StringBuffer trace = new StringBuffer(64);
-                        for (int iseg = segmentPivot - 1; iseg < segmentPivot + 10; iseg ++) {
+                        for (int iseg = - queue.getLookAhead() - 1; iseg < - queue.getLookAhead() + 10; iseg ++) {
                             trace.append(' ');
                             trace.append(queue.get(iseg).getMorphem().getEntry());
                         }
@@ -149,17 +149,17 @@ public class BibleRefFilter extends BaseFilter {
                     StringBuffer href = new StringBuffer(128);
                     Segment endSegment = null;
                     href.append("http://www.bibel-online.net/buch/");
-                    iend = segmentPivot;
-                    int isegm = segmentPivot + 1;
+                    iend = - queue.getLookAhead();
+                    int isegm = - queue.getLookAhead() + 1;
                     busy = true;
                     while (busy && isegm < -1) {
                         endSegment = queue.get(isegm);
                         String word9 = endSegment.getMorphem().getEntry();
                         if (word9.matches("\\A\\d+[a-z]?\\Z")) {
                             if (false) {
-                            } else if (isegm == segmentPivot + 1) {
+                            } else if (isegm == - queue.getLookAhead() + 1) {
                                 chaptNo = word9;
-                            } else if (isegm == segmentPivot + 2) {
+                            } else if (isegm == - queue.getLookAhead() + 2) {
                                 verseNo = word9;
                             }
                             iend = isegm;
@@ -172,7 +172,7 @@ public class BibleRefFilter extends BaseFilter {
                         }
                         isegm ++;
                     } // while isegm
-                    if (iend >= segmentPivot + 1) { // at least one number behind
+                    if (iend >= - queue.getLookAhead() + 1) { // at least one number behind
                         endSegment = queue.get(iend);
                         // build the link tags and surround the reference with them
                         morphems = tester.getInfos(normBookNo);
@@ -196,7 +196,7 @@ public class BibleRefFilter extends BaseFilter {
                                 log.debug("link " + href + " found for " + word0 + ": " + istart + ".." + iend);
                             }
                         }
-                    } // iend >= segmentPivot + 1
+                    } // iend >= - queue.getLookAhead()() + 1
                     else {
                         if (DEBUG) {
                             log.debug("no number behind " + word0);
@@ -219,7 +219,7 @@ public class BibleRefFilter extends BaseFilter {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment));
+        queue.add(segment);
     } // enqueue
 
 } // BibleRefFilter
