@@ -1,6 +1,7 @@
 /*  Bean with properties and methods for (parts of) words, 
     their grammatical type and optional additional information
     @(#) $Id: Morphem.java 978 2013-02-04 11:06:08Z gfis $
+    2016-09-25: codes PUNCT, WORD
     2013-02-04: codes for particles in morph, morel
     2013-02-03: toString not escaped; clone()
     2006-08-02: toString and prio
@@ -70,6 +71,9 @@ public class Morphem implements Cloneable {
     //====================================================
     // Particle codes for {@link #morph} and {@link morel}
     //----------------
+    /** Code for empty elements       */
+    public static final String EMPTY        = "";
+    
     // Word classes
     /** Code for adjectives           */
     public static final String ADJECT       = "Aj";
@@ -81,6 +85,8 @@ public class Morphem implements Cloneable {
     public static final String NUMBER       = "Nu";
     /** Code for punctuation          */
     public static final String PUNCT        = "Pu";
+    /** Code for unrecognized words   */
+    public static final String WORD         = "Xy";
     
     // Attitudes and times
     /** Code for gerundium            */
@@ -160,14 +166,14 @@ public class Morphem implements Cloneable {
     /** Empty Constructor
      */
     public Morphem() {
-        this("", "", "", "");
+        this(""   , EMPTY, "", "");
     } // Constructor()
 
     /** Constructor for word 
      *  @param entry the entry to be classified
      */
     public Morphem(String entry) {
-        this(entry, "", "", "");
+        this(entry, EMPTY, "", "");
     } // Constructor(1)
 
     /** Constructor for word and type
@@ -193,18 +199,6 @@ public class Morphem implements Cloneable {
         this.oper   = OR;
     } // Constructor(4)
 
-    /** Constructor forword and related word, with priority
-     *  @param entry the entry to be classified
-     *  @param morph the grammatical type of <em>entry</em>
-     *  @param enrel optional word which is somehow related to <em>entry</em> 
-     *  @param morel description / additional (semantic) information for <em>entry</em>
-     *  @param prio  priority (quality) of this entry: 1 = highest, 2 = lower 
-     */
-    public Morphem(String entry, String morph, String enrel, String morel, int prio) {
-        this(entry, morph, enrel, morel);
-        this.prio  = prio;
-    } // Constructor(5)
-
     /** Clones a Morphem
      */
     public Morphem clone(){
@@ -213,8 +207,8 @@ public class Morphem implements Cloneable {
                 , this.morph
                 , this.enrel
                 , this.morel
-                , this.prio
                 );
+        result.setPrio(this.getPrio());
         result.setOper(this.getOper());
         return result;
     } // clone

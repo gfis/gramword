@@ -78,7 +78,7 @@ public class MorphemTester {
     protected String[] intraLexems;
     /** Maximum size of {@link #morphCache} */
     private static final int MAX_CACHE = 2048;
-    /** Avoid repeated database requests by this cache */
+    /** Avoid repeated database requests by this cache which maps entries to their morphems */
     protected HashMap<String, MorphemList> morphCache;
 
     /** Database configuration */

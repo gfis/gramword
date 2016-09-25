@@ -65,6 +65,13 @@ public class Segment {
         inLink = false;
     } // Constructor(3)
 
+    /** Constructor with morphem. The glue before and behind will be empty.
+     *  @param morphem the word and its grammatical properties
+     */
+    public Segment(Morphem morphem) {
+    	this("", morphem, "");
+    } // Constructor(3)
+
     /** Constructor with prefix, morphems and suffix
      *  @param morphems the word and all its possible grammatical properties
      *  @param behind glue behind the word (or empty string)

@@ -12,7 +12,7 @@
     </script>
 </head>
 <body>
-<!--lang="en", enc="UTF-8", filter="simple", format="html", grammar="de", infile="", strat="all"-->
+<!--lang="en", enc="UTF-8", filter="wordtype", format="html", grammar="de", infile="", strat="all"-->
     <h2>GramWord</h2>
     <p><strong>GramWord</strong> is a Java package which uses a relational
     (MySql) database
@@ -73,7 +73,7 @@ Herzensfreude <span class="Av" morph="ModlAnct">darob</span>, <span class="Pr" m
                     <option value="bibleref">bibleref</option>
                     <option value="konto">konto</option>
                     <option value="number">number</option>
-                    <option value="wordtype">wordtype</option>
+                    <option value="wordtype" selected>wordtype</option>
                 </select>
             </td>
             <td><strong>Source<br />Grammar</strong><br />

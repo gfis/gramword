@@ -69,39 +69,39 @@ public class WordTypeFilter extends BaseFilter {
 
     /** Eventually modifies some previous queue element(s),
      *  append a new segment to the queue and
-     *  prints the segment which is shifted out of the queue.
+     *  serializes the previous content of that queue element (which is shifted out of the queue).
      *  @param segment the new segment to be appended to the queue
-     *  <p>
-     *  This implementation shows all words starting with an uppercase letter
-     *  and all numbers on a colored background.
      */
     protected void enqueue(Segment segment) {
         Segment element = queue.get(segmentPivot);
         MorphemList morphems = element.getMorphems();
-        String entry = morphems.get(0).getEntry();
-        String morphCode2 = "Xy"; // unrecognized so far
+        Morphem rawMorphem = morphems.get(0); // not further tested so far
+        String entry = rawMorphem.getEntry();
+        String morph = rawMorphem.getMorph();
         if (entry.length() <= 0) {
             // ignore empty words - should never occur
         } else { // if (Character.isLetterOrDigit(entry.charAt(0))) {
-            String morph = morphems.get(0).getMorph();
-            StringBuffer attrList = new StringBuffer(128);
             if (false) {
             } else if (morph.length() > 0) {
-                // we know it already
+                // we had recognized and cached it already
             } else {
                 morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
             }
+            String morphCode2 = Morphem.WORD; // "Xy" if unrecognized so far
+            StringBuffer attrList = new StringBuffer(128);
             if (morphems != null && morphems.size() > 0) {
                 cntKnown ++;
-                int imorph = 0;
+                int imorph = 0; // only if there are more than 1
                 while (imorph < morphems.size()) {
-                    attrList.append('|');
-                    attrList.append(morphems.get(imorph).getMorph());
+                    if (imorph > 0) {
+                        attrList.append('|');
+                    }
+                    attrList.append(morphems.get(imorph).getMorph()); // the additional
                     imorph ++;
                 } // while imorph
-                morphCode2 = attrList.substring(1, 3); 
+                morphCode2 = attrList.substring(0, 2);
             } else { // not found in database
-                attrList.append(" ").append(morphCode2);
+                attrList.append(morphCode2); // Xy
             }
             element.appendBefore("<span class=\"" + morphCode2 // only the 1st two for color
                     + "\" title=\"" + attrList.substring(1) + "\">"); // all separated by "|"
@@ -112,7 +112,7 @@ public class WordTypeFilter extends BaseFilter {
         if (inA) {
             segment.setInLink(inA);
         }
-        charWriter.print(queue.add(segment));
+        charWriter.print(queue.add(segment)); // serialize the previous content of the queue element
     } // enqueue
 
     /** Receive notification of the start of an element.

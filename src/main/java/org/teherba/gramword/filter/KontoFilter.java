@@ -333,7 +333,7 @@ public class KontoFilter extends BaseFilter {
      */
     public void startDocument() {
         super.startDocument();
-        queueSize = queue.getSize();
+        queueSize = queue.size();
         distBlz   = queueSize; // outside
         distKto   = queueSize; // outside
     } // startDocument

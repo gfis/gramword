@@ -1,27 +1,42 @@
 /*  JavaScript functions for gramword
-    Copyright (C) 2008 Dr. Georg Fischer <punctum at punctum dot kom>
     @(#) $Id: script.js 36 2008-09-08 06:05:06Z gfis $
+    2016-09-24: name was script.js, 1st function was setActiveStylesheet; Copyright
     2016-09-21: indexOf >= 0
     2008-05-18: with Christian, from Ajax Hacks sample files
     
-    Make sure that all referenced stylesheets have a title= attribute,
+    Make sure that ALL referenced stylesheets have a title= attribute,
     because otherwise they will not be deactivated !
 */
-var timeoutId, request;
-
-function setActiveStyleSheet(title) {
+/*
+ * Copyright 2008 Dr. Georg Fischer <punctum at punctum dot kom>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function activateStyles(title) {
     var i, a;
     for (i = 0; (a = document.getElementsByTagName("link")[i]); i ++) {
-        if (a.getAttribute("rel").indexOf("style") >= 0 && a.getAttribute("title")) {
+        if (a.getAttribute("rel").indexOf("stylesheet") >= 0 && a.getAttribute("title")) {
             a.disabled = true;
             if (a.getAttribute("title") == title) {
                 a.disabled = false;
             }
         }
     } // for i
-} // setActiveStyleSheet
+} // activateStyles
 //----------------------------------------------------------
 // now AJAX methods
+var timeoutId, request;
+
 function handleCheck() { // event handler for XMLHttpRequest
     if (request.readyState == 4){
         clearTimeout(timeoutId);

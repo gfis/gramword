@@ -8,6 +8,7 @@ das	PnReltNomvSgNt
 das	PnReltAccvSgNt
 
 Wetter	SbSgNtMeto
+Wetter	SbSgNtMeto
 
 schön	AjRoot
 

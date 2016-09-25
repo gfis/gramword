@@ -6,19 +6,9 @@
 <link rel="stylesheet" title="sbajar" type="text/css" href="sbajar.css" />
 <link rel="stylesheet" title="nmnu"   type="text/css" href="nmnu.css"   />
 <link rel="stylesheet" title="prcj"   type="text/css" href="prcj.css"   />
-<script type="text/javascript">
-function activateStyles(title) {
-    var i, a;
-    for (i = 0; (a = document.getElementsByTagName("link")[i]); i ++) {
-        if (a.getAttribute("rel").indexOf("stylesheet") >= 0 && a.getAttribute("title")) {
-            a.disabled = true;
-            if (a.getAttribute("title") == title) {
-                a.disabled = false;
-            }
-        }
-    } // for i
-} // setActiveStyleSheet
-</script>
+<link rel="stylesheet" title="puxy"   type="text/css" href="puxy.css"   />
+<script type="text/javascript" src="javascript.js"></script>
+
 	<title>Number words</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
@@ -58,17 +48,17 @@ function activateStyles(title) {
 5,31 Die gesamte Lebenszeit Lamechs betrug <span class="Nu" title="777">siebenhundertsiebenundsiebzig</span> Jahre, dann starb er. <br />
 5,32 Noach zeugte im Alter von <span class="Nu" title="500">fünfhundert</span> Jahren Sem, Ham und Jafet.
 </p>
-<br /><br />Morphem codes: <span class="Aj">Aj</span> 22
+<br /><br />Morphems: <span class="Aj">Aj</span> 22
 <span class="Ar">Ar</span> 32
-<span class="Cj">Cj</span> 42
+<span class="Cj">Cj</span> 55
 <span class="Ir">Ir</span> 1
-<span class="Nm">Nm</span> 20
+<span class="Nm">Nm</span> 22
 <span class="Nu">Nu</span> 92
 <span class="Pn">Pn</span> 37
 <span class="Pr">Pr</span> 20
-<span class="Sb">Sb</span> 69
-<span class="Un">Un</span> 14
-<span class="Vb">Vb</span> 46
+<span class="Sb">Sb</span> 77
+<span class="Un">Un</span> 2
+<span class="Vb">Vb</span> 77
 <br />
 </body>
 </html>

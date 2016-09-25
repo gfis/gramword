@@ -31,27 +31,27 @@ CALL FilterFactory
 TEST MF00 usage 
 CALL MainFilter
 
-TEST MFU1 mark uppercase words and numbers 
+TEST MF01 mark uppercase words and numbers 
 CALL MainFilter -xml -queue                                 web/wordtype/quixote0.html 
 DIFF test/$(CASE).prev.tst  web/queue.html
 
-TEST MFB2 link bible references to online bibles
+TEST MF02 link bible references to online bibles
 CALL MainFilter -xml -bibleref -enc1 ISO-8859-1 -enc2 UTF-8 web/bibleref/luther_perikope.htm 
 DIFF test/$(CASE).prev.tst  web/bibleref/luther_perikope.html
 
-TEST MFB3 link bible references to online bibles
+TEST MF03 link bible references to online bibles
 CALL MainFilter -xml -bibleref -enc1 ISO-8859-1 -enc2 UTF-8 web/bibleref/wiki_perikope.htm
 DIFF test/$(CASE).prev.tst  web/bibleref/wiki_perikope.html
 
-TEST MFK4 show German account numbers and BLZs
+TEST MF04 show German account numbers and BLZs
 CALL MainFilter -xml -konto                                 web/konto/collect.html
 DIFF test/$(CASE).prev.tst  web/konto.html
 
-TEST MFN5 show numbers and their spelling, or parse number words
+TEST MF05 show numbers and their spelling, or parse number words
 CALL MainFilter -xml -number                                web/number/genesis5.html
 DIFF test/$(CASE).prev.tst  web/number.html
 
-TEST MFW6 show word types with background colors
+TEST MF06 show word types with background colors
 CALL MainFilter -xml -wordtype                              web/wordtype/quixote0.html
 DIFF test/$(CASE).prev.tst  web/wordtype.html
 #-----------------------------------

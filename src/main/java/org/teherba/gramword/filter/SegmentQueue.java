@@ -36,8 +36,10 @@ import  org.teherba.gramword.Morphem;
 public class SegmentQueue {
     public final static String CVSID = "@(#) $Id: SegmentQueue.java 976 2013-02-02 16:44:18Z gfis $";
 
-    /** Size of the ring (should be a power of 2) */
-    private static final int RING_SIZE = 32;
+    /** Size of the ring, which should be a power of 2,
+     *  and which should be sufficient for the longest sentence to be analysed. 
+     */
+    private static final int RING_SIZE = 256;
     /** Array of <em>Segment</em>s for the words in the ring */
     private Segment[] segments;
     /** The tail of the queue is the first element behind the element
@@ -63,9 +65,9 @@ public class SegmentQueue {
      *  The queue should be flushed by <em>add</em>ing so many empty elements.
      *  @return number of queue elements
      */
-    public int getSize() {
+    public int size() {
         return RING_SIZE;
-    } // getSize
+    } // size
 
     /** Adds a segment to the queue.
      *  @param segment segment to be appended to the end of the queue

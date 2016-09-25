@@ -95,7 +95,7 @@ public class BaseFilter extends CharTransformer {
         log = Logger.getLogger(BaseFilter.class.getName());
         cntWords        = 0;
         cntKnown        = 0;
-        segmentPivot    = -4;
+        segmentPivot    = 0;
         morphCounts     = new TreeMap<String, Integer>();
         tester          = new MorphemTester("all"); // default: apply all tests
      } // initialize
@@ -111,10 +111,10 @@ public class BaseFilter extends CharTransformer {
 
     /** Indicates the class of the previous ćharacter during loop in {@link #characters} */
     private static  enum State
-            { IN_WORD  
+            { IN_WORD
             , IN_NUMBER
             , IN_PUNCT
-            , IN_GLUE 
+            , IN_GLUE
             };
     /** State of previous character while scanning  words,numbers, punctuation or glue */
     protected State prevState;
@@ -128,65 +128,10 @@ public class BaseFilter extends CharTransformer {
     /** whether in HTML "a" element */
     protected boolean inA;
 
-    /** Increments the count for the specified morphem type.
-     *  @param morph type of morphem, "Aj", "Vb" ...
-     */
-    protected void morphIncr(String morph) {
-        Object value = morphCounts.get(morph);
-        morphCounts.put(morph, new Integer ((value == null)
-                ? 1
-                : ((Integer) value).intValue() + 1));
-    } // morphIncr
-
-    /** Terminates the word or the glue at
-     *  the start of a new tag, comment, processing instruction
-     *  or at the end of the document
-     */
-    protected void tagBoundary() {
-        if (prevState == State.IN_GLUE) { // still in glue
-            queue.appendBehind(glueBuffer.toString());
-        } else { // in word, number, punctuation
-            enqueue(new Segment("", new Morphem(wordBuffer.toString()), ""));
-            wordBuffer.setLength(0);
-            prevState = State.IN_GLUE;
-        }
-        glueBuffer.setLength(0);
-    } // tagBoundary
-
-    /** Eventually modifies some previous queue element(s),
-     *  append a new segment to the queue and
-     *  prints the segment which is shifted out of the queue.
-     *  @param segment the new segment to be appended to the queue
-     *  <p>
-     *  This implementation shows 
-     *  <ul>
-     *  <li>all words starting with an uppercase letter on a chartreuse background,</li>
-     *  <li>all words starting with a digit             on a lightblue  background.</li>
-     * </ul>     
-     */
-    protected void enqueue(Segment segment) {
-        Segment element = queue.get(segmentPivot);
-        if (! element.isInLink()) {
-            String entry = element.getMorphem().getEntry();
-            if (entry.length() <= 0) {
-                // ignore empty segments (for tags)
-            } else if (Character.isUpperCase(entry.charAt(0))) {
-                element.appendBefore("<span style=\"background-color: chartreuse\">");
-                element.prependBehind("</span>");
-            } else if (Character.isDigit(entry.charAt(0))) {
-                element.appendBefore("<span style=\"background-color: lightblue\">");
-                element.prependBehind("</span>");
-            }
-        }
-        if (inA) {
-            segment.setInLink(inA);
-        }
-        charWriter.print(queue.add(segment));
-    } // enqueue
     //--------------------------------------------------------
     /** Inserts some HTML before any &lt;/head&gt; tag.
      *  By default, a series of stylesheet references is included.
-     *  These stylesheet must lay in the root directory of the container
+     *  These stylesheets must lay in the root directory of the container
      *  (gits/gramword/web/ resp. tomcat/webapps/gramword/).
      *  @param title title of the page
      */
@@ -197,21 +142,8 @@ public class BaseFilter extends CharTransformer {
         + "\n<link rel=\"stylesheet\" title=\"sbajar\" type=\"text/css\" href=\"sbajar.css\" />"
         + "\n<link rel=\"stylesheet\" title=\"nmnu\"   type=\"text/css\" href=\"nmnu.css\"   />"
         + "\n<link rel=\"stylesheet\" title=\"prcj\"   type=\"text/css\" href=\"prcj.css\"   />"
-        + "\n<script type=\"text/javascript\">"
-        + "\n<!--"
-        + "\nfunction activateStyles(title) {"
-        + "\n    var i, a;"
-        + "\n    for (i = 0; (a = document.getElementsByTagName(\"link\")[i]); i ++) {"
-        + "\n        if (a.getAttribute(\"rel\").indexOf(\"stylesheet\") >= 0 && a.getAttribute(\"title\")) {"
-        + "\n            a.disabled = true;"
-        + "\n            if (a.getAttribute(\"title\") == title) {"
-        + "\n                a.disabled = false;"
-        + "\n            }"
-        + "\n        }"
-        + "\n    } // for i"
-        + "\n} // setActiveStyleSheet"
-        + "\n-->"
-        + "\n</script>"
+        + "\n<link rel=\"stylesheet\" title=\"puxy\"   type=\"text/css\" href=\"puxy.css\"   />"
+        + "\n<script type=\"text/javascript\" src=\"javascript.js\"></script>\n"
         );
     } // writeHeadEnd
 
@@ -251,9 +183,9 @@ public class BaseFilter extends CharTransformer {
 
         if (features.indexOf("bar"      ) >= 0) {
         } // bar
-        
+
         if (features.indexOf("sum"      ) >= 0) {
-            queue.appendBehind("<strong>"      + String.format("%.1f", cntKnown * 100.0 / cntWords) 
+            queue.appendBehind("<strong>"      + String.format("%.1f", cntKnown * 100.0 / cntWords)
             + "%</strong> = "+ String.valueOf(cntKnown) + " recognized "
             + "and "         + String.valueOf(cntWords - cntKnown)  + " unknown "
             + "out of "      + String.valueOf(cntWords)  + " total words"
@@ -268,6 +200,7 @@ public class BaseFilter extends CharTransformer {
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('sbajar'); return false;\">Sb+Aj+Ar</a>, \n"
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('nmnu');   return false;\">Nm+Nu</a>, \n"
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('prcj');   return false;\">Pr+Cj+Cc+Un</a> \n"
+            + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('puxy');   return false;\">Pu+Xy</a> \n"
             );
             queue.appendBehind("<br />\n");
         } // switch
@@ -290,12 +223,14 @@ public class BaseFilter extends CharTransformer {
 
     /** Receive notification of the end of the document.
      *  Flushes the queue.
+     *  When the queue is totally filled with new elements, then
+     *  all existing elements are moved out to the serializer.
      */
     public void endDocument() {
-        int size = queue.getSize();
-        while (size > 0) { // flush the queue
-            enqueue(new Segment("", new Morphem(), ""));
-            size --;
+        int numElem = queue.size();
+        while (numElem > 0) { // flush the queue
+            enqueue(new Segment());
+            numElem --;
         } // while flushing
     } // endDocument
 
@@ -348,8 +283,88 @@ public class BaseFilter extends CharTransformer {
         inA = false;
     } // endElement
 
+    /** Increments the count for the specified morphem type.
+     *  @param morph type of morphem, "Aj", "Vb" ...
+     */
+    protected void morphIncr(String morph) {
+        Object value = morphCounts.get(morph);
+        morphCounts.put(morph, new Integer ((value == null)
+                ? 1
+                : ((Integer) value).intValue() + 1));
+    } // morphIncr
+
+    /** Terminates the word or the glue at
+     *  the start of a new tag, comment, processing instruction
+     *  or at the end of the document
+     */
+    protected void tagBoundary() {
+            // copied from 'characters#isWhitespace(chi)
+                switch (prevState) {
+                    case IN_GLUE: // append glue
+                        queue.appendBehind(glueBuffer.toString());
+                        glueBuffer.setLength(0);
+                        break;
+                    case IN_NUMBER:
+                        enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.NUMBER)));
+                        wordBuffer.setLength(0);
+                        glueBuffer.setLength(0);
+                        break;
+                    default:
+                    case IN_PUNCT: // will not occur
+                    case IN_WORD:
+                        enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.EMPTY  )));
+                        wordBuffer.setLength(0);
+                        glueBuffer.setLength(0);
+                        break;
+                } // switch for whitespace
+                prevState = State.IN_GLUE;
+           // end copy
+/* old code:
+        if (prevState == State.IN_GLUE) { // still in glue
+            queue.appendBehind(glueBuffer.toString());
+            glueBuffer.setLength(0);
+        } else { // in word, number, punctuation
+            enqueue(new Segment(new Morphem(wordBuffer.toString())));
+            wordBuffer.setLength(0);
+            glueBuffer.setLength(0);
+            prevState = State.IN_GLUE;
+        }
+*/
+    } // tagBoundary
+
+    /** Eventually modifies some previous queue element(s),
+     *  append a new segment to the queue and
+     *  prints the segment which is shifted out of the queue.
+     *  @param segment the new segment to be appended to the queue
+     *  <p>
+     *  This implementation shows
+     *  <ul>
+     *  <li>all words starting with an uppercase letter on a chartreuse background,</li>
+     *  <li>all words starting with a digit             on a lightblue  background.</li>
+     * </ul>
+     */
+    protected void enqueue(Segment segment) {
+        Segment element = queue.get(segmentPivot);
+        if (! element.isInLink()) {
+            String entry = element.getMorphem().getEntry();
+            if (entry.length() <= 0) {
+                // ignore empty segments (for tags)
+            } else if (Character.isUpperCase(entry.charAt(0))) {
+                element.appendBefore("<span style=\"background-color: chartreuse\">");
+                element.prependBehind("</span>");
+            } else if (Character.isDigit(entry.charAt(0))) {
+                element.appendBefore("<span style=\"background-color: lightblue\">");
+                element.prependBehind("</span>");
+            }
+        }
+        if (inA) {
+            segment.setInLink(inA);
+        }
+        charWriter.print(queue.add(segment));
+    } // enqueue
+
     /** Receive notification of character data inside an element.
-     *  The method generates a new segment for 
+     *  The method generates a new segment for
      *  <ul>
      *  <li>a word (consisting of letters only), and</li>
      *  <li>a number (consisting of digits only).</li>
@@ -370,7 +385,7 @@ public class BaseFilter extends CharTransformer {
         while (ichar < behind) {
             char chi = chars[ichar];
             if (false) {
-                
+
             } else if (Character.isLetter(chi)) { // word character
                 switch (prevState) {
                     case IN_GLUE:
@@ -380,18 +395,18 @@ public class BaseFilter extends CharTransformer {
                         break;
                     default:
                     case IN_PUNCT: // will not occur
-                    case IN_NUMBER: 
+                    case IN_NUMBER:
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, ""), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.EMPTY)));
                         wordBuffer.setLength(0);
                         wordBuffer.append(chi);
                         break;
-                    case IN_WORD: 
+                    case IN_WORD:
                         wordBuffer.append(chi);
                         break;
                 } // switch for letter
                 prevState = State.IN_WORD;
-                
+
             } else if (Character.isDigit(chi)) { // number character
                 switch (prevState) {
                     case IN_GLUE: // append glue and start new Segment
@@ -401,34 +416,34 @@ public class BaseFilter extends CharTransformer {
                         break;
                     default:
                     case IN_PUNCT: // will not occur
-                    case IN_WORD: 
+                    case IN_WORD:
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, Morphem.NUMBER), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.NUMBER)));
                         wordBuffer.setLength(0);
                         wordBuffer.append(chi);
                         break;
-                    case IN_NUMBER: 
+                    case IN_NUMBER:
                         wordBuffer.append(chi);
                         break;
                 } // switch for digit
                 prevState = State.IN_NUMBER;
-                
+
             } else if (Character.isWhitespace(chi)) { // glue character
                 switch (prevState) {
-                    case IN_GLUE: // append glue and start new Segment
+                    case IN_GLUE: // append glue
                         glueBuffer.append(chi);
                         break;
                     default:
-                    case IN_NUMBER: 
-                    case IN_PUNCT: // willnot occur
-                    case IN_WORD: 
+                    case IN_NUMBER:
+                    case IN_PUNCT: // will not occur
+                    case IN_WORD:
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, ""), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.EMPTY)));
                         wordBuffer.setLength(0);
                         glueBuffer.setLength(0);
                         glueBuffer.append(chi);
                         break;
-                } // switch for letter
+                } // switch for whitespace
                 prevState = State.IN_GLUE;
 
             } else { // punctuation
@@ -439,30 +454,30 @@ public class BaseFilter extends CharTransformer {
                         glueBuffer.setLength(0);
                         wordBuffer.append(chi);
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, Morphem.PUNCT), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.PUNCT)));
                         wordBuffer.setLength(0);
                         break;
-                    case IN_NUMBER: 
+                    case IN_NUMBER:
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, Morphem.NUMBER), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.NUMBER)));
                         wordBuffer.setLength(0);
                         wordBuffer.append(chi);
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, Morphem.PUNCT), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.PUNCT)));
                         wordBuffer.setLength(0);
                         break;
-                    case IN_WORD: 
+                    case IN_WORD:
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, ""), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.EMPTY)));
                         wordBuffer.setLength(0);
                         wordBuffer.append(chi);
                         entry = wordBuffer.toString();
-                        enqueue(new Segment("", new Morphem(entry, Morphem.PUNCT), ""));
+                        enqueue(new Segment(new Morphem(entry, Morphem.PUNCT)));
                         wordBuffer.setLength(0);
                         break;
                 } // switch for punctuation
                 prevState = State.IN_GLUE;
-                
+
             } // end of if cascade for current character
             ichar ++;
         } // while ichar

@@ -126,7 +126,7 @@ public class GramwordServlet extends HttpServlet {
             String view = basePage.getFilesAndFields(request, new String[]
                     { "view"    , "index"
                     , "enc"     , "UTF-8"       // of infile
-                    , "filter"  , "simple"      // filter to be applied
+                    , "filter"  , "wordtype"    // filter to be applied
                     , "format"  , "html"        // for target output
                     , "grammar" , "de"          // for analysis of infile
                     , "lang"    , "en"          // for user interface
@@ -174,7 +174,7 @@ public class GramwordServlet extends HttpServlet {
             //-------------------------------------
             // then switch for the different views
             } else if (view.equals("index"   ))   { // start page
-                    (new IndexPage()).dialog(request, response, basePage);
+                (new IndexPage()).dialog(request, response, basePage);
 
             } else if (view.equals("index2"  ))   { // former result page
                 if (false) {
