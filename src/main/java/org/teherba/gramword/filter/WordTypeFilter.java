@@ -92,14 +92,18 @@ public class WordTypeFilter extends BaseFilter {
         String entry = rawMorphem.getEntry();
         String morph = rawMorphem.getMorph();
         if (entry.length() <= 0) {
-            // ignore empty words - should never occur
-        } else { 
-            morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
+            queue.add(segment); // otherwise ignore empty segments
+        } else {
             String morphCode2 = Morphem.WORD; // assume "Xy" = unrecognized so far
+            if (morph != Morphem.PUNCT) {
+                morphems = tester.getResults(entry); // database lookup: find all morphs for this entry
+            } else {
+                morphCode2 = morph.substring(0, 2);
+            }
             StringBuffer attrList = new StringBuffer(128);
             if (morphems != null && morphems.size() > 0) {
-			    morphems.get(0).setEntry(entry); // ???
-			    element.setMorphems(morphems);
+                morphems.get(0).setEntry(entry); // ???
+                element.setMorphems(morphems);
                 cntKnown ++;
                 int imorph = 0;
                 while (imorph < morphems.size()) {
@@ -114,19 +118,21 @@ public class WordTypeFilter extends BaseFilter {
                 attrList.append(morphCode2); // Xy
             }
             element.appendBefore("<span class=\"" + morphCode2 + "\"" // only the 1st two for color
-                    + " id=\""    + queue.getTail() 
+            /*
+                    + " id=\""    + queue.getTail()
                     + "." + sentenceTester.getLength()
                     + "\""
+            */
                     + " title=\"" + attrList + "\">"); // all separated by "|"
             element.prependBehind("</span>");
             morphIncr(morphCode2); // count colors
             cntWords ++;
+            sentenceTester.addAndTest(queue, segment);
         } // entry.length() > 0
         if (inA) {
             segment.setInLink(inA);
         }
         // serialize and overwrite
-        sentenceTester.addAndTest(queue, segment);
     } // enqueue
 
     /** Receive notification of the start of an element.

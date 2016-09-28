@@ -169,7 +169,7 @@ public class BaseFilter extends XMLTransformer { // but still uses plain CharWri
         features = "," + features + ",";
 
         if (features.indexOf("code"     ) >= 0) {
-            queue.appendBehind("<br /><br />Morphems: ");
+            queue.appendBehind("<br /><br />Morphems:\n");
             Iterator<String> miter = morphCounts.keySet().iterator();
             while (miter.hasNext()) {
                 String morph = miter.next();
@@ -193,7 +193,7 @@ public class BaseFilter extends XMLTransformer { // but still uses plain CharWri
         } // sum
 
         if (features.indexOf("switch"   ) >= 0) {
-            queue.appendBehind("Highlight: "
+            queue.appendBehind("Highlight:\n"
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('all');    return false;\">all found</a>, \n"
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('vbav');   return false;\">Vb+Av</a>, \n"
             + "<a href=\"#\" title=\"Click to switch\" onclick=\"activateStyles('sbajar'); return false;\">Sb+Aj+Ar</a>, \n"
@@ -296,27 +296,27 @@ public class BaseFilter extends XMLTransformer { // but still uses plain CharWri
      *  or at the end of the document
      */
     protected void tagBoundary() {
-            // copied from 'characters#isWhitespace(chi)
-                switch (prevState) {
-                    case IN_GLUE: // append glue
-                        queue.appendBehind(glueBuffer.toString());
-                        glueBuffer.setLength(0);
-                        break;
-                    case IN_NUMBER:
-                        enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.NUMBER)));
-                        wordBuffer.setLength(0);
-                        glueBuffer.setLength(0);
-                        break;
-                    default:
-                    case IN_PUNCT: // will not occur
-                    case IN_WORD:
-                        enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.EMPTY  )));
-                        wordBuffer.setLength(0);
-                        glueBuffer.setLength(0);
-                        break;
-                } // switch for whitespace
-                prevState = State.IN_GLUE;
-           // end copy
+        // copied from 'characters#isWhitespace(chi)
+        switch (prevState) {
+            case IN_GLUE: // append glue
+                queue.appendBehind(glueBuffer.toString());
+                glueBuffer.setLength(0);
+                break;
+            case IN_NUMBER:
+                enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.NUMBER)));
+                wordBuffer.setLength(0);
+                glueBuffer.setLength(0);
+                break;
+            default:
+            case IN_PUNCT: // will not occur
+            case IN_WORD:
+                enqueue(new Segment(new Morphem(wordBuffer.toString(), Morphem.EMPTY  )));
+                wordBuffer.setLength(0);
+                glueBuffer.setLength(0);
+                break;
+        } // switch for whitespace
+        prevState = State.IN_GLUE;
+        // nd copy
     } // tagBoundary
 
     /** Eventually modifies some previous queue element(s),

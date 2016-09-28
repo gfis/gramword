@@ -57,7 +57,8 @@ public class Segment {
      *  @param behind glue behind the word (or empty string)
      */
     public Segment(String before, Morphem morphem, String behind) {
-        setMorphem(morphem);
+        morphems = new MorphemList();
+        morphems.add(morphem);
         prefix = new StringBuffer(GLUE_SIZE);
         prefix.append(before);
         suffix = new StringBuffer(GLUE_SIZE);
@@ -83,14 +84,6 @@ public class Segment {
         suffix = new StringBuffer(GLUE_SIZE);
         suffix.append(behind);
     } // Constructor(3s)
-
-    /** Sets the word with a unique grammatical type.
-     *  @param morphem morphem for the word
-     */
-    public void setMorphem(Morphem morphem) {
-        this.morphems = new MorphemList();
-        this.morphems.add(morphem);
-    } // setMorphem
 
     /** Gets the first grammatical type.
      *  @return first morphem for the word
@@ -182,6 +175,15 @@ public class Segment {
     public String toString() {
         return prefix.toString() + morphems.get(0).getEntry() + suffix.toString();
     } // toString
+
+    /** Determines whether the segment is empty
+     *  @return whether the segment contains only one empty {@link Morphem}
+     */
+    public boolean isEmpty() {
+        int imorph = 0; 
+        Morphem morphem = morphems.get(imorph); // there is only one
+        return morphem.getMorph().startsWith(Morphem.EMPTY);
+    } // isEmpty
 
     /** Determines whether the segment is some punctuation
      *  @param puncts String of applicable punctuation characters

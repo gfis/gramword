@@ -48,7 +48,8 @@
 5,31 Die gesamte Lebenszeit Lamechs betrug <span class="Nu" title="777">siebenhundertsiebenundsiebzig</span> Jahre, dann starb er. <br />
 5,32 Noach zeugte im Alter von <span class="Nu" title="500">fünfhundert</span> Jahren Sem, Ham und Jafet.
 </p>
-<br /><br />Morphems: <span class="Aj">Aj</span> 22
+<br /><br />Morphems:
+<span class="Aj">Aj</span> 22
 <span class="Ar">Ar</span> 32
 <span class="Cj">Cj</span> 54
 <span class="Ir">Ir</span> 1

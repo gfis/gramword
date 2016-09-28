@@ -54,6 +54,9 @@ DIFF test/$(CASE).prev.tst  web/number.html
 TEST MF06 show word types with background colors
 CALL MainFilter -xml -wordtype                              web/wordtype/quixote0.html
 DIFF test/$(CASE).prev.tst  web/wordtype.html
+
+TEST MF07 show word types in article
+CALL MainFilter -xml -wordtype                              test/gn_de.html
 #-----------------------------------
 # web tests
 PACKAGE=org.teherba.common

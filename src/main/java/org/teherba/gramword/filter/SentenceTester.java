@@ -35,7 +35,7 @@ public class SentenceTester {
     public final static String CVSID = "@(#) $Id: SentenceTester.java 976 2013-02-02 16:44:18Z gfis $";
 
     /** Debugging switch */
-    public int debug = 1;
+    public int debug = 0;
     
     /** Number of morphems queued behind last dot.*/
     private int sentLen;
@@ -54,13 +54,13 @@ public class SentenceTester {
         return sentLen;
     } // getLength
 
-    /** States of a DFA for relative sentences */
+    /** States of a DFA for relative clauses */
     private static enum Expect
-            { RELS_COMMA   // expect comma
-            , RELS_PREP    // expect optional preposition
-            , RELS_PNRELT  // expect relative pronoun
-            , RELS_VERB    // expect verb
-            , RELS_COMMA2  // expect comma or dot behind verb
+            { RELCL_COMMA   // expect comma
+            , RELCL_PREP    // expect optional preposition
+            , RELCL_PNRELT  // expect relative pronoun
+            , RELCL_VERB    // expect verb
+            , RELCL_COMMA2  // expect comma or dot at end of relative clause
             };
 
     /** Adds a segement to the queue, and
@@ -77,11 +77,13 @@ public class SentenceTester {
                     .println("<h3 class=\"Av\">sentence length " + String.valueOf(sentLen) 
                     + " exceeds queue size " + String.valueOf(queue.size()) + "</h3>");
         /*
+        } else if (newSegment.isEmpty())    { // at the end
+            sentLen = 0;
         */
         } else if (newSegment.isPunct(".")) { // sentence still fits in queue
             int phraseStart = 0; // invalid
             int phraseEnd   = 0;
-            Expect state = Expect.RELS_COMMA;
+            Expect state = Expect.RELCL_COMMA;
             int iofs = sentLen;
             while (iofs >= 1) { // queue[tail] is first free
                 Segment segment = queue.get(- iofs);
@@ -89,55 +91,55 @@ public class SentenceTester {
                     queue.getTransformer().getCharWriter().println("<!-- state = " + state + ": " + segment.toString() + "-->");
                 }
                 switch(state) {
-                    case RELS_COMMA:
+                    case RELCL_COMMA:
                         if (segment.isPunct(",")) {
                             phraseStart = iofs;
-                            state = Expect.RELS_PREP;
+                            state = Expect.RELCL_PREP;
                         }
                         break;
-                    case RELS_PREP: // comma before
+                    case RELCL_PREP: // comma before
                         if (debug >= 2) {
-                            queue.getTransformer().getCharWriter().println("<!-- RELS_PREP: " 
-                            		+ segment.getMorphems().toString() + " ? " + segment.contains("PnRelt") + "-->");
+                            queue.getTransformer().getCharWriter().println("<!-- RELCL_PREP: " 
+                                    + segment.getMorphems().toString() + " ? " + segment.contains("PnRelt") + "-->");
                         }
                         if (false) {
                         } else if (segment.contains("PnRelt")) {
-                            state = Expect.RELS_VERB;
+                            state = Expect.RELCL_VERB;
                         } else if (segment.contains("Pr")) {
-                            state = Expect.RELS_PNRELT;
+                            state = Expect.RELCL_PNRELT;
                         } else { // start over
-                            state = Expect.RELS_COMMA;
+                            state = Expect.RELCL_COMMA;
                         }
                         break;
-                    case RELS_PNRELT:
+                    case RELCL_PNRELT:
                         if (debug >= 2) {
-                            queue.getTransformer().getCharWriter().println("<!-- RELS_PNRELT: " + segment.toString() + "-->");
+                            queue.getTransformer().getCharWriter().println("<!-- RELCL_PNRELT: " + segment.toString() + "-->");
                         }
                         if (segment.contains("PnRelt")) {
-                            state = Expect.RELS_VERB;
+                            state = Expect.RELCL_VERB;
                         } else { // start over
-                            state = Expect.RELS_COMMA;
+                            state = Expect.RELCL_COMMA;
                         }
                         break;
-                    case RELS_VERB:
+                    case RELCL_VERB:
                         if (debug >= 2) {
-                            queue.getTransformer().getCharWriter().println("<!-- RELS_VERB: " + segment.toString() + "-->");
+                            queue.getTransformer().getCharWriter().println("<!-- RELCL_VERB: " + segment.toString() + "-->");
                         }
                         if (false) {
                         } else if (segment.contains("Vb")) {
-                            state = Expect.RELS_COMMA2;
+                            state = Expect.RELCL_COMMA2;
                         } else if (segment.isPunct(",")) {
-                            state = Expect.RELS_PREP; // start over
+                            state = Expect.RELCL_PREP; // start over
                         }
                         break;
-                    case RELS_COMMA2:
+                    case RELCL_COMMA2:
                         if (false) {
                         } else if (segment.isPunct(",.")) {
                             phraseEnd = iofs;
-                            modifyPhrase(queue, "rels", phraseStart, phraseEnd);
-                            state = Expect.RELS_COMMA; // start over
+                            modifyPhrase(queue, "RelCl", phraseStart, phraseEnd);
+                            state = Expect.RELCL_COMMA; // start over
                         } else { // may perhaps find another verb later
-                            state = Expect.RELS_VERB;
+                            state = Expect.RELCL_VERB;
                         }
                         break;
                 } // switch state
@@ -150,7 +152,7 @@ public class SentenceTester {
 
     /** Modifies a phrase which was recognized
      *  @param queue {@link SegmentQueue} to be modified
-     *  @param phraseType code for the type of the phrase
+     *  @param phraseCode code for the type of the phrase
      *  @param phraseStart starting offset in queue
      *  @param phraseEnd   ending   offset in queue
      */
@@ -159,8 +161,8 @@ public class SentenceTester {
             queue.getTransformer().getCharWriter()
                     .println("<!-- modifyPhrase, tail=" + queue.getTail() + ", " + phraseStart + " " + phraseEnd + "-->");
         }
-        queue.get(- phraseStart).prependBefore("<div class=\"" + phraseCode + "\">");
-        queue.get(- phraseEnd  ).prependBefore("</div>");
+        queue.get(- phraseStart).prependBefore("<span class=\"" + phraseCode + "\">");
+        queue.get(- phraseEnd  ).prependBefore("</span>");
         sentLen = 0;
     } // modifyPhrase
     

@@ -1,5 +1,6 @@
 /*  all.css - Cascaded Style Sheet with all morphem codes
     @(#) $Id$
+    2016-09-28: .RelCl italics bold
     2016-09-23: .Pu = punctuation; .Xy: unrecognized
     2016-09-20: revised; undo colors with web/unclass.pl
     2006-06-09: colored morphology
@@ -29,7 +30,7 @@
 .Un { color:white    ; background-color: gray       }
 .Vb { color:white    ; background-color: mediumblue }
 .Xy { color:black    ; background-color: azure      }
-.rels { font-style:italic; }
+.RelCl { font-style:italic; font-weight: bold; } /* } */
 
 body,p,h1,h2,h3,h4,dl,dd,dt,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,a,br,img
     { font-family:Verdana,Arial,sans-serif;}

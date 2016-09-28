@@ -284,8 +284,10 @@ Sparkasse Nördlicher Breisgau (<span style="background-color: gainsboro">BLZ</s
 </p><p>
 Züricher Vers. <span style="background-color: gainsboro">BLZ</span> <a href="http://www.google.de/search?q=unknown"><span title="unknown" style="background-color: lightblue">50070010</span></a>  <span style="background-color: khaki">Kto</span> <span style="background-color: lightgreen">0105230700</span>
 </p>
-<br /><br />Morphems: <br />
-Highlight: <a href="#" title="Click to switch" onclick="activateStyles('all');    return false;">all found</a>, 
+<br /><br />Morphems:
+<br />
+Highlight:
+<a href="#" title="Click to switch" onclick="activateStyles('all');    return false;">all found</a>, 
 <a href="#" title="Click to switch" onclick="activateStyles('vbav');   return false;">Vb+Av</a>, 
 <a href="#" title="Click to switch" onclick="activateStyles('sbajar'); return false;">Sb+Aj+Ar</a>, 
 <a href="#" title="Click to switch" onclick="activateStyles('nmnu');   return false;">Nm+Nu</a>, 
