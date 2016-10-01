@@ -1,0 +1,40 @@
+/*  puxy.css - Cascaded Style Sheet with morphem code subset
+    @(#) $Id$
+    2016-09-24, Georg Fischer: copied from all.css
+*/
+/*
+.Ab { color:white    ; background-color: goldenrod  }
+.Aj { color:black    ; background-color: lightblue  }
+.Ar { color:white    ; background-color: green      }
+.Au { color:black    ; background-color: lightgreen }
+.Av { color:black    ; background-color: red        }
+.Cc { color:lightred ; background-color: yellow     }
+.Cj { color:blue     ; background-color: yellow     }
+.Er { color:white    ; background-color: black      }
+.Ir { color:green    ; background-color: yellow     }
+.Nm { color:blue     ; background-color: chartreuse }
+.Nu { color:black    ; background-color: yellow     }
+.Pn { color:white    ; background-color: crimson    }
+.Pp { color:white    ; background-color: crimson    }
+.Pr { color:red      ; background-color: yellow     }
+.Ps { color:white    ; background-cclor: red        }
+*/
+.Pu { color:white    ; background-color: black    ; font-weight:bold }
+/*
+.Rp { color:black    ; background-color: yellow     }
+.Sb { color:black    ; background-color: pink       }
+.Un { color:white    ; background-color: gray       }
+.Vb { color:white    ; background-color: mediumblue }
+*/
+.Xy { color:black    ; background-color: azure      }
+
+body,p,h1,h2,h3,h4,dl,dd,dt,ul,ol,li,div,td,th,address,blockquote,nobr,b,i,a,br,img
+    { font-family:Verdana,Arial,sans-serif;}
+dt  
+    { font-weight: bold }
+tt
+    { font-family:Courier; }
+td
+    { vertical-align:top }
+body
+    { background-color:white }
