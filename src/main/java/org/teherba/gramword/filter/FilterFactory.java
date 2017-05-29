@@ -1,5 +1,6 @@
 /*  Selects the applicable filter
  *  @(#) $Id: FilterFactory.java 564 2010-10-19 16:29:18Z gfis $
+ *  2017-05-29: javadoc 1.8
  *  2016-09-19: old package was gramword.filters; dynamic class testing
  *  2010-10-19: transformer.initialize()
  *  2007-04-18: NumberFilter, KontoFilter
@@ -31,8 +32,8 @@ import  org.apache.log4j.Logger;
 
 /** Selects a specific filter and iterates over the descriptions
  *  of all filters and their codes.
- *  A filter is a subclass of {@link BaseFilter} which in turn 
- *  is based on {@link BaseTransformer}. 
+ *  A filter is a subclass of {@link BaseFilter} which in turn
+ *  is based on {@link BaseTransformer}.
  *  The output of a filter is serialized by @link XMLTransformer}.
  *  @author Dr. Georg Fischer
  */
@@ -88,6 +89,7 @@ public class FilterFactory {
      *  transformer class.
      *  @param transformer the transformer to be tested
      *  @param format code for the desired format
+     *  @return whether the transformer can handle the format
      */
     private boolean isApplicable(BaseTransformer transformer, String format) {
         boolean result = false;

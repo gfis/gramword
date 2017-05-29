@@ -1,5 +1,6 @@
 /*  Queue of words with surrounding glue (HTML tags, punctuation and whitespace)
     @(#) $Id: SegmentQueue.java 976 2013-02-02 16:44:18Z gfis $
+ *  2017-05-29: javadoc 1.8
     2016-09-22: moved to subpackage gramword.filter
     2007-04-19: RING_SIZE increased from 16 to 32 for Konto; get returns null and set does nothing if index outside the queue
     2007-02-21: renamed from PartList
@@ -46,7 +47,7 @@ public class SegmentQueue {
     private Segment[] segments;
     /** The head of the queue is the element that has been on the queue for the longest time.
      *  If the ring buffer is full, {@link #head} is the same as {@link #tail}.
-     *  Otherwise the content element range is [head..[tail,though head maybe > tail because
+     *  Otherwise the content element range is [head..[tail,though head maybe &gt; tail because
      *  of the modulo {@link #RING_SIZE} arithmetic for queue indices.
      */
     private int head;
@@ -69,6 +70,7 @@ public class SegmentQueue {
 
     /** Constructor with lookahead.
      *  @param lookAhead distance between interesting and tail element.
+     *  @param transformer Serializer for output of queue elements
      *  This should not be changed during queue processing.
      *  Initially, all segments in the queue return empty strings.
      */
@@ -235,18 +237,18 @@ public class SegmentQueue {
     public static void main(String args[]) {
         SegmentQueue queue = new SegmentQueue(8, null);
         Segment punctSegm = new Segment(new Morphem(".", Morphem.PUNCT));
-        System.out.println(punctSegm.toString() + " isPunct ? " + punctSegm.isPunct(".")); 
+        System.out.println(punctSegm.toString() + " isPunct ? " + punctSegm.isPunct("."));
         queue.add(punctSegm);
         queue.add(new Segment(new Morphem("8", Morphem.NUMBER)));
         queue.add(new Segment(new Morphem("A", Morphem.WORD  )));
         queue.add(new Segment(new Morphem("E", Morphem.EMPTY )));
-        MorphemList morphems = 
+        MorphemList morphems =
                 new MorphemList (new Morphem("die", "PnPersSgFm"));
         morphems.add            (new Morphem("die", "PnPersPl"));
         Segment wordSegm = new Segment("", morphems, "");
-        System.out.println(wordSegm.toString() + " contains PnRelt ? " + wordSegm.contains("PnRelt")); 
+        System.out.println(wordSegm.toString() + " contains PnRelt ? " + wordSegm.contains("PnRelt"));
         morphems.add            (new Morphem("die", "PnReltNomvSgFm"));
-        System.out.println(wordSegm.toString() + " contains PnRelt ? " + wordSegm.contains("PnRelt")); 
+        System.out.println(wordSegm.toString() + " contains PnRelt ? " + wordSegm.contains("PnRelt"));
         System.out.print(queue.flush());
         System.out.println();
     } // main

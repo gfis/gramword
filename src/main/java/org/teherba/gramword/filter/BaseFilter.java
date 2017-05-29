@@ -3,6 +3,7 @@
     the local analysis of several words, which are surrounded by "glue"
     (HTML tags, whitespace and punctuation).
     @(#) $Id: BaseFilter.java 805 2011-09-20 06:41:22Z gfis $
+ *  2017-05-29: javadoc 1.8
     2016-09-20: this was the former QueueTransformer
     2016-09-11: javadoc
     2010-07-05: initialize()
@@ -357,7 +358,7 @@ public class BaseFilter extends XMLTransformer { // but still uses plain CharWri
      *  <li>a number (consisting of digits only).</li>
      *  <li>a single punctuation character.</li>
      *  </ul>
-     *  Whitespace is "glue" which is <strong>appended to the previous segment<strong>.
+     *  Whitespace is "glue" which is <strong>appended to the previous segment</strong>.
      *  HTML tags are also "glue" and are placed around queue elements such that they
      *  can still be wrapped into outer HTML elements.
      *  @param chars the characters.

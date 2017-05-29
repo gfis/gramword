@@ -1,13 +1,13 @@
 /*  Shows the syntactical type of words in plain text
+    must be stored in UTF-8 encoding äöüÄÖÜß!
     @(#) $Id: MorphemTester.java 807 2011-09-20 16:54:21Z gfis $
+    2017-05-29: javadoc 1.8
     2016-09-23: log.debug|.info -> System.out.println
     2011-09-17: dbat.Configuration
     2008-02-13: Java 1.5 types
     2007-01-04: Dbat.getConnection instead of DbAccess
     2006-08-09: stack of DeuPartList.s; Veronika = 25
     2006-05-31: copied from NumberSpeller
-
-    must be stored in UTF-8 encoding äöüÄÖÜß!
 */
 /*
  * Copyright 2006 Dr. Georg Fischer <punctum at punctum dot kom>
@@ -195,6 +195,7 @@ public class MorphemTester {
     } // runQuery
 
     /** Stores all substantive declination endings in an ArrayList
+     *  @param select SELECT instruction for INSERT
      */
     private void insertForge(String select) {
         try {
@@ -583,7 +584,7 @@ public class MorphemTester {
         return result;
     } // searchRoots
 
-    /** Tries to find exact match(es) in <em>suffix/em> database table.
+    /** Tries to find exact match(es) in <em>suffix</em> database table.
      *  @param word word to be looked up
      *  @return list of morphems for exact matches of that word,
      *  maybe empty

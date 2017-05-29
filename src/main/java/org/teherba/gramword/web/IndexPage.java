@@ -1,5 +1,6 @@
 /*  IndexPage.java - starting web page for GramWord
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
+ *  2017-05-29: javadoc 1.8
  *  2016-09-22: IBANFilter removed
     2016-09-21: simple handler deprecated
  *  2016-09-20, Dr. Georg Fischer
@@ -70,12 +71,12 @@ public class IndexPage implements Serializable {
             out.write("    </script>\n");
             out.write("</head>\n<body>\n");
             out.write("<!--lang=\""     + language
-                    + "\", enc=\""      + encoding 
-                    + "\", filter=\""   + filter  
-                    + "\", format=\""   + format  
-                    + "\", grammar=\""  + grammar 
+                    + "\", enc=\""      + encoding
+                    + "\", filter=\""   + filter
+                    + "\", format=\""   + format
+                    + "\", grammar=\""  + grammar
                     + "\", infile=\""   + infile
-                    + "\", strat=\""    + strategy 
+                    + "\", strat=\""    + strategy
                     + "\"-->\n");
             String[] optEnc    = new String []
                     /*  0 */ { "ISO-8859-1"
@@ -88,15 +89,15 @@ public class IndexPage implements Serializable {
             String[] optFilter = new String []
                     /*  0 */ { "queue"
                     /*  1 */ , "bibleref"
-                    /*  2 */ , "konto"    
-                    /*  3 */ , "number"   
+                    /*  2 */ , "konto"
+                    /*  3 */ , "number"
                     /*  4 */ , "wordtype"
                     } ;
             String[] enFilter = new String []
                     /*  0 */ { "queue"
                     /*  1 */ , "bibleref"
-                    /*  2 */ , "konto"    
-                    /*  3 */ , "number"   
+                    /*  2 */ , "konto"
+                    /*  3 */ , "number"
                     /*  4 */ , "wordtype"
                     } ;
             String[] optFormat = new String []
@@ -263,156 +264,6 @@ public class IndexPage implements Serializable {
             log.error(exc.getMessage(), exc);
         }
     } // dialog
-
-    /** Write the common part of the form with thr input fields.
-     *  <ul>
-     *  <li>options</li>
-     *  <li>namespace</li>
-     *  <li>source encoding</li>
-     *  <li>target encoding</li>
-     *  <li>name of input file</li>
-     *  <li>input field</li>
-     *  </ul>
-     *  @param out PrintWriter for response
-     *
-     */
-    public static void writeFormOptions(BasePage basePage, PrintWriter out
-            , String language
-            , String dir
-            , String options
-            , String namespace
-            , String enc1
-            , String enc2
-            , String infile
-            , String intext
-        ) {
-        String border = "0";
-        int index = 0;
-        String[] optDir     = new String []
-                { "to"          // 0
-                , "from"        // 1
-                } ;
-        String[] enDir      = new String []
-                { "to"          // 0
-                , "from"        // 1
-                } ;
-        String[] optTarget  = new String []
-                { "xml"         // 0
-                } ;
-        String[] enTarget   = new String []
-                { "XML"         // 0
-                } ;
-        String[] optEnc     = new String []
-                { "UTF-8"       // 0
-                , "ISO-8859-1"  // 1
-                } ;
-        String[] enEnc      = new String []
-                { "UTF-8"       // 0
-                , "ISO-8859-1"  // 1
-                } ;
-
-        out.write("                <table border=\"" + border + "\">\n");
-        out.write("                    <tr>\n");
-        out.write("                    <td>\n");
-        out.write("                        <table border=\"" + border  + "\">\n");
-                                           if (dir != null && dir.length() > 0) { // with dir
-        out.write("                            <tr>\n");
-        out.write("                                <td>\n");
-        out.write("                                    <select name=\"dir\" size=\"" +  optDir.length  + "\">\n");
-                                                       index = 0;
-                                                       while (index < optDir.length) {
-                                                           out.write("<option value=\""
-                                                                   + optDir[index] + "\""
-                                                                   + (optDir[index].equals(dir) ? " selected" : "")
-                                                                   + ">"
-                                                                   + enDir[index] + "</option>\n");
-                                                           index ++;
-                                                       } // while index
-        out.write("                                    </select>\n");
-        out.write("                                </td>\n");
-        out.write("                                <td>\n");
-        out.write("                                    <strong>XML</strong>"); // target
-        out.write("                                </td>\n");
-        out.write("                                <td>    \n");
-        out.write("                                </td>\n");
-        out.write("                            </tr>\n");
-                                           } // with dir
-
-        out.write("                            <tr>\n");
-        out.write("                                <td colspan=\"3\">\n");
-        out.write("                                    Options<br />\n");
-        out.write("                                    <input name=\"opt\" maxsize=\"80\" size=\"40\" value=\"" + options + "\" />\n");
-        out.write("                                </td>\n");
-        out.write("                            </tr>\n");
-        out.write("                            <tr>\n");
-        out.write("                                <td colspan=\"3\">\n");
-        out.write("                                    Namespace<br /> \n");
-        out.write("                                    <input name=\"nsp\" maxsize=\"20\" size=\"40\" value=\"" + namespace + "\" />\n");
-        out.write("                                </td>\n");
-        out.write("                            </tr>\n");
-
-        out.write("                            <tr>\n");
-        out.write("                                <td>Source Encoding<br /> \n");
-        out.write("                                    <select name=\"enc1\" size=\"" + optEnc.length + "\">\n");
-                                                       index = 0;
-                                                       while (index < optEnc.length) {
-                                                           out.write("<option value=\""
-                                                                   + optEnc[index] + "\""
-                                                                   + (optEnc[index].equals(enc1) ? " selected" : "")
-                                                                   + ">"
-                                                                   + enEnc[index] + "</option>\n");
-                                                           index ++;
-                                                       } // while index
-        out.write("                                    </select>\n");
-        out.write("                                </td>\n");
-        out.write("                                <td>Target Encoding<br /> \n");
-        out.write("                                    <select name=\"enc2\" size=\"" + optEnc.length + "\">\n");
-                                                       index = 0;
-                                                       while (index < optEnc.length) {
-                                                           out.write("<option value=\""
-                                                                   + optEnc[index] + "\""
-                                                                   + (optEnc[index].equals(enc2) ? " selected" : "")
-                                                                   + ">"
-                                                                   + enEnc[index] + "</option>\n");
-                                                           index ++;
-                                                       } // while index
-        out.write("                                    </select>\n");
-        out.write("                                </td>\n");
-        out.write("                                <td>    \n");
-        out.write("                                </td>\n");
-        out.write("                            </tr>\n");
-
-        out.write("                        </table>\n");
-        out.write("                    </td>\n");
-        out.write("                    <td>\n");
-        out.write("                        <p />\n");
-
-        out.write("                    </td>\n");
-        out.write("                    </tr>\n");
-        out.write("                    <tr>\n");
-        out.write("                        <td colspan=\"3\">\n");
-        out.write("                            <table border=\"" + border + "\">\n");
-        out.write("                                <tr>\n");
-        out.write("                                    <td>\n");
-        out.write("                                    Name of Input File<br />\n");
-        out.write("                                    <input name=\"infile\" type=\"file\" style=\"font-family: Courier, monospace\" \n");
-        out.write("                                            maxsize=\"512\" size=\"80\" value=\"" + infile + "\"/> \n");
-        out.write("                                    &nbsp;&nbsp;<em><strong>or</strong></em>\n");
-        out.write("                                    <br />Input source text (non-binary formats only)<br />\n");
-        out.write("                                    <textarea name=\"intext\" cols=\"80\" rows=\"10\">" + intext + "</textarea>\n");
-        out.write("                                    <br /><input type=\"submit\" value=\"Transform\" />\n");
-        out.write("                                    </td>\n");
-        out.write("                                </tr>\n");
-        out.write("                            </table>\n");
-        out.write("                        </td>\n");
-        out.write("                    </tr>\n");
-        out.write("                    <tr>\n");
-        out.write("                        <td colspan=\"3\">\n");
-                                               basePage.writeAuxiliaryLinks(language, "main");
-        out.write("                        </td>\n");
-        out.write("                    </tr>\n");
-        out.write("                </table>\n");
-    } // writeFormOptions
 
     //================
     // Main method

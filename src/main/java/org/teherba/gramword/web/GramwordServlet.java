@@ -1,5 +1,6 @@
 /*  Servlet which checks the parameters and calls pages for different views
     @(#) $Id: GramwordServlet.java 976 2013-02-02 16:44:18Z gfis $
+    2017-05-29: javadoc 1.8
     2016-09-21: handler deprecated
     2016-09-19: previous name was GrammarServlet
     2016-09-12: moved to package gramword.web, use BasePage
@@ -82,7 +83,7 @@ public class GramwordServlet extends HttpServlet {
 
     /** Called by the servlet container to indicate to a servlet
      *  that the servlet is being placed into service.
-     *  @throws ServletException
+     *  @throws ServletException for servlet errors
      */
     public void init() throws ServletException {
         log = Logger.getLogger(GramwordServlet.class.getName());
@@ -100,7 +101,7 @@ public class GramwordServlet extends HttpServlet {
     /** Creates the response for a HTTP GET request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException {
         generateResponse(request, response);
@@ -109,7 +110,7 @@ public class GramwordServlet extends HttpServlet {
     /** Creates the response for a HTTP POST request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         generateResponse(request, response);
@@ -118,7 +119,7 @@ public class GramwordServlet extends HttpServlet {
     /** Creates the response for a HTTP GET or POST request.
      *  @param request fields from the client input form
      *  @param response data to be sent back the user's browser
-     *  @throws IOException
+     *  @throws IOException for IO errors
      */
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
         dbatConfig.configure(dbatConfig.WEB_CALL, dsMap);
@@ -169,8 +170,10 @@ public class GramwordServlet extends HttpServlet {
             } else if (",all,prsplit,sasplit,"  .indexOf("," + strategy + ",") < 0) {
                 basePage.writeMessage(request, response, language, new String[]
                         { "401", "strat"    , strategy  } );
+        /*
             } else if (basePage.getFormFileCount() <= 0 && ! view.equals("index")) { // no file was uploaded
                 basePage.writeMessage(request, response, language, new String[] { "406" } );
+        */
             //-------------------------------------
             // then switch for the different views
             } else if (view.equals("index"   ))   { // start page
@@ -181,9 +184,9 @@ public class GramwordServlet extends HttpServlet {
                 } else if (filter.equals("simple"  )
                         || filter.equals("queue"   )
                         || filter.equals("bibleref")
-                //      || filter.equals("iban"    ) 
-                        || filter.equals("konto"   ) 
-                        || filter.equals("number"  ) 
+                //      || filter.equals("iban"    )
+                        || filter.equals("konto"   )
+                        || filter.equals("number"  )
                         || filter.equals("wordtype") ) {
                     (new FilterPage()).showResult(request, response, basePage);
                 } else {

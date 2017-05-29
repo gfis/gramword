@@ -1,5 +1,6 @@
 /*  Selects the applicable inflector for words in a natural language
     @(#) $Id: FlexFactory.java 976 2013-02-02 16:44:18Z gfis $
+    2017-05-29: javadoc 1.8
     2013-01-27: copied from org.teherba.numword.SpellerFactory
 */
 /*
@@ -58,7 +59,7 @@ public class FlexFactory {
         log = Logger.getLogger(FlexFactory.class.getName());
         try {
             inflectors    = new ArrayList<BaseInflector>(64);
-            
+
             addInflector("Deu");  // German
 
         } catch (Exception exc) {
@@ -83,6 +84,7 @@ public class FlexFactory {
     /** Determines whether the language code denotes this inflector class.
      *  @param inflector the inflector to be tested
      *  @param language code for the desired language
+     *  @return whether the inclector can handle the language
      */
     public boolean isApplicable(BaseInflector inflector, String language) {
         boolean result = false;

@@ -1,5 +1,6 @@
 /*  Base class for conjugation and declination of words in different languages
     @(#) $Id: BaseInflector.java 978 2013-02-04 11:06:08Z gfis $
+    2017-05-29: javadoc 1.8
     2016-09-11: javadoc
     2013-01-27, Georg Fischer: copied from numword.BaseSpeller
 
@@ -142,6 +143,7 @@ public abstract class BaseInflector {
      *  case, person, numerus and type of determinism (but no comparision level).
      *  Sometimes it omits an <em>e</em>,
      *  C.f. <a target="_new" href="http://deutsch.lingolia.com/de/grammatik/adjektive/deklination">deutsch.lingolia.com</a>.
+     *  @param level - not used
      *  @param word the adjective (or participe)
      *  @return list of generated morphems
      */

@@ -1,6 +1,7 @@
 /*  Bean with properties and methods for words
     and surrounding glue (HTML tags, whitespace and punctuation)
     @(#) $Id: Segment.java 976 2013-02-02 16:44:18Z gfis $
+    2017-05-29: javadoc 1.8
     2016-09-22: moved to subpackage gramword.filter; had a Morphem only
     2007-02-23: copied from Morphem.java
     pure ASCII encoding
@@ -74,6 +75,7 @@ public class Segment {
     } // Constructor(3)
 
     /** Constructor with prefix, morphems and suffix
+     *  @param before - glue, not used
      *  @param morphems the word and all its possible grammatical properties
      *  @param behind glue behind the word (or empty string)
      */
@@ -180,7 +182,7 @@ public class Segment {
      *  @return whether the segment contains only one empty {@link Morphem}
      */
     public boolean isEmpty() {
-        int imorph = 0; 
+        int imorph = 0;
         Morphem morphem = morphems.get(imorph); // there is only one
         return morphem.getMorph().startsWith(Morphem.EMPTY);
     } // isEmpty
@@ -190,9 +192,9 @@ public class Segment {
      *  @return whether the segment is such a punctuation
      */
     public boolean isPunct(String puncts) {
-        int imorph = 0; 
+        int imorph = 0;
         Morphem morphem = morphems.get(imorph); // there is only one
-        return morphem.getMorph().startsWith(Morphem.PUNCT) 
+        return morphem.getMorph().startsWith(Morphem.PUNCT)
                 && puncts.indexOf(morphem.getEntry()) >= 0;
     } // isPunct
 
@@ -203,7 +205,7 @@ public class Segment {
     public boolean contains(String morphCode) {
         boolean result = false;
         MorphemList morphems = this.getMorphems();
-        int imorph = 0; 
+        int imorph = 0;
         while (! result && imorph < morphems.size()) {
             if (morphems.get(imorph).getMorph().startsWith(morphCode)) {
                 result = true;

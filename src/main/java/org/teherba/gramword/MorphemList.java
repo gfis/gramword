@@ -1,5 +1,6 @@
 /*  Bean with Properties and methods for words and their grammatical type
     @(#) $Id: MorphemList.java 978 2013-02-04 11:06:08Z gfis $
+    2017-05-29: javadoc 1.8
     2013-01-28: create logger in all constructors
     2008-02-13: Java 1.5 types
     2007-02-16: with log4j
@@ -23,7 +24,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.teherba.gramword;
 import  org.teherba.gramword.Morphem;
 import  java.sql.Connection;
@@ -250,6 +250,7 @@ public class MorphemList extends ArrayList<Morphem> {
 
     /** Checks whether the contents of the morphem list are
      *  sufficiently probable to determine the word's morphology.
+     *  @return whether the list is determined
      */
     public boolean isDetermined() {
         return this.size() > 0;
@@ -258,6 +259,7 @@ public class MorphemList extends ArrayList<Morphem> {
     /** Checks whether the contents of the morphem list are
      *  not yet
      *  sufficiently probable to determine the word's morphology.
+     *  @return whether the list is not determined
      */
     public boolean isUnsure() {
         return this.size() <= 0;

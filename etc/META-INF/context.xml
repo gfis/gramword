@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Configuration of context /dbat
+    Configuration of context /gramword
     @(#) $Id: context.xml 805 2011-09-20 06:41:22Z gfis $
+    2017-05-29: path, docBase was dbat?
     2016-09-20: Error Report Valve
     2016-09-16: copied from dbat again
     2011-09-17: 16 -> 4 connections
@@ -23,7 +24,7 @@
  * limitations under the License.
 -->
 <Context
-        path="/dbat" docBase="dbat"
+        path="/gramword" docBase="gramword"
         debug="5"
         reloadable="true"
         crossContext="true"

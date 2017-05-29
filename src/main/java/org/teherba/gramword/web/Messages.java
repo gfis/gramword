@@ -1,6 +1,7 @@
 /*  Messages.java - Static help texts and other language specific messages for GramWord
  *  Caution: must be UTF-8 - äöüÄÖÜß
  *  @(#) $Id: 57d01d0860aef0c2f2783647be70c3c381710c86 $
+ *  2017-05-29: javadoc 1.8
  *  2016-09-17: Dr. Georg Fischer: copied from Xtrans
  */
 /*
@@ -30,7 +31,6 @@ import  java.io.Serializable;
  *  <li>en - English</li>
  *  <li>de - German</li>
  *  </ul>
- *  <p />
  *  All methods in this class are not stateful, and therefore are
  *  <em>static</em> for easier activation.
  *  @author Dr. Georg Fischer
@@ -51,6 +51,11 @@ public class Messages implements Serializable {
         //--------
         basePage.add("en", "001", appLink);
         basePage.add("de", "001", appLink);
+        basePage.add("en", "002"
+                , " <a href=\"mailto:punctum@punctum.com"
+                + "?&subject=" + basePage.getAppName()
+                + "\">Dr. Georg Fischer</a>"
+                );
         //--------
         String laux = basePage.LANG_AUX;  // pseudo language code for links to auxiliary information
         int imess   = basePage.START_AUX; // start of messages    for links to auxiliary information
