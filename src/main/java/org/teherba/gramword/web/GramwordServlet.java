@@ -1,5 +1,6 @@
 /*  Servlet which checks the parameters and calls pages for different views
     @(#) $Id: GramwordServlet.java 976 2013-02-02 16:44:18Z gfis $
+    2022-01-28: Log4j 2.17, dbat.configure call
     2017-05-29: javadoc 1.8
     2016-09-21: handler deprecated
     2016-09-19: previous name was GrammarServlet
@@ -123,7 +124,8 @@ public class GramwordServlet extends HttpServlet {
      *  @throws IOException for IO errors
      */
     public void generateResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        dbatConfig.configure(dbatConfig.WEB_CALL, dsMap);
+        dbatConfig.configure(Configuration.WEB_CALL);
+        dsMap = dbatConfig.getDataSourceMap();
         try {
             String view = basePage.getFilesAndFields(request, new String[]
                     { "view"    , "index"
