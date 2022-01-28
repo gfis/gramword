@@ -12,7 +12,7 @@
       5 Anct
      28 Ar
       3 Astr
-     35 Av
+     36 Av
      18 Bibl
      11 Body
       5 Bota
@@ -21,7 +21,7 @@
       2 Chan
       3 Chem
      43 City
-      6 Cj
+      8 Cj
       6 Clth
       2 Cmpr
      26 Colr
@@ -38,7 +38,7 @@
       6 Diar
      30 Dimt
       5 E
-     10 Ex
+     11 Ex
       2 F
      20 Flum
     136 Fm
@@ -52,7 +52,7 @@
      15 Im
       6 In
      31 Ip
-      3 Ir
+      4 Ir
       1 Jidd
       4 Letr
      10 Loct
@@ -71,7 +71,7 @@
      14 Musi
     163 Nm
      63 Nomv
-      3 Nrul
+      4 Nrul
     132 Nt
       7 Nu
      16 Numr
@@ -84,9 +84,9 @@
     221 Pn
     144 Poss
       1 Post
-     35 Pr
+     38 Pr
      30 Pren
-      8 Prim
+     10 Prim
      27 Prof
       2 Qant
       1 Ratn
@@ -95,12 +95,12 @@
      16 Relt
       5 Root
       7 Rp
-      3 Rt
+      4 Rt
     124 S
     340 Sb
       5 Seas
     432 Sg
-      8 Shor
+     10 Shor
       1 Spor
       2 Strg
       5 Suff
@@ -111,11 +111,10 @@
       5 U
       4 Un
      20 Undt
-    149 Vb
+    150 Vb
      17 Vulg
-      1 Weak
+      2 Weak
       7 Week
      16 X
       9 Zool
-      1 ile
-      1 nput)
+      5 ull
