@@ -28,7 +28,8 @@ import  java.io.Serializable;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
 import  org.apache.commons.fileupload.FileItem;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Determines the proper filter for serialization,
  *  starts a transformation with that filter,
@@ -45,7 +46,7 @@ public class FilterPage implements Serializable {
     /** No-args Constructor
      */
     public FilterPage() {
-        log = Logger.getLogger(FilterPage.class.getName());
+        log = LogManager.getLogger(FilterPage.class.getName());
     } // Constructor
 
     /** Determines the proper filter for serialization,

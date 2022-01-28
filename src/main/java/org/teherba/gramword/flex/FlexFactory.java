@@ -24,7 +24,8 @@ import  java.util.ArrayList;
 import  java.util.HashMap;
 import  java.util.Iterator;
 import  java.util.StringTokenizer;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Selects a specific inflector, and iterates over the descriptions
  *  of all inflectors and their codes.
@@ -56,7 +57,7 @@ public class FlexFactory {
      *  The order of the languages here defines the order in the user interfaces.
      */
     public FlexFactory() {
-        log = Logger.getLogger(FlexFactory.class.getName());
+        log = LogManager.getLogger(FlexFactory.class.getName());
         try {
             inflectors    = new ArrayList<BaseInflector>(64);
 

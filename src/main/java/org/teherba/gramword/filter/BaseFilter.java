@@ -41,7 +41,8 @@ import  java.util.Iterator;
 import  java.util.TreeMap;
 import  org.xml.sax.Attributes;
 import  org.xml.sax.SAXParseException;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** (Pseudo-abstract) superclass for XHTML filters which perform some
  *  modification (coloring, linking and the like) based on
@@ -92,7 +93,7 @@ public class BaseFilter extends XMLTransformer { // but still uses plain CharWri
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(BaseFilter.class.getName());
+        log = LogManager.getLogger(BaseFilter.class.getName());
         cntWords        = 0;
         cntKnown        = 0;
         queue           = new SegmentQueue(8, this);

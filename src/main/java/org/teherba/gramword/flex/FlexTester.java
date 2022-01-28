@@ -41,7 +41,8 @@ import  java.util.ArrayList;
 import  java.util.Iterator;
 import  java.util.Properties;
 import  java.util.regex.Pattern;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Tests the hypothesis of some word class by expansion and table look-up.
  *  @author Dr. Georg Fischer
@@ -82,7 +83,7 @@ public class FlexTester {
      *  @param strategy applicable tests: "all", "VbIn", "AjCmp" and so on
      */
     public FlexTester(String strategy) {
-        log = Logger.getLogger(FlexTester.class.getName());
+        log = LogManager.getLogger(FlexTester.class.getName());
         newline = System.getProperty("line.separator");
         this.strategy = strategy;
         try {

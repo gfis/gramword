@@ -25,7 +25,8 @@ import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
 import  org.teherba.gramword.MorphemList;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Links bible references like "Joh 1,1" to a fragment URLs in online bibles.
  *  The algorithm is as follows:
@@ -73,7 +74,7 @@ public class BibleRefFilter extends BaseFilter {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(BibleRefFilter.class.getName());
+        log = LogManager.getLogger(BibleRefFilter.class.getName());
         queue = new SegmentQueue(12, this);
     } // initialize
 

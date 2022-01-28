@@ -32,7 +32,8 @@ import  java.net.URLEncoder;
 import  java.io.UnsupportedEncodingException;
 import  org.xml.sax.Attributes;
 import  org.xml.sax.SAXParseException;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Highlights German account and bank id numbers.
  *  The algorithm is as follows:
@@ -86,7 +87,7 @@ public class KontoFilter extends BaseFilter {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(KontoFilter.class.getName());
+        log = LogManager.getLogger(KontoFilter.class.getName());
         queue    = new SegmentQueue(16, this);
         keyWords = new ArrayList<String>(8);
         keyWords.add("BLZ");

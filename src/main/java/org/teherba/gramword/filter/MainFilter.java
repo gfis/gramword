@@ -27,7 +27,8 @@ import  org.teherba.gramword.filter.FilterFactory;
 import  org.teherba.xtrans.BaseTransformer;
 import  java.util.ArrayList;
 import  java.util.Iterator;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Commandline tool for the transformation of various file formats
  *  to and from XML.
@@ -46,7 +47,7 @@ public class MainFilter {
      *  Constructor
      */
     public MainFilter() {
-        log = Logger.getLogger(MainFilter.class.getName());
+        log = LogManager.getLogger(MainFilter.class.getName());
         factory = new FilterFactory();
     } // MainFilter
 

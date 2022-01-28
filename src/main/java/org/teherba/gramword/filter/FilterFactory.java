@@ -28,7 +28,8 @@ import  org.teherba.xtrans.XMLTransformer;
 import  java.util.ArrayList;
 import  java.util.Iterator;
 import  java.util.StringTokenizer;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Selects a specific filter and iterates over the descriptions
  *  of all filters and their codes.
@@ -46,7 +47,7 @@ public class FilterFactory {
     /** Empty Constructor
      */
     public FilterFactory() {
-        log = Logger.getLogger(FilterFactory.class.getName());
+        log = LogManager.getLogger(FilterFactory.class.getName());
         // the order here defines the order in the web page
         try {
             transformers = new ArrayList<BaseTransformer>(16);

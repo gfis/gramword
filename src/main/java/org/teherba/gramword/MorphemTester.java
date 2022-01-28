@@ -43,7 +43,8 @@ import  java.util.HashMap;
 import  java.util.Iterator;
 import  java.util.Properties;
 import  java.util.regex.Pattern;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Shows the syntactical type of words in plain text.
  *  @author Dr. Georg Fischer
@@ -116,7 +117,7 @@ public class MorphemTester {
     public MorphemTester(String strategy) {
         try {
             this.strategy = strategy;
-            log = Logger.getLogger(MorphemTester.class.getName());
+            log = LogManager.getLogger(MorphemTester.class.getName());
             wordUpperCase   = Pattern.compile("[A-ZÄÖÜ]");
             numberPattern   = Pattern.compile("\\d+");
             numSpeller      = new DeuSpeller();

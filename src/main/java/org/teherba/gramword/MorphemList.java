@@ -32,7 +32,8 @@ import  java.sql.ResultSet;
 import  java.util.ArrayList;
 import  java.util.HashMap;
 import  java.util.Iterator;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Properties and methods for lists of {@link Morphem}s.
  *  This class is general and independant of language specifica.
@@ -50,7 +51,7 @@ public class MorphemList extends ArrayList<Morphem> {
      */
     public MorphemList() {
         super(32);
-        log = Logger.getLogger(MorphemList.class.getName());
+        log = LogManager.getLogger(MorphemList.class.getName());
         newline = System.getProperty("line.separator");
     } // Constructor()
 
@@ -70,7 +71,7 @@ public class MorphemList extends ArrayList<Morphem> {
      */
     public MorphemList(Connection con, String table, String morphLike) {
         super(512);
-        log = Logger.getLogger(MorphemList.class.getName());
+        log = LogManager.getLogger(MorphemList.class.getName());
         try {
             PreparedStatement pstmt = con.prepareStatement
                     ( "SELECT entry, morph, enrel, morel FROM " + table + " WHERE"

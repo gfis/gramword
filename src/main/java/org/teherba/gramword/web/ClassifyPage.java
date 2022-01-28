@@ -34,7 +34,8 @@ import  java.util.Iterator;
 import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
 import  javax.servlet.http.HttpSession;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Xtrans main dialog page
  *  @author Dr. Georg Fischer
@@ -49,7 +50,7 @@ public class ClassifyPage implements Serializable {
     /** No-args Constructor
      */
     public ClassifyPage() {
-        log      = Logger.getLogger(ClassifyPage.class.getName());
+        log      = LogManager.getLogger(ClassifyPage.class.getName());
     } // Constructor
 
     /** Output the main dialog page for Xtrans

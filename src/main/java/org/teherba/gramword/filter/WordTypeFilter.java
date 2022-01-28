@@ -35,7 +35,8 @@ import  org.teherba.gramword.MorphemList;
 import  java.util.TreeMap;
 import  java.util.regex.Pattern;
 import  org.xml.sax.Attributes;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Shows the syntactical type of words in an HTML file by different background colors
  *  @author Dr. Georg Fischer
@@ -63,7 +64,7 @@ public class WordTypeFilter extends BaseFilter {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(WordTypeFilter.class.getName());
+        log = LogManager.getLogger(WordTypeFilter.class.getName());
         queue = new SegmentQueue(0, this); // no lookAhead
         sentenceTester = new SentenceTester();
     } // initialize

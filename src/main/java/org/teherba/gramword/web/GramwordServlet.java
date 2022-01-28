@@ -57,7 +57,8 @@ import  javax.servlet.http.HttpServletRequest;
 import  javax.servlet.http.HttpServletResponse;
 import  javax.sql.DataSource;
 import  org.apache.commons.fileupload.FileItem;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 /**
  *  This class is the servlet interface to the GramWord application
  *  and ressembles the functionality of the commandline interface.
@@ -86,7 +87,7 @@ public class GramwordServlet extends HttpServlet {
      *  @throws ServletException for servlet errors
      */
     public void init() throws ServletException {
-        log = Logger.getLogger(GramwordServlet.class.getName());
+        log = LogManager.getLogger(GramwordServlet.class.getName());
         basePage = new BasePage(APP_NAME);
         Messages.addMessageTexts(basePage);
 

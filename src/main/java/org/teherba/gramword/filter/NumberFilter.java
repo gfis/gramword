@@ -31,7 +31,8 @@ import  org.teherba.gramword.filter.BaseFilter;
 import  org.teherba.gramword.filter.Segment;
 import  org.teherba.gramword.Morphem;
 import  org.xml.sax.Attributes;
-import  org.apache.log4j.Logger;
+import  org.apache.logging.log4j.Logger;
+import  org.apache.logging.log4j.LogManager;
 
 /** Shows the syntactical type of words in an HTML file by different background colors
  *  @author Dr. Georg Fischer
@@ -57,7 +58,7 @@ public class NumberFilter extends BaseFilter {
      */
     public void initialize() {
         super.initialize();
-        log = Logger.getLogger(NumberFilter.class.getName());
+        log = LogManager.getLogger(NumberFilter.class.getName());
     } // initialize
 
     /*===========================*/
